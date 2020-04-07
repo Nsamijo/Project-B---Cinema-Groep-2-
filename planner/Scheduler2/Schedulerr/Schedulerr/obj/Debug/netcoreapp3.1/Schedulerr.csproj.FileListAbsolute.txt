@@ -2,3 +2,16 @@ C:\Users\jonas\Documents\Cinema-ProjB\Cinema Groep 2\Scheduler2\Schedulerr\Sched
 C:\Users\jonas\Documents\Cinema-ProjB\Cinema Groep 2\Scheduler2\Schedulerr\Schedulerr\obj\Debug\netcoreapp3.1\Schedulerr.csprojAssemblyReference.cache
 C:\Users\jonas\Documents\Cinema-ProjB\Cinema Groep 2\Scheduler2\Schedulerr\Schedulerr\obj\Debug\netcoreapp3.1\Schedulerr.AssemblyInfoInputs.cache
 C:\Users\jonas\Documents\Cinema-ProjB\Cinema Groep 2\Scheduler2\Schedulerr\Schedulerr\obj\Debug\netcoreapp3.1\Schedulerr.AssemblyInfo.cs
+C:\Users\jonas\Documents\Cinema-ProjB\planner\Scheduler2\Schedulerr\Schedulerr\bin\Debug\netcoreapp3.1\Schedulerr.exe
+C:\Users\jonas\Documents\Cinema-ProjB\planner\Scheduler2\Schedulerr\Schedulerr\bin\Debug\netcoreapp3.1\Schedulerr.deps.json
+C:\Users\jonas\Documents\Cinema-ProjB\planner\Scheduler2\Schedulerr\Schedulerr\bin\Debug\netcoreapp3.1\Schedulerr.runtimeconfig.json
+C:\Users\jonas\Documents\Cinema-ProjB\planner\Scheduler2\Schedulerr\Schedulerr\bin\Debug\netcoreapp3.1\Schedulerr.runtimeconfig.dev.json
+C:\Users\jonas\Documents\Cinema-ProjB\planner\Scheduler2\Schedulerr\Schedulerr\bin\Debug\netcoreapp3.1\Schedulerr.dll
+C:\Users\jonas\Documents\Cinema-ProjB\planner\Scheduler2\Schedulerr\Schedulerr\bin\Debug\netcoreapp3.1\Schedulerr.pdb
+C:\Users\jonas\Documents\Cinema-ProjB\planner\Scheduler2\Schedulerr\Schedulerr\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\jonas\Documents\Cinema-ProjB\planner\Scheduler2\Schedulerr\Schedulerr\obj\Debug\netcoreapp3.1\Schedulerr.csprojAssemblyReference.cache
+C:\Users\jonas\Documents\Cinema-ProjB\planner\Scheduler2\Schedulerr\Schedulerr\obj\Debug\netcoreapp3.1\Schedulerr.AssemblyInfoInputs.cache
+C:\Users\jonas\Documents\Cinema-ProjB\planner\Scheduler2\Schedulerr\Schedulerr\obj\Debug\netcoreapp3.1\Schedulerr.AssemblyInfo.cs
+C:\Users\jonas\Documents\Cinema-ProjB\planner\Scheduler2\Schedulerr\Schedulerr\obj\Debug\netcoreapp3.1\Schedulerr.csproj.CopyComplete
+C:\Users\jonas\Documents\Cinema-ProjB\planner\Scheduler2\Schedulerr\Schedulerr\obj\Debug\netcoreapp3.1\Schedulerr.dll
+C:\Users\jonas\Documents\Cinema-ProjB\planner\Scheduler2\Schedulerr\Schedulerr\obj\Debug\netcoreapp3.1\Schedulerr.pdb

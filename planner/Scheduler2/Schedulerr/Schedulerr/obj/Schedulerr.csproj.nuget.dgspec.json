@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jonas\\Documents\\Cinema-ProjB\\Cinema Groep 2\\Scheduler2\\Schedulerr\\Schedulerr\\Schedulerr.csproj": {}
+    "C:\\Users\\jonas\\Documents\\Cinema-ProjB\\planner\\Scheduler2\\Schedulerr\\Schedulerr\\Schedulerr.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jonas\\Documents\\Cinema-ProjB\\Cinema Groep 2\\Scheduler2\\Schedulerr\\Schedulerr\\Schedulerr.csproj": {
+    "C:\\Users\\jonas\\Documents\\Cinema-ProjB\\planner\\Scheduler2\\Schedulerr\\Schedulerr\\Schedulerr.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jonas\\Documents\\Cinema-ProjB\\Cinema Groep 2\\Scheduler2\\Schedulerr\\Schedulerr\\Schedulerr.csproj",
+        "projectUniqueName": "C:\\Users\\jonas\\Documents\\Cinema-ProjB\\planner\\Scheduler2\\Schedulerr\\Schedulerr\\Schedulerr.csproj",
         "projectName": "Schedulerr",
-        "projectPath": "C:\\Users\\jonas\\Documents\\Cinema-ProjB\\Cinema Groep 2\\Scheduler2\\Schedulerr\\Schedulerr\\Schedulerr.csproj",
+        "projectPath": "C:\\Users\\jonas\\Documents\\Cinema-ProjB\\planner\\Scheduler2\\Schedulerr\\Schedulerr\\Schedulerr.csproj",
         "packagesPath": "C:\\Users\\jonas\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jonas\\Documents\\Cinema-ProjB\\Cinema Groep 2\\Scheduler2\\Schedulerr\\Schedulerr\\obj\\",
+        "outputPath": "C:\\Users\\jonas\\Documents\\Cinema-ProjB\\planner\\Scheduler2\\Schedulerr\\Schedulerr\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\jonas\\AppData\\Roaming\\NuGet\\NuGet.Config",
