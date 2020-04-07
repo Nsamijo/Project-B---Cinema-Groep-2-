@@ -1,0 +1,22 @@
+C:\Users\jonas\Documents\github\SChedulemake\ScheduleMaker\ScheduleMaker\bin\Debug\netcoreapp3.1\ScheduleMaker.exe
+C:\Users\jonas\Documents\github\SChedulemake\ScheduleMaker\ScheduleMaker\bin\Debug\netcoreapp3.1\ScheduleMaker.deps.json
+C:\Users\jonas\Documents\github\SChedulemake\ScheduleMaker\ScheduleMaker\bin\Debug\netcoreapp3.1\ScheduleMaker.runtimeconfig.json
+C:\Users\jonas\Documents\github\SChedulemake\ScheduleMaker\ScheduleMaker\bin\Debug\netcoreapp3.1\ScheduleMaker.runtimeconfig.dev.json
+C:\Users\jonas\Documents\github\SChedulemake\ScheduleMaker\ScheduleMaker\bin\Debug\netcoreapp3.1\ScheduleMaker.dll
+C:\Users\jonas\Documents\github\SChedulemake\ScheduleMaker\ScheduleMaker\bin\Debug\netcoreapp3.1\ScheduleMaker.pdb
+C:\Users\jonas\Documents\github\SChedulemake\ScheduleMaker\ScheduleMaker\obj\Debug\netcoreapp3.1\ScheduleMaker.csprojAssemblyReference.cache
+C:\Users\jonas\Documents\github\SChedulemake\ScheduleMaker\ScheduleMaker\obj\Debug\netcoreapp3.1\ScheduleMaker.AssemblyInfoInputs.cache
+C:\Users\jonas\Documents\github\SChedulemake\ScheduleMaker\ScheduleMaker\obj\Debug\netcoreapp3.1\ScheduleMaker.AssemblyInfo.cs
+C:\Users\jonas\Documents\github\SChedulemake\ScheduleMaker\ScheduleMaker\obj\Debug\netcoreapp3.1\ScheduleMaker.dll
+C:\Users\jonas\Documents\github\SChedulemake\ScheduleMaker\ScheduleMaker\obj\Debug\netcoreapp3.1\ScheduleMaker.pdb
+C:\Users\jonas\Documents\Cinema-ProjB\Cinema Groep 2\ScheduleMaker\bin\Debug\netcoreapp3.1\ScheduleMaker.exe
+C:\Users\jonas\Documents\Cinema-ProjB\Cinema Groep 2\ScheduleMaker\bin\Debug\netcoreapp3.1\ScheduleMaker.deps.json
+C:\Users\jonas\Documents\Cinema-ProjB\Cinema Groep 2\ScheduleMaker\bin\Debug\netcoreapp3.1\ScheduleMaker.runtimeconfig.json
+C:\Users\jonas\Documents\Cinema-ProjB\Cinema Groep 2\ScheduleMaker\bin\Debug\netcoreapp3.1\ScheduleMaker.runtimeconfig.dev.json
+C:\Users\jonas\Documents\Cinema-ProjB\Cinema Groep 2\ScheduleMaker\bin\Debug\netcoreapp3.1\ScheduleMaker.dll
+C:\Users\jonas\Documents\Cinema-ProjB\Cinema Groep 2\ScheduleMaker\bin\Debug\netcoreapp3.1\ScheduleMaker.pdb
+C:\Users\jonas\Documents\Cinema-ProjB\Cinema Groep 2\ScheduleMaker\obj\Debug\netcoreapp3.1\ScheduleMaker.csprojAssemblyReference.cache
+C:\Users\jonas\Documents\Cinema-ProjB\Cinema Groep 2\ScheduleMaker\obj\Debug\netcoreapp3.1\ScheduleMaker.AssemblyInfoInputs.cache
+C:\Users\jonas\Documents\Cinema-ProjB\Cinema Groep 2\ScheduleMaker\obj\Debug\netcoreapp3.1\ScheduleMaker.AssemblyInfo.cs
+C:\Users\jonas\Documents\Cinema-ProjB\Cinema Groep 2\ScheduleMaker\obj\Debug\netcoreapp3.1\ScheduleMaker.dll
+C:\Users\jonas\Documents\Cinema-ProjB\Cinema Groep 2\ScheduleMaker\obj\Debug\netcoreapp3.1\ScheduleMaker.pdb

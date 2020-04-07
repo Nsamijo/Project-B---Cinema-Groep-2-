@@ -1,0 +1,4 @@
+C:\Users\jonas\Documents\Cinema-ProjB\Cinema Groep 2\Scheduler2\Schedulerr\Schedulerr\bin\Debug\netcoreapp3.1\Schedulerr.exe
+C:\Users\jonas\Documents\Cinema-ProjB\Cinema Groep 2\Scheduler2\Schedulerr\Schedulerr\obj\Debug\netcoreapp3.1\Schedulerr.csprojAssemblyReference.cache
+C:\Users\jonas\Documents\Cinema-ProjB\Cinema Groep 2\Scheduler2\Schedulerr\Schedulerr\obj\Debug\netcoreapp3.1\Schedulerr.AssemblyInfoInputs.cache
+C:\Users\jonas\Documents\Cinema-ProjB\Cinema Groep 2\Scheduler2\Schedulerr\Schedulerr\obj\Debug\netcoreapp3.1\Schedulerr.AssemblyInfo.cs
