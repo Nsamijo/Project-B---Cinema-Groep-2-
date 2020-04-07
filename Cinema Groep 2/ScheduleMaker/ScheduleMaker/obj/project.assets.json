@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jonas\\Documents\\Cinema-ProjB\\Cinema Groep 2\\ScheduleMaker\\ScheduleMaker.csproj",
+      "projectUniqueName": "C:\\Users\\jonas\\Documents\\Cinema-ProjB\\Cinema Groep 2\\Nieuwe map\\ScheduleMaker\\ScheduleMaker.csproj",
       "projectName": "ScheduleMaker",
-      "projectPath": "C:\\Users\\jonas\\Documents\\Cinema-ProjB\\Cinema Groep 2\\ScheduleMaker\\ScheduleMaker.csproj",
+      "projectPath": "C:\\Users\\jonas\\Documents\\Cinema-ProjB\\Cinema Groep 2\\Nieuwe map\\ScheduleMaker\\ScheduleMaker.csproj",
       "packagesPath": "C:\\Users\\jonas\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jonas\\Documents\\Cinema-ProjB\\Cinema Groep 2\\ScheduleMaker\\obj\\",
+      "outputPath": "C:\\Users\\jonas\\Documents\\Cinema-ProjB\\Cinema Groep 2\\Nieuwe map\\ScheduleMaker\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\jonas\\AppData\\Roaming\\NuGet\\NuGet.Config",
