@@ -138,7 +138,7 @@ namespace Schedulerr
         }
         public void LeesJson()
         {
-            using (StreamReader file = File.OpenText(@"C:\Users\jonas\Documents\Cinema-ProjB\planner\Scheduler2\Schedulerr\Schedulerr\Planning.json"))
+            using (StreamReader file = File.OpenText(new Finder().SearchFile("Planning.json")))
             {
                 JsonSerializer serializer = new JsonSerializer();
                 this.inhoud = (Programma[])serializer.Deserialize(file, typeof(Programma[]));
