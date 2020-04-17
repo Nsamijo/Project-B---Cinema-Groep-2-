@@ -15,11 +15,14 @@ public class Finder
         {
             foreach(string i in Directory.GetDirectories(path))
             {
-                foreach(string j in Directory.GetFiles(i))
+                foreach(string j in Directory.GetDirectories(i))
                 {
-                    if (j.Contains(file))
+                    foreach(string k in Directory.GetFiles(j))
                     {
-                        return j;
+                        if (k.Contains(file))
+                        {
+                            return k;
+                        }
                     }
                 }
             }

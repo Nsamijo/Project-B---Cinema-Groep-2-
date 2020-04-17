@@ -3,13 +3,11 @@ using System.IO;
 using System.Threading;
 using Newtonsoft.Json;
 
-
-namespace Schedulerr
+namespace Schedulerr.Module
 {
-    class Program
+    class Head
     {
-
-        static void Main(string[] args)
+        public static void Run()
         {
             Planning planning = new Planning()
             {

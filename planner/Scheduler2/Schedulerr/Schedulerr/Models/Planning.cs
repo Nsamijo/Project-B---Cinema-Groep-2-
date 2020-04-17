@@ -11,10 +11,12 @@ namespace Schedulerr
         public string naam { get; set; }
         public Programma[] inhoud;
 
+        //Constructor, haalt json data op van JSON
         public Planning()
         {
             this.LeesJson();
         }
+        //Print de inhoud van de planning
         public void PrintInhoud()
         {
             Console.Clear();
