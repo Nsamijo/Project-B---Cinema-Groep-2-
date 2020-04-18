@@ -8,7 +8,7 @@ namespace Schedulerr
 {
     class Program
     {
-
+        
         static void Main(string[] args)
         {
             Planning planning = new Planning()
@@ -24,38 +24,13 @@ namespace Schedulerr
                 switch (opdracht)
                 {
                     case 'a':
-                        planning.PrintInhoud();
-                        Console.WriteLine("Druk op enter om door te gaan");
-                        while (Console.ReadKey().Key != ConsoleKey.Enter)
-                        {
-                            Thread.Sleep(1);
-                        }
+                        new ZiePlanning().Run(planning);
                         break;
                     case 'b':
-                        Console.Clear();
-                        Console.WriteLine("Schrijf datum in syntax: DD/MM/YYYY");
-                        string datum = Console.ReadLine();
-                        Console.Clear();
-                        Console.WriteLine("Schrijf starttijd in syntax: hh:mm");
-                        string tijd = Console.ReadLine();
-                        Console.Clear();
-                        planning.ProgrammaToevoegen(datum, tijd);
-                        Console.WriteLine("Programma toegevoegd, druk op enter om door te gaan");
-                        while (Console.ReadKey().Key != ConsoleKey.Enter)
-                        {
-                            Thread.Sleep(1);
-                        }
+                        new MaakProgramma().Run(planning);
                         break;
                     case 'c':
-                        planning.PrintInhoud();
-                        Console.WriteLine("Welk programma wilt u verwijderen(typ het nummer)");
-                        string input = Console.ReadLine();
-
-                        Console.WriteLine("Programma verwijderd, druk op enter om door te gaan");
-                        while (Console.ReadKey().Key != ConsoleKey.Enter)
-                        {
-                            Thread.Sleep(1);
-                        }
+                        new VerwijderProgramma().Run(planning);
                         break;
                     case 'e':
                         planning.UpdateNaarJson();

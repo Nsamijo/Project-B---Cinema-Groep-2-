@@ -33,6 +33,7 @@ namespace Schedulerr
                 }
             }
         }
+        //Kiest een nieuw Id op basis van overgebleven Id's in de Array
         public int KiesId()
         {
             int max = 1;
@@ -52,6 +53,7 @@ namespace Schedulerr
             
             
         }
+        //Voegt een programma toe aan de Array
         public void ProgrammaToevoegen(string datum,string tijd)
         {
             
@@ -108,7 +110,7 @@ namespace Schedulerr
         public void VerwijderNulls()
         {
             int count = 0;
-            for(int i = 0; i < this.inhoud.Length;)
+            for(int i = 0; i < this.inhoud.Length;i++)
             {
                 if (this.inhoud[i] == null)
                 {
