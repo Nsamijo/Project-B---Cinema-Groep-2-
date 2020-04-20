@@ -11,9 +11,11 @@ namespace Schedulerr
         
         static void Main(string[] args)
         {
+            FilmCatalogus catalog = new FilmCatalogus();
             Planning planning = new Planning()
             {
-                naam = "planning"
+                naam = "planning",
+                catalogus = catalog
             };
             bool exit = false;
             while (exit != true)
@@ -24,12 +26,15 @@ namespace Schedulerr
                 switch (opdracht)
                 {
                     case 'a':
+                        Console.Clear();
                         new ZiePlanning().Run(planning);
                         break;
                     case 'b':
+                        Console.Clear();
                         new MaakProgramma().Run(planning);
                         break;
                     case 'c':
+                        Console.Clear();
                         new VerwijderProgramma().Run(planning);
                         break;
                     case 'e':

@@ -10,22 +10,24 @@ namespace Schedulerr
     {
         public string naam { get; set; }
         public Programma[] inhoud;
+        public FilmCatalogus catalogus { get; set; }
 
-        //Constructor, haalt json data op van JSON
+        //Constructor, haalt json data op van JSON's
         public Planning()
         {
-            this.LeesJson();
+            this.LeesPlanning();
         }
+        
         //Print de inhoud van de planning
         public void PrintInhoud()
         {
-            Console.Clear();
             Console.WriteLine("Programmas:");
+            
             for (int i = 0; i < this.inhoud.Length; i++)
             {
                 try
                 {
-                    Console.WriteLine($"\n{this.inhoud[i].programmaid}.   Datum: {this.inhoud[i].datum}\n     Tijd: {this.inhoud[i].tijd}");
+                    Console.WriteLine(inhoud[i].Info());
                 }
                 catch
                 {
@@ -54,7 +56,7 @@ namespace Schedulerr
             
         }
         //Voegt een programma toe aan de Array
-        public void ProgrammaToevoegen(string datum,string tijd)
+        public void ProgrammaToevoegen(string datum,string tijd,string filmid)
         {
             
             Programma[] res = new Programma[this.inhoud.Length+1];
@@ -71,13 +73,16 @@ namespace Schedulerr
                     {
                         programmaid = this.KiesId(),
                         datum = datum,
-                        tijd = tijd
+                        tijd = tijd,
+                        filmid = filmid,
+                        filmnaam = catalogus.VindFilmdDoorId(filmid).Naam
                     };
                 }
             }
             
             this.inhoud = res;
         }
+        
         public int VindIndexDoorId(int id)
         {
             for(int i = 0; i < this.inhoud.Length; i++)
@@ -140,7 +145,7 @@ namespace Schedulerr
                 
             }
         }
-        public void LeesJson()
+        public void LeesPlanning()
         {
             using (StreamReader file = File.OpenText(new Finder().SearchFile("Planning.json")))
             {
@@ -148,6 +153,8 @@ namespace Schedulerr
                 this.inhoud = (Programma[])serializer.Deserialize(file, typeof(Programma[]));
             }
         }
+
         
+
     }
 }

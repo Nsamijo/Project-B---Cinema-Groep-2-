@@ -11,26 +11,50 @@ namespace Schedulerr
         {
             string datum = "";
             string tijd = "";
-            
+            string filmid = "-1";
+
+            Console.Clear();
+            Console.WriteLine("Schrijf datum in syntax: DD/MM/YYYY");
+            datum = Console.ReadLine();
+
             while (new Checker().DatumSyntax(datum) == false)
             {
                 Console.Clear();
+                Console.WriteLine("Probeer het opnieuw");
                 Console.WriteLine("Schrijf datum in syntax: DD/MM/YYYY");
                 datum = Console.ReadLine();
             }
 
-            
-            while(new Checker().TijdSyntax(tijd) == false)
+            Console.Clear();
+            planning.catalogus.PrintFilms();
+            Console.WriteLine("Schrijf het Id van de film");
+            filmid = Console.ReadLine();
+
+            while (planning.catalogus.VindFilmdDoorId(filmid) ==  null)
             {
                 Console.Clear();
-                Console.WriteLine("Schrijf starttijd in syntax: hh:mm");
-                tijd = Console.ReadLine();
-            
-            
+                planning.catalogus.PrintFilms();
+                Console.WriteLine("Probeer het opnieuw\n");
+                Console.WriteLine("Schrijf het Id van de film");
+                filmid = Console.ReadLine();
             }
 
             Console.Clear();
-            planning.ProgrammaToevoegen(datum, tijd);
+            Console.WriteLine("Schrijf starttijd in syntax: hh:mm");
+            tijd = Console.ReadLine();
+
+            while (new Checker().TijdSyntax(tijd) == false)
+            {
+                Console.Clear();
+                    Console.WriteLine("Probeer het opnieuw");
+                Console.WriteLine("Schrijf starttijd in syntax: hh:mm");
+                tijd = Console.ReadLine();
+            }
+
+
+
+            Console.Clear();
+            planning.ProgrammaToevoegen(datum, tijd,filmid);
             Console.WriteLine("Programma toegevoegd, druk op enter om door te gaan");
             while (Console.ReadKey().Key != ConsoleKey.Enter)
             {

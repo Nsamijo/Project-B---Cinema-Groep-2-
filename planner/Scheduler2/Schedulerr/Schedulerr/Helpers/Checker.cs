@@ -4,6 +4,7 @@ using System.Text;
 
 public class Checker
 {
+    
     public bool TijdSyntax(string s)
     {
         char[] arr = s.ToCharArray();
