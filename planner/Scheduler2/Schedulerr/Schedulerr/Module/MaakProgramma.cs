@@ -14,15 +14,47 @@ namespace Schedulerr
             string filmid = "-1";
 
             Console.Clear();
-            Console.WriteLine("Schrijf datum in syntax: DD/MM/YYYY");
-            datum = Console.ReadLine();
+            Console.WriteLine("Kies een dag");
+            string[] dagarr = new Dagen().VolgendeDagen(2, 14);
+            Console.WriteLine(new Dagen().PrintVolgendeDagen(2,14));
+            ConsoleKeyInfo input = Console.ReadKey();
+            if (input.Key != ConsoleKey.Escape )
+            {
+                try
+                {
+                    datum = dagarr[Int32.Parse(input.KeyChar.ToString())];
+                } catch
+                {
+                    Console.WriteLine("Probeer opnieuw");
+                }
+            }
+            else
+            {
+                return;
+            }
 
             while (new Checker().DatumSyntax(datum) == false)
             {
+
                 Console.Clear();
-                Console.WriteLine("Probeer het opnieuw");
-                Console.WriteLine("Schrijf datum in syntax: DD/MM/YYYY");
-                datum = Console.ReadLine();
+                Console.WriteLine("Kies een dag");
+                Console.WriteLine(new Dagen().PrintVolgendeDagen(2, 14));
+                input = Console.ReadKey();
+                if (input.Key != ConsoleKey.Escape)
+                {
+                    try
+                    {
+                        datum = dagarr[Int32.Parse(input.KeyChar.ToString())];
+                    }
+                    catch
+                    {
+                        Console.WriteLine("Probeer opnieuw");
+                    }
+                }
+                else
+                {
+                    return;
+                }
             }
 
             Console.Clear();
@@ -36,7 +68,13 @@ namespace Schedulerr
                 planning.catalogus.PrintFilms();
                 Console.WriteLine("Probeer het opnieuw\n");
                 Console.WriteLine("Schrijf het Id van de film");
-                filmid = Console.ReadLine();
+                try
+                {
+                    filmid = Console.ReadKey().KeyChar.ToString();
+                } catch
+                {
+                    Console.WriteLine("opnieuw");
+                }
             }
 
             Console.Clear();
@@ -46,7 +84,7 @@ namespace Schedulerr
             while (new Checker().TijdSyntax(tijd) == false)
             {
                 Console.Clear();
-                    Console.WriteLine("Probeer het opnieuw");
+                Console.WriteLine("Probeer het opnieuw");
                 Console.WriteLine("Schrijf starttijd in syntax: hh:mm");
                 tijd = Console.ReadLine();
             }

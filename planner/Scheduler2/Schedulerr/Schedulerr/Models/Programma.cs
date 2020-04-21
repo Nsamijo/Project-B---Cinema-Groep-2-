@@ -17,7 +17,7 @@ namespace Schedulerr
 
         public string Info()
         {
-            return $"\n{programmaid}.   Datum: {datum}\n     Tijd: {tijd}\n film: {filmnaam}";
+            return $"\n{programmaid}.   Datum: {datum}\n     Tijd: {tijd}\n     film: {filmnaam}";
         }
         
     }

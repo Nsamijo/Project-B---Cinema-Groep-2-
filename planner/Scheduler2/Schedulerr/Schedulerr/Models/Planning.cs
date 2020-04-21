@@ -137,12 +137,12 @@ namespace Schedulerr
 
         public void UpdateNaarJson()
         {
-            using (StreamWriter file = File.CreateText(@"C:\Users\jonas\Documents\Cinema-ProjB\planner\Scheduler2\Schedulerr\Schedulerr\Planning.json"))
+            using (StreamWriter file = File.CreateText(new Finder().SearchFile("Planning.json")))
             {
                 JsonSerializer serializer = new JsonSerializer();
-                
+
                 serializer.Serialize(file, this.inhoud);
-                
+
             }
         }
         public void LeesPlanning()
