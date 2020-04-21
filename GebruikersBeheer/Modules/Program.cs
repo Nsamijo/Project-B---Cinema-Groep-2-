@@ -7,8 +7,8 @@ namespace Project_B_Rebooted
     {
         static void Main(string[] args)
         {
-            Manager files = new Manager();
-            files.Login();
+            Manager system = new Manager();
+            system.Run();
         }
     }
 }

@@ -6,6 +6,9 @@ class GebruikersMenu
 {
     public void PrintGebruikers(List<Gebruiker> users, Gebruiker admin)
     {
+        ///<summary>
+        ///Deze functie print alle gebruikers naar de console toe
+        /// </summary>
         foreach(var gebruiker in users)
         {
             if (!gebruiker.naam.Equals(admin.naam))
@@ -28,8 +31,9 @@ class GebruikersMenu
         {
             //welke toets wordt hier ingedrukt
             ConsoleKeyInfo key = Console.ReadKey(true);
+
             //filteren welke key het is en kijken of het geen bijzondere key is
-            if (key.Key != ConsoleKey.Backspace && key.Key != ConsoleKey.Enter)
+            if (key.Key != ConsoleKey.Backspace && key.Key != ConsoleKey.Enter && key.Key != ConsoleKey.Escape)
             {
                 //als het een normale key wordt deze opgeteld aan het wachtwoordt
                 pass += key.KeyChar;
@@ -51,6 +55,14 @@ class GebruikersMenu
                 else if (key.Key == ConsoleKey.Enter)
                 {
                     //de loop wordt verbroken
+                    break;
+                }
+                //kijken of de key niet de ESC key is
+                else if (key.Key == ConsoleKey.Escape)
+                {
+                    //de cancel command wordt doorgegeven
+                    pass = "ESC";
+                    //breken uit de loop
                     break;
                 }
             }//loopen todat er uit de loop wordt gebroken
@@ -93,7 +105,7 @@ class GebruikersMenu
 
         if(key.Key == ConsoleKey.Escape)
         {
-            return "-1";
+            return "ESC";
         }
 
         return result;
@@ -101,21 +113,34 @@ class GebruikersMenu
 
     public Gebruiker Login(List<Gebruiker> gebruikers)
     {
-        Console.WriteLine("FilmHaus Inloggen:\n");
+        ///<summary>
+        ///Vraag de account details aan van de gebruiker
+        ///en dan kijken of deze echt bestaat
+        ///Zo ja dan wordt de account terug gegeven
+        ///Zo niet dan wordt een null terug gegeven
+        /// </summary>
+        Console.WriteLine("FilmHaus Inloggen:");
+        Console.WriteLine("(Druk op ESC terug te gaan)\nVoer uw gebruikersnaam en wachtwoordt in\n");
         Console.Write("Gebruikersnaam: ");
         string gebruiker = ReadWithCancel();
 
-        if(gebruiker.Equals("-1"))
-        {
+        if(gebruiker.Equals("ESC"))
             return new Gebruiker("cancel", "cancel", "cancel", "cancel");
-        }
+
         Console.Write("\nWachtwoord: ");
+
         string pass = Wachtwoordt();
-        foreach(Gebruiker i in gebruikers)
+        if(pass.Equals("ESC"))
+            return new Gebruiker("cancel", "cancel", "cancel", "cancel");
+
+        //kijken of de account een bestaande account is
+        foreach (Gebruiker i in gebruikers)
         {
             {
+                //komen de gebruikersnamen overeen
                 if (i.gebruikersnaam.Equals(gebruiker))
                 {
+                    //komen de wachtwoorden overeen
                     if (i.checkWachtwoord(pass))
                     {
                         return i;
