@@ -1,0 +1,13 @@
+C:\Users\jonas\Documents\Cinema-ProjB\Cinema Groep 2\FilmSchemaBeheer\FilmSchemaBeheer\obj\Debug\netcoreapp3.1\FilmSchemaBeheer.csprojAssemblyReference.cache
+C:\Users\jonas\Documents\Cinema-ProjB\Cinema Groep 2\FilmSchemaBeheer\FilmSchemaBeheer\obj\Debug\netcoreapp3.1\FilmSchemaBeheer.AssemblyInfoInputs.cache
+C:\Users\jonas\Documents\Cinema-ProjB\Cinema Groep 2\FilmSchemaBeheer\FilmSchemaBeheer\obj\Debug\netcoreapp3.1\FilmSchemaBeheer.AssemblyInfo.cs
+C:\Users\jonas\Documents\Cinema-ProjB\Cinema Groep 2\FilmSchemaBeheer\FilmSchemaBeheer\bin\Debug\netcoreapp3.1\FilmSchemaBeheer.exe
+C:\Users\jonas\Documents\Cinema-ProjB\Cinema Groep 2\FilmSchemaBeheer\FilmSchemaBeheer\bin\Debug\netcoreapp3.1\FilmSchemaBeheer.deps.json
+C:\Users\jonas\Documents\Cinema-ProjB\Cinema Groep 2\FilmSchemaBeheer\FilmSchemaBeheer\bin\Debug\netcoreapp3.1\FilmSchemaBeheer.runtimeconfig.json
+C:\Users\jonas\Documents\Cinema-ProjB\Cinema Groep 2\FilmSchemaBeheer\FilmSchemaBeheer\bin\Debug\netcoreapp3.1\FilmSchemaBeheer.runtimeconfig.dev.json
+C:\Users\jonas\Documents\Cinema-ProjB\Cinema Groep 2\FilmSchemaBeheer\FilmSchemaBeheer\bin\Debug\netcoreapp3.1\FilmSchemaBeheer.dll
+C:\Users\jonas\Documents\Cinema-ProjB\Cinema Groep 2\FilmSchemaBeheer\FilmSchemaBeheer\bin\Debug\netcoreapp3.1\FilmSchemaBeheer.pdb
+C:\Users\jonas\Documents\Cinema-ProjB\Cinema Groep 2\FilmSchemaBeheer\FilmSchemaBeheer\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\jonas\Documents\Cinema-ProjB\Cinema Groep 2\FilmSchemaBeheer\FilmSchemaBeheer\obj\Debug\netcoreapp3.1\FilmSchemaBeheer.csproj.CopyComplete
+C:\Users\jonas\Documents\Cinema-ProjB\Cinema Groep 2\FilmSchemaBeheer\FilmSchemaBeheer\obj\Debug\netcoreapp3.1\FilmSchemaBeheer.dll
+C:\Users\jonas\Documents\Cinema-ProjB\Cinema Groep 2\FilmSchemaBeheer\FilmSchemaBeheer\obj\Debug\netcoreapp3.1\FilmSchemaBeheer.pdb
