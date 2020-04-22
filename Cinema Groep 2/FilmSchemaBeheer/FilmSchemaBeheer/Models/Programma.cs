@@ -14,7 +14,7 @@ namespace FilmSchemaBeheer
         public string filmnaam { get; set; }
 
         
-
+        //Returned een string met de info van een programma
         public string Info()
         {
             return $"\n{programmaid}.   Datum: {datum}\n     Tijd: {tijd}\n     film: {filmnaam}";

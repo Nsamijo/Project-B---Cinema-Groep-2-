@@ -15,53 +15,49 @@ namespace FilmSchemaBeheer
 
             Console.Clear();
             Console.WriteLine("Kies een dag");
+            //Maakt een array aan met strings in de syntax: "DD/MM/YYYY"
+            //van over 2 dagen tot over 14 dagen
             string[] dagarr = new Dagen().VolgendeDagen(2, 14);
+            //Print deze dagen
             Console.WriteLine(new Dagen().PrintVolgendeDagen(2,14));
-            ConsoleKeyInfo input = Console.ReadKey();
-            if (input.Key != ConsoleKey.Escape )
+            //Leest de input van de user
+            string input = Console.ReadLine();
+            //Probeert de input naar een integer om te zetten, 
+            //als dit niet lukt gebeurt er niets en gaat hij over naar de loop
+            try
             {
-                try
-                {
-                    datum = dagarr[Int32.Parse(input.KeyChar.ToString())];
-                } catch
-                {
-                    Console.WriteLine("Probeer opnieuw");
-                }
-            }
-            else
+                datum = dagarr[Int32.Parse(input)];
+            } catch
             {
-                return;
+                Console.WriteLine("Probeer opnieuw");
             }
-
+            
+            //Als er nog geen correcte datum is gaat hij over naar deze loop
             while (new Checker().DatumSyntax(datum) == false)
             {
 
                 Console.Clear();
                 Console.WriteLine("Kies een dag");
                 Console.WriteLine(new Dagen().PrintVolgendeDagen(2, 14));
-                input = Console.ReadKey();
-                if (input.Key != ConsoleKey.Escape)
+                input = Console.ReadLine();
+                
+                try
                 {
-                    try
-                    {
-                        datum = dagarr[Int32.Parse(input.KeyChar.ToString())];
-                    }
-                    catch
-                    {
-                        Console.WriteLine("Probeer opnieuw");
-                    }
+                    datum = dagarr[Int32.Parse(input)];
                 }
-                else
+                catch
                 {
-                    return;
+                    Console.WriteLine("Probeer opnieuw");
                 }
+                
             }
-
+            //Het kiezen van een film
             Console.Clear();
             planning.catalogus.PrintFilms();
             Console.WriteLine("Schrijf het Id van de film");
+            //leest input van user
             filmid = Console.ReadLine();
-
+            //Als de input incorrect is, start de loop
             while (planning.catalogus.VindFilmdDoorId(filmid) ==  null)
             {
                 Console.Clear();
@@ -70,17 +66,18 @@ namespace FilmSchemaBeheer
                 Console.WriteLine("Schrijf het Id van de film");
                 try
                 {
-                    filmid = Console.ReadKey().KeyChar.ToString();
+                    filmid = Console.ReadLine();
                 } catch
                 {
                     Console.WriteLine("opnieuw");
                 }
             }
 
+            //invullen van tijd
             Console.Clear();
             Console.WriteLine("Schrijf starttijd in syntax: hh:mm");
             tijd = Console.ReadLine();
-
+            //Als tijd niet correct is, start de loop
             while (new Checker().TijdSyntax(tijd) == false)
             {
                 Console.Clear();
@@ -94,6 +91,7 @@ namespace FilmSchemaBeheer
             Console.Clear();
             planning.ProgrammaToevoegen(datum, tijd,filmid);
             Console.WriteLine("Programma toegevoegd, druk op enter om door te gaan");
+            //Het programma blijft wachten totdat de user op enter drukt
             while (Console.ReadKey().Key != ConsoleKey.Enter)
             {
                 Thread.Sleep(1);

@@ -4,9 +4,11 @@ using System.Text;
 
 namespace FilmSchemaBeheer
 {
+    //class voor het maken van dagen
     public class Dagen
     {
-        
+        //Returned een array van strings in syntax "DD/MM/YYYY"
+        //van vandaag + start tot en met vandaag+eind   
         public string[] VolgendeDagen(int start, int eind)
         {
             DateTime vandaag = DateTime.Today;
@@ -23,6 +25,7 @@ namespace FilmSchemaBeheer
             return res;
 
         }
+        //Returned een string die geprint wordt met de dagen van VolgendeDagen()
         public string PrintVolgendeDagen(int start, int eind)
         {
           

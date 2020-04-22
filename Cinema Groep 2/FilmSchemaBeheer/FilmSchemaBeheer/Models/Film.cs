@@ -13,7 +13,7 @@ namespace FilmSchemaBeheer
         public string Duur { get; set; }
         public string Kijkwijzer { get; set; }
         public string Status { get; set; }
-
+        //Returned een string met info van de film
         public string Info()
         {
             return $"\n{FilmId}.   Naam: {Naam}\n    Genre: {Genre}\n    Duur: {Duur}\n    Kijkwijzer: {Kijkwijzer}\n    Status: {Status}\n";

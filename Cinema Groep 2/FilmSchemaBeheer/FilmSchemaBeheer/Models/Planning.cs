@@ -8,8 +8,11 @@ namespace FilmSchemaBeheer
 {
     public class Planning
     {
+        //zet de naam van de planning
         public string naam { get; set; }
+        //Creeërt de inhoud van programma's
         public Programma[] inhoud;
+        //Get en Set de filmcatalogus
         public FilmCatalogus catalogus { get; set; }
 
         //Constructor, haalt json data op van JSON's
@@ -82,7 +85,7 @@ namespace FilmSchemaBeheer
             
             this.inhoud = res;
         }
-        
+        //Vindt de index van een programma in de lijst door het id, en returned deze index
         public int VindIndexDoorId(int id)
         {
             for(int i = 0; i < this.inhoud.Length; i++)
@@ -94,6 +97,8 @@ namespace FilmSchemaBeheer
             }
             return -99;
         }
+
+        //Vindt het object van een programma in de lijst door het id, en returned deze index
         public Programma VindObjectDoorId(int id)
         {
             for (int i = 0; i < this.inhoud.Length; i++)
@@ -105,13 +110,16 @@ namespace FilmSchemaBeheer
             }
             return null;
         }
+        //verwijdert een programma uit this.inhoud door het 
+        //element op die index naar null te zetten en de null's te 
+        //verwijderen uit this.inhoud
         public void VerwijderProgramma(int n)
         {
             int index = VindIndexDoorId(n);
             this.inhoud[index] = null;
             this.VerwijderNulls();
         }
-
+        //Verwijdert alle nulls die in this.inhoud zitten
         public void VerwijderNulls()
         {
             int count = 0;
@@ -134,7 +142,7 @@ namespace FilmSchemaBeheer
             }
             this.inhoud = res;
         }
-
+        //Dumpt de elementen van this.inhoud naar Planning.json
         public void UpdateNaarJson()
         {
             using (StreamWriter file = File.CreateText(new Finder().SearchFile("Planning.json")))
@@ -145,6 +153,7 @@ namespace FilmSchemaBeheer
 
             }
         }
+        //Leest de inhoud van planning.json en deserialized het naar this.inhoud
         public void LeesPlanning()
         {
             using (StreamReader file = File.OpenText(new Finder().SearchFile("Planning.json")))

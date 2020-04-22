@@ -4,7 +4,8 @@ using System.Text;
 
 public class Checker
 {
-    
+    //Returned een boolean die false is als de string niet volgens de syntax van de tijd is
+    //en true als die dat wel is
     public bool TijdSyntax(string s)
     {
         char[] arr = s.ToCharArray();
@@ -34,7 +35,7 @@ public class Checker
         }
         return true;
     }
-
+    //Hetzelfde als TijdSyntax() maar dan voor de datum
     public bool DatumSyntax(string s)
     {
         char[] arr = s.ToCharArray();

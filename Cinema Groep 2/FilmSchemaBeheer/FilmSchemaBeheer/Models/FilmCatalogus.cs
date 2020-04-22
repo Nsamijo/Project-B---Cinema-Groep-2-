@@ -10,11 +10,12 @@ namespace FilmSchemaBeheer
     {
         public Film[] inhoud;
 
-
+        //Constructor
         public FilmCatalogus()
         {
             LeesFilms();
         }
+        //Print alle inhoud van this.inhoud
         public void PrintFilms()
         {
             foreach (Film f in inhoud)
@@ -22,6 +23,7 @@ namespace FilmSchemaBeheer
                 Console.WriteLine(f.Info());
             }
         }
+        //Returned een film door het ID
         public Film VindFilmdDoorId(string id)
         {
             Film res;
@@ -37,6 +39,7 @@ namespace FilmSchemaBeheer
             res = null;
             return res;
         }
+        //Leest de films van Films.json
         public void LeesFilms()
         {
             using (StreamReader file = File.OpenText(new Finder().SearchFile("Films.json")))

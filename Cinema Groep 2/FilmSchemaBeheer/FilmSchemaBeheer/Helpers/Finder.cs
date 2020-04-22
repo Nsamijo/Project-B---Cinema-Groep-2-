@@ -2,8 +2,9 @@
 using System.IO;
 using System.Reflection;
 
-public class Finder
+public class Finder 
 {
+    //Functie van Nathan, zoekt een bepaalde file met een naam in dezelfde directory
     public string SearchFile(string file)
     {
         string path = System.IO.Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
