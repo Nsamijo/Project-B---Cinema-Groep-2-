@@ -28,6 +28,5 @@ namespace Bioscoop.Modules
             Helpers.Display.PrintTable("4", "Filmschemabeheer");
             Helpers.Display.PrintTable("5", "Stoelenbeheer");
         }
-
     }
 }

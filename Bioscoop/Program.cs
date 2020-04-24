@@ -14,7 +14,6 @@ namespace Bioscoop
             //opvragen van jou module hoofd class
             MenuModule menu = new MenuModule(); 
 
-            //haal jouw module uit de comments
 
             ZaalModule zaal = new ZaalModule();
             //FilmModule film = new FilmModule();

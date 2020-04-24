@@ -10,5 +10,15 @@ namespace Bioscoop
         public string Omschrijving { get; set; }
         public string Status { get; set; }
         public string Scherm { get; set; }
+
+        public ZaalModel() { }
+
+        public ZaalModel(int zaalId, string omschrijving, string status, string scherm)
+        {
+            ZaalId = zaalId;
+            Omschrijving = omschrijving;
+            Status = status;
+            Scherm = scherm;
+        }
     }
 }
