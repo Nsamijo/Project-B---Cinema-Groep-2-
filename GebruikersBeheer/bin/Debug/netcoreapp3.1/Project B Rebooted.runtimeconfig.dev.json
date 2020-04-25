@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\nsami\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\nsami\\.nuget\\packages"
+    ]
+  }
+}

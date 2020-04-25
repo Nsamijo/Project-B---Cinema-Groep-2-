@@ -1,0 +1,15 @@
+C:\Users\nsami\source\repos\Project B Rebooted\Project B Rebooted\bin\Debug\netcoreapp3.1\Project B Rebooted.exe
+C:\Users\nsami\source\repos\Project B Rebooted\Project B Rebooted\bin\Debug\netcoreapp3.1\Project B Rebooted.deps.json
+C:\Users\nsami\source\repos\Project B Rebooted\Project B Rebooted\bin\Debug\netcoreapp3.1\Project B Rebooted.runtimeconfig.json
+C:\Users\nsami\source\repos\Project B Rebooted\Project B Rebooted\bin\Debug\netcoreapp3.1\Project B Rebooted.runtimeconfig.dev.json
+C:\Users\nsami\source\repos\Project B Rebooted\Project B Rebooted\bin\Debug\netcoreapp3.1\Project B Rebooted.dll
+C:\Users\nsami\source\repos\Project B Rebooted\Project B Rebooted\bin\Debug\netcoreapp3.1\Project B Rebooted.pdb
+C:\Users\nsami\source\repos\Project B Rebooted\Project B Rebooted\obj\Debug\netcoreapp3.1\Project B Rebooted.AssemblyInfoInputs.cache
+C:\Users\nsami\source\repos\Project B Rebooted\Project B Rebooted\obj\Debug\netcoreapp3.1\Project B Rebooted.AssemblyInfo.cs
+C:\Users\nsami\source\repos\Project B Rebooted\Project B Rebooted\obj\Debug\netcoreapp3.1\Project B Rebooted.dll
+C:\Users\nsami\source\repos\Project B Rebooted\Project B Rebooted\obj\Debug\netcoreapp3.1\Project B Rebooted.pdb
+C:\Users\nsami\source\repos\Project B Rebooted\Project B Rebooted\obj\Debug\netcoreapp3.1\Project B Rebooted.genruntimeconfig.cache
+C:\Users\nsami\source\repos\Project B Rebooted\Project B Rebooted\obj\Debug\netcoreapp3.1\Project B Rebooted.csprojAssemblyReference.cache
+C:\Users\nsami\source\repos\Project B Rebooted\Project B Rebooted\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\nsami\source\repos\Project B Rebooted\Project B Rebooted\obj\Debug\netcoreapp3.1\Project B Rebooted.csproj.CoreCompileInputs.cache
+C:\Users\nsami\source\repos\Project B Rebooted\Project B Rebooted\obj\Debug\netcoreapp3.1\Project B Rebooted.csproj.CopyComplete

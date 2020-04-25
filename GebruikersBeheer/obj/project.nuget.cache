@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "etkwkoBTP+zGFvneAW+V2e5FWT9BkmdypZQQYuVgv+nu9maZJGb/p5bSa1sEYisHgv4yfjl65DojHyD7O+okBQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\nsami\\source\\repos\\Project B Rebooted\\Project B Rebooted\\Project B Rebooted.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\nsami\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
