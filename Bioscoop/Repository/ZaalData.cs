@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using Newtonsoft.Json;
 using System.Linq;
+using Newtonsoft.Json.Linq;
 
 namespace Bioscoop.Repository
 {
@@ -40,7 +41,15 @@ namespace Bioscoop.Repository
         public static void RemoveData(ZaalModel data)
         {
             List<ZaalModel> zaalData = LoadData();
-            zaalData.Remove(data);
+
+            var toRemove = zaalData.Where(a => a.ZaalId == data.ZaalId).ToList();
+
+            //var setToRemove = new HashSet<ZaalModel>(zaalData);
+            //zaalData.RemoveAll(x => setToRemove.Contains(x));
+            foreach (var remove in toRemove)
+            {
+                zaalData.Remove(remove);
+            }
 
             // Update json data string
             var jsondata = JsonConvert.SerializeObject(zaalData, Formatting.Indented);
@@ -48,9 +57,15 @@ namespace Bioscoop.Repository
         }
         public static void EditData(ZaalModel data)
         {
-            List<ZaalModel> zaalData = LoadData();
-            zaalData.Remove(data);
-            zaalData.Add(data);
+            dynamic zaalData = LoadData();
+
+            zaalData[data.ZaalId - 1] = data;
+
+            //string json = File.ReadAllText("settings.json");
+            //dynamic jsonObj = Newtonsoft.Json.JsonConvert.DeserializeObject(json);
+            //jsonObj["Bots"][0]["Password"] = "new password";
+            //string output = Newtonsoft.Json.JsonConvert.SerializeObject(jsonObj, Newtonsoft.Json.Formatting.Indented);
+            //File.WriteAllText("settings.json", output);
 
             // Update json data string
             var jsondata = JsonConvert.SerializeObject(zaalData, Formatting.Indented);
