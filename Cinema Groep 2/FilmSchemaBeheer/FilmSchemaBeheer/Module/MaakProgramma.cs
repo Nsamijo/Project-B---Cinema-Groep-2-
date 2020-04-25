@@ -12,6 +12,7 @@ namespace FilmSchemaBeheer
             string datum = "";
             string tijd = "";
             string filmid = "-1";
+            int zaalid = -1;
 
             Console.Clear();
             Console.WriteLine("Kies een dag");
@@ -53,15 +54,15 @@ namespace FilmSchemaBeheer
             }
             //Het kiezen van een film
             Console.Clear();
-            planning.catalogus.PrintFilms();
+            planning.Films.PrintFilms();
             Console.WriteLine("Schrijf het Id van de film");
             //leest input van user
             filmid = Console.ReadLine();
             //Als de input incorrect is, start de loop
-            while (planning.catalogus.VindFilmdDoorId(filmid) ==  null)
+            while (planning.Films.VindFilmdDoorId(filmid) ==  null)
             {
                 Console.Clear();
-                planning.catalogus.PrintFilms();
+                planning.Films.PrintFilms();
                 Console.WriteLine("Probeer het opnieuw\n");
                 Console.WriteLine("Schrijf het Id van de film");
                 try
@@ -86,14 +87,49 @@ namespace FilmSchemaBeheer
                 tijd = Console.ReadLine();
             }
 
+            //Het kiezen van een zaal
+            Console.Clear();
+            planning.Zalen.PrintZalen();
+            Console.WriteLine("Schrijf het Id van de zaal");
+            //leest input van user
+            try
+            {
+                zaalid = Int32.Parse(Console.ReadLine());
+            }
+            catch
+            {
+                zaalid = -1;
+            }
+            //Als de input incorrect is, start de loop
+            while (planning.Zalen.VindZaaldDoorId(zaalid) == null)
+            {
+                Console.Clear();
+                planning.Zalen.PrintZalen();
+                Console.WriteLine("Probeer het opnieuw\n");
+                Console.WriteLine("Schrijf het Id van de zaal");
+                try
+                {
+                    zaalid = Int32.Parse(Console.ReadLine());
+                }
+                catch
+                {
+                    Console.WriteLine("opnieuw");
+                }
+            }
 
 
             Console.Clear();
-            planning.ProgrammaToevoegen(datum, tijd,filmid);
-            Console.WriteLine("Programma toegevoegd, druk op enter om door te gaan");
+            planning.ProgrammaToevoegen(datum, tijd,filmid,zaalid);
+            Console.WriteLine("Programma toegevoegd, druk op Tab om het op te slaan en op ENTER om door te gaan");
+            
             //Het programma blijft wachten totdat de user op enter drukt
             while (Console.ReadKey().Key != ConsoleKey.Enter)
             {
+                if(Console.ReadKey().Key == ConsoleKey.Tab)
+                {
+                    planning.UpdateNaarJson();
+                    Console.WriteLine("Planning opgeslagen");
+                }
                 Thread.Sleep(1);
             }
         }

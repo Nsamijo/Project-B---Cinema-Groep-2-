@@ -17,9 +17,9 @@ namespace FilmSchemaBeheer
                 Console.WriteLine("Welk programma wilt u verwijderen(typ het nummer)");
                 //Vraagt input van de user
                 string input = Console.ReadLine();
-                //probeert de input van de user te veranderen naar een integer, 
-                //als het lukt wordt het programma verwijdert en stopt de loop
-                //zo niet wordt de input opnieuw gevraagd
+                /// probeert de input van de user te veranderen naar een integer, 
+                ///als het lukt wordt het programma verwijdert en stopt de loop
+                ///zo niet wordt de input opnieuw gevraagd
                 try
                 {
                     planning.VerwijderProgramma(Int32.Parse(input));

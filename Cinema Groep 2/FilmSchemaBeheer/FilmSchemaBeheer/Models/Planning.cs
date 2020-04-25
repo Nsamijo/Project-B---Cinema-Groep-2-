@@ -10,10 +10,12 @@ namespace FilmSchemaBeheer
     {
         //zet de naam van de planning
         public string naam { get; set; }
-        //Creeërt de inhoud van programma's
-        public Programma[] inhoud;
-        //Get en Set de filmcatalogus
-        public FilmCatalogus catalogus { get; set; }
+        //Creeërt de Inhoud van programma's
+        public Programma[] Inhoud;
+        //Get en Set de filmCatalogus
+        public FilmCatalogus Films { get; set; }
+        //Get en Set de ZaalCatalogus
+        public ZaalCatalogus Zalen { get; set; }
 
         //Constructor, haalt json data op van JSON's
         public Planning()
@@ -21,16 +23,16 @@ namespace FilmSchemaBeheer
             this.LeesPlanning();
         }
         
-        //Print de inhoud van de planning
+        //Print de Inhoud van de planning
         public void PrintInhoud()
         {
             Console.WriteLine("Programmas:");
             
-            for (int i = 0; i < this.inhoud.Length; i++)
+            for (int i = 0; i < this.Inhoud.Length; i++)
             {
                 try
                 {
-                    Console.WriteLine(inhoud[i].Info());
+                    Console.WriteLine(Inhoud[i].Info());
                 }
                 catch
                 {
@@ -42,11 +44,11 @@ namespace FilmSchemaBeheer
         public int KiesId()
         {
             int max = 1;
-            for (int i = 0; i < this.inhoud.Length; i++)
+            for (int i = 0; i < this.Inhoud.Length; i++)
             {
-                if (this.inhoud[i] != null)
+                if (this.Inhoud[i] != null)
                 {
-                    if (this.inhoud[i].programmaid == max)
+                    if (this.Inhoud[i].ProgrammaId == max)
                     {
                         max++;
                         i = 0;
@@ -59,14 +61,14 @@ namespace FilmSchemaBeheer
             
         }
         //Voegt een programma toe aan de Array
-        public void ProgrammaToevoegen(string datum,string tijd,string filmid)
+        public void ProgrammaToevoegen(string Datum,string Tijd,string FilmId,int ZaalId)
         {
             
-            Programma[] res = new Programma[this.inhoud.Length+1];
+            Programma[] res = new Programma[this.Inhoud.Length+1];
             int i = 0;
-            for(i = 0;i < this.inhoud.Length; i++)
+            for(i = 0;i < this.Inhoud.Length; i++)
             {
-                res[i] = this.inhoud[i];
+                res[i] = this.Inhoud[i];
             }
             for (int j = 0; j < res.Length; j++)
             {
@@ -74,23 +76,24 @@ namespace FilmSchemaBeheer
                 {
                     res[j] = new Programma()
                     {
-                        programmaid = this.KiesId(),
-                        datum = datum,
-                        tijd = tijd,
-                        filmid = filmid,
-                        filmnaam = catalogus.VindFilmdDoorId(filmid).Naam
+                        ProgrammaId = this.KiesId(),
+                        Datum = Datum,
+                        Tijd = Tijd,
+                        FilmId = FilmId,
+                        FilmNaam = Films.VindFilmdDoorId(FilmId).Naam,
+                        ZaalId = ZaalId
                     };
                 }
             }
             
-            this.inhoud = res;
+            this.Inhoud = res;
         }
         //Vindt de index van een programma in de lijst door het id, en returned deze index
         public int VindIndexDoorId(int id)
         {
-            for(int i = 0; i < this.inhoud.Length; i++)
+            for(int i = 0; i < this.Inhoud.Length; i++)
             {
-                if(this.inhoud[i].programmaid == id)
+                if(this.Inhoud[i].ProgrammaId == id)
                 {
                     return i;
                 }
@@ -101,65 +104,65 @@ namespace FilmSchemaBeheer
         //Vindt het object van een programma in de lijst door het id, en returned deze index
         public Programma VindObjectDoorId(int id)
         {
-            for (int i = 0; i < this.inhoud.Length; i++)
+            for (int i = 0; i < this.Inhoud.Length; i++)
             {
-                if (this.inhoud[i].programmaid == id)
+                if (this.Inhoud[i].ProgrammaId == id)
                 {
-                    return inhoud[i];
+                    return Inhoud[i];
                 }
             }
             return null;
         }
-        //verwijdert een programma uit this.inhoud door het 
+        //verwijdert een programma uit this.Inhoud door het 
         //element op die index naar null te zetten en de null's te 
-        //verwijderen uit this.inhoud
+        //verwijderen uit this.Inhoud
         public void VerwijderProgramma(int n)
         {
             int index = VindIndexDoorId(n);
-            this.inhoud[index] = null;
+            this.Inhoud[index] = null;
             this.VerwijderNulls();
         }
-        //Verwijdert alle nulls die in this.inhoud zitten
+        //Verwijdert alle nulls die in this.Inhoud zitten
         public void VerwijderNulls()
         {
             int count = 0;
-            for(int i = 0; i < this.inhoud.Length;i++)
+            for(int i = 0; i < this.Inhoud.Length;i++)
             {
-                if (this.inhoud[i] == null)
+                if (this.Inhoud[i] == null)
                 {
                     count++;
                 }
             }
-            Programma[] res = new Programma[this.inhoud.Length - count];
+            Programma[] res = new Programma[this.Inhoud.Length - count];
             int j = 0;
-            for(int i = 0; i < this.inhoud.Length; i++)
+            for(int i = 0; i < this.Inhoud.Length; i++)
             {
-                if(this.inhoud[i] != null)
+                if(this.Inhoud[i] != null)
                 {
-                    res[j] = this.inhoud[i];
+                    res[j] = this.Inhoud[i];
                     j++;
                 }
             }
-            this.inhoud = res;
+            this.Inhoud = res;
         }
-        //Dumpt de elementen van this.inhoud naar Planning.json
+        //Dumpt de elementen van this.Inhoud naar Planning.json
         public void UpdateNaarJson()
         {
             using (StreamWriter file = File.CreateText(new Finder().SearchFile("Planning.json")))
             {
                 JsonSerializer serializer = new JsonSerializer();
 
-                serializer.Serialize(file, this.inhoud);
+                serializer.Serialize(file, this.Inhoud);
 
             }
         }
-        //Leest de inhoud van planning.json en deserialized het naar this.inhoud
+        //Leest de Inhoud van planning.json en deserialized het naar this.Inhoud
         public void LeesPlanning()
         {
             using (StreamReader file = File.OpenText(new Finder().SearchFile("Planning.json")))
             {
                 JsonSerializer serializer = new JsonSerializer();
-                this.inhoud = (Programma[])serializer.Deserialize(file, typeof(Programma[]));
+                this.Inhoud = (Programma[])serializer.Deserialize(file, typeof(Programma[]));
             }
         }
 

@@ -8,17 +8,17 @@ namespace FilmSchemaBeheer
 {
     public class FilmCatalogus
     {
-        public Film[] inhoud;
+        public Film[] Inhoud;
 
         //Constructor
         public FilmCatalogus()
         {
             LeesFilms();
         }
-        //Print alle inhoud van this.inhoud
+        //Print alle Inhoud van this.Inhoud
         public void PrintFilms()
         {
-            foreach (Film f in inhoud)
+            foreach (Film f in Inhoud)
             {
                 Console.WriteLine(f.Info());
             }
@@ -28,7 +28,7 @@ namespace FilmSchemaBeheer
         {
             Film res;
 
-            foreach (Film f in inhoud)
+            foreach (Film f in Inhoud)
             {
                 if (f.FilmId == id)
                 {
@@ -45,7 +45,7 @@ namespace FilmSchemaBeheer
             using (StreamReader file = File.OpenText(new Finder().SearchFile("Films.json")))
             {
                 JsonSerializer serializer = new JsonSerializer();
-                this.inhoud = (Film[])serializer.Deserialize(file, typeof(Film[]));
+                this.Inhoud = (Film[])serializer.Deserialize(file, typeof(Film[]));
             }
         }
     }

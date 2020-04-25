@@ -8,13 +8,16 @@ namespace FilmSchemaBeheer
     {
         public void Run()
         {
-            //maakt de catalogus aan
-            FilmCatalogus catalog = new FilmCatalogus();
+            //maakt de filmcatalogus aan
+            FilmCatalogus films = new FilmCatalogus();
+            //maakt de zaalcatalogus aan
+            ZaalCatalogus zalen = new ZaalCatalogus();
             //maakt de Planning aan
             Planning planning = new Planning()
             {
                 naam = "planning",
-                catalogus = catalog
+                Films = films,
+                Zalen = zalen
             };
             bool exit = false;
             //Start de loop
