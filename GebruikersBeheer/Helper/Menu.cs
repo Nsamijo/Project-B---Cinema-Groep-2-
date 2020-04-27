@@ -9,11 +9,13 @@ class GebruikersMenu
         ///<summary>
         ///Deze functie print alle gebruikers naar de console toe
         /// </summary>
-        foreach(var gebruiker in users)
+        /// 
+        Console.WriteLine("{0, -20}{1, -18}{2, -5}{3, -15}{4, 0}", "Naam", "Gebruikersnaam","ID", "Wachtwoord", "Rechten");
+        foreach (var gebruiker in users)
         {
-            if (!gebruiker.naam.Equals(admin.naam))
+            if (!gebruiker.naam.Equals(admin.naam) && admin.rechten)
             {
-                Console.WriteLine("{0, 0}{1, -20}{2, -25}{3, -25}", gebruiker.naam, gebruiker.gebruikersnaam, gebruiker.zieWachtwoordt(admin), gebruiker.rechten);
+                Console.WriteLine("{0, -20}{1, -18}{2, -5}{3, -15}{4,0}", gebruiker.naam, gebruiker.gebruikersnaam,gebruiker.id, gebruiker.zieWachtwoordt(admin), gebruiker.rechten);
             }
         }
     }
@@ -97,7 +99,7 @@ class GebruikersMenu
             }
             else if(result.Length > 0 && key.Key == ConsoleKey.Backspace)
             {
-                Console.Write("\b\b");
+                Console.Write("\b \b");
                 result = result.Substring(0, result.Length - 1);
             }
             key = Console.ReadKey(true);
@@ -119,19 +121,21 @@ class GebruikersMenu
         ///Zo ja dan wordt de account terug gegeven
         ///Zo niet dan wordt een null terug gegeven
         /// </summary>
+        Console.Clear();
         Console.WriteLine("FilmHaus Inloggen:");
         Console.WriteLine("(Druk op ESC terug te gaan)\nVoer uw gebruikersnaam en wachtwoordt in\n");
         Console.Write("Gebruikersnaam: ");
         string gebruiker = ReadWithCancel();
 
         if(gebruiker.Equals("ESC"))
-            return new Gebruiker("cancel", "cancel", "cancel", "cancel");
+            return new Gebruiker("cancel", "cancel", "cancel", "cancel", false);
 
         Console.Write("\nWachtwoord: ");
 
         string pass = Wachtwoordt();
+        //als de sessie wordt onderbroken
         if(pass.Equals("ESC"))
-            return new Gebruiker("cancel", "cancel", "cancel", "cancel");
+            return new Gebruiker("cancel", "cancel", "cancel", "cancel", false);
 
         //kijken of de account een bestaande account is
         foreach (Gebruiker i in gebruikers)
@@ -149,5 +153,10 @@ class GebruikersMenu
             }
         }
         return null;
+    }
+
+    public void AdminPrivilege(List<Gebruiker> gebruikers)
+    {
+
     }
 }

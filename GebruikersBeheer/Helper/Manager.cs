@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.Serialization;
 using System.Text;
 
 /// <summary>
@@ -15,20 +16,23 @@ class Manager
     //lijst voor de gebruikers (wordt aan het begin ingelezen)
     private List<Gebruiker> Data = new List<Gebruiker>();
     //huidige gebruiker die is ingelogd
-    private Gebruiker Ingelogd;
+    private Gebruiker Ingelogd = null;
     //bool voor eerste runtime hierdoor wordt data niet meer dan
     //1 keer ingelezen
     private bool ingelezen = false;
+    //object die de menu voorziet
+    GebruikersMenu menu;
 
     void DataInladen()
     {
         //data inlezen van de gebruikers
         this.Data = new Lezer().gebruikersInlezen();
+        this.menu = new GebruikersMenu();
     }
     public void Login()
     {
         //inloggen in een account
-        this.Ingelogd = new GebruikersMenu().Login(this.Data);
+        this.Ingelogd = this.menu.Login(this.Data);
         //kijken of er werkelijk is ingelogd
         if (this.Ingelogd == null)
         {
@@ -36,33 +40,76 @@ class Manager
             ///als er niet is ingelogd dan wordt dit vermeld
             /// </summary>
             Console.WriteLine("\nNiet ingelogd!\nCheck uw gebruikersnaam of wachtwoord!");
-        }else if(this.Ingelogd.naam.Equals("cancel"))
+        }
+        else if (this.Ingelogd.naam.Equals("cancel"))
         {
             ///<summary>
             ///Als de gebruiker beslist om te stoppen met inloggen
             /// </summary>
             Console.WriteLine("\n\nInloggen is gecanceld.");
         }
-        else
+    }
+
+    void SuccesLogin()
+    {
+        ///<summary>
+        ///De gebruiker is succesvol ingelogd
+        ///De naam van de gebruiker wordt getoond en de rechten
+        ///van deze.
+        /// </summary>
+        Console.Clear();
+        Console.WriteLine("Gebruikersbeheer");
+        Console.WriteLine("ESC terug naar het menu\t\tINS nieuwe gebruiker aanmaken");
+        Console.WriteLine("\nIngelogd: " + this.Ingelogd.naam);
+        Console.WriteLine("Admin: " + this.Ingelogd.rechten + "\n");
+    }
+    void GebruikersBeheer()
+    {
+        ///<summary>
+        ///Deze functie zal voor alle gebruikersbeheer zijn
+        ///-verwijderen van een gebruiker
+        ///-toevoegen van een gebruiker
+        ///-aanpassen van een gebruiker (Naam, gebruikersnaam, rechten en wachtwoord)
+        ///-Inzien van een gebruiker
+        /// </summary>
+        /// 
+
+        //gebruikers inlezen
+        if (!this.ingelezen)
+            this.DataInladen();
+
+        //inloggen
+        if (this.Ingelogd == null)
         {
-            ///<summary>
-            ///De gebruiker is succesvol ingelogd
-            ///De naam van de gebruiker wordt getoond en de rechten
-            ///van deze.
-            /// </summary>
-            Console.Clear();
-            Console.WriteLine("Ingelogd: " + this.Ingelogd.naam);
-            Console.WriteLine("Account-type: " + this.Ingelogd.rechten);
+            //Login();
+            this.Ingelogd = new Gebruiker("Jan Rooseveld", "JVeld", "3", "00000000", true);
+        }
+
+        //in de if springen als er is ingelogd zodat de admin
+        //aanpassingen kan maken
+        if (this.Ingelogd != null && !this.Ingelogd.id.Equals("cancel"))
+        {
+            //account details tonen als de login succesvol was
+            SuccesLogin();
+
+            //kijken welke rechten de ingelogde heeft
+            switch(this.Ingelogd.rechten)
+            {
+                //admin rechten
+                case true:
+                    this.menu.PrintGebruikers(this.Data, this.Ingelogd);
+                    break;
+
+                //medewerker rechten
+                case false:
+                    break;
+            }
         }
     }
 
     public void Run()
     {
-        //gebruikers inlezen
-        if(!this.ingelezen)
-            this.DataInladen();
-        //inloggen
-        Login();
+        this.GebruikersBeheer();
     }
 }
 

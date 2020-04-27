@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Text;
 
 public class Gebruiker
@@ -8,17 +9,21 @@ public class Gebruiker
     public string naam;
     //gebruikersnaam (accountnaam)
     public string gebruikersnaam;
+    //gebruikers id
+    public string id;
     //wachtwoord (sleutel naar de account toe)
     public string wachtwoord;
     //rechten (wat kan de gebruiker wel of niet doen)
-    public string rechten;
+    public bool rechten;
 
-    public Gebruiker(string naam, string gebruikersnaam, string wachtwoord, string rechten)
+    public Gebruiker(string naam, string gebruikersnaam, string id, string wachtwoord, bool rechten)
     {
         //volledige naam (Voor en achternaam)
         this.naam = naam;
         //gebruikersnaam (naam voor inloggen oftewel accountnaam)
         this.gebruikersnaam = gebruikersnaam;
+        //wijs het id toe
+        this.id = id;
         //wachtwoord (sleutel naar de account)
         this.wachtwoord = wachtwoord;
         //rechten (bevoegheden van de gebruiker)
@@ -38,7 +43,7 @@ public class Gebruiker
         /// </summary>
         /// 
         //kijken of de huidige gebruiker een admin is
-        if (admin.rechten == "Admin")
+        if (admin.rechten)
         {
             //geven de wachtwoordt terug van de aangegeven gebruiker
             //of van zichzelf

@@ -1,1 +1,1 @@
-[{"naam":"Nathan Samijo","gebruikersnaam":"Nsamijo","wachtwoord":"12345678","rechten":"Medewerker"},{"naam":"Jonas de Boer","gebruikersnaam":"JBoer","wachtwoord":"87654321","rechten":"Admin"}]
+[{"naam":"Nathan Samijo","gebruikersnaam":"Nsamijo","id":"1","wachtwoord":"12345678","rechten":false},{"naam":"Jonas de Boer","gebruikersnaam":"JBoer","id":"2","wachtwoord":"12345678","rechten":true},{"naam":"Jan Roozeveld","gebruikersnaam":"JVeld","id":"3","wachtwoord":"12345678","rechten":true}]
