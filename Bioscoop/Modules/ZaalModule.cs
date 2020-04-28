@@ -1,9 +1,5 @@
-﻿using Newtonsoft.Json;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.IO;
-using System.Text;
-using System.Linq;
 using Bioscoop.Helpers;
 using Bioscoop.Repository;
 
@@ -11,21 +7,23 @@ namespace Bioscoop.Modules
 {
     class ZaalModule
     {
-        Inputs Inputs = new Inputs();
         List<ZaalModel> zalen;
 
-        public void Run()
+        public void Run() //hoofd functie
         {
+            //globale data
             Boolean abort = false;
             String error = "";
             while (!abort)
             {
-                zalen = ZaalData.LoadData();
                 Console.Clear();
-                if (!String.IsNullOrEmpty(error)) //error handling
+                if (!String.IsNullOrEmpty(error)) //error handling en text kleur veranderen
                 {
+                    ConsoleColor originalColor = Console.ForegroundColor;
+                    Console.ForegroundColor = ConsoleColor.Red;
                     Helpers.Display.PrintLine("Error: " + error);
                     Helpers.Display.PrintLine("");
+                    Console.ForegroundColor = originalColor;
                 }
 
                 //menu
@@ -36,8 +34,12 @@ namespace Bioscoop.Modules
                 Helpers.Display.PrintLine(" ");
                 Helpers.Display.PrintHeader("Nr.", "Omschrijving", "Status", "Scherm");
 
-                int nummering = 1;
-                foreach (ZaalModel zaal in zalen)
+                //Ophalen json via Repository/ZaalData.cs LoadData functie
+                zalen = ZaalData.LoadData();
+                ZaalData.SortData(); //sorteer functie
+                int nummering = 1; // nummer naast de waarde op het scherm
+
+                foreach (ZaalModel zaal in zalen) //door alle zaal data loopen en weergeven
                 {
                     Helpers.Display.PrintTable(nummering.ToString(), zaal.Omschrijving, zaal.Status, zaal.Scherm);
                     nummering++;
@@ -45,17 +47,17 @@ namespace Bioscoop.Modules
                 Helpers.Display.PrintLine(" ");
                 Helpers.Display.PrintLine("Type je keuze in en sluit af met een enter");
 
+                //userinput functie opvragen in Helpers/Inputs
                 Inputs.KeyInput input = Inputs.ReadUserData();
                 switch (input.action)
                 {
                     case Inputs.KeyAction.Enter:
-                        int inputValue;
-                        inputValue = Int32.TryParse(input.val, out inputValue) ? inputValue : 0;
-                        inputValue--; //start bij 0
+                        int inputValue = Int32.TryParse(input.val, out inputValue) ? inputValue : 0;
+                        inputValue--; //-1 want count start bij 0
                         if (inputValue >= 0 && inputValue < zalen.Count)
                         {
                             error = "";
-                            EditZaal(zalen[inputValue]);
+                            EditZaal(zalen[inputValue]); //waarde meegeven van de gekozen zaal
                         }
                         else
                         {
@@ -64,20 +66,20 @@ namespace Bioscoop.Modules
                         break;
 
 
-                    case Inputs.KeyAction.Insert:
+                    case Inputs.KeyAction.Insert: //toevoeg scherm aanroepen
                         AddZaal();
                         break;
 
-                    case Inputs.KeyAction.Escape:
-                        abort = true;
+                    case Inputs.KeyAction.Escape: //de functie beeindigen
+                        abort = true; 
                         break;
                 }
             }
         }
 
-
-        private void EditZaal(ZaalModel zaal)
+        private void EditZaal(ZaalModel zaal) //aanpas scherm
         {
+            //globale data
             Boolean abort = false;
             String error = "";
             Inputs.KeyInput input = null;
@@ -87,18 +89,22 @@ namespace Bioscoop.Modules
             while (!abort)
             {
                 Console.Clear();
-                if (!String.IsNullOrEmpty(error))
+                if (!String.IsNullOrEmpty(error)) //error handling en text kleur veranderen
                 {
+                    ConsoleColor originalColor = Console.ForegroundColor;
+                    Console.ForegroundColor = ConsoleColor.Red;
                     Helpers.Display.PrintLine("Error: " + error);
                     Helpers.Display.PrintLine("");
+                    Console.ForegroundColor = originalColor;
                 }
 
                 //menu
                 Helpers.Display.PrintHeader("Aanpassen zaal : " + zaal.Omschrijving);
-                Helpers.Display.PrintLine("ESC - Terug naar menu            INS - Opslaan"); Display.PrintLine("");
+                Helpers.Display.PrintLine("ESC - Terug naar menu            Del - Verwijderen"); Display.PrintLine("");
+                Helpers.Display.PrintLine("                                 INS - Opslaan"); Display.PrintLine("");
                 Helpers.Display.PrintLine("Druk op een nummer om deze waarde aan te passen."); Display.PrintLine("");
 
-                int nr = 0;
+                int nr = 0; //data weergeven en nummeren voor waarde keuze
                 Helpers.Display.PrintHeader("Nr.");
                 Helpers.Display.PrintLine((nr += 1) + "| Omschrijving: " + zaal.Omschrijving);
                 Helpers.Display.PrintLine((nr += 1) + "| Status: " + zaal.Status);
@@ -106,98 +112,87 @@ namespace Bioscoop.Modules
                 Console.WriteLine(" ");
 
 
-                input = Inputs.ReadUserData();
+                input = Inputs.ReadUserData(); //waarde oplezen met keyinput functie
                 switch (input.action)
                 {
-                    case Inputs.KeyAction.Enter: // process input als enter
-                        int inputValue = Int32.TryParse(input.val, out inputValue) ? inputValue : 0;
-                        inputValue--; //start bij 0
+                    case Inputs.KeyAction.Enter:
+                        int inputValue = Int32.TryParse(input.val, out inputValue) ? inputValue : 0; //controleren of de waarde een int is
+                        inputValue--; //waarde -1 want switch start bij 0
                         switch (inputValue)
                         {
-                            case 0: Helpers.Display.PrintLine("Vul de nieuwe Zaal Omschrijving in: "); break;
+                            case 0: Helpers.Display.PrintLine("Vul de nieuwe Zaal Omschrijving in: (Zaal 'nummer')"); break;
                             case 1: Helpers.Display.PrintLine("Vul de nieuwe Zaal Status waarde in: (Beschikbaar / Niet beschikbaar)"); break;
                             case 2: Helpers.Display.PrintLine("Vul de nieuwe Zaal Scherm waarde in: (2D, 3D, IMAX)"); break;
                         }
 
+                        //switch met de instructie en data opvang van de gekozen data soort. met error handling.
                         inputData = Inputs.ReadUserData();
                         switch (inputValue)
                         {
-                                case 0:
-                                if (inputData.val.Length > 5)
-                                {
-                                    editZaal.Omschrijving = inputData.val;
-                                }
-                                else
-                                {
-                                    error = "De omschrijving moet minimaal 6 karakters zijn";
-                                }
-
+                            case 0:
+                                if (inputData.val.Length > 5) editZaal.Omschrijving = inputData.val;
+                                else error = "De omschrijving moet uit minimaal 5 karakters bestaan";
                                 break;
                             case 1:
-                                if (inputData.val == "Beschikbaar" || inputData.val == "Niet Beschikbaar")
-                                {
-                                    editZaal.Status = inputData.val;
-                                }
-                                else
-                                {
-                                    error = "Onjuiste waarde ingevuld.";
-                                }
+                                if (inputData.val == "Beschikbaar" || inputData.val == "Niet Beschikbaar") editZaal.Status = inputData.val;
+                                else error = "Onjuiste waarde ingevuld.";
                                 break;
                             case 2:
-                                if (inputData.val == "2D" || inputData.val == "3D" || inputData.val == "IMAX")
-                                {
-                                    editZaal.Scherm = inputData.val;
-                                }
-                                else
-                                {
-                                    error = "Onjuiste waarde ingevuld.";
-                                }
+                                if (inputData.val == "2D" || inputData.val == "3D" || inputData.val == "IMAX") editZaal.Scherm = inputData.val;
+                                else error = "Onjuiste waarde ingevuld.";
                                 break;
                             default:
                                 break;
                         }
                         break;
-                    case Inputs.KeyAction.Escape:
+                    case Inputs.KeyAction.Escape: //de functie beeindigen
                         abort = true;
                         break;
-                    case Inputs.KeyAction.Insert:
+                    case Inputs.KeyAction.Insert: //de nieuwe waardes opslaan met andere kleur
                         ZaalData.EditData(editZaal);
+                        ConsoleColor originalColor = Console.ForegroundColor;
+                        Console.ForegroundColor = ConsoleColor.Green;
                         Console.WriteLine("De gegevens zijn opgeslagen.");
+                        Console.ForegroundColor = originalColor;
                         System.Threading.Thread.Sleep(2000);
                         abort = true;
                         break;
-                    case Inputs.KeyAction.Delete:
-                        Console.WriteLine("Weet je het zeker?");
-                        string aaaa = Console.ReadLine();
-                        if( aaaa == "y")
+                    case Inputs.KeyAction.Delete: //de specifieke zaal data verwijderen
+                        Console.WriteLine("Weet je zeker dat je" + zaal.ZaalId + "wilt verwijderen? (y/n)");
+                        string temp = Console.ReadLine();
+                        if( temp == "y")
                         {
                             ZaalData.RemoveData(zaal);
                             Console.WriteLine(zaal.Omschrijving + " is verwijderd.");
                             System.Threading.Thread.Sleep(2000);
                             abort = true;
                         }
+                        else EditZaal(zaal);
                         break;
                 }
             }
         }
 
-
-
-
-        private void AddZaal()
+        private void AddZaal() //toevoeg scherm
         {
+            //globale data
             Boolean abort = false;
+            bool check = false;
             String error = "";
             Inputs.KeyInput input = null;
             ZaalModel newZaal = new ZaalModel();
+
             int x = 0;
             while (!abort && x < 4)
             {
                 Console.Clear();
-                if (!String.IsNullOrEmpty(error))
+                if (!String.IsNullOrEmpty(error)) //error handling en text kleur veranderen
                 {
+                    ConsoleColor originalColor = Console.ForegroundColor;
+                    Console.ForegroundColor = ConsoleColor.Red;
                     Helpers.Display.PrintLine("Error: " + error);
                     Helpers.Display.PrintLine("");
+                    Console.ForegroundColor = originalColor;
                 }
 
                 //menu
@@ -210,17 +205,15 @@ namespace Bioscoop.Modules
                 if (!String.IsNullOrEmpty(newZaal.Scherm)) Helpers.Display.PrintLine("Scherm: " + newZaal.Scherm);
                 Helpers.Display.PrintLine("");
 
-
-
-                switch (x)
+                switch (x) //switch case die vanaf 0 begint. elke waarde moet ingevuld worden.
                 {
-                    case 0: Helpers.Display.PrintLine("Vul de nieuwe Zaal Omschrijving in: "); break;
-                    case 1: Helpers.Display.PrintLine("Vul de Zaal Status in: (Beschikbaar / Niet beschikbaar)"); break;
+                    case 0: Helpers.Display.PrintLine("Vul de nieuwe Zaal Omschrijving in: (Zaal (nummer))"); break;
+                    case 1: Helpers.Display.PrintLine("Vul de Zaal Status in: (Beschikbaar / Niet Beschikbaar)"); break;
                     case 2: Helpers.Display.PrintLine("Vul het zaal scherm in: (2D, 3D, IMAX)"); break;
                     case 3: Helpers.Display.PrintLine("druk op Insert om de gegevens op te slaan"); break;
                 }
 
-                input = Inputs.ReadUserData();
+                input = Inputs.ReadUserData(); //waarde oplezen met keyinput functie
                 switch (input.action)
                 {
                     case Inputs.KeyAction.Enter:
@@ -232,11 +225,7 @@ namespace Bioscoop.Modules
                                     newZaal.Omschrijving = input.val;
                                     x++;
                                 }
-                                else
-                                {
-                                    error = "De omschrijving moet minimaal 6 karakters zijn";
-                                }
-
+                                else error = "De omschrijving moet uit minimaal 6 karakters bestaan";
                                 break;
                             case 1:
                                 if (input.val == "Beschikbaar" || input.val == "Niet Beschikbaar")
@@ -244,21 +233,16 @@ namespace Bioscoop.Modules
                                     newZaal.Status = input.val;
                                     x++;
                                 }
-                                else
-                                {
-                                    error = "Onjuist waarde ingevuld.";
-                                }
+                                else error = "Onjuist waarde ingevuld.";
                                 break;
                             case 2:
                                 if (input.val == "2D" || input.val == "3D" || input.val == "IMAX")
                                 {
                                     newZaal.Scherm = input.val;
                                     x++;
+                                    check = true;
                                 }
-                                else
-                                {
-                                    error = "Onjuist waarde ingevuld.";
-                                }
+                                else error = "Onjuist waarde ingevuld.";
                                 break;
                             case 3:
                                 Console.WriteLine("druk op Insert om de gegevens op te slaan");
@@ -268,20 +252,26 @@ namespace Bioscoop.Modules
                                 break;
                         }
                         break;
-                    case Inputs.KeyAction.Escape:
+                    case Inputs.KeyAction.Escape:  //de functie beeindigen
                         abort = true;
                         break;
-                    case Inputs.KeyAction.Insert:
-                        ZaalData.AddData(newZaal);
-                        Console.WriteLine("De zaal is opgeslagen.");
-                        System.Threading.Thread.Sleep(2000);
-                        abort = true;
+                    case Inputs.KeyAction.Insert:  //De nieuwe data opslaan als de laatste waarde is ingevuld. groene kleur text
+                        if (check == true)
+                        {
+                            ZaalData.AddData(newZaal);
+                            ConsoleColor originalColor = Console.ForegroundColor;
+                            Console.ForegroundColor = ConsoleColor.Green;
+                            Console.WriteLine("De nieuwe zaal is opgeslagen.");
+                            Console.ForegroundColor = originalColor;
+                            System.Threading.Thread.Sleep(2000);
+                            ZaalData.SortData();
+                            abort = true;
+                        }
                         break;
-                    case Inputs.KeyAction.Delete:
+                    case Inputs.KeyAction.Delete:  //De functie opnieuw aanroepen en alle inputs resetten
                         abort = true;
                         AddZaal();
                         break;
-
                 }
             }
         }
