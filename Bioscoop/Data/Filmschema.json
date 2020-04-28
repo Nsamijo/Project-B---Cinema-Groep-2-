@@ -1,0 +1,16 @@
+[
+  {
+    "ProgrammaId": 1,
+    "Datum": "28/04/2020",
+    "Tijd": "15:00",
+    "FilmId": 14,
+    "ZaalId": 1
+  },
+  {
+    "ProgrammaId": 2,
+    "Datum": "29/04/2020",
+    "Tijd": "14:00",
+    "FilmId": 18,
+    "ZaalId": 4
+  }
+]
