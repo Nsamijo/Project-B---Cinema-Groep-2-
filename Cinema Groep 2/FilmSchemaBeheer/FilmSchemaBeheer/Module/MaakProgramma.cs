@@ -11,9 +11,10 @@ namespace FilmSchemaBeheer
         {
             string datum = "";
             string tijd = "";
-            string filmid = "-1";
+            int filmid = -1;
             int zaalid = -1;
 
+            
             Console.Clear();
             Console.WriteLine("Kies een dag");
             //Maakt een array aan met strings in de syntax: "DD/MM/YYYY"
@@ -27,7 +28,7 @@ namespace FilmSchemaBeheer
             //als dit niet lukt gebeurt er niets en gaat hij over naar de loop
             try
             {
-                datum = dagarr[Int32.Parse(input)];
+                datum = dagarr[Int32.Parse(input)-1];
             } catch
             {
                 Console.WriteLine("Probeer opnieuw");
@@ -44,47 +45,13 @@ namespace FilmSchemaBeheer
                 
                 try
                 {
-                    datum = dagarr[Int32.Parse(input)];
+                    datum = dagarr[Int32.Parse(input)-1];
                 }
                 catch
                 {
                     Console.WriteLine("Probeer opnieuw");
                 }
                 
-            }
-            //Het kiezen van een film
-            Console.Clear();
-            planning.Films.PrintFilms();
-            Console.WriteLine("Schrijf het Id van de film");
-            //leest input van user
-            filmid = Console.ReadLine();
-            //Als de input incorrect is, start de loop
-            while (planning.Films.VindFilmdDoorId(filmid) ==  null)
-            {
-                Console.Clear();
-                planning.Films.PrintFilms();
-                Console.WriteLine("Probeer het opnieuw\n");
-                Console.WriteLine("Schrijf het Id van de film");
-                try
-                {
-                    filmid = Console.ReadLine();
-                } catch
-                {
-                    Console.WriteLine("opnieuw");
-                }
-            }
-
-            //invullen van tijd
-            Console.Clear();
-            Console.WriteLine("Schrijf starttijd in syntax: hh:mm");
-            tijd = Console.ReadLine();
-            //Als tijd niet correct is, start de loop
-            while (new Checker().TijdSyntax(tijd) == false)
-            {
-                Console.Clear();
-                Console.WriteLine("Probeer het opnieuw");
-                Console.WriteLine("Schrijf starttijd in syntax: hh:mm");
-                tijd = Console.ReadLine();
             }
 
             //Het kiezen van een zaal
@@ -117,21 +84,90 @@ namespace FilmSchemaBeheer
                 }
             }
 
+            //invullen van tijd
+            Console.Clear();
+            string[] tijdenarr = new string[5] {"09:00","12:00","15:00","18:00","21:00" };
+            Console.WriteLine("Maak een keuze uit de tijden");
+            int i = 1;
+            foreach(string t in tijdenarr)
+            {
+                Console.WriteLine($"{i}.   {t}");
+                i++;
+            }
+            input = Console.ReadLine();
+            try
+            {
+                tijd = tijdenarr[Int32.Parse(input) - 1];
+            }
+            catch
+            {
+                Console.WriteLine("Probeer opnieuw");
+                tijd = "";
+            }
+            //Als tijd niet correct is, start de loop
+            while (new Checker().TijdSyntax(tijd) == false)
+            {
+                Console.WriteLine("Maak een keuze uit de tijden");
+                i = 1;
+                foreach (string t in tijdenarr)
+                {
+                    Console.WriteLine($"{i}.   {t}");
+                    i++;
+                }
+                input = Console.ReadLine();
+                try
+                {
+                    tijd = tijdenarr[Int32.Parse(input) - 1];
+                }
+                catch
+                {
+                    Console.WriteLine("Probeer opnieuw");
+                    tijd = "";
+                }
+            }
+
+            
+
+            //Het kiezen van een film
+            Console.Clear();
+            planning.Films.PrintFilms();
+            Console.WriteLine("Schrijf het Id van de film");
+            //leest input van user
+            filmid = Int32.Parse(Console.ReadLine());
+            //Als de input incorrect is, start de loop
+            while (planning.Films.VindFilmdDoorId(filmid) == null)
+            {
+                Console.Clear();
+                planning.Films.PrintFilms();
+                Console.WriteLine("Probeer het opnieuw\n");
+                Console.WriteLine("Schrijf het Id van de film");
+                try
+                {
+                    filmid = Int32.Parse(Console.ReadLine());
+                }
+                catch
+                {
+                    Console.WriteLine("opnieuw");
+                }
+            }
+
 
             Console.Clear();
             planning.ProgrammaToevoegen(datum, tijd,filmid,zaalid);
-            Console.WriteLine("Programma toegevoegd, druk op Tab om het op te slaan en op ENTER om door te gaan");
+            Console.WriteLine("Programma toegevoegd, druk op Insert om het op te slaan en op ENTER om door te gaan");
             
             //Het programma blijft wachten totdat de user op enter drukt
             while (Console.ReadKey().Key != ConsoleKey.Enter)
             {
-                if(Console.ReadKey().Key == ConsoleKey.Tab)
+                if(Console.ReadKey().Key == ConsoleKey.Insert)
                 {
                     planning.UpdateNaarJson();
                     Console.WriteLine("Planning opgeslagen");
                 }
                 Thread.Sleep(1);
             }
+
+
         }
     }
 }

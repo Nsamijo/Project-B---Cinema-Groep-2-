@@ -26,20 +26,90 @@ namespace FilmSchemaBeheer
         //Print de Inhoud van de planning
         public void PrintInhoud()
         {
-            Console.WriteLine("Programmas:");
-            
-            for (int i = 0; i < this.Inhoud.Length; i++)
+            string[] datums = Datums();
+            string datum = "";
+            Console.WriteLine("Welke datum?:");
+            int i = 1;
+            bool isint = true;
+            foreach(string s in datums)
             {
+
+                Console.WriteLine($"{i}.  {s}");
+                i++;
+            }
+            string input = Console.ReadLine();
+            try
+            {
+                datum = datums[Int32.Parse(input) - 1];
+            }
+            catch
+            {
+                Console.WriteLine("nope");
+                isint = false;
+            }
+            while(isint == false)
+            {
+                input = Console.ReadLine();
                 try
                 {
-                    Console.WriteLine(Inhoud[i].Info());
+                    datum = datums[Int32.Parse(input) - 1];
+                    isint = true;
                 }
                 catch
                 {
-                    Console.WriteLine("");
+                    Console.WriteLine("nope");
+                    isint = false;
                 }
             }
+            
+            Console.WriteLine("Programmas:");
+            i = 1;
+            foreach(int index in ProgrammasOpDatum(datum))
+            {
+                Console.WriteLine(this.Inhoud[index].Info());
+            }
         }
+        //Geeft een array van strings met de verschillende datums die voorkomen in de inhoud
+        public string[] Datums()
+        {
+            HashSet<string> datumset = new HashSet<string>();
+            foreach(Programma p in this.Inhoud)
+            {
+                datumset.Add(p.Datum);
+            }
+            string[] res = new string[datumset.Count];
+            int i = 0;
+            foreach(string d in datumset)
+            {
+                res[i] = d;
+                i++;
+            }
+            return res;
+        }
+        //Returned een array van integers van de indexen van de programma's die op een bepaalde datum zijn
+        public int[] ProgrammasOpDatum(string datum) 
+        {
+            int count = 0;
+            for(int i = 0; i < this.Inhoud.Length; i++)
+            {
+                if(this.Inhoud[i].Datum == datum)
+                {
+                    count++;
+                }
+            }
+            int[] res = new int[count];
+            int j = 0;
+            for (int i = 0; i < this.Inhoud.Length; i++)
+            {
+                if (this.Inhoud[i].Datum == datum)
+                {
+                    res[j] = i;
+                    j++;
+                }
+            }
+            return res;
+        }
+
         //Kiest een nieuw Id op basis van overgebleven Id's in de Array
         public int KiesId()
         {
@@ -57,11 +127,9 @@ namespace FilmSchemaBeheer
              
             }
             return max;
-            
-            
         }
         //Voegt een programma toe aan de Array
-        public void ProgrammaToevoegen(string Datum,string Tijd,string FilmId,int ZaalId)
+        public void ProgrammaToevoegen(string Datum,string Tijd,int FilmId,int ZaalId)
         {
             
             Programma[] res = new Programma[this.Inhoud.Length+1];
@@ -113,6 +181,36 @@ namespace FilmSchemaBeheer
             }
             return null;
         }
+        //Verandert de tijd van een programma
+        public bool VeranderTijd(int id,string tijd)
+        {
+            int index = this.VindIndexDoorId(id);
+            if(new Checker().TijdSyntax(tijd) && index != -99)
+            {
+                this.Inhoud[index].VeranderTijd(tijd);
+                return true;
+            } else
+            {
+                return false;
+            }
+        }
+        //Verandert de datum van een programma
+        public bool VeranderDatum(int id,string datum)
+        {
+            int index = this.VindIndexDoorId(id);
+            if(new Checker().DatumSyntax(datum) & index != -99)
+            {
+                this.Inhoud[index].VeranderDatum(datum);
+                return true;
+            }
+            return false;
+
+        }
+
+        public string VeranderFilm(int id)
+        {
+            return "";
+        }
         //verwijdert een programma uit this.Inhoud door het 
         //element op die index naar null te zetten en de null's te 
         //verwijderen uit this.Inhoud
@@ -145,6 +243,9 @@ namespace FilmSchemaBeheer
             }
             this.Inhoud = res;
         }
+
+
+        
         //Dumpt de elementen van this.Inhoud naar Planning.json
         public void UpdateNaarJson()
         {

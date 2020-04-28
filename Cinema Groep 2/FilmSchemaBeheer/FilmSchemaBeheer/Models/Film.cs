@@ -6,7 +6,7 @@ namespace FilmSchemaBeheer
 {
     public class Film
     {
-        public string FilmId { get; set; }
+        public int FilmId { get; set; }
         public string Naam { get; set; }
         public string Omschrijving { get; set; }
         public string Genre { get; set; }

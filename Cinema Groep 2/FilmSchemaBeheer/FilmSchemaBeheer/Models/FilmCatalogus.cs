@@ -24,7 +24,7 @@ namespace FilmSchemaBeheer
             }
         }
         //Returned een film door het ID
-        public Film VindFilmdDoorId(string id)
+        public Film VindFilmdDoorId(int id)
         {
             Film res;
 

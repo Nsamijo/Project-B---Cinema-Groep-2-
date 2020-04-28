@@ -30,21 +30,28 @@ namespace FilmSchemaBeheer
                 switch (opdracht)
                 {
                     case 'a':
+                    case 'A':
                         //laat de planning zien
                         Console.Clear();
                         new ZiePlanning().Run(planning);
                         break;
                     case 'b':
+                    case 'B':
                         //laat de gebruiker een programma aanmaken
                         Console.Clear();
                         new MaakProgramma().Run(planning);
                         break;
                     case 'c':
+                    case 'C':
                         //laat de gebruiker een programma verwijderen
                         Console.Clear();
                         new VerwijderProgramma().Run(planning);
                         break;
+                    case 'd':
+                    case 'D':
+                        
                     case 'e':
+                    case 'E':
                         //Verlaat de app, update de data naar de json
                         planning.UpdateNaarJson();
                         exit = true;

@@ -11,6 +11,11 @@ namespace FilmSchemaBeheer
         {
             //Loop
             bool klaar = false;
+            if (planning.Inhoud.Length == 0)
+            {
+                klaar = true;
+                Console.WriteLine("Druk op enter om door te gaan");
+            }
             while (klaar != true)
             {
                 planning.PrintInhoud();
@@ -24,6 +29,7 @@ namespace FilmSchemaBeheer
                 {
                     planning.VerwijderProgramma(Int32.Parse(input));
                     klaar = true;
+                    Console.WriteLine("Programma verwijderd,druk op insert om op te slaan en druk op enter om door te gaan");
                 }
                 catch
                 {
@@ -31,10 +37,16 @@ namespace FilmSchemaBeheer
                 }
             }
             //Programma slaapt totdat de gebruiker enter heeft ingedrukt
-            Console.WriteLine("Programma verwijderd, druk op enter om door te gaan");
+            
             while (Console.ReadKey().Key != ConsoleKey.Enter)
             {
                 Thread.Sleep(1);
+                if(Console.ReadKey().Key == ConsoleKey.Insert)
+                {
+
+                    planning.UpdateNaarJson();
+                    Console.WriteLine("Opgeslagen");
+                }
             }
         }
     }

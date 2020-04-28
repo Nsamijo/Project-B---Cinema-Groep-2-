@@ -9,7 +9,7 @@ namespace FilmSchemaBeheer
         public int ProgrammaId { get; set; }
         public string Datum { get; set; }
         public string Tijd { get; set; }
-        public string FilmId { get; set; }
+        public int FilmId { get; set; }
 
         public string FilmNaam { get; set; }
 
@@ -20,6 +20,23 @@ namespace FilmSchemaBeheer
         public string Info()
         {
             return $"\n{ProgrammaId}.   Datum: {Datum}\n     Tijd: {Tijd}\n     film: {FilmNaam}";
+        }
+        public void VeranderTijd(string tijd)
+        {
+            this.Tijd = tijd;
+        }
+        public void VeranderDatum(string datum)
+        {
+            this.Datum = datum;
+        }
+        public void VeranderFilm(int filmid,string filmnaam)
+        {
+            this.FilmId = filmid;
+            this.FilmNaam = filmnaam;
+        }
+        public void VeranderZaal(int zaalid)
+        {
+            this.ZaalId = zaalid;
         }
         
     }
