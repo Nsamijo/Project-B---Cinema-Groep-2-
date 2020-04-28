@@ -100,7 +100,7 @@ namespace Bioscoop.Modules
 
                 //menu
                 Helpers.Display.PrintHeader("Aanpassen zaal : " + zaal.Omschrijving);
-                Helpers.Display.PrintLine("ESC - Terug naar menu            Del - Verwijderen"); Display.PrintLine("");
+                Helpers.Display.PrintLine("ESC - Terug naar menu            Del - Verwijderen");
                 Helpers.Display.PrintLine("                                 INS - Opslaan"); Display.PrintLine("");
                 Helpers.Display.PrintLine("Druk op een nummer om deze waarde aan te passen."); Display.PrintLine("");
 
@@ -118,31 +118,34 @@ namespace Bioscoop.Modules
                     case Inputs.KeyAction.Enter:
                         int inputValue = Int32.TryParse(input.val, out inputValue) ? inputValue : 0; //controleren of de waarde een int is
                         inputValue--; //waarde -1 want switch start bij 0
-                        switch (inputValue)
+                        if (inputValue >= 0 && inputValue < 3)
                         {
-                            case 0: Helpers.Display.PrintLine("Vul de nieuwe Zaal Omschrijving in: (Zaal 'nummer')"); break;
-                            case 1: Helpers.Display.PrintLine("Vul de nieuwe Zaal Status waarde in: (Beschikbaar / Niet beschikbaar)"); break;
-                            case 2: Helpers.Display.PrintLine("Vul de nieuwe Zaal Scherm waarde in: (2D, 3D, IMAX)"); break;
-                        }
+                            switch (inputValue)
+                            {
+                                case 0: Helpers.Display.PrintLine("Vul de nieuwe Zaal Omschrijving in: (Zaal 'nummer')"); break;
+                                case 1: Helpers.Display.PrintLine("Vul de nieuwe Zaal Status waarde in: (Beschikbaar / Niet beschikbaar)"); break;
+                                case 2: Helpers.Display.PrintLine("Vul de nieuwe Zaal Scherm waarde in: (2D, 3D, IMAX)"); break;
+                            }
 
-                        //switch met de instructie en data opvang van de gekozen data soort. met error handling.
-                        inputData = Inputs.ReadUserData();
-                        switch (inputValue)
-                        {
-                            case 0:
-                                if (inputData.val.Length > 5) editZaal.Omschrijving = inputData.val;
-                                else error = "De omschrijving moet uit minimaal 5 karakters bestaan";
-                                break;
-                            case 1:
-                                if (inputData.val == "Beschikbaar" || inputData.val == "Niet Beschikbaar") editZaal.Status = inputData.val;
-                                else error = "Onjuiste waarde ingevuld.";
-                                break;
-                            case 2:
-                                if (inputData.val == "2D" || inputData.val == "3D" || inputData.val == "IMAX") editZaal.Scherm = inputData.val;
-                                else error = "Onjuiste waarde ingevuld.";
-                                break;
-                            default:
-                                break;
+                            //switch met de instructie en data opvang van de gekozen data soort. met error handling.
+                            inputData = Inputs.ReadUserData();
+                            switch (inputValue)
+                            {
+                                case 0:
+                                    if (inputData.val.Length > 5) editZaal.Omschrijving = inputData.val;
+                                    else error = "De omschrijving moet uit minimaal 5 karakters bestaan";
+                                    break;
+                                case 1:
+                                    if (inputData.val == "Beschikbaar" || inputData.val == "Niet Beschikbaar") editZaal.Status = inputData.val;
+                                    else error = "Onjuiste waarde ingevuld.";
+                                    break;
+                                case 2:
+                                    if (inputData.val == "2D" || inputData.val == "3D" || inputData.val == "IMAX") editZaal.Scherm = inputData.val;
+                                    else error = "Onjuiste waarde ingevuld.";
+                                    break;
+                                default:
+                                    break;
+                            }
                         }
                         break;
                     case Inputs.KeyAction.Escape: //de functie beeindigen
@@ -163,7 +166,10 @@ namespace Bioscoop.Modules
                         if( temp == "y")
                         {
                             ZaalData.RemoveData(zaal);
+                            ConsoleColor ogColor = Console.ForegroundColor;
+                            Console.ForegroundColor = ConsoleColor.Red;
                             Console.WriteLine(zaal.Omschrijving + " is verwijderd.");
+                            Console.ForegroundColor = ogColor;
                             System.Threading.Thread.Sleep(2000);
                             abort = true;
                         }
