@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using Bioscoop.Helpers;
-using Newtonsoft.Json;
 using Bioscoop.Modules;
 
 namespace Bioscoop
@@ -47,11 +43,8 @@ namespace Bioscoop
                         //stoel.Run();
                         break;
                 }
-
             }
-
         }
-
     }
 }
 

@@ -15,13 +15,13 @@
     "ZaalId": 3,
     "Omschrijving": "Zaal 3",
     "Status": "Beschikbaar",
-    "Scherm": "3D"
+    "Scherm": "2D"
   },
   {
     "ZaalId": 4,
     "Omschrijving": "Zaal 4",
     "Status": "Beschikbaar",
-    "Scherm": "IMAX"
+    "Scherm": "2D"
   },
   {
     "ZaalId": 5,
@@ -31,14 +31,26 @@
   },
   {
     "ZaalId": 6,
-    "Omschrijving": "zaal 6",
+    "Omschrijving": "Zaal 6",
     "Status": "Beschikbaar",
-    "Scherm": "IMAX"
+    "Scherm": "3D"
   },
   {
     "ZaalId": 7,
     "Omschrijving": "Zaal 7",
     "Status": "Beschikbaar",
     "Scherm": "3D"
+  },
+  {
+    "ZaalId": 8,
+    "Omschrijving": "Zaal 8",
+    "Status": "Beschikbaar",
+    "Scherm": "IMAX"
+  },
+  {
+    "ZaalId": 9,
+    "Omschrijving": "Zaal 9",
+    "Status": "Beschikbaar",
+    "Scherm": "IMAX"
   }
 ]

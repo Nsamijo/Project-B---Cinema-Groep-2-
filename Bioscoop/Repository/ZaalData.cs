@@ -3,72 +3,74 @@ using System.Collections.Generic;
 using System.IO;
 using Newtonsoft.Json;
 using System.Linq;
-using Newtonsoft.Json.Linq;
 
 namespace Bioscoop.Repository
 {
-    class ZaalData
+    class ZaalData //data ophaal functies
     {
         public static string jsonPath => Path.GetFullPath(Path.Combine(Environment.CurrentDirectory, @"..\..\..\")) + @"Data\Zaal.json";
 
-        public static List<ZaalModel> LoadData()
+        public static List<ZaalModel> LoadData() //ophalen json data als list functie
         {
             string jsonFilePath = jsonPath;
             string _json = File.ReadAllText(jsonFilePath);
 
             return JsonConvert.DeserializeObject<List<ZaalModel>>(_json);
         }
-        public static int getId()
+        private static void SaveData(List<ZaalModel> zaalData) //opslaan en schrijven naar json functie
         {
-            //laatste id+1 voor toevoegen van nieuwe zaal. moest dubbel op definitieren anders error.
-            var jsonData = LoadData();
-            int lastId = jsonData.Count() - 1;
-            int zaalId = lastId + 2;
-            return zaalId;
-            //var lastElement = jsonData[lastId].ZaalId;
+            var jsondata = JsonConvert.SerializeObject(zaalData, Formatting.Indented);
+            System.IO.File.WriteAllText(jsonPath, jsondata);
         }
+        public static int getId() //hoogste id opzoek functie
+        {
+            var zaalData = LoadData();
+            int zaalId = zaalData.Max(r => r.ZaalId) + 1;
 
-        public static void AddData(ZaalModel data)
+            return zaalId;
+        }
+        public static void AddData(ZaalModel data) //toevoeg functie
         {
             List<ZaalModel> zaalData = LoadData();
             data.ZaalId = getId();
             zaalData.Add(data);
 
             // Update json data string
-            var jsondata = JsonConvert.SerializeObject(zaalData, Formatting.Indented);
-            System.IO.File.WriteAllText(jsonPath, jsondata);
+            SaveData(zaalData);
         }
-        public static void RemoveData(ZaalModel data)
+        public static void RemoveData(ZaalModel data) //verwijder functie
         {
             List<ZaalModel> zaalData = LoadData();
 
             var toRemove = zaalData.Where(a => a.ZaalId == data.ZaalId).ToList();
+            foreach (var remove in toRemove) zaalData.Remove(remove);
 
-            //var setToRemove = new HashSet<ZaalModel>(zaalData);
-            //zaalData.RemoveAll(x => setToRemove.Contains(x));
-            foreach (var remove in toRemove)
-            {
-                zaalData.Remove(remove);
+            // Update json data string
+            SaveData(zaalData);
+        }
+        public static void EditData(ZaalModel data) //aanpas functie
+        {
+            List<ZaalModel> zaalData = LoadData();
+
+            var toEdit = zaalData.Where(a => a.ZaalId == data.ZaalId).ToList();
+
+            if (toEdit.Count() == 1){
+                foreach(var x in toEdit){
+                    x.Omschrijving = data.Omschrijving;
+                    x.Status = data.Status;
+                    x.Scherm = data.Scherm;
+                }
             }
 
             // Update json data string
-            var jsondata = JsonConvert.SerializeObject(zaalData, Formatting.Indented);
-            System.IO.File.WriteAllText(jsonPath, jsondata);
+            SaveData(zaalData);
         }
-        public static void EditData(ZaalModel data)
+        public static void SortData() //data sorteer functie
         {
-            dynamic zaalData = LoadData();
+            var zaalData = LoadData();
+            var orderedData = zaalData.OrderBy(x => x.Omschrijving);
 
-            zaalData[data.ZaalId - 1] = data;
-
-            //string json = File.ReadAllText("settings.json");
-            //dynamic jsonObj = Newtonsoft.Json.JsonConvert.DeserializeObject(json);
-            //jsonObj["Bots"][0]["Password"] = "new password";
-            //string output = Newtonsoft.Json.JsonConvert.SerializeObject(jsonObj, Newtonsoft.Json.Formatting.Indented);
-            //File.WriteAllText("settings.json", output);
-
-            // Update json data string
-            var jsondata = JsonConvert.SerializeObject(zaalData, Formatting.Indented);
+            var jsondata = JsonConvert.SerializeObject(orderedData, Formatting.Indented);
             System.IO.File.WriteAllText(jsonPath, jsondata);
         }
     }

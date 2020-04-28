@@ -4,14 +4,12 @@ using System.Text;
 
 namespace Bioscoop.Helpers
 {
-    class Display
+    class Display //consolewriteline vervanger met tabellen
     {
         
         static readonly string prefix = " ";
-
-        //key press functie aanvragen zie zaalmodule voor gebruik
-        //Deze functie haal je alleen op.
-        public static ConsoleKey Keypress()
+        
+        public static ConsoleKey Keypress() //keypress lees functie voor hoofdmenu
         {
             return Console.ReadKey(true).Key;
         }

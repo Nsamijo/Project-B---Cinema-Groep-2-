@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Bioscoop.Helpers
 {
-    class Inputs
+    class Inputs //user input vervanger met keyinputs. Deze functie niet aanraken of aanpassen!
     {
         public enum KeyAction
         {
@@ -14,7 +12,7 @@ namespace Bioscoop.Helpers
             Delete
         }
 
-        public class KeyInput
+        public class KeyInput //verwacht een waarde en een key
         {
             public KeyAction action;
             public string val;
@@ -39,7 +37,7 @@ namespace Bioscoop.Helpers
                         input.action = KeyAction.Delete;
                         return input;
                     case ConsoleKey.Backspace:
-                        if(!string.IsNullOrEmpty(input.val))
+                        if(!string.IsNullOrEmpty(input.val)) //als er op backspace is gedrukt de val - 1 character omdat de functie looped door elke waarde die word ingedrukt.
                         {
                             Console.Write(" \b");
                             input.val = input.val.Remove(input.val.Length - 1);
