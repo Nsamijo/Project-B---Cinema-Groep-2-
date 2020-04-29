@@ -57,11 +57,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jonas\\Desktop\\Bioscoopbackup\\Bioscoop.csproj",
+      "projectUniqueName": "C:\\Users\\jonas\\Documents\\Cinema-ProjB\\FilmSchemaBeheer2 (jonas)\\Bioscoop.csproj",
       "projectName": "Bioscoop",
-      "projectPath": "C:\\Users\\jonas\\Desktop\\Bioscoopbackup\\Bioscoop.csproj",
+      "projectPath": "C:\\Users\\jonas\\Documents\\Cinema-ProjB\\FilmSchemaBeheer2 (jonas)\\Bioscoop.csproj",
       "packagesPath": "C:\\Users\\jonas\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jonas\\Desktop\\Bioscoopbackup\\obj\\",
+      "outputPath": "C:\\Users\\jonas\\Documents\\Cinema-ProjB\\FilmSchemaBeheer2 (jonas)\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\jonas\\AppData\\Roaming\\NuGet\\NuGet.Config",

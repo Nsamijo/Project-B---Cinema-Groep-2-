@@ -18,7 +18,17 @@ namespace Bioscoop
         public int ProgrammaId { get; set; }
         public string Datum { get; set; }
         public string Tijd { get; set; }
-        public string FilmId { get; set; } //filmnaam niet, dat is dubbel data opslaan, big nono. want je zoekt gewoon de naam op bij het object met die id:  json.Where(a => a.Naam == data.Naam).ToList();
+        public int FilmId { get; set; } //filmnaam niet, dat is dubbel data opslaan, big nono. want je zoekt gewoon de naam op bij het object met die id:  json.Where(a => a.Naam == data.Naam).ToList();
         public int ZaalId { get; set; }
+
+        public FilmschemaModel(int programmaId, string datum,string tijd,int filmId,int zaalId)
+        {
+            this.ProgrammaId = programmaId;
+            this.Datum = datum;
+            this.Tijd = tijd;
+            this.FilmId = filmId;
+            this.ZaalId = zaalId;
+
+        }
     }
 }

@@ -14,7 +14,7 @@ namespace Bioscoop
             ZaalModule zaal = new ZaalModule();
             //FilmModule film = new FilmModule();
             //GebruikerModule gebruiker = new FilmModule();
-            //FilmschemaModule schema = new FilmschemaModule();
+            FilmschemaModule schema = new FilmschemaModule();
             //StoelModule stoel = new StoelModule();
 
             bool loop = true;
@@ -36,7 +36,7 @@ namespace Bioscoop
                         break;
                     case ConsoleKey.D4:
                         Console.Clear();
-                        //filmschema.Run();
+                        schema.Run();
                         break;
                     case ConsoleKey.D5:
                         Console.Clear();

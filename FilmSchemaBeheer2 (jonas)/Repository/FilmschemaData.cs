@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.IO;
 using Newtonsoft.Json;
+using System.Linq;
 
 namespace Bioscoop.Repository
 {
@@ -28,6 +29,31 @@ namespace Bioscoop.Repository
             System.IO.File.WriteAllText(filmschemaPath, jsondata);
         }
 
+        public static void MaakProgramma(string datum,string tijd,int zaalid,int filmid)
+        {
+            List<FilmschemaModel> filmSchema = LoadData();
+            int programmaid = getId();
+            filmSchema.Add(new FilmschemaModel(programmaid,datum,tijd,filmid,zaalid));
+            SaveData(filmSchema);
+        }
+        public static void VerwijderProgramma(int index)
+        {
+            List<FilmschemaModel> filmschema = LoadData();
+            filmschema.RemoveAt(index);
+            SaveData(filmschema);
+        }
+
+        public static int getId() //hoogste id opzoek functie
+        {
+            var filmschemaData = LoadData();
+            int zaalId = 0;
+            if (filmschemaData.Count != 0)
+            {
+                zaalId = filmschemaData.Max(r => r.ProgrammaId) + 1;
+            }
+
+            return zaalId;
+        }
         //Returned een boolean die false is als de string niet volgens de syntax van de tijd is
         //en true als die dat wel is
         public static bool TijdSyntax(string s)
