@@ -1,0 +1,182 @@
+[
+  {
+    "FilmId": 1,
+    "Naam": "Forrest Gump",
+    "Omschrijving": "...",
+    "Genre": "Avontuur",
+    "Duur": "02:22",
+    "Kijkwijzer": "12+",
+    "Status": "Niet beschikbaar"
+  },
+  {
+    "FilmId": 2,
+    "Naam": "Interstellar",
+    "Omschrijving": "...",
+    "Genre": "Avontuur",
+    "Duur": "02:49",
+    "Kijkwijzer": "12+",
+    "Status": "Niet beschikbaar"
+  },
+  {
+    "FilmId": 3,
+    "Naam": "Back to the Future",
+    "Omschrijving": "...",
+    "Genre": "Avontuur",
+    "Duur": "01:56",
+    "Kijkwijzer": "All",
+    "Status": "Niet beschikbaar"
+  },
+  {
+    "FilmId": 4,
+    "Naam": "The Dark Knight",
+    "Omschrijving": "...",
+    "Genre": "Actie",
+    "Duur": "02:32",
+    "Kijkwijzer": "16+",
+    "Status": "Niet beschikbaar"
+  },
+  {
+    "FilmId": 5,
+    "Naam": "Shrek",
+    "Omschrijving": "...",
+    "Genre": "Animatie",
+    "Duur": "01:30",
+    "Kijkwijzer": "6+",
+    "Status": "Niet beschikbaar"
+  },
+  {
+    "FilmId": 6,
+    "Naam": "Joker",
+    "Omschrijving": "...",
+    "Genre": "Thriller",
+    "Duur": "01:30",
+    "Kijkwijzer": "16+",
+    "Status": "Niet beschikbaar"
+  },
+  {
+    "FilmId": 7,
+    "Naam": "Wall-E",
+    "Omschrijving": "...",
+    "Genre": "Animatie",
+    "Duur": "01:38",
+    "Kijkwijzer": "All",
+    "Status": "Niet beschikbaar"
+  },
+  {
+    "FilmId": 8,
+    "Naam": "Avengers: Infinity War",
+    "Omschrijving": "...",
+    "Genre": "Actie",
+    "Duur": "02:29",
+    "Kijkwijzer": "12+",
+    "Status": "Niet beschikbaar"
+  },
+  {
+    "FilmId": 9,
+    "Naam": "Avengers: EndGame",
+    "Omschrijving": "...",
+    "Genre": "Actie",
+    "Duur": "03:01",
+    "Kijkwijzer": "12+",
+    "Status": "Niet beschikbaar"
+  },
+  {
+    "FilmId": 10,
+    "Naam": "Jurassic Park",
+    "Omschrijving": "...",
+    "Genre": "Actie",
+    "Duur": "02:07",
+    "Kijkwijzer": "12+",
+    "Status": "Niet beschikbaar"
+  },
+  {
+    "FilmId": 11,
+    "Naam": "Slumdog Millionaire",
+    "Omschrijving": "...",
+    "Genre": "Drama",
+    "Duur": "02:00",
+    "Kijkwijzer": "12+",
+    "Status": "Niet beschikbaar"
+  },
+  {
+    "FilmId": 12,
+    "Naam": "Star Wars: Episode IV - A New Hope",
+    "Omschrijving": "...",
+    "Genre": "Actie",
+    "Duur": "02:01",
+    "Kijkwijzer": "All",
+    "Status": "Niet beschikbaar"
+  },
+  {
+    "FilmId": 13,
+    "Naam": "Inception",
+    "Omschrijving": "...",
+    "Genre": "Sci-Fi",
+    "Duur": "02:28",
+    "Kijkwijzer": "12+",
+    "Status": "Niet beschikbaar"
+  },
+  {
+    "FilmId": 14,
+    "Naam": "The Lion King",
+    "Omschrijving": "...",
+    "Genre": "Animation",
+    "Duur": "01:28",
+    "Kijkwijzer": "All",
+    "Status": "Niet beschikbaar"
+  },
+  {
+    "FilmId": 15,
+    "Naam": "Dumb and Dumber",
+    "Omschrijving": "...",
+    "Genre": "Komedie",
+    "Duur": "01:47",
+    "Kijkwijzer": "All",
+    "Status": "Niet beschikbaar"
+  },
+  {
+    "FilmId": 16,
+    "Naam": "Titanic",
+    "Omschrijving": "...",
+    "Genre": "Drama",
+    "Duur": "03:14",
+    "Kijkwijzer": "12+",
+    "Status": "Niet beschikbaar"
+  },
+  {
+    "FilmId": 17,
+    "Naam": "Terminator 2: Judgement Day",
+    "Omschrijving": "...",
+    "Genre": "Actie",
+    "Duur": "02:17",
+    "Kijkwijzer": "16+",
+    "Status": "Niet beschikbaar"
+  },
+  {
+    "FilmId": 18,
+    "Naam": "Kung Fu Panda",
+    "Omschrijving": "...",
+    "Genre": "Animatie",
+    "Duur": "01:32",
+    "Kijkwijzer": "6+",
+    "Status": "Niet beschikbaar"
+  },
+  {
+    "FilmId": 19,
+    "Naam": "Avatar",
+    "Omschrijving": "...",
+    "Genre": "Actie",
+    "Duur": "02:42",
+    "Kijkwijzer": "12+",
+    "Status": "Niet beschikbaar"
+  },
+  {
+    "FilmId": 20,
+    "Naam": "The Shawshank Redemption",
+    "Omschrijving": "...",
+    "Genre": "Drama",
+    "Duur": "02:22",
+    "Kijkwijzer": "12+",
+    "Status": "Niet beschikbaar"
+  }
+]
