@@ -1,9 +1,16 @@
 [
   {
-    "ProgrammaId": 0,
-    "Datum": "01/05/2020",
+    "ProgrammaId": 1,
+    "Datum": "02/05/2020",
     "Tijd": "13:30",
-    "FilmId": 14,
+    "FilmId": 8,
+    "ZaalId": 4
+  },
+  {
+    "ProgrammaId": 2,
+    "Datum": "02/05/2020",
+    "Tijd": "10:00",
+    "FilmId": 15,
     "ZaalId": 4
   }
 ]

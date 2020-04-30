@@ -29,10 +29,9 @@ namespace Bioscoop.Repository
             System.IO.File.WriteAllText(filmschemaPath, jsondata);
         }
 
-        public static void MaakProgramma(string datum,string tijd,int zaalid,int filmid)
+        public static void MaakProgramma(int programmaid,string datum,string tijd,int zaalid,int filmid)
         {
             List<FilmschemaModel> filmSchema = LoadData();
-            int programmaid = getId();
             filmSchema.Add(new FilmschemaModel(programmaid,datum,tijd,filmid,zaalid));
             SaveData(filmSchema);
         }
@@ -152,6 +151,51 @@ namespace Bioscoop.Repository
                 i++;
             }
             return res;
+        }
+        public static bool TimeCollides(string datum,int zaalid,string tijd)
+        {
+            List<FilmschemaModel> filmschema = LoadData();
+            foreach(FilmschemaModel programma in filmschema)
+            {
+                if(programma.Datum == datum && programma.ZaalId == zaalid && programma.Tijd == tijd)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+        public static bool HallCollides(string datum, int zaalid)
+        {
+            List<FilmschemaModel> filmschema = LoadData();
+            string[] tijden = new string[4] { "10:00", "13:30", "17:00", "20:30" };
+            foreach (FilmschemaModel programma in filmschema)
+            {
+                foreach(string tijd in tijden)
+                {
+                    if (TimeCollides(datum, zaalid, tijd) == false)
+                    {
+                        return false;
+                    }
+                }
+            }
+            return true;
+
+        }
+        public static bool DateCollides(string datum)
+        {
+            List<FilmschemaModel> filmschema = LoadData();
+            List<ZaalModel> zalen = ZaalData.LoadData();
+            foreach (FilmschemaModel programma in filmschema)
+            {
+                foreach(ZaalModel zaal in zalen)
+                {
+                    if(HallCollides(datum,zaal.ZaalId) == false)
+                    {
+                        return false;
+                    }
+                }
+            }
+            return true;
         }
 
         
