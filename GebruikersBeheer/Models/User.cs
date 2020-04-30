@@ -68,4 +68,12 @@ public class Gebruiker
             this.wachtwoord = nieuwww;
         }
     }
+
+    public Gebruiker Clone()
+    {
+        //geeft een shallow copy terug van het object
+        //gebruikt om aanpassingen te maken zonder dat dit effect
+        //heeft op het aan te passen object
+        return (Gebruiker)this.MemberwiseClone();
+    }
 }

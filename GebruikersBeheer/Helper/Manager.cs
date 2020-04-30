@@ -50,19 +50,6 @@ class Manager
         }
     }
 
-    void SuccesLogin()
-    {
-        ///<summary>
-        ///De gebruiker is succesvol ingelogd
-        ///De naam van de gebruiker wordt getoond en de rechten
-        ///van deze.
-        /// </summary>
-        Console.Clear();
-        Console.WriteLine("Gebruikersbeheer");
-        Console.WriteLine("ESC terug naar het menu\t\tINS nieuwe gebruiker aanmaken");
-        Console.WriteLine("\nIngelogd: " + this.Ingelogd.naam);
-        Console.WriteLine("Admin: " + this.Ingelogd.rechten + "\n");
-    }
     void GebruikersBeheer()
     {
         ///<summary>
@@ -89,15 +76,12 @@ class Manager
         //aanpassingen kan maken
         if (this.Ingelogd != null && !this.Ingelogd.id.Equals("cancel"))
         {
-            //account details tonen als de login succesvol was
-            SuccesLogin();
-
             //kijken welke rechten de ingelogde heeft
             switch(this.Ingelogd.rechten)
             {
                 //admin rechten
                 case true:
-                    this.menu.PrintGebruikers(this.Data, this.Ingelogd);
+                    menu.AdminsRechten(this.Data, this.Ingelogd);
                     break;
 
                 //medewerker rechten
