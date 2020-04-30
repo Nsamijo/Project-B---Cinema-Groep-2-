@@ -50,6 +50,43 @@ public class Stoelenbeheer
         return "1";
     }
 
+
+    public void StoelNummerAanpassen()
+    {
+        Console.Clear();
+        StoelenDisplay.PrintLine("Stoelbeheer");
+        StoelenDisplay.PrintLine("Typ het stoelnummer dat wilt aanpassen/verwijderen");
+        var ans = Console.ReadLine();
+        if (ans.All(char.IsDigit))
+        {
+            List<Stoel> json = StoelLoadJson();
+            int x = int.Parse(ans);
+            foreach (Stoel stoel in json)
+            {
+                if (stoel.StoelId == x)
+                {
+                    StoelenAanpas(x);
+                }
+            }
+        }
+        StoelenDisplay.PrintLine("Dat is geen geldige input of de stoel bestaat niet");
+        StoelenDisplay.PrintLine("ESC - Terug naar overzicht                    INS - Probeer opnieuw");
+        switch (StoelenDisplay.Keypress())
+        {
+            case ConsoleKey.Insert:
+                StoelNummerAanpassen();
+                break;
+            case ConsoleKey.Escape:
+                Run();
+                break;
+            default:
+                Run();
+                break;
+        }
+
+        
+    }
+                
     //OVERZICHT
     private void StoelMain(string zaalnummer = "1")
     {
@@ -57,9 +94,9 @@ public class Stoelenbeheer
         List<Stoel> stoelen = StoelLoadJson();
 
         StoelenDisplay.PrintLine("Stoelbeheer");
-        StoelenDisplay.PrintLine("ESC - Naar menu                       INS - stoel toevoegen/verwijderen");
-        StoelenDisplay.PrintLine("\n[A] Typ, om een stoel aan te passen, het Id van een stoel in");
-        StoelenDisplay.PrintHeader("Id", "Omschrijving", "Rij", "Stoelnummer", "Premium", "ZaalId");
+        StoelenDisplay.PrintLine("ESC - Naar menu                       INS - Maak een nieuwe stoel");
+        StoelenDisplay.PrintLine("                                      DEL - Pas stoel aan of verwijder stoel");
+        StoelenDisplay.PrintHeader("Nummer", "Id", "Omschrijving", "Rij", "Stoelnummer", "Premium");
 
         //data opvragen en weergeven
         int numering = 1;
@@ -70,12 +107,12 @@ public class Stoelenbeheer
                 string StoelNummer = "" + stoel.StoelNr;
                 string StoelPremium = "" + stoel.Premium;
                 string stoelid = "" + stoel.StoelId;
-                StoelenDisplay.PrintTable(numering.ToString(), stoel.Omschrijving, stoel.Rij, StoelNummer, StoelPremium, stoel.Zaalid);
+                StoelenDisplay.PrintTable(numering.ToString(), stoelid, stoel.Omschrijving, stoel.Rij, StoelNummer, StoelPremium);
                 numering++;
             }
         }
 
-        //input INS of ESC
+        //input INS of ESC of DEL
         
         switch (StoelenDisplay.Keypress())
         {
@@ -85,14 +122,8 @@ public class Stoelenbeheer
             case ConsoleKey.Escape:
                 Run();
                 break;
-            default:
-                var ans = Console.ReadLine();
-                if (ans.All(char.IsDigit))
-                {
-                    ans = GeldigStoelnummer(ans);
-                    int x = int.Parse(ans);
-                    StoelenAanpas(x);
-                }
+            case ConsoleKey.Delete:
+                StoelNummerAanpassen();
                 break;
         }
     }
@@ -102,18 +133,17 @@ public class Stoelenbeheer
     {
         Console.Clear();
         Helpers.StoelenDisplay.PrintLine("Stoelenbeheer");
-        Helpers.StoelenDisplay.PrintLine("[A] Voeg een stoel toe");
-        Helpers.StoelenDisplay.PrintLine("[B] Verwijder een stoel");
-        Helpers.StoelenDisplay.PrintLine("[C] Ga terug naar overzicht");
-        var ans = Console.ReadLine();
-
-        switch (ans)
+        Helpers.StoelenDisplay.PrintLine("ESC - Ga terug naar overzicht          INS - Maak stoel aan");
+        switch (StoelenDisplay.Keypress())
         {
-            case "A":
+            case ConsoleKey.Insert:
                 VoegStoelToe();
                 break;
-            case "C":
-                StoelMain();
+            case ConsoleKey.Escape:
+                Run();
+                break;
+            default:
+                Run();
                 break;
         }
     }
@@ -124,17 +154,19 @@ public class Stoelenbeheer
         bool geldigeInput = true;
         //premium(p) vragen
         Console.Clear();
+        string premiumAns = null;
         StoelenDisplay.PrintHeader("Stoelenbeheer");
         StoelenDisplay.PrintLine("Voeg een stoel toe");
         StoelenDisplay.PrintLine("\nIs de stoel premium?");
         StoelenDisplay.PrintLine("      >[A] Ja");
         StoelenDisplay.PrintLine("      >[B] Nee");
-        string premiumAns = Console.ReadLine();
+        premiumAns = Console.ReadLine();
 
         //zaalid(zaalid) vragen
+        string ans = null;
         StoelenDisplay.PrintLine("\nIn welke zaal staat de stoel?");
         StoelenDisplay.PrintLine("Vul het zaalnummer in:");
-        string ans = Console.ReadLine();
+        ans = Console.ReadLine();
 
         //premium(p) checken
         bool premium = true;
@@ -163,9 +195,13 @@ public class Stoelenbeheer
                 zaalid = x;
             }
             else
-            {
+            {            
                 geldigeInput = false;
             }
+        }
+        else
+        {
+            geldigeInput = false;
         }
 
         //stoelid bepalen
@@ -176,9 +212,10 @@ public class Stoelenbeheer
         int stoelId = stoelData.Max(r => r.StoelId) + 1;
 
         //stoelnummer(z) bepalen:
+        string stoelans = null;
         StoelenDisplay.PrintLine("\nWelk stoelnummer heeft de stoel?");
         StoelenDisplay.PrintLine("Vul de stoelnummer in (1-20)");
-        var stoelans = Console.ReadLine();
+        stoelans = Console.ReadLine();
         int z = 1;
         if (stoelans.All(char.IsDigit))
         {
@@ -194,9 +231,10 @@ public class Stoelenbeheer
         }
 
         //rij(str) bepalen:
+        string str = null;
         StoelenDisplay.PrintLine("\nIn welke rij staat de stoel?");
         StoelenDisplay.PrintLine("Vul de rij in (letter A - J)");
-        var str = Console.ReadLine();
+        str = Console.ReadLine();
         switch (str)
         {
             case "A":
@@ -246,15 +284,20 @@ public class Stoelenbeheer
         //gegevens checken en stoel aanmaken:
         if (geldigeInput == true)
         {
-            string omschr = "Rij " + str + " stoel " + z;
+            string omschr = "Rij " + str + " Stoel " + z;
+            StoelenDisplay.PrintLine(omschr);
+
+            //checken of niet een stoel uit diezelfde zaal dezelfde omschrijving heeft
             List<Stoel> stoelen = StoelLoadJson();
             foreach (Stoel stoel in stoelen)
             {
+                StoelenDisplay.PrintLine(stoel.Omschrijving);
                 if (stoel.Zaalid == z.ToString())
                 {
+                    StoelenDisplay.PrintLine(stoel.Omschrijving);
                     if (stoel.Omschrijving == omschr)
                     {
-                        StoelenDisplay.PrintLine("De ingevulde zijn niet correct omdat de stoel al bestaat, er kan geen nieuwe stoel aangemaakt worden.");
+                        StoelenDisplay.PrintLine("De ingevulde zijn niet correct omdat de stoel al bestaat, \ner kan geen nieuwe stoel aangemaakt worden.");
                         StoelenDisplay.PrintLine("ESC - Terug naar overzicht                    INS - Probeer opnieuw");
                         switch (StoelenDisplay.Keypress())
                         {
@@ -270,8 +313,9 @@ public class Stoelenbeheer
                         }
                     }
                 }
-                StoelToevoegen(stoelId, omschr, str, z, premium, zaalid.ToString());
             }
+            var ab = Console.ReadLine();
+            StoelToevoegen(stoelId, omschr, str, z, premium, zaalid.ToString());
         }
         //foutmelding als een van de gegevens niet kloppen:
         else
@@ -313,16 +357,30 @@ public class Stoelenbeheer
         string str2 = JsonConvert.SerializeObject(list);
         dynamic obj = JsonConvert.DeserializeObject(str2);
         nieuwe_json.UpdateJson(obj);
+        Console.Clear();
+        StoelenDisplay.PrintLine("Stoelbeheer");
+        StoelenDisplay.PrintLine("De stoel wordt toegevoegd\nESC - Terug naar overzicht         INS - nieuwe stoel");
+        switch (StoelenDisplay.Keypress())
+        {
+            case ConsoleKey.Insert:
+                VoegStoelToe();
+                break;
+            case ConsoleKey.Escape:
+                Run();
+                break;
+            default:
+                Run();
+                break;
+        }
+
     }
-
-
 
     //STOELEN AANPAS SCHERM
     public void StoelenAanpas(int stoelNummer)
     {   
         Console.Clear();
         StoelenDisplay.PrintLine("Stoelbeheer");
-        StoelenDisplay.PrintLine("Pas stoel " + stoelNummer + " aan");
+        StoelenDisplay.PrintLine("Pas stoel " + stoelNummer + " aan\n");
         StoelenDisplay.PrintHeader("Id", "Omschrijving", "Rij", "Stoelnummer", "Premium", "Status");
         
         //stoel in json zoeken
@@ -339,23 +397,36 @@ public class Stoelenbeheer
             }
         }
 
-        Helpers.StoelenDisplay.PrintLine("\nWat wilt u aanpassen");
-        Helpers.StoelenDisplay.PrintLine("[A] Verander zaalnummer");
-        Helpers.StoelenDisplay.PrintLine("[B] Verander premium");
-        Helpers.StoelenDisplay.PrintLine("[C] Ga terug naar overzicht");
+        StoelenDisplay.PrintLine("\nWat wilt u aanpassen");
+        StoelenDisplay.PrintLine("ESC - Terug naar overzicht                    INS - Verander premium");
+        StoelenDisplay.PrintLine("                                              DEL - Verwijder stoel");
 
-        //input
-        string ans = Console.ReadLine();
-        switch (ans)
+        switch (StoelenDisplay.Keypress())
         {
-            case "A":
-//                ChangeStatus(stoelNummer);
-                break;
-            case "B":
+            case ConsoleKey.Insert:
                 ChangePremium(stoelNummer);
                 break;
-            case "C":
-                StoelMain();
+            case ConsoleKey.Escape:
+                Run();
+                break;
+            case ConsoleKey.Delete:
+                StoelVerwijderen(stoelNummer);
+                break;
+            default:
+                StoelenDisplay.PrintLine("Dat is geen geldige input.");
+                StoelenDisplay.PrintLine("ESC - Terug naar overzicht                    INS - Probeer opnieuw");
+                switch (StoelenDisplay.Keypress())
+                {
+                    case ConsoleKey.Insert:
+                        StoelenAanpas(stoelNummer);
+                        break;
+                    case ConsoleKey.Escape:
+                        Run();
+                        break;
+                    default:
+                        StoelenAanpas(stoelNummer);
+                        break;
+                }
                 break;
         }
     }
@@ -411,47 +482,28 @@ public class Stoelenbeheer
                     return stoelnummer;
                 }
             }
+        }
+        else
+        {
             StoelenDisplay.PrintLine("Geen geldige input, probeer het nogmaals");
             stoelnummer = Console.ReadLine();
             GeldigStoelnummer(stoelnummer);
         }
-        
         return "";
     }
 
-    public void StoelVerwijderen
-        
+    public void StoelVerwijderen(int a)
+    {
+        dynamic array = this.nieuwe_json.getJson();
+        string str = JsonConvert.SerializeObject(array);
+        List<Stoel> list = JsonConvert.DeserializeObject<List<Stoel>>(str);
+        list.RemoveAll(r => r.StoelId == a);
+        string str2 = JsonConvert.SerializeObject(list);
+        dynamic obj = JsonConvert.DeserializeObject(str2);
+        nieuwe_json.UpdateJson(obj);
+        Console.Clear();
+        StoelenDisplay.PrintLine("stoel nummer " + a + " is verwijderd, Typ een key om naar overzicht te gaan");
+        string ans = Console.ReadLine();
+    }
 }
 
-
-/*    // deze functie veranderd Beschikbaar - Niet beschikbaar van de status
-    public void ChangeStatus(int stoelNummer)
-    {
-        Console.Clear();
-        List<Stoel> json = LoadJson();
-        foreach (Stoel stoel in json)
-        {
-            if (stoel.StoelId == stoelNummer)
-            {
-                //veranderen van waarde (beschikbaar - niet beschikbaar en andersom)
-                switch (stoel.Status)
-                {
-                    case "Beschikbaar":
-                        stoel.Status = "Niet beschikbaar";
-                        break;
-                    case "Niet beschikbaar":
-                        stoel.Status = "Beschikbaar";
-                        break;
-                }
-            }
-        }
-
-        //streamwriter die terug naar json aanpast
-        using (StreamWriter file = File.CreateText(Path.GetFullPath(Path.Combine(Environment.CurrentDirectory, @"..\..\..\")) + @"Data\data.json"))
-        {
-            JsonSerializer serializer = new JsonSerializer();
-            serializer.Serialize(file, json);
-        }
-
-        StoelenAanpas(stoelNummer);
-    }*/
