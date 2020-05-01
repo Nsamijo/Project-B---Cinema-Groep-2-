@@ -46,7 +46,7 @@ public class Stoelenbeheer
                 return ans;
             }
         }
-        //anders doet die scherm 1 bij elk ander getal, moet ik nog aan werken
+        //anders doet die scherm 1 bij elk ander getal
         return "1";
     }
 
@@ -55,36 +55,46 @@ public class Stoelenbeheer
     {
         Console.Clear();
         StoelenDisplay.PrintLine("Stoelbeheer");
-        StoelenDisplay.PrintLine("Typ het stoelnummer dat wilt aanpassen/verwijderen");
-        var ans = Console.ReadLine();
-        if (ans.All(char.IsDigit))
-        {
-            List<Stoel> json = StoelLoadJson();
-            int x = int.Parse(ans);
-            foreach (Stoel stoel in json)
-            {
-                if (stoel.StoelId == x)
-                {
-                    StoelenAanpas(x);
-                }
-            }
-        }
-        StoelenDisplay.PrintLine("Dat is geen geldige input of de stoel bestaat niet");
-        StoelenDisplay.PrintLine("ESC - Terug naar overzicht                    INS - Probeer opnieuw");
+        StoelenDisplay.PrintLine("ESC - Terug naar overzicht                       \n");
+        StoelenDisplay.PrintLine("INS - Typ het stoelnummer dat u wilt aanpassen/verwijderen");
         switch (StoelenDisplay.Keypress())
         {
             case ConsoleKey.Insert:
-                StoelNummerAanpassen();
+                StoelenDisplay.PrintLine("\nStoelnummer:");
+                var ans = Console.ReadLine();
+                if (ans.All(char.IsDigit))
+                {
+                    List<Stoel> json = StoelLoadJson();
+                    int x = int.Parse(ans);
+                    foreach (Stoel stoel in json)
+                    {
+                        if (stoel.StoelId == x)
+                        {
+                            StoelenAanpas(x);
+                        }
+                    }
+                }
                 break;
             case ConsoleKey.Escape:
                 Run();
                 break;
             default:
-                Run();
+                StoelenDisplay.PrintLine("Dat is geen geldige input of de stoel bestaat niet");
+                StoelenDisplay.PrintLine("ESC - Terug naar overzicht                    INS - Probeer opnieuw");
+                switch (StoelenDisplay.Keypress())
+                {
+                    case ConsoleKey.Insert:
+                        StoelNummerAanpassen();
+                        break;
+                    case ConsoleKey.Escape:
+                        Run();
+                        break;
+                    default:
+                        StoelNummerAanpassen();
+                        break;
+                }
                 break;
         }
-
-        
     }
                 
     //OVERZICHT
@@ -501,7 +511,7 @@ public class Stoelenbeheer
         dynamic obj = JsonConvert.DeserializeObject(str2);
         nieuwe_json.UpdateJson(obj);
         Console.Clear();
-        StoelenDisplay.PrintLine("stoel nummer " + a + " is verwijderd, Typ een key om naar overzicht te gaan");
+        StoelenDisplay.PrintLine("stoel nummer " + a + " is verwijderd, Typ enter om naar overzicht te gaan");
         string ans = Console.ReadLine();
     }
 }
