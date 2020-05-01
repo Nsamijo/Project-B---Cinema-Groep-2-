@@ -22,19 +22,19 @@ public class Stoelenbeheer
     public static string Vraagzaal()
     {
         Console.Clear();
-        Helpers.StoelenDisplay.PrintLine("Stoelbeheer");
-        Helpers.StoelenDisplay.PrintLine("ESC - Terug naar overzicht                       ");
-        Helpers.StoelenDisplay.PrintLine("\nOm de stoelen van een zaal te bekijken, typ het Id van de zaal in");
-        Helpers.StoelenDisplay.PrintLine("\n[1] Zaal 1");
-        Helpers.StoelenDisplay.PrintLine("\n[2] Zaal 2");
-        Helpers.StoelenDisplay.PrintLine("\n[3] Zaal 3");
-        Helpers.StoelenDisplay.PrintLine("\n[4] Zaal 4");
-        Helpers.StoelenDisplay.PrintLine("\n[5] Zaal 5");
-        Helpers.StoelenDisplay.PrintLine("\n[6] Zaal 6");
-        Helpers.StoelenDisplay.PrintLine("\n[7] Zaal 7");
-        Helpers.StoelenDisplay.PrintLine("\n[8] Zaal 8");
-        Helpers.StoelenDisplay.PrintLine("\n[9] Zaal 9");
-        Helpers.StoelenDisplay.PrintLine("\n[10] Zaal 10");
+        StoelenDisplay.PrintLine("Stoelbeheer");
+        StoelenDisplay.PrintLine("ESC - Terug naar overzicht                       ");
+        StoelenDisplay.PrintLine("\nOm de stoelen van een zaal te bekijken, typ het Id van de zaal in");
+        StoelenDisplay.PrintLine("\n[1] Zaal 1");
+        StoelenDisplay.PrintLine("\n[2] Zaal 2");
+        StoelenDisplay.PrintLine("\n[3] Zaal 3");
+        StoelenDisplay.PrintLine("\n[4] Zaal 4");
+        StoelenDisplay.PrintLine("\n[5] Zaal 5");
+        StoelenDisplay.PrintLine("\n[6] Zaal 6");
+        StoelenDisplay.PrintLine("\n[7] Zaal 7");
+        StoelenDisplay.PrintLine("\n[8] Zaal 8");
+        StoelenDisplay.PrintLine("\n[9] Zaal 9");
+        StoelenDisplay.PrintLine("\n[10] Zaal 10");
         string ans = Console.ReadLine();
 
         //hier checkt die of de input een getal tussen de 1 en 10 is
@@ -132,8 +132,8 @@ public class Stoelenbeheer
     public void StoelenAanmaken()
     {
         Console.Clear();
-        Helpers.StoelenDisplay.PrintLine("Stoelenbeheer");
-        Helpers.StoelenDisplay.PrintLine("ESC - Ga terug naar overzicht          INS - Maak stoel aan");
+        StoelenDisplay.PrintLine("Stoelenbeheer");
+        StoelenDisplay.PrintLine("ESC - Ga terug naar overzicht          INS - Maak stoel aan");
         switch (StoelenDisplay.Keypress())
         {
             case ConsoleKey.Insert:
@@ -152,7 +152,7 @@ public class Stoelenbeheer
     public void VoegStoelToe()
     {
         bool geldigeInput = true;
-        //premium(p) vragen
+        //premium(premiumAns) vragen
         Console.Clear();
         string premiumAns = null;
         StoelenDisplay.PrintHeader("Stoelenbeheer");
@@ -168,7 +168,7 @@ public class Stoelenbeheer
         StoelenDisplay.PrintLine("Vul het zaalnummer in:");
         ans = Console.ReadLine();
 
-        //premium(p) checken
+        //premium(premiumAns -> premium) checken
         bool premium = true;
         switch (premiumAns)
         {
@@ -314,7 +314,6 @@ public class Stoelenbeheer
                     }
                 }
             }
-            var ab = Console.ReadLine();
             StoelToevoegen(stoelId, omschr, str, z, premium, zaalid.ToString());
         }
         //foutmelding als een van de gegevens niet kloppen:
@@ -342,7 +341,7 @@ public class Stoelenbeheer
     public void StoelToevoegen(int stoelid, string omschrijving, string rij, int stoelnr, bool premium, string zaalid)
     {
         //object maken en stoel toevoegen
-        dynamic array = this.nieuwe_json.getJson();
+        dynamic array = this.nieuwe_json.GetJson();
         string str = JsonConvert.SerializeObject(array);
         List<Stoel> list = JsonConvert.DeserializeObject<List<Stoel>>(str);
 
@@ -494,7 +493,7 @@ public class Stoelenbeheer
 
     public void StoelVerwijderen(int a)
     {
-        dynamic array = this.nieuwe_json.getJson();
+        dynamic array = this.nieuwe_json.GetJson();
         string str = JsonConvert.SerializeObject(array);
         List<Stoel> list = JsonConvert.DeserializeObject<List<Stoel>>(str);
         list.RemoveAll(r => r.StoelId == a);

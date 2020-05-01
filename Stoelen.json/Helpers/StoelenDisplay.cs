@@ -8,15 +8,9 @@ namespace Helpers
     {
         static readonly string prefix = " ";
 
-        public static ConsoleKey Keypress()
-        {
-            return Console.ReadKey(true).Key;
-        }
+        public static ConsoleKey Keypress() => Console.ReadKey(true).Key;
 
-        public static void PrintLine(string line)
-        {
-            Console.WriteLine(prefix + line);
-        }
+        public static void PrintLine(string line) => Console.WriteLine(prefix + line);
 
         //tabbellen data
         public static void PrintHeader(string col1, string col2 = null, string col3 = null, string col4 = null, string col5 = null, string col6 = null)

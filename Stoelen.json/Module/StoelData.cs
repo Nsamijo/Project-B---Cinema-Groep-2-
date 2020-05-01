@@ -8,7 +8,6 @@ namespace StoelData
     public class Data
     {
         //om naar json te updaten vanaf hier
-
         public dynamic array;
 
         public Data()
@@ -16,14 +15,14 @@ namespace StoelData
             LoadJson();
         }
 
-        public void LoadJson() //informatie van json laden
+        public void LoadJson()
         {
             using StreamReader file = new StreamReader("C:/Users/Lenovo/source/repos/Stoelen.json/Stoelen.json/Data/data.json");
             string json = file.ReadToEnd();
             this.array = JsonConvert.DeserializeObject(json);
         }
 
-        public dynamic getJson()
+        public dynamic GetJson()
         {
             return this.array;
         }

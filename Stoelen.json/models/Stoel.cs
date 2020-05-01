@@ -14,6 +14,7 @@ public class Stoel
 
     public Stoel() { }
 
+
     public Stoel(int stoelId, string omschrijving, string rij, int stoelNr, bool premium, string zaalId)
     {
         StoelId = stoelId;
