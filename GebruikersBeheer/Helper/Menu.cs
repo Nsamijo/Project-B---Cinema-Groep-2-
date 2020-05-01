@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Reflection.Metadata;
 using System.Reflection.Metadata.Ecma335;
 using System.Text;
@@ -29,7 +30,7 @@ class GebruikersMenu
         int index = 1;
         foreach (var gebruiker in users)
         {
-            if (!gebruiker.naam.Equals(admin.naam) && admin.rechten)
+            if (!gebruiker.id.Equals(admin.id) && admin.rechten)
             {
                 Console.WriteLine("{0, -5}{1, -20}{2, -18}{3, -5}{4, -15}{5,0}", index, gebruiker.naam, gebruiker.gebruikersnaam, gebruiker.id, gebruiker.zieWachtwoordt(admin), gebruiker.rechten);
                 index++;
@@ -342,39 +343,107 @@ class GebruikersMenu
         else
             data[locatie] = temp;
     }
+
+    void VoegGebruikerToe(List<Gebruiker> data)
+    {
+        //array voor alle input (details van de nieuwe gebruiker)
+        string[] user = new string[4];
+        //wat er ingevuld moet worden
+        string[] todo = { "Naam: ", "Gebruikersnaam: ", "Wachtwoordt: ", "Rechten: " };
+        //input string hierin wordt de input gezet
+        string input = "";
+        Console.Clear();
+        //details met wat er moet gebeuren
+        Console.WriteLine("ESC om terug te gaan (CANCEL)\nGebruiker Aanmaken, vul aub de benodigde gegevens in:\n");
+        //pointer voor hoever de progress is
+        int pointer = 0;
+        //zolang doorgaan tot alle details zijn ingevuld
+        while (pointer < todo.Length)
+        {
+            Console.Write("\n" + todo[pointer]);
+            input = ReadWithSpecialKeys();
+            //kijken wat de input
+            switch (input)
+            {
+                //vangen speciale keys die niet worden gebruikt
+                case "INS":
+                    Console.WriteLine("\nProbeer nogmaals! De toets die is ingedrukt wordt niet ondersteunt momenteel");
+                    break;
+                case "DEL":
+                    Console.WriteLine("\nProbeer nogmaals! De toets die is ingedrukt wordt niet ondersteunt momenteel");
+                    break;
+                //vangen een lege string
+                case "":
+                    Console.WriteLine("\nVoer aub iets in!");
+                    break;
+                //als er gestopt moet worden
+                case "ESC":
+                    return;
+                //goeie input en dan zal er verder gegaan worden
+                default:
+                    user[pointer] = input;
+                    pointer++;
+                    input = "";
+                    break;
+            }
+        }
+        //genereer een nieuwe id
+        string genID = (Int32.Parse(data[data.Count - 1].id) + 1).ToString();
+        //kijken welke rechten worden toegekent
+        bool rechten = false;
+        if (user[3].Contains("admin"))
+            rechten = true;
+        //nieuwe gebruiker aanmaken
+        Gebruiker gebruiker = new Gebruiker(user[0], user[1],  genID, user[2], rechten);
+        //gebruiker toevoegen
+        data.Add(gebruiker);
+    }
     public void AdminsRechten(List<Gebruiker> data, Gebruiker admin)
     {
+        //bool om programma af te sluiten
         bool exit = false;
         while (!exit)
         {
+            //succes met onloggen
             this.SuccesLogin(admin);
+            //print alle gebruikers behalve de admin
             this.PrintGebruikers(data, admin);
+            //keuze voor de gebruiker
             Console.WriteLine("\nToets in wat u wilt doen\nToets een nummer in om een gebruiker te veranderen\n");
             Console.Write("Keuze >>> ");
+            //keuze inlezen
             string keuze = ReadWithSpecialKeys();
+            //als er geen keuze wordt gemaakt
             while (keuze.Equals(""))
             {
                 Console.WriteLine("\nMaak aub een geldige keuze!");
                 Console.Write("Keuze >>> ");
                 keuze = ReadWithSpecialKeys();
             }
+            //kijken wat de keuze is
             switch (keuze)
             {
                 case "ESC":
+                    //stoppen met de programma
                     exit = true;
                     return;
                 case "INS":
-                    Console.WriteLine("\nGebruiker toevoegen...");
+                    //voeg een gebruiker toe
+                    VoegGebruikerToe(data);
                     break;
             }
 
+            //kijken of de gebruiker een nummer heeft ingevoerd
             if (int.TryParse(keuze, out _))
             {
                 if (Int32.Parse(keuze) <= data.Count)
                 {
+                    //gebruiker aanpassen en tonen
                     ToonGebruiker(data, keuze);
                 }
             }
+
+            //aanpassingen opslaan in het systeem
             if (!data.Equals(new Lezer().gebruikersInlezen()))
                 new Schrijver().updateGebruikers(data);
         }

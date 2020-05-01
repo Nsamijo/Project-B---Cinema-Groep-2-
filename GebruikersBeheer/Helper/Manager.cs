@@ -68,8 +68,7 @@ class Manager
         //inloggen
         if (this.Ingelogd == null)
         {
-            //Login();
-            this.Ingelogd = new Gebruiker("Jan Rooseveld", "JVeld", "3", "00000000", true);
+            Login();
         }
 
         //in de if springen als er is ingelogd zodat de admin
