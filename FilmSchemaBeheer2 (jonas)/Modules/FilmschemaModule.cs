@@ -67,6 +67,7 @@ namespace Bioscoop.Modules
         //VerwijderProgramma.cs -public void VerwijderProgramma()
         public void VerwijderProgramma()
         {
+            Console.Clear();
             List<FilmschemaModel> filmschema = FilmschemaData.LoadData();
             List<FilmModel> filmData = FilmData.LoadData();
             List<ZaalModel> zaalData = ZaalData.LoadData();
@@ -138,62 +139,121 @@ namespace Bioscoop.Modules
         //MaakProgramma.cs -public void MaakProgramma()
         public void MaakProgramma()
         {
+            bool abort = false;
             int zaalid = -1;
             int filmid = -1;
             string datum = "";
             string tijd = "";
-
+           
             Console.Clear();
             datum = AssignDatum();
-            while (FilmschemaData.DatumSyntax(datum) == false)
+            if(datum == "abort")
             {
-                Console.Clear();
-                datum = AssignDatum();
+                abort = true;
             }
-
-            Console.Clear();
-            ZaalModel z = AssignZaal(datum);
-            if (z == null)
+            if (!abort)
             {
-                while (z == null)
+                while (FilmschemaData.DatumSyntax(datum) == false && !abort)
                 {
-                    Console.Clear();
-                    z = AssignZaal(datum);
+                    if (!abort)
+                    {
+                        Console.Clear();
+                        datum = AssignDatum();
+                        if (datum == "abort")
+                        {
+                            abort = true;
+                        }
+                    }
                 }
             }
-            else
-            {
-                zaalid = z.ZaalId;
-            }
 
-            Console.Clear();
-            tijd = AssignTijd(datum,zaalid);
-
-            while(FilmschemaData.TijdSyntax(tijd) == false)
+            if (!abort)
             {
                 Console.Clear();
-                tijd = AssignTijd(datum,zaalid);
+                ZaalModel z = AssignZaal(datum);
+                if (z.ZaalId == -1)
+                {
+                    abort = true;
+                }
+                if (z == null && !abort)
+                {
+                    
+                    while (z == null)
+                    {
+                        Console.Clear();
+                        z = AssignZaal(datum);
+                        if (z.ZaalId == -1)
+                        {
+                            abort = true;
+                        }
+                    }
+                    
+                }
+                else
+                {
+                    if (!abort)
+                    {
+                        zaalid = z.ZaalId;
+                    }
+                }
             }
 
             Console.Clear();
-            FilmModel film = AssignFilm();
-            if (film == null)
+            if (!abort)
             {
-                while (film == null)
+                tijd = AssignTijd(datum, zaalid);
+                if (tijd == "abort")
+                {
+                    abort = true;
+                }
+                while (FilmschemaData.TijdSyntax(tijd) == false && !abort)
                 {
                     Console.Clear();
-                    film = AssignFilm();
+                    tijd = AssignTijd(datum, zaalid);
+                    if (tijd == "abort")
+                    {
+                        abort = true;
+                    }
                 }
             }
-            else
+            if (!abort)
             {
-                filmid = film.FilmId;
+                Console.Clear();
+                FilmModel film = AssignFilm();
+                if (film.FilmId == -1)
+                {
+                    abort = true;
+                }
+                if (film == null && !abort)
+                {
+                    while (film == null && !abort)
+                    {
+                        Console.Clear();
+                        film = AssignFilm();
+                        if (film.FilmId == -1)
+                        {
+                            abort = true;
+                        }
+                    }
+                }
+                else
+                {
+                    if (!abort)
+                    {
+                        filmid = film.FilmId;
+                    }
+                }
             }
-            FilmschemaData.MaakProgramma(FilmschemaData.getId(),datum, tijd, zaalid, filmid);
+            if (!abort)
+            {
+                FilmschemaData.MaakProgramma(FilmschemaData.getId(), datum, tijd, zaalid, filmid);
+            }
             
         }
         public ZaalModel AssignZaal(string datum)
         {
+            Helpers.Display.PrintLine("[ESC] teruggaan");
+
             string error = "";
             List<ZaalModel> zalen;
             zalen = ZaalData.LoadData();
@@ -235,7 +295,7 @@ namespace Bioscoop.Modules
 
                 
                 case Inputs.KeyAction.Escape: //de functie beeindigen
-                    return null;
+                    return new ZaalModel(-1,"","","");
                     
             }
             return null;
@@ -243,6 +303,8 @@ namespace Bioscoop.Modules
 
         public FilmModel AssignFilm()
         {
+            Helpers.Display.PrintLine("[ESC] teruggaan");
+
             List<FilmModel> films = Repository.FilmData.LoadData();
             int i = 1;
             Helpers.Display.PrintHeader("No", "Naam", "Omschrijving", "Genre", "Kijkwijzer");
@@ -272,13 +334,15 @@ namespace Bioscoop.Modules
 
 
                 case Inputs.KeyAction.Escape: //de functie beeindigen
-                    return null;
+                    return new FilmModel(-1,"","","","","","");
 
             }
             return null;
         }
         public string AssignTijd(string datum,int zaalid)
         {
+            Helpers.Display.PrintLine("[ESC] teruggaan");
+
             string res = "";
             string[] tijden = new string[4] {"10:00","13:30","17:00","20:30" };
             
@@ -322,7 +386,7 @@ namespace Bioscoop.Modules
 
                     break;
                 case Inputs.KeyAction.Escape: //de functie beeindigen
-                    return "";
+                    return "abort";
             }
             return res;
 
@@ -330,7 +394,7 @@ namespace Bioscoop.Modules
         public string AssignDatum()
         {
             string res = "";
-            
+            Helpers.Display.PrintLine("[ESC] teruggaan");
             string[] dagen = FilmschemaData.VolgendeDagen(2, 14);
             int count = 0;
             foreach (string dag in dagen)
@@ -372,7 +436,7 @@ namespace Bioscoop.Modules
                     
                     break;
                 case Inputs.KeyAction.Escape: //de functie beeindigen
-                    return "";
+                    return "abort";
             }
             return res;
         }
@@ -381,6 +445,7 @@ namespace Bioscoop.Modules
         {
             bool abort = false;
             Console.Clear();
+
             List<FilmschemaModel> filmschema = FilmschemaData.LoadData();
             int i = 1;
             Helpers.Display.PrintHeader("No", "Zaal", "Datum", "Tijd");
