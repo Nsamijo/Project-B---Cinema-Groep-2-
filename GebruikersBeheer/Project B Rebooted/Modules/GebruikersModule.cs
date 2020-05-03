@@ -50,7 +50,8 @@ class GebruikersModule
         //inloggen
         if (this.Ingelogd == null)
         {
-            this.Ingelogd = this.login.Login(this.Ingelogd, this.Data);
+            login.Login(Data);
+            this.Ingelogd = login.NuIngelogd();
         }
 
         //in de if springen als er is ingelogd zodat de admin

@@ -4,6 +4,8 @@ using System.Text;
 
 public class LoginModule
 {
+
+    GebruikerModel Ingelogd = null;
     string Wachtwoordt()
     {
         ///<summary>
@@ -58,7 +60,7 @@ public class LoginModule
         return pass;
     }
 
-    GebruikerModel Login(List<GebruikerModel> gebruikers)
+    GebruikerModel Inloggen(List<GebruikerModel> gebruikers)
     {
         ///<summary>
         ///Vraag de account details aan van de gebruiker
@@ -106,19 +108,19 @@ public class LoginModule
         }
         return null;
     }
-    public GebruikerModel Login(GebruikerModel inloggen, List<GebruikerModel> data)
+    public void Login(List<GebruikerModel> data)
     {
         //inloggen in een account
-        inloggen = Login(data);
+        Ingelogd = Inloggen(data);
         //kijken of er werkelijk is ingelogd
-        if (inloggen == null)
+        if (this.Ingelogd == null)
         {
             ///<summary>
             ///als er niet is ingelogd dan wordt dit vermeld
             /// </summary>
             Console.WriteLine("\nNiet ingelogd!\nCheck uw gebruikersnaam of wachtwoord!");
         }
-        else if (inloggen.naam.Equals("cancel"))
+        else if (this.Ingelogd.naam.Equals("cancel"))
         {
             ///<summary>
             ///Als de gebruiker beslist om te stoppen met inloggen
@@ -126,6 +128,11 @@ public class LoginModule
             Console.WriteLine("\n\nInloggen is gecanceld.");
         }
 
-        return inloggen;
+    }
+
+    public GebruikerModel NuIngelogd()
+    {
+        //deze functie geeft de ingelogde terug
+        return this.Ingelogd;
     }
 }

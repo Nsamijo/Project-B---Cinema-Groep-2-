@@ -60,10 +60,10 @@ public class Schrijver
             //schrijf de JSON (string) naar de file toe
             File.WriteAllText(new Zoeker().SearchFile("gebruikers.json"), users);
         }
-        catch (Exception e)
+        catch
         {
             //er is niet naar de file kunnen schrijven
-            Console.WriteLine("Unable to update the file");
+            Console.WriteLine("De Gebruikers data is niet bijgewerkt! Probeer het nogmaals!");
         }
     }
 }
@@ -83,10 +83,10 @@ public class Lezer
             //alle gebruikers terug geven
             return gebruikers;
         }
-        catch (Exception e)
+        catch
         {
             //de JSON locatie is niet gevonden
-            Console.WriteLine("Unable to get users data");
+            Console.WriteLine("Gebruikers data is niet gevonden!");
         }
         //als de JSON niet kan worden ingelezen wordt er een null terug gegeven
         return null;
@@ -120,7 +120,7 @@ class GebruikersMenu
         {
             if (!(gebruiker.GebruikersID == admin.GebruikersID) && admin.rechten)
             {
-                Console.WriteLine("{0, -5}{1, -20}{2, -18}{3, -5}{4, -15}{5,0}", index, gebruiker.naam, gebruiker.gebruikersnaam, gebruiker.GebruikersID, gebruiker.zieWachtwoordt(admin), gebruiker.rechten);
+                Console.WriteLine("{0, -5}{1, -20}{2, -18}{3, -5}{4, -15}{5,0}", index, gebruiker.naam, gebruiker.gebruikersnaam, gebruiker.GebruikersID, gebruiker.zieWachtwoordt(admin), ((gebruiker.rechten)? "Admin":"Medewerker"));
                 index++;
             }
         }
@@ -329,17 +329,27 @@ class GebruikersMenu
         //tellen 1 erbij op zodat de admin niet kan worden aangepast
         if (locAdmin < locatie)
             locatie++;
-        
-        GebruikerModel temp = null;
-        while (temp == null)
+
+        try
         {
-            temp = VeranderGebruiker(data[locatie]);
+
+
+            GebruikerModel temp = null;
+            while (temp == null)
+            {
+                temp = VeranderGebruiker(data[locatie]);
+            }
+            //kijken of er een gebruiker verandert moet worden of verwijdert
+            if (temp.naam == "DEL")
+                data.Remove(data[locatie]);
+            else
+                data[locatie] = temp;
         }
-        //kijken of er een gebruiker verandert moet worden of verwijdert
-        if (temp.naam == "DEL")
-            data.Remove(data[locatie]);
-        else
-            data[locatie] = temp;
+        catch
+        {
+            Console.WriteLine("\nSelecteer aub een gebruiker die wel in de lijst staat");
+            Thread.Sleep(500);
+        }
     }
 
     void VoegGebruikerToe(List<GebruikerModel> data)
@@ -434,7 +444,7 @@ class GebruikersMenu
             //kijken of de gebruiker een nummer heeft ingevoerd
             if (int.TryParse(keuze, out _))
             {
-                if (Int32.Parse(keuze) <= data.Count)
+                if (Int32.Parse(keuze) < data.Count)
                 {
                     //gebruiker aanpassen en tonen
                     ToonGebruiker(data, keuze, admin);
