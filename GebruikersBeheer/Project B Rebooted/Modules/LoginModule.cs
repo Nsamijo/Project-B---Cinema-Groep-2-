@@ -80,14 +80,14 @@ public class LoginModule
         }
 
         if (gebruiker.Equals("ESC"))
-            return new GebruikerModel("cancel", "cancel", "cancel", "cancel", false);
+            return new GebruikerModel("cancel", "cancel", 0, "cancel", false);
 
         Console.Write("\nWachtwoord: ");
 
         string pass = Wachtwoordt();
         //als de sessie wordt onderbroken
         if (pass.Equals("ESC"))
-            return new GebruikerModel("cancel", "cancel", "cancel", "cancel", false);
+            return new GebruikerModel("cancel", "cancel", 0, "cancel", false);
 
         //kijken of de account een bestaande account is
         foreach (GebruikerModel i in gebruikers)

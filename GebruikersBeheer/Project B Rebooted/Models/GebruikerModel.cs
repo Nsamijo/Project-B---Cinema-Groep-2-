@@ -6,7 +6,7 @@ using System.Text;
 public class GebruikerModel
 {
     //gebruikers id
-    public string GebruikersID;
+    public int GebruikersID;
     //naam van de persoon
     public string naam;
     //gebruikersnaam (accountnaam)
@@ -16,7 +16,7 @@ public class GebruikerModel
     //rechten (wat kan de gebruiker wel of niet doen)
     public bool rechten;
 
-    public GebruikerModel(string naam, string gebruikersnaam, string id, string wachtwoord, bool rechten)
+    public GebruikerModel(string naam, string gebruikersnaam, int id, string wachtwoord, bool rechten)
     {
         //volledige naam (Voor en achternaam)
         this.naam = naam;

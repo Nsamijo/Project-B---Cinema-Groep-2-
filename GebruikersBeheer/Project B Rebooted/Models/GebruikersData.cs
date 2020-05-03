@@ -3,7 +3,9 @@ using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Reflection;
+using System.Threading;
 
 public class Zoeker
 {
@@ -116,7 +118,7 @@ class GebruikersMenu
         int index = 1;
         foreach (var gebruiker in users)
         {
-            if (!gebruiker.GebruikersID.Equals(admin.GebruikersID) && admin.rechten)
+            if (!(gebruiker.GebruikersID == admin.GebruikersID) && admin.rechten)
             {
                 Console.WriteLine("{0, -5}{1, -20}{2, -18}{3, -5}{4, -15}{5,0}", index, gebruiker.naam, gebruiker.gebruikersnaam, gebruiker.GebruikersID, gebruiker.zieWachtwoordt(admin), gebruiker.rechten);
                 index++;
@@ -247,7 +249,13 @@ class GebruikersMenu
                         if (change.Equals("ESC"))
                             break;
                         else
-                            temp.GebruikersID = change;
+                            if (Int32.TryParse(change, out _))
+                            temp.GebruikersID = Int32.Parse(change);
+                        else
+                        {
+                            Console.WriteLine("\nFout! De ID kan alleen een nummer zijn!");
+                            Thread.Sleep(500);
+                        }
                         break;
                     //hierin wordt de naam aangepast
                     case "2":
@@ -378,7 +386,7 @@ class GebruikersMenu
             }
         }
         //genereer een nieuwe id
-        string genID = (Int32.Parse(data[data.Count - 1].GebruikersID) + 1).ToString();
+        int genID = data.Max(x => x.GebruikersID) + 1;
         //kijken welke rechten worden toegekent
         bool rechten = false;
         if (user[3].Contains("admin"))
