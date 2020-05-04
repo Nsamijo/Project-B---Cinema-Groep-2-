@@ -1,7 +1,7 @@
 [
   {
     "ProgrammaId": 1,
-    "Datum": "28/04/2020",
+    "Datum": "07/05/2020",
     "Tijd": "15:00",
     "FilmId": 14,
     "ZaalId": 1
@@ -11,6 +11,6 @@
     "Datum": "29/04/2020",
     "Tijd": "14:00",
     "FilmId": 18,
-    "ZaalId": 4
+    "ZaalId": 2
   }
 ]

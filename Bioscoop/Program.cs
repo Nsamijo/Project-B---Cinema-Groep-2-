@@ -7,15 +7,15 @@ namespace Bioscoop
     {
         static void Main(string[] args)
         {
-            //opvragen van jou module hoofd class
+            Console.SetWindowSize(155, 32);
             MenuModule menu = new MenuModule(); 
 
             //haal jou module uit commentaar!!
-            ZaalModule zaal = new ZaalModule();
-            //FilmModule film = new FilmModule();
-            //GebruikerModule gebruiker = new FilmModule();
-            //FilmschemaModule schema = new FilmschemaModule();
-            //StoelModule stoel = new StoelModule();
+            ZaalModule zaalbeheer = new ZaalModule();
+            FilmModule filmbeheer = new FilmModule();
+            GebruikerModule gebruikerbeheer = new GebruikerModule();
+            FilmschemaModule filmschemabeheer = new FilmschemaModule();
+            StoelModule stoel = new StoelModule();
 
             bool loop = true;
             while (loop)
@@ -24,23 +24,23 @@ namespace Bioscoop
                 {
                     case ConsoleKey.D1:
                         Console.Clear();
-                        zaal.Run();
+                        zaalbeheer.Run();
                         break;
                     case ConsoleKey.D2:
                         Console.Clear();
-                        //film.Run();
+                        filmbeheer.Run();
                         break;
                     case ConsoleKey.D3:
                         Console.Clear();
-                        //gebruiker.Run();
+                        gebruikerbeheer.Run();
                         break;
                     case ConsoleKey.D4:
                         Console.Clear();
-                        //filmschema.Run();
+                        filmschemabeheer.Run();
                         break;
                     case ConsoleKey.D5:
                         Console.Clear();
-                        //stoel.Run();
+                        stoel.Run();
                         break;
                 }
             }

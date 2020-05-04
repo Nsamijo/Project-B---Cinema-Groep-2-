@@ -46,11 +46,5 @@
     "Omschrijving": "Zaal 8",
     "Status": "Beschikbaar",
     "Scherm": "IMAX"
-  },
-  {
-    "ZaalId": 9,
-    "Omschrijving": "Zaal 9",
-    "Status": "Beschikbaar",
-    "Scherm": "IMAX"
   }
 ]

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Bioscoop.Helpers;
 using Bioscoop.Repository;
+using Bioscoop.Models;
 
 namespace Bioscoop.Modules
 {
@@ -161,7 +162,7 @@ namespace Bioscoop.Modules
                         abort = true;
                         break;
                     case Inputs.KeyAction.Delete: //de specifieke zaal data verwijderen
-                        Console.WriteLine("Weet je zeker dat je" + zaal.ZaalId + "wilt verwijderen? (y/n)");
+                        Console.WriteLine("Weet je zeker dat je " + zaal.Omschrijving + " wilt verwijderen? (y/n)");
                         string temp = Console.ReadLine();
                         if( temp == "y")
                         {
@@ -213,7 +214,7 @@ namespace Bioscoop.Modules
 
                 switch (x) //switch case die vanaf 0 begint. elke waarde moet ingevuld worden.
                 {
-                    case 0: Helpers.Display.PrintLine("Vul de nieuwe Zaal Omschrijving in: (Zaal (nummer))"); break;
+                    case 0: Helpers.Display.PrintLine("Vul de Zaal Omschrijving in: (Zaal (nummer))"); break;
                     case 1: Helpers.Display.PrintLine("Vul de Zaal Status in: (Beschikbaar / Niet Beschikbaar)"); break;
                     case 2: Helpers.Display.PrintLine("Vul het zaal scherm in: (2D, 3D, IMAX)"); break;
                     case 3: Helpers.Display.PrintLine("druk op Insert om de gegevens op te slaan"); break;
@@ -229,6 +230,7 @@ namespace Bioscoop.Modules
                                 if (input.val.Length > 5)
                                 {
                                     newZaal.Omschrijving = input.val;
+                                    error = "";
                                     x++;
                                 }
                                 else error = "De omschrijving moet uit minimaal 6 karakters bestaan";
@@ -237,6 +239,7 @@ namespace Bioscoop.Modules
                                 if (input.val == "Beschikbaar" || input.val == "Niet Beschikbaar")
                                 {
                                     newZaal.Status = input.val;
+                                    error = "";
                                     x++;
                                 }
                                 else error = "Onjuist waarde ingevuld.";
@@ -245,6 +248,7 @@ namespace Bioscoop.Modules
                                 if (input.val == "2D" || input.val == "3D" || input.val == "IMAX")
                                 {
                                     newZaal.Scherm = input.val;
+                                    error = "";
                                     x++;
                                     check = true;
                                 }

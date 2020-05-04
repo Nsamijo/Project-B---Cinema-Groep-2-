@@ -50,7 +50,7 @@ namespace Bioscoop.Helpers
             } while (val.Key != ConsoleKey.Escape);
 
             input.action = KeyAction.Escape;
-            Console.WriteLine("");
+            Console.WriteLine("a");
             return input;
         }
     }

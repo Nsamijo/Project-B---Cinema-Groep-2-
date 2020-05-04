@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Bioscoop
+namespace Bioscoop.Models
 {
     class FilmModel
     {

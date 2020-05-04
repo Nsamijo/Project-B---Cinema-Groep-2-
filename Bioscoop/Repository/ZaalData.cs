@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using Newtonsoft.Json;
 using System.Linq;
+using Bioscoop.Models;
 
 namespace Bioscoop.Repository
 {

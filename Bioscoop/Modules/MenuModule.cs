@@ -15,9 +15,9 @@ namespace Bioscoop.Modules
         {
             //main menu
             Console.Clear();
-            System.Console.WriteLine("Hoofdmenu");
-            System.Console.WriteLine("Druk op een nummer om verder te gaan naar het debetreffende scherm");
-            System.Console.WriteLine(" ");
+            Helpers.Display.PrintLine("Hoofdmenu");
+            Helpers.Display.PrintLine("Druk op een nummer om verder te gaan naar het debetreffende scherm");
+            Helpers.Display.PrintLine("");
             Helpers.Display.PrintHeader("Nr.", "Menu");
             Helpers.Display.PrintTable("1", "Zaalbeheer");
             Helpers.Display.PrintTable("2", "Filmbeheer");
