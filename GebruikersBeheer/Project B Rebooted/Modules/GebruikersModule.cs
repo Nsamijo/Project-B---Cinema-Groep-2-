@@ -50,8 +50,9 @@ class GebruikersModule
         //inloggen
         if (this.Ingelogd == null)
         {
-            login.Login(Data);
-            this.Ingelogd = login.NuIngelogd();
+            //login.Login(Data);
+            //temporeel account
+            this.Ingelogd = new GebruikerModel("Test Account", "Tester", 10, "12345678", true);
         }
 
         //in de if springen als er is ingelogd zodat de admin

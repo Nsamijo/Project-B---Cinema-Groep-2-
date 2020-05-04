@@ -327,8 +327,8 @@ class GebruikersMenu
         //kijken waar de admin zit
         int locAdmin = data.FindIndex(x => x.GebruikersID == admin.GebruikersID) - 1;
         //tellen 1 erbij op zodat de admin niet kan worden aangepast
-        if (locAdmin < locatie)
-            locatie++;
+        //if (locAdmin < locatie)
+           // locatie++;
 
         try
         {
