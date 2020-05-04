@@ -28,35 +28,23 @@ namespace Bioscoop.Modules
                 Helpers.Display.PrintLine("2. Maak programma");
                 Helpers.Display.PrintLine("3. Verwijder programma");
                 Helpers.Display.PrintLine("4. Verander programma");
-                Inputs.KeyInput input = Inputs.ReadUserData();
 
-                switch (input.action)
+                switch (Helpers.Display.Keypress())
                 {
-                    case Inputs.KeyAction.Escape:
+                    case ConsoleKey.D1:
+                        ZiePlanning();
+                        break;
+                    case ConsoleKey.D2:
+                        MaakProgramma();
+                        break;
+                    case ConsoleKey.D3:
+                        VerwijderProgramma();
+                        break;
+                    case ConsoleKey.D4:
+                        KiesProgramma();
+                        break;
+                    case ConsoleKey.Escape:
                         abort = true;
-                        break;
-                    case Inputs.KeyAction.Enter:
-                        int inputValue = Int32.TryParse(input.val, out inputValue) ? inputValue : 0;
-                        inputValue--; //-1 want count start bij 0
-                        switch (inputValue)
-                        {
-                            case 0:
-                                ZiePlanning();
-                                break;
-                            case 1:
-                                MaakProgramma();
-                                break;
-                            case 2:
-                                VerwijderProgramma();
-                                break;
-                            case 3:
-                                KiesProgramma();
-                                break;
-                            default:
-                                break;
-                        }
-                        break;
-                    default:
                         break;
                 }
             }
@@ -171,14 +159,15 @@ namespace Bioscoop.Modules
             {
                 Console.Clear();
                 ZaalModel z = AssignZaal(datum);
+
                 if (z.ZaalId == -1)
                 {
                     abort = true;
                 }
-                if (z == null && !abort)
+                if (z.ZaalId == -2 && !abort)
                 {
                     
-                    while (z == null)
+                    while (z.ZaalId == -2)
                     {
                         Console.Clear();
                         z = AssignZaal(datum);
@@ -224,9 +213,9 @@ namespace Bioscoop.Modules
                 {
                     abort = true;
                 }
-                if (film == null && !abort)
+                if (film.FilmId == -2 && !abort)
                 {
-                    while (film == null && !abort)
+                    while (film.FilmId == -2 && !abort)
                     {
                         Console.Clear();
                         film = AssignFilm();
@@ -244,7 +233,7 @@ namespace Bioscoop.Modules
                     }
                 }
             }
-            if (!abort)
+            if (!abort && filmid >= 0 && zaalid >= 0)
             {
                 FilmschemaData.MaakProgramma(FilmschemaData.getId(), datum, tijd, zaalid, filmid);
             }
@@ -298,7 +287,7 @@ namespace Bioscoop.Modules
                     return new ZaalModel(-1,"","","");
                     
             }
-            return null;
+            return new ZaalModel(-2,"","","");
         }
 
         public FilmModel AssignFilm()
@@ -337,7 +326,7 @@ namespace Bioscoop.Modules
                     return new FilmModel(-1,"","","","","","");
 
             }
-            return null;
+            return new FilmModel(-2, "", "", "", "", "", "");
         }
         public string AssignTijd(string datum,int zaalid)
         {
@@ -489,14 +478,13 @@ namespace Bioscoop.Modules
             List<ZaalModel> zaalData = ZaalData.LoadData();
             List<FilmModel> filmData = FilmData.LoadData();
             FilmschemaModel programma = filmschema[index];
-            
-            
 
+
+            Console.Clear();
 
 
             while (!abort)
             {
-                Console.Clear();
                 Helpers.Display.PrintLine($"Datum: {programma.Datum}");
                 Helpers.Display.PrintLine($"Zaal: {zaalData.Where(zaal => zaal.ZaalId == programma.ZaalId).ToList()[0].Omschrijving}");
                 Helpers.Display.PrintLine($"Film: {filmData.Where(film => film.FilmId == programma.FilmId).ToList()[0].Naam}");
@@ -521,6 +509,10 @@ namespace Bioscoop.Modules
                     case Inputs.KeyAction.Insert:
                         FilmschemaData.VerwijderProgramma(index);
                         FilmschemaData.MaakProgramma(programma.ProgrammaId, programma.Datum, programma.Tijd, programma.ZaalId, programma.FilmId);
+                        Console.Clear();
+
+                        Helpers.Display.PrintLine("Programma opgeslagen\n\n");
+                        Console.Clear();
                         break;
                     case Inputs.KeyAction.Enter:
                         int inputValue = Int32.TryParse(input.val, out inputValue) ? inputValue : 0;
@@ -530,23 +522,117 @@ namespace Bioscoop.Modules
                             switch (inputValue)
                             {
                                 case 1:
-                                    programma.Datum = AssignDatum();
+                                    Console.Clear();
+                                    string datum = AssignDatum();
+                                    if (datum != "abort" && FilmschemaData.DatumSyntax(datum) == false)
+                                    {
+                                        while (FilmschemaData.DatumSyntax(datum) == false && datum != "abort")
+                                        {
+                                            Console.Clear();
+                                            Helpers.Display.PrintLine("Probeer het opnieuw\n\n");
+                                            datum = AssignDatum();
+                                            Console.Clear();
+                                        }
+                                        if (datum != "abort")
+                                        {
+                                            programma.Datum = datum;
+                                        }
+
+                                    }
+                                    else
+                                    {
+                                        if (datum != "abort")
+                                        {
+                                            programma.Datum = datum;
+                                        }
+                                    }
+                                    Console.Clear();
                                     break;
                                 case 2:
-                                    programma.ZaalId = AssignZaal(programma.Datum).ZaalId;
+                                    Console.Clear();
+                                    int zaalid = AssignZaal(programma.Datum).ZaalId;
+                                    if(zaalid >= 0)
+                                    {
+                                        programma.ZaalId = zaalid;
+                                    }
+                                    else
+                                    {
+                                        while(zaalid == -2)
+                                        {
+                                            Console.Clear();
+                                            Helpers.Display.PrintLine("Probeer het opnieuw\n\n");
+                                            zaalid = AssignZaal(programma.Datum).ZaalId;
+                                            Console.Clear();
+                                        }
+                                        if(zaalid != -1)
+                                        {
+                                            programma.ZaalId = zaalid;
+                                        }
+                                    }
+                                    Console.Clear();
                                     break;
                                 case 3:
-                                    programma.FilmId = AssignFilm().FilmId;
+                                    Console.Clear();
+                                    int filmid = AssignFilm().FilmId;
+                                    if(filmid >= 0)
+                                    {
+                                        programma.FilmId = filmid;
+                                    }
+                                    else
+                                    {
+                                        while(filmid == -2)
+                                        {
+                                            Console.Clear();
+                                            Helpers.Display.PrintLine("Probeer het opnieuw\n\n");
+                                            filmid = AssignFilm().FilmId;
+                                            Console.Clear();
+                                        }
+                                        if (filmid != -1)
+                                        {
+                                            programma.FilmId = filmid;
+                                        }
+                                    }
+                                    Console.Clear();
                                     break;
                                 case 4:
-                                    programma.Tijd = AssignTijd(programma.Datum,programma.ZaalId);
+                                    Console.Clear();
+                                    string tijd = AssignTijd(programma.Datum,programma.ZaalId);
+                                    if(tijd != "abort" &&  FilmschemaData.TijdSyntax(tijd) == false)
+                                    {
+                                        while(!FilmschemaData.TijdSyntax(tijd) && tijd != "abort")
+                                        {
+                                            Console.Clear();
+                                            Helpers.Display.PrintLine("Probeer het opnieuw\n\n");
+
+                                            tijd = AssignTijd(programma.Datum, programma.ZaalId);
+                                            Console.Clear();
+                                        }
+                                        if(tijd != "abort")
+                                        {
+                                            programma.Tijd = tijd;
+                                        }
+                                    }
+                                    else
+                                    {
+                                        if(tijd != "abort")
+                                        {
+                                            programma.Tijd = tijd;
+                                        }
+                                    }
+                                    Console.Clear();
                                     break;
-                            }
+                                
+                            } 
                             Helpers.Display.PrintLine("Programma aangepast");
                             Helpers.Display.PrintLine("");
                         }
+                        else
+                        {
+                            Console.Clear();
+                        }
                         break;
                     default:
+                        Console.Clear();
                         break;
                 }
             }
