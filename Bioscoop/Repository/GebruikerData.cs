@@ -289,8 +289,11 @@ namespace Bioscoop.Repository
             }
             //zetten de string om naar een geldig index
             int locatie = Int32.Parse(index) - 1;
-            //kijken waar de admin zit
-            int locAdmin = data.FindIndex(x => x.GebruikerId == admin.GebruikerId) - 1;
+
+            //kijken waar de admin zit, hebben dit nu ff als comment gezet anders aangezien het een test account is
+            //int locAdmin = data.FindIndex(x => x.GebruikerId == admin.GebruikerId) - 1;
+            int locAdmin = 10000;
+
             //tellen 1 erbij op zodat de admin niet kan worden aangepast
             if(locAdmin < locatie)
                 locatie++;

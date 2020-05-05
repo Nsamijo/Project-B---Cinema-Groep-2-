@@ -54,8 +54,10 @@ namespace Bioscoop.Modules
             //inloggen
             if (this.Ingelogd == null)
             {
-                login.Login(Data);
+                //kijken wie is ingelogd
                 this.Ingelogd = login.NuIngelogd();
+                //test account, inloggen gaat namelijk voor het heel menu plaats vinden
+                this.Ingelogd = new GebruikerModel("Sinterklaas", "SKlaas", 10, "hierzosnoep", true);
             }
 
             //in de if springen als er is ingelogd zodat de admin
