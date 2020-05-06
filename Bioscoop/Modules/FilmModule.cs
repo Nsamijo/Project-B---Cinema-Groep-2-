@@ -131,7 +131,7 @@ namespace Bioscoop.Modules
                                 case 1: Helpers.Display.PrintLine("Vul de nieuwe omschrijving in:"); break;
                                 case 2: Helpers.Display.PrintLine("Vul de nieuwe genre in: (Avontuur / Actie / Thriller / Horror / Animatie / Drama / Comedy"); break;
                                 case 3: Helpers.Display.PrintLine("Vul de nieuwe film duur in: (00:00)"); break;
-                                case 4: Helpers.Display.PrintLine("Vul de nieuwe kijkwijzer in: (6+, 12+, 16+, 18+)"); break;
+                                case 4: Helpers.Display.PrintLine("Vul de nieuwe kijkwijzer in: (6+, 12+, 16+, 18+, AL)"); break;
                                 case 5: Helpers.Display.PrintLine("Vul de nieuwe film status in: (Beschikbaar / Niet Beschikbaar"); break;
                             }
 

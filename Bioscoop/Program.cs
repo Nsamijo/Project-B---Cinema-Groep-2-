@@ -15,7 +15,7 @@ namespace Bioscoop
             FilmModule filmbeheer = new FilmModule();
             GebruikerModule gebruikerbeheer = new GebruikerModule();
             FilmschemaModule filmschemabeheer = new FilmschemaModule();
-            StoelModule stoel = new StoelModule();
+            StoelModule stoelbeheer = new StoelModule();
 
             bool loop = true;
             while (loop)
@@ -24,23 +24,23 @@ namespace Bioscoop
                 {
                     case ConsoleKey.D1:
                         Console.Clear();
-                        zaalbeheer.Run();
+                        filmbeheer.Run();
                         break;
                     case ConsoleKey.D2:
                         Console.Clear();
-                        filmbeheer.Run();
+                        filmschemabeheer.Run();
                         break;
                     case ConsoleKey.D3:
                         Console.Clear();
-                        gebruikerbeheer.Run();
+                        zaalbeheer.Run();
                         break;
                     case ConsoleKey.D4:
                         Console.Clear();
-                        filmschemabeheer.Run();
+                        stoelbeheer.Run(); ;
                         break;
                     case ConsoleKey.D5:
                         Console.Clear();
-                        stoel.Run();
+                        gebruikerbeheer.Run();
                         break;
                 }
             }

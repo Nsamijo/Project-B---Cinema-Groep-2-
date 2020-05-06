@@ -140,7 +140,7 @@
     "Omschrijving": "...",
     "Genre": "Avontuur",
     "Duur": "01:56",
-    "Kijkwijzer": "All",
+    "Kijkwijzer": "AL",
     "Status": "Niet beschikbaar"
   },
   {
@@ -149,7 +149,7 @@
     "Omschrijving": "...",
     "Genre": "Komedie",
     "Duur": "01:47",
-    "Kijkwijzer": "All",
+    "Kijkwijzer": "AL",
     "Status": "Niet beschikbaar"
   },
   {
@@ -158,7 +158,7 @@
     "Omschrijving": "...",
     "Genre": "Actie",
     "Duur": "02:01",
-    "Kijkwijzer": "All",
+    "Kijkwijzer": "AL",
     "Status": "Niet beschikbaar"
   },
   {
@@ -167,16 +167,16 @@
     "Omschrijving": "...",
     "Genre": "Animation",
     "Duur": "01:28",
-    "Kijkwijzer": "All",
+    "Kijkwijzer": "AL",
     "Status": "Niet beschikbaar"
   },
   {
     "FilmId": 7,
-    "Naam": "Wall-E",
+    "Naam": "WAL-E",
     "Omschrijving": "...",
     "Genre": "Animatie",
     "Duur": "01:38",
-    "Kijkwijzer": "All",
+    "Kijkwijzer": "AL",
     "Status": "Niet beschikbaar"
   }
 ]
