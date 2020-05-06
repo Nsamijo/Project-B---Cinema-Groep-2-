@@ -30,9 +30,16 @@ namespace Bioscoop.Modules
                 Helpers.Display.PrintHeader("No", "Zaal", "Film", "Datum", "Tijd");
                 foreach (FilmschemaModel programma in filmschema)
                 {
-                    string filmnaam = filmData.Where(film => film.FilmId == programma.FilmId).ToList()[0].Naam;
-                    string zaalnaam = zaalData.Where(zaal => zaal.ZaalId == programma.ZaalId).ToList()[0].Omschrijving;
-                    Helpers.Display.PrintTable(i.ToString(), zaalnaam, filmnaam, programma.Datum, programma.Tijd);
+                    try
+                    {
+                        string filmnaam = filmData.Where(film => film.FilmId == programma.FilmId).ToList()[0].Naam;
+                        string zaalnaam = zaalData.Where(zaal => zaal.ZaalId == programma.ZaalId).ToList()[0].Omschrijving;
+                        Helpers.Display.PrintTable(i.ToString(), zaalnaam, filmnaam, programma.Datum, programma.Tijd);
+                    }
+                    catch
+                    {
+
+                    }
                     i++;
                 }
                 Helpers.Display.PrintLine(" ");
