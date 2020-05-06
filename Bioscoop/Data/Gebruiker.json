@@ -1,30 +1,30 @@
 [
   {
-    "GebruikersID": "1",
-    "naam": "Nathan Samijo",
-    "gebruikersnaam": "Nsamijo",
-    "wachtwoord": "12345678",
-    "rechten": true
+    "GebruikerId": 1,
+    "Naam": "Nathan Samijo",
+    "Gebruikersnaam": "Nsamijo",
+    "Wachtwoord": "12345678",
+    "Rechten": true
   },
   {
-    "GebruikersID": "2",
-    "naam": "Jonas de Boer",
-    "gebruikersnaam": "JBoer",
-    "wachtwoord": "12345678",
-    "rechten": true
+    "GebruikerId": 2,
+    "Naam": "Jonas de Boer",
+    "Gebruikersnaam": "JBoer",
+    "Wachtwoord": "12345678",
+    "Rechten": true
   },
   {
-    "GebruikersID": "3",
-    "naam": "Jan Roozemond",
-    "gebruikersnaam": "jrmond",
-    "wachtwoord": "ietsietsiets",
-    "rechten": true
+    "GebruikerId": 3,
+    "Naam": "Jan Roozemond",
+    "Gebruikersnaam": "jrmond",
+    "Wachtwoord": "ietsietsiets",
+    "Rechten": true
   },
   {
-    "GebruikersID": "4",
-    "naam": "Judith Jansen",
-    "gebruikersnaam": "JJansen",
-    "wachtwoord": "veiligheid",
-    "rechten": false
+    "GebruikerId": 4,
+    "Naam": "Judith Jansen",
+    "Gebruikersnaam": "JJansen",
+    "Wachtwoord": "veiligheid",
+    "Rechten": false
   }
 ]

@@ -18,7 +18,7 @@ namespace Bioscoop.Repository
         public void UpdateGebruikers(List<GebruikerModel> gebruikers)
         {
             //zetten de lijst met objecten om naar JSON notatie (string)
-            string users = JsonConvert.SerializeObject(gebruikers.ToArray());
+            string users = JsonConvert.SerializeObject(gebruikers.ToArray(), Formatting.Indented);
             try
             {
                 //schrijf de JSON (string) naar de file toe
@@ -148,11 +148,10 @@ namespace Bioscoop.Repository
                 GebruikerModel temp = user;
                 Helpers.Display.PrintLine("Aanpassingen opgeslagen: " + opgeslagen + "\n");
                 Helpers.Display.PrintLine("Aanpassen gebruiker: " + temp.Naam + "\nESC Terug naar overzicht(CANCEL)\t DEL Gebruikerverwijderen\nINS Opslaan\n");
-                Helpers.Display.PrintLine("1. ID:             " + temp.GebruikerId);
-                Helpers.Display.PrintLine("2. Naam:           " + temp.Naam);
-                Helpers.Display.PrintLine("3. Wachtwoord:     " + temp.Wachtwoord);
-                Helpers.Display.PrintLine("4. Account-type:   " + ((temp.Rechten) ? "Admin" : "Medewerker"));
-                Helpers.Display.PrintLine("5. Gebruikersnaam: " + temp.Gebruikersnaam);
+                Helpers.Display.PrintLine("1. Naam:           " + temp.Naam);
+                Helpers.Display.PrintLine("2. Wachtwoord:     " + temp.Wachtwoord);
+                Helpers.Display.PrintLine("3. Account-type:   " + ((temp.Rechten) ? "Admin" : "Medewerker"));
+                Helpers.Display.PrintLine("4. Gebruikersnaam: " + temp.Gebruikersnaam);
                 Helpers.Display.PrintLine("Welke attribute wilt u veranderen: ");
                 Console.Write(">>> ");
             }
@@ -204,26 +203,9 @@ namespace Bioscoop.Repository
                     Console.Clear();
                     switch (keuze)
                     {
-                        //hierin wordt de id aangepast
-                        case "1":
-                            PrintOpties();
-                            Helpers.Display.PrintLine("ID: " + temp.GebruikerId);
-                            change = Verander();
-                            //terug naar menu zonder aanpassing te maken
-                            if (change.Equals("ESC"))
-                                break;
-                            else if (Int32.TryParse(change, out _))
-                            { 
-                                    temp.GebruikerId = Int32.Parse(change); 
-                            }
-                            else
-                            {
-                                Helpers.Display.PrintLine("\nFout! De ID kan alleen een nummer zijn!");
-                                Thread.Sleep(500);
-                            }
-                                break;
+                        
                         //hierin wordt de naam aangepast
-                        case "2":
+                        case "1":
                             PrintOpties();
                             Helpers.Display.PrintLine("Naam: " + temp.Naam);
                             change = Verander();
@@ -234,7 +216,7 @@ namespace Bioscoop.Repository
                                 temp.Naam = change;
                             break;
                         //wachtwoordt van veranderen van de gebruiker
-                        case "3":
+                        case "2":
                             PrintOpties();
                             Helpers.Display.PrintLine("Wachtwoordt: " + temp.Wachtwoord);
                             change = Verander();
@@ -245,7 +227,7 @@ namespace Bioscoop.Repository
                                 temp.Wachtwoord = change;
                             break;
                         //rechten veranderen van de gebruiker
-                        case "4":
+                        case "3":
                             PrintOpties();
                             Helpers.Display.PrintLine("Account-type: " + ((temp.Rechten) ? "Admin" : "Medewerker"));
                             change = Verander();
@@ -260,7 +242,7 @@ namespace Bioscoop.Repository
                                 temp.Rechten = false;
                             break;
 
-                        case "5":
+                        case "4":
                             PrintOpties();
                             Helpers.Display.PrintLine("Gebruikersnaam: " + temp.Gebruikersnaam);
                             change = Verander();
@@ -411,7 +393,7 @@ namespace Bioscoop.Repository
                 //kijken of de gebruiker een nummer heeft ingevoerd
                 if (int.TryParse(keuze, out _))
                 {
-                    if (Int32.Parse(keuze) < data.Count)
+                    if (Int32.Parse(keuze) - 1 < data.Count)
                     {
                         //gebruiker aanpassen en tonen
                         ToonGebruiker(data, keuze, admin);
