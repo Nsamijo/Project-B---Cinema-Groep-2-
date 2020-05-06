@@ -42,9 +42,15 @@ namespace Bioscoop.Repository
         public static void RemoveData(ZaalModel data) //verwijder functie
         {
             List<ZaalModel> zaalData = LoadData();
+            List<FilmschemaModel> filmschemaData = FilmschemaData.LoadData();
 
             var toRemove = zaalData.Where(a => a.ZaalId == data.ZaalId).ToList();
             foreach (var remove in toRemove) zaalData.Remove(remove);
+
+            //voorfilmschema
+            for (int i = 0; i < filmschemaData.Count; i++) if (filmschemaData[i].ZaalId == data.ZaalId)  
+                    if (filmschemaData[i].ZaalId == data.ZaalId) FilmschemaData.VerwijderProgramma(i);
+
 
             // Update json data string
             SaveData(zaalData);
