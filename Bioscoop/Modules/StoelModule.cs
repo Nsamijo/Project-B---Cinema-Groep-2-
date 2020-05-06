@@ -25,14 +25,14 @@ namespace Bioscoop.Modules
                 Helpers.Display.PrintLine("Stoelbeheer");
                 Helpers.Display.PrintLine("ESC - Terug naar het menu \n");
                 Helpers.Display.PrintLine("Om de stoelen van een zaal te bekijken, vul de nummer voor de zaal in \n");
-                Helpers.Display.PrintHeader("Nr.", "Omschrijving", "Status", "Scherm");
+                Helpers.Display.PrintHeader("Nr.", "Omschrijving", "Scherm");
 
                 var zalen = ZaalData.LoadData();
                 ZaalData.SortData();
                 int nummering = 1;
                 foreach (ZaalModel zaal in zalen)
                 {
-                    Helpers.Display.PrintTable(nummering.ToString(), zaal.Omschrijving, zaal.Status, zaal.Scherm);
+                    Helpers.Display.PrintTable(nummering.ToString(), zaal.Omschrijving, zaal.Scherm);
                     nummering++;
                 }
                 Helpers.Display.PrintLine(" ");
