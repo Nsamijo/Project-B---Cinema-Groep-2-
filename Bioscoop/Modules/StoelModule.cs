@@ -70,7 +70,8 @@ namespace Bioscoop.Modules
                 Helpers.Display.PrintLine("Stoelbeheer: Zaal " + zaalnummer );
                 Helpers.Display.PrintLine("ESC - Naar menu                       INS - Maak een nieuwe stoel");
                 Helpers.Display.PrintLine("                                      DEL - Pas stoel aan of verwijder stoel");
-                Helpers.Display.PrintHeader("Nummer", "Omschrijving", "Rij", "Stoelnummer", "Premium");
+                Helpers.Display.PrintLine("");
+                Helpers.Display.PrintHeader("Nr", "Omschrijving", "Rij", "Stoelnummer", "Premium");
 
                 //data opvragen en weergeven
                 int numering = 1;
@@ -82,6 +83,9 @@ namespace Bioscoop.Modules
                         numering++;
                     }
                 }
+
+                //bovenaan beginenn van scherm
+                Console.SetWindowPosition(0, 1);
 
                 //input INS of ESC of DEL
                 Inputs.KeyInput input = Inputs.ReadUserData();
