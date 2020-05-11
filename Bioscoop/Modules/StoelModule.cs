@@ -7,7 +7,7 @@ using Bioscoop.Helpers;
 using Bioscoop.Repository;
 using Bioscoop.Models;
 
-namespace Bioscoop.Modules
+namespace Bioscoop.Modules 
 {
     public class StoelModule
     {
