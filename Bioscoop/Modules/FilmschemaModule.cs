@@ -11,6 +11,7 @@ namespace Bioscoop.Modules
     {
         public void Run()
         {
+            Console.CursorVisible = true;
             bool abort = false;
             while (!abort)
             {

@@ -15,6 +15,7 @@ namespace Bioscoop.Modules
 
         public void Run()
         {
+            Console.CursorVisible = true;
             bool abort = false;
             String error = "";
 
@@ -59,7 +60,7 @@ namespace Bioscoop.Modules
         }
 
         //OVERZICHT
-        private void StoelMain(int zaalnummer)
+        public void StoelMain(int zaalnummer)
         {
             Console.Clear();
             List<StoelModel> stoelen = StoelLoadJson();

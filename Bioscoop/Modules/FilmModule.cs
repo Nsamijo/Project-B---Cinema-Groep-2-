@@ -12,6 +12,7 @@ namespace Bioscoop.Modules
 
         public void Run() //hoofd functie
         {
+            Console.CursorVisible = true;
             //globale data
             Boolean abort = false;
             String error = "";

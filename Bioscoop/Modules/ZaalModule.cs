@@ -12,6 +12,7 @@ namespace Bioscoop.Modules
 
         public void Run() //hoofd functie
         {
+            Console.CursorVisible = true;
             //globale data
             Boolean abort = false;
             String error = "";
@@ -49,7 +50,7 @@ namespace Bioscoop.Modules
                 Helpers.Display.PrintLine("Type je keuze in en sluit af met een enter");
 
                 //userinput functie opvragen in Helpers/Inputs
-                Inputs.KeyInput input = Inputs.ReadUserData();
+                Console.Write(">"); Inputs.KeyInput input = Inputs.ReadUserData();
                 switch (input.action)
                 {
                     case Inputs.KeyAction.Enter:
@@ -101,9 +102,9 @@ namespace Bioscoop.Modules
 
                 //menu
                 Helpers.Display.PrintHeader("Aanpassen zaal : " + zaal.Omschrijving);
-                Helpers.Display.PrintLine("ESC - Terug naar menu            Del - Verwijderen");
-                Helpers.Display.PrintLine("                                 INS - Opslaan"); Display.PrintLine("");
-                Helpers.Display.PrintLine("Druk op een nummer om deze waarde aan te passen."); Display.PrintLine("");
+                Helpers.Display.PrintLine("ESC - Terug naar menu                        Del - Verwijderen");
+                Helpers.Display.PrintLine("F1 - Stoelenbeheer                           INS - Opslaan"); 
+                Display.PrintLine("");
 
                 int nr = 0; //data weergeven en nummeren voor waarde keuze
                 Helpers.Display.PrintHeader("Nr.");
@@ -112,7 +113,8 @@ namespace Bioscoop.Modules
                 Helpers.Display.PrintLine((nr += 1) + "| Scherm: " + zaal.Scherm);
                 Console.WriteLine(" ");
 
-
+                Helpers.Display.PrintLine("Druk op een nummer om deze waarde aan te passen.");
+                Console.Write(">");
                 input = Inputs.ReadUserData(); //waarde oplezen met keyinput functie
                 switch (input.action)
                 {
@@ -129,6 +131,7 @@ namespace Bioscoop.Modules
                             }
 
                             //switch met de instructie en data opvang van de gekozen data soort. met error handling.
+                            Console.Write(">");
                             inputData = Inputs.ReadUserData();
                             switch (inputValue)
                             {
@@ -148,6 +151,11 @@ namespace Bioscoop.Modules
                                     break;
                             }
                         }
+                        break;
+                    case Inputs.KeyAction.F1:
+                        StoelModule stoelenbeheer = new StoelModule();
+                        int value = editZaal.ZaalId;
+                        stoelenbeheer.StoelMain(value);//de zaalid meegeven van de geselecteerde zaal
                         break;
                     case Inputs.KeyAction.Escape: //de functie beeindigen
                         abort = true;
@@ -220,6 +228,7 @@ namespace Bioscoop.Modules
                     case 3: Helpers.Display.PrintLine("druk op Insert om de gegevens op te slaan"); break;
                 }
 
+                Console.Write(">");
                 input = Inputs.ReadUserData(); //waarde oplezen met keyinput functie
                 switch (input.action)
                 {
