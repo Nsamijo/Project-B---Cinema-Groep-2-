@@ -9,7 +9,7 @@ using Bioscoop.Models;
 
 namespace Bioscoop.Modules
 {
-    public class StoelModule
+    public class StoelModule//Judith
     {
         public StoelData nieuwe_json = new StoelData();
 

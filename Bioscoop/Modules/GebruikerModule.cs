@@ -15,7 +15,7 @@ namespace Bioscoop.Modules
     /// 3. Bestaande gebruikers verwijderen
     /// 4. Bestaande gebruikers rechten veranderen
     /// </summary>
-    class GebruikerModule
+    class GebruikerModule//Nathan
     {
         //lijst voor de gebruikers (wordt aan het begin ingelezen)
         private List<GebruikerModel> Data = new List<GebruikerModel>();

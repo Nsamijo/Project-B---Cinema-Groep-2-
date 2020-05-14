@@ -30,8 +30,8 @@ namespace Bioscoop.Modules
             while (loop)
             {
                 Console.Clear(); Console.CursorVisible = false;
-                Helpers.Display.PrintLine("Bioscoop - Admin Portaal                                 Welkom:");
-                Helpers.Display.PrintLine("ESC - Uitloggen                                          INS - Medewerkers portaal");
+                Helpers.Display.PrintLine("Bioscoop - Admin Portaal                            Welkom:");
+                Helpers.Display.PrintLine("ESC - Uitloggen                                     INS - Medewerkers portaal");
                 Helpers.Display.PrintLine("");
                 Helpers.Display.PrintHeader("Nr.", "Menu");
                 Helpers.Display.PrintTable("1", "Filmbeheer");
@@ -85,7 +85,7 @@ namespace Bioscoop.Modules
             while (loop)
             {
                 Console.Clear();
-                Helpers.Display.PrintLine("Bioscoop - Medewerkers Portaal                                 Welkom:");
+                Helpers.Display.PrintLine("Bioscoop - Medewerkers Portaal                       Welkom:");
                 Helpers.Display.PrintLine("ESC - Uitloggen");
                 Helpers.Display.PrintLine("");
                 Helpers.Display.PrintHeader("Nr.", "Menu");

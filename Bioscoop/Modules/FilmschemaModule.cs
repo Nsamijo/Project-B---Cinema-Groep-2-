@@ -7,7 +7,7 @@ using Bioscoop.Models;
 
 namespace Bioscoop.Modules
 {
-    class FilmschemaModule
+    class FilmschemaModule//Jonas
     {
         public void Run()
         {
@@ -27,14 +27,16 @@ namespace Bioscoop.Modules
                 Helpers.Display.PrintLine("Vul een nummer in om deze waarde te bewerken.");
                 Helpers.Display.PrintLine(" ");
 
+                string filmnaam = "..."; const int maxVal = 17; //grote waarde fix
                 int i = 1;
                 Helpers.Display.PrintHeader("No", "Zaal", "Film", "Datum", "Tijd");
                 foreach (FilmschemaModel programma in filmschema)
                 {
                     try
                     {
-                        string filmnaam = filmData.Where(film => film.FilmId == programma.FilmId).ToList()[0].Naam;
+                        string filmnaamData = filmData.Where(film => film.FilmId == programma.FilmId).ToList()[0].Naam;
                         string zaalnaam = zaalData.Where(zaal => zaal.ZaalId == programma.ZaalId).ToList()[0].Omschrijving;
+                        if (filmnaamData.Length > maxVal) filmnaam = filmnaamData.Substring(0, maxVal) +".."; else filmnaam = filmnaamData;
                         Helpers.Display.PrintTable(i.ToString(), zaalnaam, filmnaam, programma.Datum, programma.Tijd);
                     }
                     catch

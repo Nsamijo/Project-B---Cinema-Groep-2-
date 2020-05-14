@@ -6,7 +6,7 @@ using Bioscoop.Models;
 
 namespace Bioscoop.Modules
 {
-    class ZaalModule
+    class ZaalModule//Jan
     {
         List<ZaalModel> zalen;
 
@@ -107,10 +107,10 @@ namespace Bioscoop.Modules
                 Display.PrintLine("");
 
                 int nr = 0; //data weergeven en nummeren voor waarde keuze
-                Helpers.Display.PrintHeader("Nr.");
-                Helpers.Display.PrintLine((nr += 1) + "| Omschrijving: " + zaal.Omschrijving);
-                Helpers.Display.PrintLine((nr += 1) + "| Status: " + zaal.Status);
-                Helpers.Display.PrintLine((nr += 1) + "| Scherm: " + zaal.Scherm);
+                Helpers.Display.PrintHeader("Nr.", "Benaming", "Waarde");
+                Helpers.Display.PrintTable((nr += 1).ToString(), "Omschrijving: ", zaal.Omschrijving);
+                Helpers.Display.PrintTable((nr += 1).ToString(),"Status: ", zaal.Status);
+                Helpers.Display.PrintTable((nr += 1).ToString(), "Scherm: ", zaal.Scherm);
                 Console.WriteLine(" ");
 
                 Helpers.Display.PrintLine("Druk op een nummer om deze waarde aan te passen.");
