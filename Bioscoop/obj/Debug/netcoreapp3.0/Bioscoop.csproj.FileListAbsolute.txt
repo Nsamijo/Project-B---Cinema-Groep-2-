@@ -63,3 +63,16 @@ F:\project\Bioscoop\obj\Debug\netcoreapp3.0\Bioscoop.AssemblyInfo.cs
 F:\project\Bioscoop\obj\Debug\netcoreapp3.0\Bioscoop.csproj.CopyComplete
 F:\project\Bioscoop\obj\Debug\netcoreapp3.0\Bioscoop.dll
 F:\project\Bioscoop\obj\Debug\netcoreapp3.0\Bioscoop.pdb
+C:\Users\jonas\Documents\Cinema-ProjB\Bioscoop\bin\Debug\netcoreapp3.0\Bioscoop.exe
+C:\Users\jonas\Documents\Cinema-ProjB\Bioscoop\bin\Debug\netcoreapp3.0\Bioscoop.deps.json
+C:\Users\jonas\Documents\Cinema-ProjB\Bioscoop\bin\Debug\netcoreapp3.0\Bioscoop.runtimeconfig.json
+C:\Users\jonas\Documents\Cinema-ProjB\Bioscoop\bin\Debug\netcoreapp3.0\Bioscoop.runtimeconfig.dev.json
+C:\Users\jonas\Documents\Cinema-ProjB\Bioscoop\bin\Debug\netcoreapp3.0\Bioscoop.dll
+C:\Users\jonas\Documents\Cinema-ProjB\Bioscoop\bin\Debug\netcoreapp3.0\Bioscoop.pdb
+C:\Users\jonas\Documents\Cinema-ProjB\Bioscoop\bin\Debug\netcoreapp3.0\Newtonsoft.Json.dll
+C:\Users\jonas\Documents\Cinema-ProjB\Bioscoop\obj\Debug\netcoreapp3.0\Bioscoop.csprojAssemblyReference.cache
+C:\Users\jonas\Documents\Cinema-ProjB\Bioscoop\obj\Debug\netcoreapp3.0\Bioscoop.AssemblyInfoInputs.cache
+C:\Users\jonas\Documents\Cinema-ProjB\Bioscoop\obj\Debug\netcoreapp3.0\Bioscoop.AssemblyInfo.cs
+C:\Users\jonas\Documents\Cinema-ProjB\Bioscoop\obj\Debug\netcoreapp3.0\Bioscoop.csproj.CopyComplete
+C:\Users\jonas\Documents\Cinema-ProjB\Bioscoop\obj\Debug\netcoreapp3.0\Bioscoop.dll
+C:\Users\jonas\Documents\Cinema-ProjB\Bioscoop\obj\Debug\netcoreapp3.0\Bioscoop.pdb
