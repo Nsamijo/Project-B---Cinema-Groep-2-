@@ -1,12 +1,5 @@
 [
   {
-    "ProgrammaId": 2,
-    "Datum": "29/04/2020",
-    "Tijd": "14:00",
-    "FilmId": 18,
-    "ZaalId": 2
-  },
-  {
     "ProgrammaId": 1,
     "Datum": "07/05/2020",
     "Tijd": "15:00",
@@ -21,6 +14,13 @@
     "ZaalId": 1
   },
   {
+    "ProgrammaId": 5,
+    "Datum": "20/05/2020",
+    "Tijd": "13:30",
+    "FilmId": 9,
+    "ZaalId": 1
+  },
+  {
     "ProgrammaId": 3,
     "Datum": "20/05/2020",
     "Tijd": "17:00",
@@ -28,10 +28,17 @@
     "ZaalId": 4
   },
   {
-    "ProgrammaId": 5,
-    "Datum": "20/05/2020",
+    "ProgrammaId": 6,
+    "Datum": "21/05/2020",
     "Tijd": "13:30",
-    "FilmId": 9,
-    "ZaalId": 1
+    "FilmId": 17,
+    "ZaalId": 2
+  },
+  {
+    "ProgrammaId": 7,
+    "Datum": "21/05/2020",
+    "Tijd": "17:00",
+    "FilmId": 14,
+    "ZaalId": 2
   }
 ]
