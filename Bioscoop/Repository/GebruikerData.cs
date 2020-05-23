@@ -359,23 +359,35 @@ namespace Bioscoop.Repository
         {
             //bool om programma af te sluiten
             bool exit = false;
+            string message = "";
             while (!exit)
             {
-                //succes met onloggen
-                this.SuccesLogin(admin);
-                //print alle gebruikers behalve de admin
-                this.PrintGebruikers(data, admin);
-                //keuze voor de gebruiker
-                Helpers.Display.PrintLine("\nToets in wat u wilt doen\nToets een nummer in om een gebruiker te veranderen\n");
-                Console.Write("Keuze >>> ");
-                //keuze inlezen
-                string keuze = ReadWithSpecialKeys();
-                //als er geen keuze wordt gemaakt
-                while (keuze.Equals(""))
+                string keuze = "";
+                while (true)
                 {
-                    Helpers.Display.PrintLine("\nMaak een geldige keuze!");
-                    Console.Write("Keuze >>> ");
+                    //succes met onloggen
+                    this.SuccesLogin(admin);
+                    //print alle gebruikers behalve de admin
+                    this.PrintGebruikers(data, admin);
+                    //keuze voor de gebruiker
+                    Helpers.Display.PrintLine("\nToets in wat u wilt doen\nToets een nummer in om een gebruiker te veranderen\n" + message);
+                    //keuze inlezen
+                    Console.WriteLine("Keuze >>> ");
                     keuze = ReadWithSpecialKeys();
+
+                    //checken of het een nummer is
+                    if (Int16.TryParse(keuze, out _))
+                    {
+                        //checken of het in range is
+                        if (int.Parse(keuze) - 1 < data.Count)
+                            break;
+                        else
+                            //error message
+                            message = "\nToets een nummer in dat is aangegeven!";
+                    }else if (keuze.Equals("ESC") || keuze.Equals( "INS"))
+                        break;
+                    else
+                        message = "\nToets alleen nummers in!";
                 }
                 //kijken wat de keuze is
                 switch (keuze)

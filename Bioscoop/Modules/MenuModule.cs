@@ -1,11 +1,11 @@
 ﻿using System;
 using Bioscoop.Modules;
+using Bioscoop.Repository;
 
 namespace Bioscoop.Modules
 {
     class MenuModule
     {
-
         public ConsoleKey Run()
         {
             MenuMain();
@@ -26,11 +26,20 @@ namespace Bioscoop.Modules
         }
         public void MenuAdmin()
         {
+            LoginModule admin = new LoginModule();
+            while (admin.NuIngelogd() == null)
+            {
+                admin.Login(new Lezer().gebruikersInlezen());
+            }
+
+            if (admin.NuIngelogd().Naam.Equals("cancel"))
+                return;
+
             bool loop = true;
             while (loop)
             {
                 Console.Clear(); Console.CursorVisible = false;
-                Helpers.Display.PrintLine("Bioscoop - Admin Portaal                            Welkom:");
+                Helpers.Display.PrintLine("Bioscoop - Admin Portaal                            Welkom: " + admin.NuIngelogd().Naam);
                 Helpers.Display.PrintLine("ESC - Uitloggen                                     INS - Medewerkers portaal");
                 Helpers.Display.PrintLine("");
                 Helpers.Display.PrintHeader("Nr.", "Menu");
