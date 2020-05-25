@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 using Bioscoop.Modules;
 using Bioscoop.Repository;
 
@@ -34,6 +35,13 @@ namespace Bioscoop.Modules
 
             if (admin.NuIngelogd().Naam.Equals("cancel"))
                 return;
+
+            if (admin.NuIngelogd().Rechten == false)
+            {
+                Helpers.Display.PrintLine("\nU heeft niet de bevoegde rechten om hier te komen!\nLog in met een admin account aub!");
+                Thread.Sleep(750);
+                return;
+            }
 
             bool loop = true;
             while (loop)
@@ -75,7 +83,7 @@ namespace Bioscoop.Modules
                         break;
                     case ConsoleKey.D5:
                         Console.Clear();
-                        gebruikerbeheer.Run();
+                        gebruikerbeheer.Run(admin);
                         break;
                     case ConsoleKey.Insert:
                         Console.Clear();

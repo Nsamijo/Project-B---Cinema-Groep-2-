@@ -28,15 +28,15 @@ namespace Bioscoop.Modules
         GebruikersMenu menu;
         LoginModule login;
 
-        void DataInladen()
+        void DataInladen(LoginModule login)
         {
             //data inlezen van de gebruikers
             this.Data = new Lezer().gebruikersInlezen();
             this.menu = new GebruikersMenu();
-            login = new LoginModule();
+            this.login = login;
         }
 
-        void GebruikersBeheer()
+        void GebruikersBeheer(LoginModule login)
         {
             ///<summary>
             ///Deze functie zal voor alle gebruikersbeheer zijn
@@ -49,15 +49,13 @@ namespace Bioscoop.Modules
 
             //gebruikers inlezen
             if (!this.ingelezen)
-                this.DataInladen();
+                this.DataInladen(login);
 
             //inloggen
             if (this.Ingelogd == null)
             {
                 //kijken wie is ingelogd
                 this.Ingelogd = login.NuIngelogd();
-                //test account, inloggen gaat namelijk voor het heel menu plaats vinden
-                this.Ingelogd = new GebruikerModel("Sinterklaas", "SKlaas", 10, "hierzosnoep", true);
             }
 
             //in de if springen als er is ingelogd zodat de admin
@@ -79,9 +77,9 @@ namespace Bioscoop.Modules
             }
         }
 
-        public void Run()
+        public void Run(LoginModule login)
         {
-            this.GebruikersBeheer();
+            this.GebruikersBeheer(login);
         }
     }
 }

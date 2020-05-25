@@ -69,7 +69,7 @@ namespace Bioscoop.Repository
             Console.Clear();
             Helpers.Display.PrintLine("Gebruikersbeheer");
             Helpers.Display.PrintLine("ESC terug naar het menu\t\tINS nieuwe gebruiker aanmaken");
-            Helpers.Display.PrintLine("\nIngelogd: " + admin.Naam);
+            Helpers.Display.PrintLine("Ingelogd: " + admin.Naam);
             Helpers.Display.PrintLine("Account-type: " + ((admin.Rechten) ? "Admin" : "Medewerker"));
         }
         public void PrintGebruikers(List<GebruikerModel> users, GebruikerModel admin)
@@ -78,13 +78,13 @@ namespace Bioscoop.Repository
             ///Deze functie print alle gebruikers naar de console toe
             /// </summary>
             /// 
-            Helpers.Display.PrintHeader("Nr", "Naam", "Gebruikersnaam", "ID", "Wachtwoord", "Rechten");
+            Helpers.Display.PrintHeader("Nr", "Naam", "Gebruikersnaam", "Wachtwoord", "Rechten");
             int index = 1;
             foreach (var gebruiker in users)
             {
                 if (!gebruiker.GebruikerId.Equals(admin.GebruikerId) && admin.Rechten)
                 {
-                    Helpers.Display.PrintTable(index.ToString(), gebruiker.Naam, gebruiker.Gebruikersnaam, gebruiker.GebruikerId.ToString(), gebruiker.zieWachtwoordt(admin), ((gebruiker.Rechten) ? "Admin" : "Medewerker"));
+                    Helpers.Display.PrintTable(index.ToString(), gebruiker.Naam, gebruiker.Gebruikersnaam, gebruiker.zieWachtwoordt(admin), ((gebruiker.Rechten) ? "Admin" : "Medewerker"));
                     index++;
                 }
             }
@@ -273,8 +273,7 @@ namespace Bioscoop.Repository
             int locatie = Int32.Parse(index) - 1;
 
             //kijken waar de admin zit, hebben dit nu ff als comment gezet anders aangezien het een test account is
-            //int locAdmin = data.FindIndex(x => x.GebruikerId == admin.GebruikerId) - 1;
-            int locAdmin = 10000;
+            int locAdmin = data.FindIndex(x => x.GebruikerId == admin.GebruikerId) - 1;
 
             //tellen 1 erbij op zodat de admin niet kan worden aangepast
             if(locAdmin < locatie)
