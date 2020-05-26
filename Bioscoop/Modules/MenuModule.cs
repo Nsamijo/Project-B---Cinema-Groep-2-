@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Threading;
 using Bioscoop.Helpers;
+using Bioscoop.Models;
 using Bioscoop.Modules;
 using Bioscoop.Repository;
 
@@ -39,8 +40,7 @@ namespace Bioscoop.Modules
 
             if (admin.NuIngelogd().Rechten == false)
             {
-                Helpers.Display.PrintLine("\nU heeft niet de bevoegde rechten om hier te komen!\nLog in met een admin account aub!");
-                Thread.Sleep(750);
+                this.MenuMedewerker(admin.NuIngelogd());
                 return;
             }
 
@@ -49,7 +49,7 @@ namespace Bioscoop.Modules
             {
                 Console.Clear(); Console.CursorVisible = false;
                 Helpers.Display.PrintLine("Bioscoop - Admin Portaal                            Welkom: " + admin.NuIngelogd().Naam);
-                Helpers.Display.PrintLine("ESC - Uitloggen                                     INS - Medewerkers portaal");
+                Helpers.Display.PrintLine("ESC - Uitloggen");
                 Helpers.Display.PrintLine("");
                 Helpers.Display.PrintHeader("Nr.", "Menu");
                 Helpers.Display.PrintTable("1", "Filmbeheer");
@@ -86,12 +86,9 @@ namespace Bioscoop.Modules
                         Console.Clear();
                         gebruikerbeheer.Run(admin);
                         break;
-                    case ConsoleKey.Insert:
-                        Console.Clear();
-                        MenuMedewerker();
-                        break;
                     case ConsoleKey.Escape:
                         Console.Clear();
+                        Helpers.Display.PrintLine("Bioscoop - Admin Portaal                            Welkom: " + admin.NuIngelogd().Naam);
                         Display.PrintLine("Bent u zeker dat u wilt uitloggen? (y/n)");
                         if (Helpers.Display.Keypress() == ConsoleKey.Y)
                             loop = false;
@@ -99,13 +96,13 @@ namespace Bioscoop.Modules
                 }
             }
         }
-        private void MenuMedewerker()
+        private void MenuMedewerker(GebruikerModel mede)
         {
             bool loop = true;
             while (loop)
             {
                 Console.Clear();
-                Helpers.Display.PrintLine("Bioscoop - Medewerkers Portaal                       Welkom:");
+                Helpers.Display.PrintLine("Bioscoop - Medewerkers Portaal                       Welkom: " + mede.Naam);
                 Helpers.Display.PrintLine("ESC - Uitloggen");
                 Helpers.Display.PrintLine("");
                 Helpers.Display.PrintHeader("Nr.", "Menu");
@@ -129,6 +126,10 @@ namespace Bioscoop.Modules
                         break;
                     case ConsoleKey.Escape:
                         Console.Clear();
+                        Helpers.Display.PrintLine("Bioscoop - Medewerkers Portaal                       Welkom: " + mede.Naam);
+                        Display.PrintLine("Bent u zeker dat u wilt uitloggen? (y/n)");
+                        if (Helpers.Display.Keypress() == ConsoleKey.Y)
+                            loop = false;
                         loop = false;
                         break;
                 }
