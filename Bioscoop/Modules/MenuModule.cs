@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Threading;
+using Bioscoop.Helpers;
 using Bioscoop.Modules;
 using Bioscoop.Repository;
 
@@ -91,7 +92,9 @@ namespace Bioscoop.Modules
                         break;
                     case ConsoleKey.Escape:
                         Console.Clear();
-                        loop = false;
+                        Display.PrintLine("Bent u zeker dat u wilt uitloggen? (y/n)");
+                        if (Helpers.Display.Keypress() == ConsoleKey.Y)
+                            loop = false;
                         break;
                 }
             }
