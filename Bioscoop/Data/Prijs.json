@@ -1,0 +1,22 @@
+[
+  {
+    "Soort": "2D",
+    "Prijs": "9,50"
+  },
+  {
+    "Soort": "3D",
+    "Prijs": "12,00"
+  },
+  {
+    "Soort": "IMAX 2D",
+    "Prijs": "14,50"
+  },
+  {
+    "Soort": "IMAX 3D",
+    "Prijs": "17,50"
+  },
+  {
+    "Soort": "VIP",
+    "Prijs": "3,50"
+  }
+]
