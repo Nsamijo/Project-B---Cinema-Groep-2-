@@ -87,9 +87,7 @@ namespace Bioscoop.Modules
                         gebruikerbeheer.Run(admin);
                         break;
                     case ConsoleKey.Escape:
-                        Console.Clear();
-                        Helpers.Display.PrintLine("Bioscoop - Admin Portaal                            Welkom: " + admin.NuIngelogd().Naam);
-                        Display.PrintLine("Bent u zeker dat u wilt uitloggen? (y/n)");
+                        Display.PrintLine("\nBent u zeker dat u wilt uitloggen? (y/n)");
                         if (Helpers.Display.Keypress() == ConsoleKey.Y)
                             loop = false;
                         break;
@@ -125,12 +123,9 @@ namespace Bioscoop.Modules
                         //rapportage films
                         break;
                     case ConsoleKey.Escape:
-                        Console.Clear();
-                        Helpers.Display.PrintLine("Bioscoop - Medewerkers Portaal                       Welkom: " + mede.Naam);
-                        Display.PrintLine("Bent u zeker dat u wilt uitloggen? (y/n)");
+                        Display.PrintLine("\nBent u zeker dat u wilt uitloggen? (y/n)");
                         if (Helpers.Display.Keypress() == ConsoleKey.Y)
                             loop = false;
-                        loop = false;
                         break;
                 }
             }

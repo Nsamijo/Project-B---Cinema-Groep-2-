@@ -72,8 +72,8 @@ namespace Bioscoop.Modules
             ///Zo niet dan wordt een null terug gegeven
             /// </summary>
             Console.Clear();
-            Console.WriteLine("FilmHaus Inloggen:");
-            Console.WriteLine("(Druk op ESC terug te gaan)\nVoer uw gebruikersnaam en wachtwoordt in\n");
+            Console.WriteLine("Bioscoop Inlog Portaal");
+            Console.WriteLine("(ESC - Terug\n");
             Console.Write("Gebruikersnaam: ");
             string gebruiker = new GebruikersMenu().ReadWithSpecialKeys();
 
