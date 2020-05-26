@@ -122,13 +122,12 @@ namespace Bioscoop.Modules
                     }
 
                 }
-                else
+                
+                if (!abort)
                 {
-                    if (!abort)
-                    {
-                        zaalid = z.ZaalId;
-                    }
+                    zaalid = z.ZaalId;
                 }
+                
             }
 
             Console.Clear();
@@ -180,6 +179,10 @@ namespace Bioscoop.Modules
             if (!abort && filmid >= 0 && zaalid >= 0)
             {
                 FilmschemaData.MaakProgramma(FilmschemaData.getId(), datum, tijd, zaalid, filmid);
+                Console.ForegroundColor = ConsoleColor.Green;
+                Helpers.Display.PrintLine("Programma aangemaakt");
+                Console.ForegroundColor = ConsoleColor.White;
+                System.Threading.Thread.Sleep(2000);
             }
         }
 
@@ -259,7 +262,7 @@ namespace Bioscoop.Modules
                 Console.ForegroundColor = ConsoleColor.White;
             }
             Helpers.Display.PrintLine(" ");
-            Helpers.Display.PrintLine("Typ welke zaal u wilt toevoegen");
+            Helpers.Display.PrintLine("Typ het nummer van de zaal die u wilt toevoegen");
             Inputs.KeyInput input = Inputs.ReadUserData();
 
             switch (input.action)
@@ -295,7 +298,7 @@ namespace Bioscoop.Modules
             int i = 1;
             Helpers.Display.PrintLine("");
             Helpers.Display.PrintLine($"Datum: {datum}");
-            Helpers.Display.PrintLine($"Zaal: {ZaalData.LoadData().Where(z => z.ZaalId == zaalid).ToList()[0]}");
+            Helpers.Display.PrintLine($"Zaal: {ZaalData.LoadData().Where(z => z.ZaalId == zaalid).ToList()[0].Omschrijving}");
             Helpers.Display.PrintLine($"Tijd: {tijd}");
             Helpers.Display.PrintLine("");
             Helpers.Display.PrintHeader("No", "Naam", "Omschrijving", "Genre", "Kijkwijzer");
@@ -381,7 +384,7 @@ namespace Bioscoop.Modules
 
 
             Helpers.Display.PrintLine("");
-            Helpers.Display.PrintLine("Type welke tijd u wilt toevoegen");
+            Helpers.Display.PrintLine("Type het nummer van de tijd die u wilt toevoegen");
 
             if(error != "")
             {
@@ -448,7 +451,7 @@ namespace Bioscoop.Modules
                 count++;
             }
             Helpers.Display.PrintLine("");
-            Helpers.Display.PrintLine("Vul in welke dag u wilt toevoegen");
+            Helpers.Display.PrintLine("Vul het nummer van de dag die u wilt toevoegen");
             Helpers.Display.PrintLine("");
             if(error != "")
             {
@@ -491,7 +494,7 @@ namespace Bioscoop.Modules
             List<ZaalModel> zaalData = ZaalData.LoadData();
             List<FilmModel> filmData = FilmData.LoadData();
             FilmschemaModel programma = filmschema[index];
-
+            string message = ""; 
 
             Console.Clear();
             while (!abort)
@@ -509,7 +512,13 @@ namespace Bioscoop.Modules
                 Helpers.Display.PrintLine("2. Zaal");
                 Helpers.Display.PrintLine("3. Film");
                 Helpers.Display.PrintLine("4. Tijd");
-
+                Helpers.Display.PrintLine("");
+                if(message != "")
+                {
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Helpers.Display.PrintLine(message);
+                    Console.ForegroundColor = ConsoleColor.White;
+                }
                 Inputs.KeyInput input = Inputs.ReadUserData();
                 switch (input.action)
                 {
@@ -521,7 +530,7 @@ namespace Bioscoop.Modules
                         FilmschemaData.MaakProgramma(programma.ProgrammaId, programma.Datum, programma.Tijd, programma.ZaalId, programma.FilmId);
                         Console.Clear();
 
-                        Helpers.Display.PrintLine("Programma opgeslagen\n\n");
+                        message = "Programma aangepast";
                         Console.Clear();
                         break;
                     case Inputs.KeyAction.Enter:
@@ -546,6 +555,8 @@ namespace Bioscoop.Modules
                                         if (datum != "abort")
                                         {
                                             programma.Datum = datum;
+                                            message = "Datum aangepast";
+
                                         }
 
                                     }
@@ -554,6 +565,8 @@ namespace Bioscoop.Modules
                                         if (datum != "abort")
                                         {
                                             programma.Datum = datum;
+                                            message = "Datum aangepast";
+
                                         }
                                     }
                                     Console.Clear();
@@ -564,6 +577,8 @@ namespace Bioscoop.Modules
                                     if (zaalid >= 0)
                                     {
                                         programma.ZaalId = zaalid;
+                                        message = "Film aangepast";
+
                                     }
                                     else
                                     {
@@ -577,6 +592,8 @@ namespace Bioscoop.Modules
                                         if (zaalid != -1)
                                         {
                                             programma.ZaalId = zaalid;
+                                            message = "Zaal aangepast";
+
                                         }
                                     }
                                     Console.Clear();
@@ -588,6 +605,8 @@ namespace Bioscoop.Modules
                                     if (filmid >= 0)
                                     {
                                         programma.FilmId = filmid;
+                                        message = "Film aangepast";
+
                                     }
                                     else
                                     {
@@ -600,6 +619,8 @@ namespace Bioscoop.Modules
                                         if (filmid != -1)
                                         {
                                             programma.FilmId = filmid;
+                                            message = "Film aangepast";
+
                                         }
                                     }
                                     Console.Clear();
@@ -620,6 +641,8 @@ namespace Bioscoop.Modules
                                         if (tijd != "abort")
                                         {
                                             programma.Tijd = tijd;
+                                            message = "Tijd aangepast";
+
                                         }
                                     }
                                     else
@@ -627,6 +650,8 @@ namespace Bioscoop.Modules
                                         if (tijd != "abort")
                                         {
                                             programma.Tijd = tijd;
+                                            message = "Tijd aangepast";
+
                                         }
                                     }
                                     Console.Clear();

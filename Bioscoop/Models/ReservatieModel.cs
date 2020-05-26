@@ -4,20 +4,20 @@ using System.Text;
 
 namespace Bioscoop.Models
 {
-    class ReservatieModel
+    class ReserveringModel
     {
-        public int ReservatieId { get; set; }
+        public int ReserveringId { get; set; }
         public string Code { get; set; }
         public int ProgrammaId { get; set; }
         public List<int> StoelId { get; set; }
         public int Aantal { get; set; }
         public string Totaal { get; set; }
 
-        public ReservatieModel() { }
+        public ReserveringModel() { }
 
-        public ReservatieModel(int reservatieId, string code, int programmaId, List<int> stoelId, int aantal, string totaal)
+        public ReserveringModel(int ReserveringId, string code, int programmaId, List<int> stoelId, int aantal, string totaal)
         {
-            ReservatieId = reservatieId;
+            ReserveringId = ReserveringId;
             Code = code;
             ProgrammaId = programmaId;
             StoelId = stoelId;

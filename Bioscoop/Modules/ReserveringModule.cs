@@ -10,7 +10,7 @@ namespace Bioscoop.Modules
     {
         public static void Run()
         {
-            List<ReservatieModel> reserveringen = Reserveringdata.LoadData();
+            List<ReserveringModel> reserveringen = Reserveringdata.LoadData();
             bool abort = false;
             while (!abort) {
                 Helpers.Display.PrintLine("Type de code van uw reservering");
@@ -25,7 +25,7 @@ namespace Bioscoop.Modules
                         }
                         else
                         {
-                            ReservatieModel r = Reserveringdata.VindReservering(c);
+                            ReserveringModel r = Reserveringdata.VindReservering(c);
                             PrintReservering(r);
                             break;
                         }
@@ -36,7 +36,7 @@ namespace Bioscoop.Modules
                 }
             }
         }
-        public static void PrintReservering(ReservatieModel reservering) { 
+        public static void PrintReservering(ReserveringModel reservering) { 
             
         }
     }

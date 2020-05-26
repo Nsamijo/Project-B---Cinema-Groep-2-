@@ -15,10 +15,10 @@ namespace Bioscoop.Repository
         {
             string res = "";
             Random rnd = new Random();
-            List<ReservatieModel> reserveringen = LoadData();
+            List<ReserveringModel> reserveringen = LoadData();
             List<string> codes = new List<string>();
             
-            foreach(ReservatieModel r in reserveringen)
+            foreach(ReserveringModel r in reserveringen)
             {
                 codes.Add(r.Code);
             }
@@ -35,22 +35,22 @@ namespace Bioscoop.Repository
             }
             return res;
         }
-        public static List<ReservatieModel> LoadData() //ophalen json data als list functie
+        public static List<ReserveringModel> LoadData() //ophalen json data als list functie
         {
             string jsonFilePath = reserveringPath;
             string _json = File.ReadAllText(jsonFilePath);
 
-            List<ReservatieModel> res = JsonConvert.DeserializeObject<List<ReservatieModel>>(_json);
+            List<ReserveringModel> res = JsonConvert.DeserializeObject<List<ReserveringModel>>(_json);
             return res;
         }
-        public static void SaveData(List<ReservatieModel> lis)
+        public static void SaveData(List<ReserveringModel> lis)
         {
             var jsondata = JsonConvert.SerializeObject(lis, Formatting.Indented);
             System.IO.File.WriteAllText(reserveringPath, jsondata);
         }
-        public static ReservatieModel VindReservering(string code)
+        public static ReserveringModel VindReservering(string code)
         {
-            foreach(ReservatieModel r in LoadData())
+            foreach(ReserveringModel r in LoadData())
             {
                 if(r.Code == code)
                 {
