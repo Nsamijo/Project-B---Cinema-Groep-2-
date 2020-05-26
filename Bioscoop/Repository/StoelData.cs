@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
+using Bioscoop.Models;
 using Newtonsoft.Json;
 
 namespace Bioscoop.Repository
@@ -14,17 +16,21 @@ namespace Bioscoop.Repository
             LoadJson();
         }
 
-        public string jsonPath => Path.GetFullPath(Path.Combine(Environment.CurrentDirectory, @"..\..\..\")) + @"Data\Zaal.json";
-        public void LoadJson()
-        {
+        public string jsonPath => (Path.GetFullPath(Path.Combine(Environment.CurrentDirectory, @"..\..\..\")) + @"Data\Stoel.json");
+        public void LoadJson(){
             string file = jsonPath;
             string json = File.ReadAllText(file); ;
             this.array = JsonConvert.DeserializeObject(json);
         }
 
+
+
         public dynamic GetJson()
         {
-            return this.array;
+            string file = Path.GetFullPath(Path.Combine(Environment.CurrentDirectory, @"..\..\..\")) + @"Data\Stoel.json";
+            string data = File.ReadAllText(file);
+
+            return JsonConvert.DeserializeObject<List<StoelModel>>(data);
         }
 
         public void UpdateJson(dynamic a)
