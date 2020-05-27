@@ -7,8 +7,9 @@ namespace Bioscoop
     {
         static void Main(string[] args)
         {
-            Console.SetWindowSize(155, 32);
+            Console.SetWindowSize(160, 35);
             MenuModule menu = new MenuModule();
+            ReserveringModule reservatie = new ReserveringModule();
             bool loop = true;
 
             while (loop)
@@ -17,15 +18,14 @@ namespace Bioscoop
                 {
                     case ConsoleKey.D1:
                         Console.Clear();
-                        //filmoverzicht
+                        reservatie.SelectFilm();
                         break;
                     case ConsoleKey.D2:
                         Console.Clear();
-                        //beherenreservatieklant
+                        reservatie.ManageReservationData();
                         break;
                     case ConsoleKey.Insert:
                         Console.Clear();
-                        //login
                         menu.MenuAdmin();
                         break;
                 }
@@ -33,4 +33,3 @@ namespace Bioscoop
         }
     }
 }
-

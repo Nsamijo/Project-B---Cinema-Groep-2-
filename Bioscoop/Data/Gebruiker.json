@@ -26,5 +26,26 @@
     "Gebruikersnaam": "JJansen",
     "Wachtwoord": "veiligheid",
     "Rechten": false
+  },
+  {
+    "GebruikerId": 5,
+    "Naam": "aaaa",
+    "Gebruikersnaam": "asdadsa",
+    "Wachtwoord": "wachtwoord",
+    "Rechten": false
+  },
+  {
+    "GebruikerId": 6,
+    "Naam": "testadmin",
+    "Gebruikersnaam": "1",
+    "Wachtwoord": "1",
+    "Rechten": true
+  },
+  {
+    "GebruikerId": 7,
+    "Naam": "testmedewerker",
+    "Gebruikersnaam": "2",
+    "Wachtwoord": "2",
+    "Rechten": false
   }
 ]

@@ -69,7 +69,7 @@ namespace Bioscoop.Repository
             Console.Clear();
             Helpers.Display.PrintLine("Gebruikersbeheer");
             Helpers.Display.PrintLine("ESC terug naar het menu\t\tINS nieuwe gebruiker aanmaken");
-            Helpers.Display.PrintLine("\nIngelogd: " + admin.Naam);
+            Helpers.Display.PrintLine("Ingelogd: " + admin.Naam);
             Helpers.Display.PrintLine("Account-type: " + ((admin.Rechten) ? "Admin" : "Medewerker"));
         }
         public void PrintGebruikers(List<GebruikerModel> users, GebruikerModel admin)
@@ -78,13 +78,13 @@ namespace Bioscoop.Repository
             ///Deze functie print alle gebruikers naar de console toe
             /// </summary>
             /// 
-            Helpers.Display.PrintHeader("Nr", "Naam", "Gebruikersnaam", "ID", "Wachtwoord", "Rechten");
+            Helpers.Display.PrintHeader("Nr", "Naam", "Gebruikersnaam", "Wachtwoord", "Rechten");
             int index = 1;
             foreach (var gebruiker in users)
             {
                 if (!gebruiker.GebruikerId.Equals(admin.GebruikerId) && admin.Rechten)
                 {
-                    Helpers.Display.PrintTable(index.ToString(), gebruiker.Naam, gebruiker.Gebruikersnaam, gebruiker.GebruikerId.ToString(), gebruiker.zieWachtwoordt(admin), ((gebruiker.Rechten) ? "Admin" : "Medewerker"));
+                    Helpers.Display.PrintTable(index.ToString(), gebruiker.Naam, gebruiker.Gebruikersnaam, gebruiker.zieWachtwoordt(admin), ((gebruiker.Rechten) ? "Admin" : "Medewerker"));
                     index++;
                 }
             }
@@ -144,7 +144,7 @@ namespace Bioscoop.Repository
             {
                 //ingebouwde functie voor het tonen van de gebruiker
                 Console.Clear();
-                Helpers.Display.PrintLine("FilmHaus Gebruikerbeheer\n");
+                Helpers.Display.PrintLine("Gebruikerbeheer\n");
                 GebruikerModel temp = user;
                 Helpers.Display.PrintLine("Aanpassingen opgeslagen: " + opgeslagen + "\n");
                 Helpers.Display.PrintLine("Aanpassen gebruiker: " + temp.Naam + "\nESC Terug naar overzicht(CANCEL)\t DEL Gebruikerverwijderen\nINS Opslaan\n");
@@ -198,14 +198,14 @@ namespace Bioscoop.Repository
                     //toon data van een gebruiker
                     ToonGebruiker(temp, opgeslagen);
                     //welke attribute wordt aangepast
-                    string keuze = ReadWithSpecialKeys();
+                    ConsoleKey pressed = Helpers.Display.Keypress();
                     //schone zaak
                     Console.Clear();
-                    switch (keuze)
+                    switch (pressed)
                     {
-                        
+
                         //hierin wordt de naam aangepast
-                        case "1":
+                        case ConsoleKey.D1:
                             PrintOpties();
                             Helpers.Display.PrintLine("Naam: " + temp.Naam);
                             change = Verander();
@@ -216,9 +216,9 @@ namespace Bioscoop.Repository
                                 temp.Naam = change;
                             break;
                         //wachtwoordt van veranderen van de gebruiker
-                        case "2":
+                        case ConsoleKey.D2:
                             PrintOpties();
-                            Helpers.Display.PrintLine("Wachtwoordt: " + temp.Wachtwoord);
+                            Helpers.Display.PrintLine("Wachtwoord: " + temp.Wachtwoord);
                             change = Verander();
                             //terug naar menu zonder aanpassing te maken
                             if (change.Equals("ESC"))
@@ -227,7 +227,7 @@ namespace Bioscoop.Repository
                                 temp.Wachtwoord = change;
                             break;
                         //rechten veranderen van de gebruiker
-                        case "3":
+                        case ConsoleKey.D3:
                             PrintOpties();
                             Helpers.Display.PrintLine("Account-type: " + ((temp.Rechten) ? "Admin" : "Medewerker"));
                             change = Verander();
@@ -242,7 +242,7 @@ namespace Bioscoop.Repository
                                 temp.Rechten = false;
                             break;
 
-                        case "4":
+                        case ConsoleKey.D4:
                             PrintOpties();
                             Helpers.Display.PrintLine("Gebruikersnaam: " + temp.Gebruikersnaam);
                             change = Verander();
@@ -252,14 +252,14 @@ namespace Bioscoop.Repository
                             else
                                 temp.Gebruikersnaam = change;
                             break;
-                        case "ESC":
+                        case ConsoleKey.Escape:
                             //terug naar menu met alle gebruikers
                             return user;
-                        case "DEL":
+                        case ConsoleKey.Delete:
                             //veranderen de naam naar DEl om te verwijderen
                             user.Naam = "DEL";
                             return user;
-                        case "INS":
+                        case ConsoleKey.Insert:
                             //alle aanpassingen worden opgeslagen
                             user = temp;
                             opgeslagen = true;
@@ -273,11 +273,10 @@ namespace Bioscoop.Repository
             int locatie = Int32.Parse(index) - 1;
 
             //kijken waar de admin zit, hebben dit nu ff als comment gezet anders aangezien het een test account is
-            //int locAdmin = data.FindIndex(x => x.GebruikerId == admin.GebruikerId) - 1;
-            int locAdmin = 10000;
+            int locAdmin = data.FindIndex(x => x.GebruikerId == admin.GebruikerId) - 1;
 
             //tellen 1 erbij op zodat de admin niet kan worden aangepast
-            if(locAdmin < locatie)
+            if (locAdmin < locatie)
                 locatie++;
 
             try
@@ -301,7 +300,7 @@ namespace Bioscoop.Repository
 
         }
 
-        void VoegGebruikerToe(List<GebruikerModel> data)
+        void VoegGebruikerToe(List<GebruikerModel> data, GebruikerModel admin)
         {
             //array voor alle input (details van de nieuwe gebruiker)
             string[] user = new string[4];
@@ -311,7 +310,8 @@ namespace Bioscoop.Repository
             string input = "";
             Console.Clear();
             //details met wat er moet gebeuren
-            Helpers.Display.PrintLine("ESC om terug te gaan (CANCEL)\nGebruiker Aanmaken, vul de benodigde gegevens in:\n");
+            Display.PrintLine("Gebruikersbeheer\nWelkom: " + admin.Naam);
+            Helpers.Display.PrintLine("ESC - Terug naar overzicht                                     DEL RESET\n\nVoer aub de volgende gegevens in: ");
             //pointer voor hoever de progress is
             int pointer = 0;
             //zolang doorgaan tot alle details zijn ingevuld
@@ -327,7 +327,11 @@ namespace Bioscoop.Repository
                         Helpers.Display.PrintLine("\nProbeer nogmaals! De toets die is ingedrukt wordt niet ondersteunt momenteel");
                         break;
                     case "DEL":
-                        Helpers.Display.PrintLine("\nProbeer nogmaals! De toets die is ingedrukt wordt niet ondersteunt momenteel");
+                        pointer = 0;
+                        user = new string[4];
+                        Console.Clear();
+                        Helpers.Display.PrintLine("Gebruikersbeheer\nWelkom: " + admin.Naam);
+                        Helpers.Display.PrintLine("ESC - Terug naar overzicht                                     DEL RESET\n\nVoer aub de volgende gegevens in: ");
                         break;
                     //vangen een lege string
                     case "":
@@ -359,23 +363,35 @@ namespace Bioscoop.Repository
         {
             //bool om programma af te sluiten
             bool exit = false;
+            string message = "";
             while (!exit)
             {
-                //succes met onloggen
-                this.SuccesLogin(admin);
-                //print alle gebruikers behalve de admin
-                this.PrintGebruikers(data, admin);
-                //keuze voor de gebruiker
-                Helpers.Display.PrintLine("\nToets in wat u wilt doen\nToets een nummer in om een gebruiker te veranderen\n");
-                Console.Write("Keuze >>> ");
-                //keuze inlezen
-                string keuze = ReadWithSpecialKeys();
-                //als er geen keuze wordt gemaakt
-                while (keuze.Equals(""))
+                string keuze = "";
+                while (true)
                 {
-                    Helpers.Display.PrintLine("\nMaak een geldige keuze!");
-                    Console.Write("Keuze >>> ");
+                    //succes met onloggen
+                    this.SuccesLogin(admin);
+                    //print alle gebruikers behalve de admin
+                    this.PrintGebruikers(data, admin);
+                    //keuze voor de gebruiker
+                    Helpers.Display.PrintLine("\nToets in wat u wilt doen\nToets een nummer in om een gebruiker te veranderen\n" + message);
+                    //keuze inlezen
                     keuze = ReadWithSpecialKeys();
+
+                    //checken of het een nummer is
+                    if (Int16.TryParse(keuze, out _))
+                    {
+                        //checken of het in range is
+                        if (int.Parse(keuze) - 1 < data.Count)
+                            break;
+                        else
+                            //error message
+                            message = "\nToets een nummer in dat is aangegeven!";
+                    }
+                    else if (keuze.Equals("ESC") || keuze.Equals("INS"))
+                        break;
+                    else
+                        message = "\nToets alleen nummers in!";
                 }
                 //kijken wat de keuze is
                 switch (keuze)
@@ -386,7 +402,7 @@ namespace Bioscoop.Repository
                         return;
                     case "INS":
                         //voeg een gebruiker toe
-                        VoegGebruikerToe(data);
+                        VoegGebruikerToe(data, admin);
                         break;
                 }
 

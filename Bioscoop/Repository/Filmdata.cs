@@ -34,6 +34,7 @@ namespace Bioscoop.Repository
         {
             List<FilmModel> filmData = LoadData();
             data.FilmId = getId();
+            data.Kliks = 0;
             filmData.Add(data);
 
             // Update json data string

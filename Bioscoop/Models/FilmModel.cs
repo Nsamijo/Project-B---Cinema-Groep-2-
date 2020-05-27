@@ -13,10 +13,11 @@ namespace Bioscoop.Models
         public string Duur { get; set; }
         public string Kijkwijzer { get; set; }
         public string Status { get; set; }
+        public int Kliks { get; set; }
 
         public FilmModel() { }
 
-        public FilmModel(int filmId, string naam, string omschrijving, string genre, string duur, string kijkwijzer, string status)
+        public FilmModel(int filmId, string naam, string omschrijving, string genre, string duur, string kijkwijzer, string status, int kliks)
         {
             FilmId = filmId;
             Naam = naam;
@@ -25,7 +26,7 @@ namespace Bioscoop.Models
             Duur = duur;
             Kijkwijzer = kijkwijzer;
             Status = status;
+            Kliks = kliks;
         }
     }
-
 }

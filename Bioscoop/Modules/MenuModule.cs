@@ -1,11 +1,14 @@
 ﻿using System;
+using System.Threading;
+using Bioscoop.Helpers;
+using Bioscoop.Models;
 using Bioscoop.Modules;
+using Bioscoop.Repository;
 
 namespace Bioscoop.Modules
 {
     class MenuModule
     {
-
         public ConsoleKey Run()
         {
             MenuMain();
@@ -16,7 +19,7 @@ namespace Bioscoop.Modules
         {
             //main menu
             Console.Clear(); Console.CursorVisible = false;
-            Helpers.Display.PrintLine("Hoofdmenu                                                INS - Login \n");
+            Helpers.Display.PrintLine("Bioscoop - Hoofdmenu                                                INS - Login \n");
             Helpers.Display.PrintLine("Welkom op het klanten portaal van de Bioscoop \n");
             Helpers.Display.PrintLine("Navigeer naar het filmoverzicht om alle film informatie in te zien en een film te reserveren");
             Helpers.Display.PrintLine("Als je een reservatie hebt aangemaakt kan je deze inzien bij beheren reservatie \n");
@@ -26,19 +29,34 @@ namespace Bioscoop.Modules
         }
         public void MenuAdmin()
         {
+            Console.Clear(); Console.CursorVisible = true;
+            LoginModule admin = new LoginModule();
+            while (admin.NuIngelogd() == null)
+            {
+                admin.Login(new Lezer().gebruikersInlezen());
+            }
+
+            if (admin.NuIngelogd().Naam.Equals("cancel"))
+                return;
+
+            if (admin.NuIngelogd().Rechten == false)
+            {
+                this.MenuMedewerker(admin.NuIngelogd());
+                return;
+            }
+
             bool loop = true;
             while (loop)
             {
                 Console.Clear(); Console.CursorVisible = false;
-                Helpers.Display.PrintLine("Bioscoop - Admin Portaal                            Welkom:");
-                Helpers.Display.PrintLine("ESC - Uitloggen                                     INS - Medewerkers portaal");
+                Helpers.Display.PrintLine("Bioscoop - Admin Portaal                            Welkom: " + admin.NuIngelogd().Naam);
+                Helpers.Display.PrintLine("ESC - Uitloggen");
                 Helpers.Display.PrintLine("");
                 Helpers.Display.PrintHeader("Nr.", "Menu");
                 Helpers.Display.PrintTable("1", "Filmbeheer");
                 Helpers.Display.PrintTable("2", "Filmschemabeheer");
                 Helpers.Display.PrintTable("3", "Zaalbeheer");
-                Helpers.Display.PrintTable("4", "Stoelenbeheer");
-                Helpers.Display.PrintTable("5", "Gebruikerbeheer");
+                Helpers.Display.PrintTable("4", "Gebruikerbeheer");
 
                 ZaalModule zaalbeheer = new ZaalModule();
                 FilmModule filmbeheer = new FilmModule();
@@ -62,30 +80,23 @@ namespace Bioscoop.Modules
                         break;
                     case ConsoleKey.D4:
                         Console.Clear();
-                        stoelbeheer.Run();
-                        break;
-                    case ConsoleKey.D5:
-                        Console.Clear();
-                        gebruikerbeheer.Run();
-                        break;
-                    case ConsoleKey.Insert:
-                        Console.Clear();
-                        MenuMedewerker();
+                        gebruikerbeheer.Run(admin);
                         break;
                     case ConsoleKey.Escape:
-                        Console.Clear();
-                        loop = false;
+                        Display.PrintLine("\nBent u zeker dat u wilt uitloggen? (y/n)");
+                        if (Helpers.Display.Keypress() == ConsoleKey.Y)
+                            loop = false;
                         break;
                 }
             }
         }
-        private void MenuMedewerker()
+        private void MenuMedewerker(GebruikerModel medewerker)
         {
             bool loop = true;
             while (loop)
             {
                 Console.Clear();
-                Helpers.Display.PrintLine("Bioscoop - Medewerkers Portaal                       Welkom:");
+                Helpers.Display.PrintLine("Bioscoop - Medewerkers Portaal                       Welkom: " + medewerker.Naam);
                 Helpers.Display.PrintLine("ESC - Uitloggen");
                 Helpers.Display.PrintLine("");
                 Helpers.Display.PrintHeader("Nr.", "Menu");
@@ -101,15 +112,12 @@ namespace Bioscoop.Modules
                         break;
                     case ConsoleKey.D2:
                         Console.Clear();
-                        //rapportage reservaties
-                        break;
-                    case ConsoleKey.D3:
-                        Console.Clear();
-                        //rapportage films
+                        //rapportage
                         break;
                     case ConsoleKey.Escape:
-                        Console.Clear();
-                        loop = false;
+                        Display.PrintLine("\nBent u zeker dat u wilt uitloggen? (y/n)");
+                        if (Helpers.Display.Keypress() == ConsoleKey.Y)
+                            loop = false;
                         break;
                 }
             }

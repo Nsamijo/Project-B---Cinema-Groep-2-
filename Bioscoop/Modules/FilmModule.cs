@@ -116,14 +116,14 @@ namespace Bioscoop.Modules
                 int nr = 0; //data weergeven en nummeren voor waarde keuze
                 Helpers.Display.PrintHeader("Nr.", "Benaming", "Waarde");
                 Helpers.Display.PrintTable((nr += 1).ToString(), "Naam: ", film.Naam);
-                int maxLength = 40; int index = 0;
+                int maxLength = 45; int index = 0;
                 while (index + maxLength < film.Omschrijving.Length)
                 {
                     if (index == 0) Helpers.Display.PrintTable((nr += 1).ToString(), "Omschrijving: ", film.Omschrijving.Substring(index, maxLength));
                     else Helpers.Display.PrintTable(" ", " ", film.Omschrijving.Substring(index, maxLength));
                     index += maxLength;
                 }
-                Helpers.Display.PrintTable((nr += 1).ToString(), "Status: ", film.Genre);
+                Helpers.Display.PrintTable((nr += 1).ToString(), "Genre: ", film.Genre);
                 Helpers.Display.PrintTable((nr += 1).ToString(), "Duur: ", film.Duur);
                 Helpers.Display.PrintTable((nr += 1).ToString(), "Kijkwijzer: ", film.Kijkwijzer);
                 Helpers.Display.PrintTable((nr += 1).ToString(), "Status: ", film.Status);

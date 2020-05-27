@@ -9,7 +9,7 @@
     "ZaalId": 2,
     "Omschrijving": "Zaal 2",
     "Status": "Beschikbaar",
-    "Scherm": "2D"
+    "Scherm": "IMAX 2D"
   },
   {
     "ZaalId": 3,
@@ -33,7 +33,7 @@
     "ZaalId": 6,
     "Omschrijving": "Zaal 6",
     "Status": "Beschikbaar",
-    "Scherm": "3D"
+    "Scherm": "IMAX 3D"
   },
   {
     "ZaalId": 7,
@@ -45,6 +45,6 @@
     "ZaalId": 8,
     "Omschrijving": "Zaal 8",
     "Status": "Beschikbaar",
-    "Scherm": "IMAX"
+    "Scherm": "IMAX 2D"
   }
 ]

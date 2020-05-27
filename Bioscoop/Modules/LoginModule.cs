@@ -2,6 +2,7 @@
 using Bioscoop.Repository;
 using System;
 using System.Collections.Generic;
+using System.Threading;
 
 namespace Bioscoop.Modules
 {
@@ -71,8 +72,8 @@ namespace Bioscoop.Modules
             ///Zo niet dan wordt een null terug gegeven
             /// </summary>
             Console.Clear();
-            Console.WriteLine("FilmHaus Inloggen:");
-            Console.WriteLine("(Druk op ESC terug te gaan)\nVoer uw gebruikersnaam en wachtwoordt in\n");
+            Console.WriteLine("Bioscoop Inlog Portaal");
+            Console.WriteLine("ESC - Terug\n");
             Console.Write("Gebruikersnaam: ");
             string gebruiker = new GebruikersMenu().ReadWithSpecialKeys();
 
@@ -121,6 +122,7 @@ namespace Bioscoop.Modules
                 ///als er niet is ingelogd dan wordt dit vermeld
                 /// </summary>
                 Console.WriteLine("\nNiet ingelogd!\nCheck uw gebruikersnaam of wachtwoord!");
+                Thread.Sleep(500);
             }
             else if (this.Ingelogd.Naam.Equals("cancel"))
             {

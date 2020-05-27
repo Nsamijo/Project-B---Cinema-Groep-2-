@@ -17,7 +17,9 @@ namespace Bioscoop.Repository
             string jsonFilePath = filmschemaPath;
             string _json = File.ReadAllText(jsonFilePath);
 
-            return JsonConvert.DeserializeObject<List<FilmschemaModel>>(_json);
+            List<FilmschemaModel> res = JsonConvert.DeserializeObject<List<FilmschemaModel>>(_json);
+            res = Sort(res);
+            return res;
         }
         private static void SaveData(List<FilmschemaModel> FilmschemaData) //opslaan en schrijven naar json functie
         {
@@ -187,6 +189,131 @@ namespace Bioscoop.Repository
                 }
             }
             return true;
+        }
+        public static string CompareDates(string d1, string d2)
+        {
+            string[] d1sarr = d1.Split("/");
+            string[] d2sarr = d2.Split("/");
+            int[] d1iarr = new int[3];
+            int[] d2iarr = new int[3];
+            for (int i = 0; i < 2; i++)
+            {
+                if (d1sarr[i].ToCharArray()[0] == '0')
+                {
+                    d1iarr[i] = (int)Char.GetNumericValue(d1sarr[i].ToCharArray()[1]);
+                }
+                else
+                {
+                    d1iarr[i] = Int32.Parse(d1sarr[i]);
+                }
+                if (d2sarr[i].ToCharArray()[0] == '0')
+                {
+                    d2iarr[i] = (int)Char.GetNumericValue(d2sarr[i].ToCharArray()[1]);
+                }
+                else
+                {
+                    d2iarr[i] = Int32.Parse(d2sarr[i]);
+                }
+            }
+            d1iarr[2] = Int32.Parse(d1sarr[2]);
+            d2iarr[2] = Int32.Parse(d2sarr[2]);
+
+            for (int i = 2; i >= 0; i--)
+            {
+                if (d1iarr[i] > d2iarr[i])
+                {
+                    return d1;
+                }
+                if (d1iarr[i] < d2iarr[i])
+                {
+                    return d2;
+                }
+            }
+            return "";
+        }
+        public static string CompareTimes(string t1, string t2)
+        {
+            string[] t1sarr = t1.Split(":");
+            string[] t2sarr = t2.Split(":");
+            int[] t1iarr = new int[2];
+            int[] t2iarr = new int[2];
+            for (int i = 0; i < 2; i++)
+            {
+                if (t1sarr[i].ToCharArray()[0] == '0')
+                {
+                    t1iarr[i] = (int)Char.GetNumericValue(t1sarr[i].ToCharArray()[1]);
+                }
+                else
+                {
+                    t1iarr[i] = Int32.Parse(t1sarr[i]);
+                }
+                if (t2sarr[i].ToCharArray()[0] == '0')
+                {
+                    t1iarr[i] = (int)Char.GetNumericValue(t1sarr[i].ToCharArray()[1]);
+                }
+                else
+                {
+                    t2iarr[i] = Int32.Parse(t2sarr[i]);
+                }
+            }
+
+            for (int i = 0; i < 2; i++)
+            {
+                if (t1iarr[i] > t2iarr[i])
+                {
+                    return t1;
+                }
+                if (t1iarr[i] < t2iarr[i])
+                {
+                    return t2;
+                }
+            }
+            return "";
+
+
+        }
+        public static List<FilmschemaModel> Sort(List<FilmschemaModel> arr)
+        {
+            List<FilmschemaModel> res = new List<FilmschemaModel>();
+
+            foreach (FilmschemaModel f in arr)
+            {
+                if (res.Count > 0)
+                {
+                    for (int i = 0; i <= res.Count; i++)
+                    {
+                        if (i != res.Count)
+                        {
+                            if (CompareDates(f.Datum, res[i].Datum) == res[i].Datum)
+                            {
+                                res.Insert(i, f);
+                                break;
+                            }
+                            else if (CompareDates(f.Datum, res[i].Datum) == "")
+                            {
+                                if (CompareTimes(f.Tijd, res[i].Tijd) == res[i].Tijd)
+                                {
+                                    res.Insert(i, f);
+                                    break;
+                                }
+                                else if (CompareTimes(f.Tijd, res[i].Tijd) == "")
+                                {
+                                    res.Insert(i, f);
+                                    break;
+                                }
+                            }
+                        }
+                        else
+                        {
+                            res.Add(f);
+                            break;
+                        }
+                    }
+                }
+                else
+                    res.Add(f);
+            }
+            return res;
         }
     }
 }

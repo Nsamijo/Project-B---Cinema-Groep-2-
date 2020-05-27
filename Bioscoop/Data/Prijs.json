@@ -1,12 +1,22 @@
 [
   {
-    "TweeD": "9,50",
-    "TweeDVip": "12,00",
-    "DrieD": "12,50",
-    "DrieDVip+": "15,00",
-    "ImaxTweeD": "12,00",
-    "ImaxTweeDVip+": "14,50",
-    "ImaxDrieD": "15,50",
-    "ImaxDrieDVip": "17,50"
+    "Soort": "2D",
+    "Prijs": "9,50"
+  },
+  {
+    "Soort": "3D",
+    "Prijs": "12,00"
+  },
+  {
+    "Soort": "IMAX 2D",
+    "Prijs": "14,50"
+  },
+  {
+    "Soort": "IMAX 3D",
+    "Prijs": "17,50"
+  },
+  {
+    "Soort": "VIP",
+    "Prijs": "3,50"
   }
 ]

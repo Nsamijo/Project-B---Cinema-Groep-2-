@@ -66,12 +66,9 @@ namespace Bioscoop.Modules
                             error = "Onjuist waarde ingevuld.";
                         }
                         break;
-
-
                     case Inputs.KeyAction.Insert: //toevoeg scherm aanroepen
                         AddZaal();
                         break;
-
                     case Inputs.KeyAction.Escape: //de functie beeindigen
                         abort = true; 
                         break;
@@ -155,7 +152,7 @@ namespace Bioscoop.Modules
                     case Inputs.KeyAction.F1:
                         StoelModule stoelenbeheer = new StoelModule();
                         int value = editZaal.ZaalId;
-                        stoelenbeheer.StoelMain(value);//de zaalid meegeven van de geselecteerde zaal
+                        stoelenbeheer.Run(value);//de zaalid meegeven van de geselecteerde zaal
                         break;
                     case Inputs.KeyAction.Escape: //de functie beeindigen
                         abort = true;
@@ -254,7 +251,7 @@ namespace Bioscoop.Modules
                                 else error = "Onjuist waarde ingevuld.";
                                 break;
                             case 2:
-                                if (input.val == "2D" || input.val == "3D" || input.val == "IMAX")
+                                if (input.val == "2D" || input.val == "3D" || input.val == "IMAX 2D" || input.val == "IMAX 3D")
                                 {
                                     newZaal.Scherm = input.val;
                                     error = "";
