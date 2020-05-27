@@ -43,7 +43,7 @@ namespace Bioscoop.Modules
                 Helpers.Display.PrintLine("ESC - Terug naar menu                       INS - Filmprogramma van vandaag\n");
                 Helpers.Display.PrintLine("Vul een nummer in om de informatie en fimschema in te zien van de desbetreffende film\n");
                 Helpers.Display.PrintLine("Het huidige film aabod: \n");
-                Helpers.Display.PrintHeader("Nr", "Naam", "", "", "Genre", "Kijkwijzer");
+                Helpers.Display.PrintTableFilm("Nr", "Naam","Genre", "Kijkwijzer");
 
                 List<FilmModel> filmAanbod = filmData.Where(f => f.Status == "Beschikbaar").ToList();
                 int nummering = 1; // nummer naast de waarde op het scherm
@@ -51,8 +51,7 @@ namespace Bioscoop.Modules
                 {
                     foreach (FilmModel film in filmAanbod) //door alle film data loopen en weergeven
                     {
-
-                        Helpers.Display.PrintTable(nummering.ToString(), film.Naam, " ", " ", film.Genre, film.Kijkwijzer);
+                        Helpers.Display.PrintTableFilm(nummering.ToString(), film.Naam, film.Genre, film.Kijkwijzer);
                         nummering++;
                     }
                 }
@@ -131,19 +130,23 @@ namespace Bioscoop.Modules
                 Helpers.Display.PrintHeader("Nr.","dag","Datum", "Tijd", "Scherm");
 
                 //data voor loop
-                List<FilmschemaModel> filmschema = filmschemaData.Where(a => a.FilmId == film.FilmId).ToList();
                 var land = new System.Globalization.CultureInfo("nl-NL");
-                int nummering = 1;
+                string fromdate = DateTime.UtcNow.ToString("dd/MM/yyyy"); DateTime td = DateTime.Parse(fromdate, land);
+                List<FilmschemaModel> filmschema = filmschemaData.Where(a => a.FilmId == film.FilmId).ToList();
+                List<FilmschemaModel> temp = new List<FilmschemaModel>();
                 foreach (FilmschemaModel schema in filmschema)
                 {
-                    ZaalModel data = zaalData.Where(a => a.ZaalId == schema.ZaalId).SingleOrDefault();
-                    string fromdate = DateTime.UtcNow.ToString("dd/MM/yyyy"); DateTime td = DateTime.Parse(fromdate, land);
                     DateTime d = DateTime.Parse(schema.Datum, land);
                     if (d > td)
-                    {
-                        Helpers.Display.PrintTable(nummering.ToString(), land.DateTimeFormat.GetDayName(d.DayOfWeek), schema.Datum, schema.Tijd, data.Scherm);
-                        nummering++;
-                    }
+                        temp.Add(schema);
+                }
+                int nummering = 1;
+                foreach (FilmschemaModel schema in temp)
+                {
+                    ZaalModel data = zaalData.Where(a => a.ZaalId == schema.ZaalId).SingleOrDefault();
+                    DateTime d = DateTime.Parse(schema.Datum, land);
+                    Helpers.Display.PrintTable(nummering.ToString(), land.DateTimeFormat.GetDayName(d.DayOfWeek), schema.Datum, schema.Tijd, data.Scherm);
+                    nummering++;
                 }
                 Helpers.Display.PrintLine("\n Vul je keuze in en sluit af met een enter");
 
@@ -155,10 +158,10 @@ namespace Bioscoop.Modules
                     case Inputs.KeyAction.Enter:
                         int inputValue = Int32.TryParse(input.val, out inputValue) ? inputValue : 0;
                         inputValue--; //-1 want count start bij 0
-                        if (inputValue >= 0 && inputValue < filmData.Count)
+                        if (inputValue >= 0 && inputValue < temp.Count)
                         {
                             error = "";
-                            Reservering(filmschema[inputValue]); //waarde meegeven van de gekozen film
+                            Reservering(temp[inputValue]); //waarde meegeven van de gekozen film
                         }
                         else
                         {
@@ -251,13 +254,13 @@ namespace Bioscoop.Modules
                 Helpers.Display.PrintLine("Reservatie informatie: \n");
 
                 //weergave data
-                int nr = 0;
+                int nr = 0; 
                 List<string> displaystoelen = new List<string>();
 
                 Helpers.Display.PrintHeader("Nr", "Benaming", "Waarde");
                 Helpers.Display.PrintTable((nr += 1).ToString(), "Film: ", films.Naam);
                 Helpers.Display.PrintTable((nr += 1).ToString(), "Scherm: ", zaal.Scherm);
-                Helpers.Display.PrintTable((nr += 1).ToString(), "Prijs: ", prijs.ToString());
+                Helpers.Display.PrintTable((nr += 1).ToString(), "Prijs: ", (prijs/100).ToString("0.00"));
                 Helpers.Display.PrintTable((nr += 1).ToString(), "Tijd: ", schemaData.Tijd);
                 Helpers.Display.PrintTable((nr += 1).ToString(), "Datum: ", schemaData.Datum);
                 if (newReservering.Aantal >0) Helpers.Display.PrintTable((nr += 1).ToString(), "Aantal: ", newReservering.Aantal.ToString());

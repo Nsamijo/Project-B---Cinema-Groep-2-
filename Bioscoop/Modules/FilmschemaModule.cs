@@ -7,10 +7,11 @@ using Bioscoop.Models;
 
 namespace Bioscoop.Modules
 {
-    class FilmschemaModule
+    class FilmschemaModule//Jonas
     {
         public void Run()
         {
+            Console.CursorVisible = true;
             bool abort = false;
             while (!abort)
             {
@@ -26,14 +27,16 @@ namespace Bioscoop.Modules
                 Helpers.Display.PrintLine("Vul een nummer in om deze waarde te bewerken.");
                 Helpers.Display.PrintLine(" ");
 
+                string filmnaam = "..."; const int maxVal = 17; //grote waarde fix
                 int i = 1;
                 Helpers.Display.PrintHeader("No", "Zaal", "Film", "Datum", "Tijd");
                 foreach (FilmschemaModel programma in filmschema)
                 {
                     try
                     {
-                        string filmnaam = filmData.Where(film => film.FilmId == programma.FilmId).ToList()[0].Naam;
+                        string filmnaamData = filmData.Where(film => film.FilmId == programma.FilmId).ToList()[0].Naam;
                         string zaalnaam = zaalData.Where(zaal => zaal.ZaalId == programma.ZaalId).ToList()[0].Omschrijving;
+                        if (filmnaamData.Length > maxVal) filmnaam = filmnaamData.Substring(0, maxVal) +".."; else filmnaam = filmnaamData;
                         Helpers.Display.PrintTable(i.ToString(), zaalnaam, filmnaam, programma.Datum, programma.Tijd);
                     }
                     catch
@@ -68,7 +71,6 @@ namespace Bioscoop.Modules
                 }
             }
         }
-
         public void MaakProgramma()
         {
             bool abort = false;
@@ -90,7 +92,7 @@ namespace Bioscoop.Modules
                     if (!abort)
                     {
                         Console.Clear();
-                        datum = AssignDatum();
+                        datum = AssignDatum(datum);
                         if (datum == "abort")
                         {
                             abort = true;
@@ -105,29 +107,22 @@ namespace Bioscoop.Modules
                 ZaalModel z = AssignZaal(datum);
 
                 if (z.ZaalId == -1)
-                {
                     abort = true;
-                }
                 if (z.ZaalId == -2 && !abort)
                 {
 
                     while (z.ZaalId == -2)
                     {
                         Console.Clear();
-                        z = AssignZaal(datum);
+                        z = AssignZaal(datum, z.Omschrijving);
                         if (z.ZaalId == -1)
-                        {
                             abort = true;
-                        }
                     }
-
                 }
                 else
                 {
                     if (!abort)
-                    {
                         zaalid = z.ZaalId;
-                    }
                 }
             }
 
@@ -142,7 +137,7 @@ namespace Bioscoop.Modules
                 while (FilmschemaData.TijdSyntax(tijd) == false && !abort)
                 {
                     Console.Clear();
-                    tijd = AssignTijd(datum, zaalid);
+                    tijd = AssignTijd(datum, zaalid, tijd);
                     if (tijd == "abort")
                     {
                         abort = true;
@@ -152,7 +147,7 @@ namespace Bioscoop.Modules
             if (!abort)
             {
                 Console.Clear();
-                FilmModel film = AssignFilm();
+                FilmModel film = AssignFilm(tijd, datum, zaalid);
                 if (film.FilmId == -1)
                 {
                     abort = true;
@@ -162,7 +157,7 @@ namespace Bioscoop.Modules
                     while (film.FilmId == -2 && !abort)
                     {
                         Console.Clear();
-                        film = AssignFilm();
+                        film = AssignFilm(tijd, datum, zaalid, film.Omschrijving);
                         if (film.FilmId == -1)
                         {
                             abort = true;
@@ -180,8 +175,13 @@ namespace Bioscoop.Modules
             if (!abort && filmid >= 0 && zaalid >= 0)
             {
                 FilmschemaData.MaakProgramma(FilmschemaData.getId(), datum, tijd, zaalid, filmid);
+                Console.ForegroundColor = ConsoleColor.Green;
+                Helpers.Display.PrintLine("Programma aangemaakt");
+                Console.ForegroundColor = ConsoleColor.White;
+                System.Threading.Thread.Sleep(2000);
             }
         }
+
 
         public void VerwijderProgramma()
         {
@@ -195,13 +195,13 @@ namespace Bioscoop.Modules
             Helpers.Display.PrintLine("ESC - Terug naar menu \n");
 
             int i = 1;
-            Helpers.Display.PrintHeader("Nr", "Zaal", "film", "Datum", "Tijd");
+            Helpers.Display.PrintHeader("Nr", "Film", "Zaal", "Datum", "Tijd");
             foreach (FilmschemaModel programma in filmschema)
             {
                 string filmnaam = filmData.Where(film => film.FilmId == programma.FilmId).ToList()[0].Naam;
                 string zaalnaam = zaalData.Where(zaal => zaal.ZaalId == programma.ZaalId).ToList()[0].Omschrijving;
 
-                Helpers.Display.PrintTable(i.ToString(), zaalnaam, filmnaam, programma.Datum, programma.Tijd);
+                Helpers.Display.PrintHeader(i.ToString(), filmnaam, zaalnaam, programma.Datum, programma.Tijd);
                 i++;
             }
             Helpers.Display.PrintLine(" ");
@@ -224,7 +224,7 @@ namespace Bioscoop.Modules
             }
         }
 
-        public ZaalModel AssignZaal(string datum)
+        public ZaalModel AssignZaal(string datum, string error = "")
         {
             Helpers.Display.PrintLine("[ESC] teruggaan");
 
@@ -237,6 +237,11 @@ namespace Bioscoop.Modules
                     zalen.RemoveAt(i);
                 }
             }
+            Helpers.Display.PrintLine("");
+            Helpers.Display.PrintLine($"Datum: {datum}");
+            Helpers.Display.PrintLine("");
+
+
             int count = 1;
             foreach (ZaalModel zaal in zalen)
             {
@@ -246,8 +251,15 @@ namespace Bioscoop.Modules
                     count++;
                 }
             }
+            if (error != "")
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Helpers.Display.PrintLine("");
+                Helpers.Display.PrintLine(error);
+                Console.ForegroundColor = ConsoleColor.White;
+            }
             Helpers.Display.PrintLine(" ");
-            Helpers.Display.PrintLine("Typ welke zaal u wilt toevoegen");
+            Helpers.Display.PrintLine("Typ het nummer van de zaal die u wilt toevoegen");
             Inputs.KeyInput input = Inputs.ReadUserData();
 
             switch (input.action)
@@ -259,11 +271,15 @@ namespace Bioscoop.Modules
                     {
                         return zalen[inputValue]; //waarde meegeven van de gekozen zaal
                     }
+                    else if (inputValue == -1)
+                    {
+                        return new ZaalModel(-2, "Verkeerde input, type een nummer in", "", "");
+                    }
                     else
                     {
-                        Console.WriteLine( "Onjuist waarde ingevuld.");
+                        return new ZaalModel(-2, "Verkeerd nummer, type een nummer van de lijst in", "", "");
                     }
-                    break;
+
 
                 case Inputs.KeyAction.Escape: //de functie beeindigen
                     return new ZaalModel(-1, "", "", "");
@@ -271,21 +287,33 @@ namespace Bioscoop.Modules
             return new ZaalModel(-2, "", "", "");
         }
 
-        public FilmModel AssignFilm()
+        public FilmModel AssignFilm(string tijd, string datum, int zaalid, string error = "")
         {
             Helpers.Display.PrintLine("[ESC] teruggaan");
 
             List<FilmModel> films = Repository.FilmData.LoadData();
             int i = 1;
+            Helpers.Display.PrintLine("");
+            Helpers.Display.PrintLine($"Datum: {datum}");
+            Helpers.Display.PrintLine($"Zaal: {ZaalData.LoadData().Where(z => z.ZaalId == zaalid).ToList()[0].Omschrijving}");
+            Helpers.Display.PrintLine($"Tijd: {tijd}");
+            Helpers.Display.PrintLine("");
             Helpers.Display.PrintHeader("No", "Naam", "Omschrijving", "Genre", "Kijkwijzer");
             foreach (FilmModel film in films)
             {
-                Helpers.Display.PrintTable(i.ToString(), film.Naam, film.Omschrijving, film.Genre, film.Kijkwijzer);
+                Helpers.Display.PrintHeader(i.ToString(), film.Naam, film.Omschrijving, film.Genre, film.Kijkwijzer);
                 i++;
             }
 
+            if (error != "")
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Helpers.Display.PrintLine("");
+                Helpers.Display.PrintLine(error);
+                Console.ForegroundColor = ConsoleColor.White;
+            }
             Helpers.Display.PrintLine(" ");
-            Helpers.Display.PrintLine("Typ welke zaal u wilt toevoegen");
+            Helpers.Display.PrintLine("Typ welke film u wilt toevoegen");
             Inputs.KeyInput input = Inputs.ReadUserData();
 
             switch (input.action)
@@ -297,21 +325,33 @@ namespace Bioscoop.Modules
                     {
                         return films[inputValue]; //waarde meegeven van de gekozen film
                     }
+                    else if (inputValue == -1)
+                    {
+                        return new FilmModel(-2, "", "Verkeerde input, vul een nummer in", "", "", "", "",0);
+                    }
+                    else
+                    {
+                        return new FilmModel(-2, "", "Verkeerd nummer, vul een nummer uit de lijst in", "", "", "", "",0);
+                    }
 
-                    break;
+
                 case Inputs.KeyAction.Escape: //de functie beeindigen
-                    return new FilmModel(-1, "", "", "", "", "", "");
+                    return new FilmModel(-1, "", "", "", "", "", "", 0);
             }
-            return new FilmModel(-2, "", "", "", "", "", "");
+            return new FilmModel(-2, "", "", "", "", "", "",0);
         }
 
-        public string AssignTijd(string datum, int zaalid)
+        public string AssignTijd(string datum, int zaalid, string error = "")
         {
             Helpers.Display.PrintLine("[ESC] teruggaan");
 
             string res = "";
             string[] tijden = new string[4] { "10:00", "13:30", "17:00", "20:30" };
 
+            Helpers.Display.PrintLine("");
+            Helpers.Display.PrintLine($"Datum: {datum}");
+            Helpers.Display.PrintLine($"Zaal: {ZaalData.LoadData().Where(z => z.ZaalId == zaalid).ToList()[0].Omschrijving}");
+            Helpers.Display.PrintLine("");
             int count = 0;
             foreach (string tijd in tijden)
             {
@@ -338,7 +378,16 @@ namespace Bioscoop.Modules
                 Helpers.Display.PrintTable(count.ToString(), tijd);
                 count++;
             }
+            Helpers.Display.PrintLine("");
+            Helpers.Display.PrintLine("Vul het nummer in van de tijd die u wilt toevoegen");
 
+            if (error != "")
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Helpers.Display.PrintLine("");
+                Helpers.Display.PrintLine(error);
+                Console.ForegroundColor = ConsoleColor.White;
+            }
             Inputs.KeyInput input = Inputs.ReadUserData();
             switch (input.action)
             {
@@ -349,20 +398,29 @@ namespace Bioscoop.Modules
                     {
                         return tijden[inputValue]; //waarde meegeven van de gekozen zaal
                     }
+                    else if (inputValue == -1)
+                    {
+                        return "Verkeerde input, vul een nummer in";
+                    }
+                    else
+                    {
+                        return "Verkeerd nummer, vul een nummer uit de lijst in";
+                    }
 
-                    break;
+
                 case Inputs.KeyAction.Escape: //de functie beeindigen
                     return "abort";
             }
             return res;
         }
 
-        public string AssignDatum()
+        public string AssignDatum(string error = "")
         {
             string res = "";
             Helpers.Display.PrintLine("[ESC] teruggaan");
-            string[] dagen = FilmschemaData.VolgendeDagen(2, 14);
+            string[] dagen = FilmschemaData.VolgendeDagen(1, 14);
             int count = 0;
+
             foreach (string dag in dagen)
             {
                 if (FilmschemaData.DateCollides(dag) == false)
@@ -387,7 +445,16 @@ namespace Bioscoop.Modules
                 Helpers.Display.PrintLine($"{count}.  {dag}");
                 count++;
             }
-
+            Helpers.Display.PrintLine("");
+            Helpers.Display.PrintLine("Vul het nummer van de dag die u wilt toevoegen");
+            Helpers.Display.PrintLine("");
+            if (error != "")
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Helpers.Display.PrintLine("");
+                Helpers.Display.PrintLine(error);
+                Console.ForegroundColor = ConsoleColor.White;
+            }
             Helpers.Display.PrintLine("Typ welke dag: ");
             Inputs.KeyInput input = Inputs.ReadUserData();
             switch (input.action)
@@ -399,8 +466,16 @@ namespace Bioscoop.Modules
                     {
                         return dagen[inputValue]; //waarde meegeven van de gekozen datum
                     }
+                    else if (inputValue == -1)
+                    {
+                        return "Verkeerde input, vul een nummer in";
+                    }
+                    else
+                    {
+                        return "Verkeerd nummer, vul een nummer uit de lijst in";
+                    }
 
-                    break;
+
                 case Inputs.KeyAction.Escape: //de functie beeindigen
                     return "abort";
             }
@@ -414,7 +489,7 @@ namespace Bioscoop.Modules
             List<ZaalModel> zaalData = ZaalData.LoadData();
             List<FilmModel> filmData = FilmData.LoadData();
             FilmschemaModel programma = filmschema[index];
-
+            string message = "";
 
             Console.Clear();
             while (!abort)
@@ -432,7 +507,13 @@ namespace Bioscoop.Modules
                 Helpers.Display.PrintLine("2. Zaal");
                 Helpers.Display.PrintLine("3. Film");
                 Helpers.Display.PrintLine("4. Tijd");
-
+                Helpers.Display.PrintLine("");
+                if (message != "")
+                {
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Helpers.Display.PrintLine(message);
+                    Console.ForegroundColor = ConsoleColor.White;
+                }
                 Inputs.KeyInput input = Inputs.ReadUserData();
                 switch (input.action)
                 {
@@ -444,7 +525,7 @@ namespace Bioscoop.Modules
                         FilmschemaData.MaakProgramma(programma.ProgrammaId, programma.Datum, programma.Tijd, programma.ZaalId, programma.FilmId);
                         Console.Clear();
 
-                        Helpers.Display.PrintLine("Programma opgeslagen\n\n");
+                        message = "Programma aangepast";
                         Console.Clear();
                         break;
                     case Inputs.KeyAction.Enter:
@@ -469,6 +550,8 @@ namespace Bioscoop.Modules
                                         if (datum != "abort")
                                         {
                                             programma.Datum = datum;
+                                            message = "Datum aangepast";
+
                                         }
 
                                     }
@@ -477,6 +560,8 @@ namespace Bioscoop.Modules
                                         if (datum != "abort")
                                         {
                                             programma.Datum = datum;
+                                            message = "Datum aangepast";
+
                                         }
                                     }
                                     Console.Clear();
@@ -487,6 +572,8 @@ namespace Bioscoop.Modules
                                     if (zaalid >= 0)
                                     {
                                         programma.ZaalId = zaalid;
+                                        message = "Film aangepast";
+
                                     }
                                     else
                                     {
@@ -500,29 +587,35 @@ namespace Bioscoop.Modules
                                         if (zaalid != -1)
                                         {
                                             programma.ZaalId = zaalid;
+                                            message = "Zaal aangepast";
+
                                         }
                                     }
                                     Console.Clear();
                                     break;
                                 case 3:
                                     Console.Clear();
-                                    int filmid = AssignFilm().FilmId;
+                                    FilmModel film = AssignFilm(programma.Tijd, programma.Datum, programma.ZaalId);
+                                    int filmid = film.FilmId;
                                     if (filmid >= 0)
                                     {
                                         programma.FilmId = filmid;
+                                        message = "Film aangepast";
+
                                     }
                                     else
                                     {
                                         while (filmid == -2)
                                         {
-                                            Console.Clear();
-                                            Helpers.Display.PrintLine("Probeer het opnieuw\n\n");
-                                            filmid = AssignFilm().FilmId;
+                                            film = AssignFilm(programma.Tijd, programma.Datum, programma.ZaalId, film.Omschrijving);
+                                            filmid = film.FilmId;
                                             Console.Clear();
                                         }
                                         if (filmid != -1)
                                         {
                                             programma.FilmId = filmid;
+                                            message = "Film aangepast";
+
                                         }
                                     }
                                     Console.Clear();
@@ -543,6 +636,8 @@ namespace Bioscoop.Modules
                                         if (tijd != "abort")
                                         {
                                             programma.Tijd = tijd;
+                                            message = "Tijd aangepast";
+
                                         }
                                     }
                                     else
@@ -550,6 +645,8 @@ namespace Bioscoop.Modules
                                         if (tijd != "abort")
                                         {
                                             programma.Tijd = tijd;
+                                            message = "Tijd aangepast";
+
                                         }
                                     }
                                     Console.Clear();

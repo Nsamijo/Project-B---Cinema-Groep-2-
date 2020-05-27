@@ -3,15 +3,18 @@ using System.Collections.Generic;
 using Bioscoop.Helpers;
 using Bioscoop.Repository;
 using Bioscoop.Models;
+using System.Text.RegularExpressions;
+using System.Linq;
 
 namespace Bioscoop.Modules
 {
-    class FilmModule
+    class FilmModule//Dennis
     {
         List<FilmModel> filmen;
 
         public void Run() //hoofd functie
         {
+            Console.CursorVisible = true;
             //globale data
             Boolean abort = false;
             String error = "";
@@ -33,23 +36,27 @@ namespace Bioscoop.Modules
                 Helpers.Display.PrintLine(" ");
                 Helpers.Display.PrintLine("Vul een nummer in om deze waarde te bewerken");
                 Helpers.Display.PrintLine(" ");
-                Helpers.Display.PrintFilmHeader("Nr.", "Naam", "Omschrijving", "Genre", "Duur", "Kijkwijzer", "Status");
+                Helpers.Display.PrintHeader("Nr.", "Naam", "Omschrijving", "Genre", "Duur", "Kijkwijzer", "Status");
 
 
                 //Ophalen json via Repository/FilmData.cs LoadData functie
                 filmen = FilmData.LoadData();
                 FilmData.SortData(); //sorteer functie
+                string filmOmschrijving = "..."; string filmNaam = "..."; const int maxVal = 17;//te grote waarde fix
                 int nummering = 1; // nummer naast de waarde op het scherm
-
                 foreach (FilmModel film in filmen) //door alle film data loopen en weergeven
                 {
-                    Helpers.Display.PrintFilmTable(nummering.ToString(), film.Naam, film.Omschrijving, film.Genre, film.Duur, film.Kijkwijzer, film.Status);
+                    if (film.Naam.Length > maxVal) filmNaam = film.Naam.Substring(0, maxVal) + ".."; else filmNaam = film.Naam;
+                    if (film.Omschrijving.Length > maxVal) filmOmschrijving = film.Omschrijving.Substring(0, maxVal) + ".."; else filmOmschrijving = film.Omschrijving;
+                    
+                    Helpers.Display.PrintTable(nummering.ToString(), filmNaam, filmOmschrijving, film.Genre, film.Duur, film.Kijkwijzer, film.Status);
                     nummering++;
                 }
                 Helpers.Display.PrintLine(" ");
                 Helpers.Display.PrintLine("Type je keuze in en sluit af met een enter");
 
                 //userinput functie opvragen in Helpers/Inputs
+                Console.Write(">");
                 Inputs.KeyInput input = Inputs.ReadUserData();
                 switch (input.action)
                 {
@@ -102,21 +109,27 @@ namespace Bioscoop.Modules
 
                 //menu
                 Helpers.Display.PrintHeader("Aanpassen film : " + film.Naam);
-                Helpers.Display.PrintLine("ESC - Terug naar menu            Del - Verwijderen");
-                Helpers.Display.PrintLine("                                 INS - Opslaan"); Display.PrintLine("");
+                Helpers.Display.PrintLine("ESC - Terug naar menu                   Del - Verwijderen");
+                Helpers.Display.PrintLine("                                        INS - Opslaan"); Display.PrintLine("");
                 Helpers.Display.PrintLine("Druk op een nummer om deze waarde aan te passen."); Display.PrintLine("");
 
                 int nr = 0; //data weergeven en nummeren voor waarde keuze
-                Helpers.Display.PrintHeader("Nr.");
-                Helpers.Display.PrintLine((nr += 1) + "| Naam: " + film.Naam);
-                Helpers.Display.PrintLine((nr += 1) + "| Omschrijving: " + film.Omschrijving);
-                Helpers.Display.PrintLine((nr += 1) + "| Status: " + film.Genre);
-                Helpers.Display.PrintLine((nr += 1) + "| Scherm: " + film.Duur);
-                Helpers.Display.PrintLine((nr += 1) + "| Scherm: " + film.Kijkwijzer);
-                Helpers.Display.PrintLine((nr += 1) + "| Scherm: " + film.Status);
-                Console.WriteLine(" ");
+                Helpers.Display.PrintHeader("Nr.", "Benaming", "Waarde");
+                Helpers.Display.PrintTable((nr += 1).ToString(), "Naam: ", film.Naam);
+                int maxLength = 45; int index = 0;
+                while (index + maxLength < film.Omschrijving.Length)
+                {
+                    if (index == 0) Helpers.Display.PrintTable((nr += 1).ToString(), "Omschrijving: ", film.Omschrijving.Substring(index, maxLength));
+                    else Helpers.Display.PrintTable(" ", " ", film.Omschrijving.Substring(index, maxLength));
+                    index += maxLength;
+                }
+                Helpers.Display.PrintTable((nr += 1).ToString(), "Genre: ", film.Genre);
+                Helpers.Display.PrintTable((nr += 1).ToString(), "Duur: ", film.Duur);
+                Helpers.Display.PrintTable((nr += 1).ToString(), "Kijkwijzer: ", film.Kijkwijzer);
+                Helpers.Display.PrintTable((nr += 1).ToString(), "Status: ", film.Status);
 
-
+                Display.PrintLine("\n Vul het nummer in: ");
+                Console.Write(">");
                 input = Inputs.ReadUserData(); //waarde oplezen met keyinput functie
                 switch (input.action)
                 {
@@ -136,6 +149,7 @@ namespace Bioscoop.Modules
                             }
 
                             //switch met de instructie en data opvang van de gekozen data soort. met error handling.
+                            Console.Write(">");
                             inputData = Inputs.ReadUserData();
                             switch (inputValue)
                             {
@@ -185,8 +199,8 @@ namespace Bioscoop.Modules
                         break;
                     case Inputs.KeyAction.Delete: //de specifieke film data verwijderen
                         Console.WriteLine("Weet je zeker dat je " + film.Naam + " wilt verwijderen? (y/n)");
-                        string temp = Console.ReadLine();
-                        if( temp == "y")
+                        string confirm = Console.ReadLine();
+                        if( confirm == "y")
                         {
                             FilmData.RemoveData(film);
                             ConsoleColor ogColor = Console.ForegroundColor;
@@ -248,6 +262,7 @@ namespace Bioscoop.Modules
                     case 6: Helpers.Display.PrintLine("druk op Insert om de gegevens op te slaan"); break;
                 }
 
+                Console.Write(">");
                 input = Inputs.ReadUserData(); //waarde oplezen met keyinput functie
                 switch (input.action)
                 {

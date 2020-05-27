@@ -4,7 +4,7 @@
     "Omschrijving": "Rij A Stoel 1",
     "Rij": "A",
     "StoelNr": 1,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 1
   },
   {
@@ -12,7 +12,7 @@
     "Omschrijving": "Rij A Stoel 2",
     "Rij": "A",
     "StoelNr": 2,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 1
   },
   {
@@ -20,7 +20,7 @@
     "Omschrijving": "Rij A Stoel 3",
     "Rij": "A",
     "StoelNr": 3,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 1
   },
   {
@@ -28,7 +28,7 @@
     "Omschrijving": "Rij A Stoel 4",
     "Rij": "A",
     "StoelNr": 4,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 1
   },
   {
@@ -36,7 +36,7 @@
     "Omschrijving": "Rij A Stoel 5",
     "Rij": "A",
     "StoelNr": 5,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 1
   },
   {
@@ -44,7 +44,7 @@
     "Omschrijving": "Rij A Stoel 6",
     "Rij": "A",
     "StoelNr": 6,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 1
   },
   {
@@ -52,7 +52,7 @@
     "Omschrijving": "Rij A Stoel 7",
     "Rij": "A",
     "StoelNr": 7,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 1
   },
   {
@@ -60,7 +60,7 @@
     "Omschrijving": "Rij A Stoel 8",
     "Rij": "A",
     "StoelNr": 8,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 1
   },
   {
@@ -68,7 +68,7 @@
     "Omschrijving": "Rij A Stoel 9",
     "Rij": "A",
     "StoelNr": 9,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 1
   },
   {
@@ -76,7 +76,7 @@
     "Omschrijving": "Rij A Stoel 10",
     "Rij": "A",
     "StoelNr": 10,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 1
   },
   {
@@ -84,7 +84,7 @@
     "Omschrijving": "Rij A Stoel 11",
     "Rij": "A",
     "StoelNr": 11,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 1
   },
   {
@@ -92,7 +92,7 @@
     "Omschrijving": "Rij A Stoel 12",
     "Rij": "A",
     "StoelNr": 12,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 1
   },
   {
@@ -100,7 +100,7 @@
     "Omschrijving": "Rij A Stoel 13",
     "Rij": "A",
     "StoelNr": 13,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 1
   },
   {
@@ -108,7 +108,7 @@
     "Omschrijving": "Rij A Stoel 14",
     "Rij": "A",
     "StoelNr": 14,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 1
   },
   {
@@ -116,7 +116,7 @@
     "Omschrijving": "Rij A Stoel 15",
     "Rij": "A",
     "StoelNr": 15,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 1
   },
   {
@@ -124,39 +124,7 @@
     "Omschrijving": "Rij A Stoel 16",
     "Rij": "A",
     "StoelNr": 16,
-    "Premium": true,
-    "ZaalId": 1
-  },
-  {
-    "StoelId": 17,
-    "Omschrijving": "Rij A Stoel 17",
-    "Rij": "A",
-    "StoelNr": 17,
-    "Premium": true,
-    "ZaalId": 1
-  },
-  {
-    "StoelId": 18,
-    "Omschrijving": "Rij A Stoel 18",
-    "Rij": "A",
-    "StoelNr": 18,
-    "Premium": true,
-    "ZaalId": 1
-  },
-  {
-    "StoelId": 19,
-    "Omschrijving": "Rij A Stoel 19",
-    "Rij": "A",
-    "StoelNr": 19,
-    "Premium": true,
-    "ZaalId": 1
-  },
-  {
-    "StoelId": 20,
-    "Omschrijving": "Rij A Stoel 20",
-    "Rij": "A",
-    "StoelNr": 20,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 1
   },
   {
@@ -164,7 +132,7 @@
     "Omschrijving": "Rij B Stoel 1",
     "Rij": "B",
     "StoelNr": 1,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 1
   },
   {
@@ -172,7 +140,7 @@
     "Omschrijving": "Rij B Stoel 2",
     "Rij": "B",
     "StoelNr": 2,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 1
   },
   {
@@ -180,7 +148,7 @@
     "Omschrijving": "Rij B Stoel 3",
     "Rij": "B",
     "StoelNr": 3,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 1
   },
   {
@@ -188,7 +156,7 @@
     "Omschrijving": "Rij B Stoel 4",
     "Rij": "B",
     "StoelNr": 4,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 1
   },
   {
@@ -196,7 +164,7 @@
     "Omschrijving": "Rij B Stoel 5",
     "Rij": "B",
     "StoelNr": 5,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 1
   },
   {
@@ -204,7 +172,7 @@
     "Omschrijving": "Rij B Stoel 6",
     "Rij": "B",
     "StoelNr": 6,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 1
   },
   {
@@ -212,7 +180,7 @@
     "Omschrijving": "Rij B Stoel 7",
     "Rij": "B",
     "StoelNr": 7,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 1
   },
   {
@@ -220,7 +188,7 @@
     "Omschrijving": "Rij B Stoel 8",
     "Rij": "B",
     "StoelNr": 8,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 1
   },
   {
@@ -228,7 +196,7 @@
     "Omschrijving": "Rij B Stoel 9",
     "Rij": "B",
     "StoelNr": 9,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 1
   },
   {
@@ -236,7 +204,7 @@
     "Omschrijving": "Rij B Stoel 10",
     "Rij": "B",
     "StoelNr": 10,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 1
   },
   {
@@ -244,7 +212,7 @@
     "Omschrijving": "Rij B Stoel 11",
     "Rij": "B",
     "StoelNr": 11,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 1
   },
   {
@@ -252,7 +220,7 @@
     "Omschrijving": "Rij B Stoel 12",
     "Rij": "B",
     "StoelNr": 12,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 1
   },
   {
@@ -260,7 +228,7 @@
     "Omschrijving": "Rij B Stoel 13",
     "Rij": "B",
     "StoelNr": 13,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 1
   },
   {
@@ -268,7 +236,7 @@
     "Omschrijving": "Rij B Stoel 14",
     "Rij": "B",
     "StoelNr": 14,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 1
   },
   {
@@ -276,7 +244,7 @@
     "Omschrijving": "Rij B Stoel 15",
     "Rij": "B",
     "StoelNr": 15,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 1
   },
   {
@@ -284,39 +252,7 @@
     "Omschrijving": "Rij B Stoel 16",
     "Rij": "B",
     "StoelNr": 16,
-    "Premium": true,
-    "ZaalId": 1
-  },
-  {
-    "StoelId": 37,
-    "Omschrijving": "Rij B Stoel 17",
-    "Rij": "B",
-    "StoelNr": 17,
-    "Premium": true,
-    "ZaalId": 1
-  },
-  {
-    "StoelId": 38,
-    "Omschrijving": "Rij B Stoel 18",
-    "Rij": "B",
-    "StoelNr": 18,
-    "Premium": true,
-    "ZaalId": 1
-  },
-  {
-    "StoelId": 39,
-    "Omschrijving": "Rij B Stoel 19",
-    "Rij": "B",
-    "StoelNr": 19,
-    "Premium": true,
-    "ZaalId": 1
-  },
-  {
-    "StoelId": 40,
-    "Omschrijving": "Rij B Stoel 20",
-    "Rij": "B",
-    "StoelNr": 20,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 1
   },
   {
@@ -444,38 +380,6 @@
     "Omschrijving": "Rij C Stoel 16",
     "Rij": "C",
     "StoelNr": 16,
-    "Premium": false,
-    "ZaalId": 1
-  },
-  {
-    "StoelId": 57,
-    "Omschrijving": "Rij C Stoel 17",
-    "Rij": "C",
-    "StoelNr": 17,
-    "Premium": false,
-    "ZaalId": 1
-  },
-  {
-    "StoelId": 58,
-    "Omschrijving": "Rij C Stoel 18",
-    "Rij": "C",
-    "StoelNr": 18,
-    "Premium": false,
-    "ZaalId": 1
-  },
-  {
-    "StoelId": 59,
-    "Omschrijving": "Rij C Stoel 19",
-    "Rij": "C",
-    "StoelNr": 19,
-    "Premium": false,
-    "ZaalId": 1
-  },
-  {
-    "StoelId": 60,
-    "Omschrijving": "Rij C Stoel 20",
-    "Rij": "C",
-    "StoelNr": 20,
     "Premium": false,
     "ZaalId": 1
   },
@@ -608,38 +512,6 @@
     "ZaalId": 1
   },
   {
-    "StoelId": 77,
-    "Omschrijving": "Rij D Stoel 17",
-    "Rij": "D",
-    "StoelNr": 17,
-    "Premium": false,
-    "ZaalId": 1
-  },
-  {
-    "StoelId": 78,
-    "Omschrijving": "Rij D Stoel 18",
-    "Rij": "D",
-    "StoelNr": 18,
-    "Premium": false,
-    "ZaalId": 1
-  },
-  {
-    "StoelId": 79,
-    "Omschrijving": "Rij D Stoel 19",
-    "Rij": "D",
-    "StoelNr": 19,
-    "Premium": false,
-    "ZaalId": 1
-  },
-  {
-    "StoelId": 80,
-    "Omschrijving": "Rij D Stoel 20",
-    "Rij": "D",
-    "StoelNr": 20,
-    "Premium": false,
-    "ZaalId": 1
-  },
-  {
     "StoelId": 81,
     "Omschrijving": "Rij E Stoel 1",
     "Rij": "E",
@@ -764,38 +636,6 @@
     "Omschrijving": "Rij E Stoel 16",
     "Rij": "E",
     "StoelNr": 16,
-    "Premium": false,
-    "ZaalId": 1
-  },
-  {
-    "StoelId": 97,
-    "Omschrijving": "Rij E Stoel 17",
-    "Rij": "E",
-    "StoelNr": 17,
-    "Premium": false,
-    "ZaalId": 1
-  },
-  {
-    "StoelId": 98,
-    "Omschrijving": "Rij E Stoel 18",
-    "Rij": "E",
-    "StoelNr": 18,
-    "Premium": false,
-    "ZaalId": 1
-  },
-  {
-    "StoelId": 99,
-    "Omschrijving": "Rij E Stoel 19",
-    "Rij": "E",
-    "StoelNr": 19,
-    "Premium": false,
-    "ZaalId": 1
-  },
-  {
-    "StoelId": 100,
-    "Omschrijving": "Rij E Stoel 20",
-    "Rij": "E",
-    "StoelNr": 20,
     "Premium": false,
     "ZaalId": 1
   },
@@ -928,38 +768,6 @@
     "ZaalId": 1
   },
   {
-    "StoelId": 117,
-    "Omschrijving": "Rij F Stoel 17",
-    "Rij": "F",
-    "StoelNr": 17,
-    "Premium": false,
-    "ZaalId": 1
-  },
-  {
-    "StoelId": 118,
-    "Omschrijving": "Rij F Stoel 18",
-    "Rij": "F",
-    "StoelNr": 18,
-    "Premium": false,
-    "ZaalId": 1
-  },
-  {
-    "StoelId": 119,
-    "Omschrijving": "Rij F Stoel 19",
-    "Rij": "F",
-    "StoelNr": 19,
-    "Premium": false,
-    "ZaalId": 1
-  },
-  {
-    "StoelId": 120,
-    "Omschrijving": "Rij F Stoel 20",
-    "Rij": "F",
-    "StoelNr": 20,
-    "Premium": false,
-    "ZaalId": 1
-  },
-  {
     "StoelId": 121,
     "Omschrijving": "Rij G Stoel 1",
     "Rij": "G",
@@ -1088,43 +896,11 @@
     "ZaalId": 1
   },
   {
-    "StoelId": 137,
-    "Omschrijving": "Rij G Stoel 17",
-    "Rij": "G",
-    "StoelNr": 17,
-    "Premium": false,
-    "ZaalId": 1
-  },
-  {
-    "StoelId": 138,
-    "Omschrijving": "Rij G Stoel 18",
-    "Rij": "G",
-    "StoelNr": 18,
-    "Premium": false,
-    "ZaalId": 1
-  },
-  {
-    "StoelId": 139,
-    "Omschrijving": "Rij G Stoel 19",
-    "Rij": "G",
-    "StoelNr": 19,
-    "Premium": false,
-    "ZaalId": 1
-  },
-  {
-    "StoelId": 140,
-    "Omschrijving": "Rij G Stoel 20",
-    "Rij": "G",
-    "StoelNr": 20,
-    "Premium": false,
-    "ZaalId": 1
-  },
-  {
     "StoelId": 141,
     "Omschrijving": "Rij H Stoel 1",
     "Rij": "H",
     "StoelNr": 1,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 1
   },
   {
@@ -1132,7 +908,7 @@
     "Omschrijving": "Rij H Stoel 2",
     "Rij": "H",
     "StoelNr": 2,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 1
   },
   {
@@ -1140,7 +916,7 @@
     "Omschrijving": "Rij H Stoel 3",
     "Rij": "H",
     "StoelNr": 3,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 1
   },
   {
@@ -1148,7 +924,7 @@
     "Omschrijving": "Rij H Stoel 4",
     "Rij": "H",
     "StoelNr": 4,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 1
   },
   {
@@ -1156,7 +932,7 @@
     "Omschrijving": "Rij H Stoel 5",
     "Rij": "H",
     "StoelNr": 5,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 1
   },
   {
@@ -1164,7 +940,7 @@
     "Omschrijving": "Rij H Stoel 6",
     "Rij": "H",
     "StoelNr": 6,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 1
   },
   {
@@ -1172,7 +948,7 @@
     "Omschrijving": "Rij H Stoel 7",
     "Rij": "H",
     "StoelNr": 7,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 1
   },
   {
@@ -1180,7 +956,7 @@
     "Omschrijving": "Rij H Stoel 8",
     "Rij": "H",
     "StoelNr": 8,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 1
   },
   {
@@ -1188,7 +964,7 @@
     "Omschrijving": "Rij H Stoel 9",
     "Rij": "H",
     "StoelNr": 9,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 1
   },
   {
@@ -1196,7 +972,7 @@
     "Omschrijving": "Rij H Stoel 10",
     "Rij": "H",
     "StoelNr": 10,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 1
   },
   {
@@ -1204,7 +980,7 @@
     "Omschrijving": "Rij H Stoel 11",
     "Rij": "H",
     "StoelNr": 11,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 1
   },
   {
@@ -1212,7 +988,7 @@
     "Omschrijving": "Rij H Stoel 12",
     "Rij": "H",
     "StoelNr": 12,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 1
   },
   {
@@ -1220,7 +996,7 @@
     "Omschrijving": "Rij H Stoel 13",
     "Rij": "H",
     "StoelNr": 13,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 1
   },
   {
@@ -1228,7 +1004,7 @@
     "Omschrijving": "Rij H Stoel 14",
     "Rij": "H",
     "StoelNr": 14,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 1
   },
   {
@@ -1236,7 +1012,7 @@
     "Omschrijving": "Rij H Stoel 15",
     "Rij": "H",
     "StoelNr": 15,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 1
   },
   {
@@ -1244,39 +1020,7 @@
     "Omschrijving": "Rij H Stoel 16",
     "Rij": "H",
     "StoelNr": 16,
-    "Premium": false,
-    "ZaalId": 1
-  },
-  {
-    "StoelId": 157,
-    "Omschrijving": "Rij H Stoel 17",
-    "Rij": "H",
-    "StoelNr": 17,
-    "Premium": false,
-    "ZaalId": 1
-  },
-  {
-    "StoelId": 158,
-    "Omschrijving": "Rij H Stoel 18",
-    "Rij": "H",
-    "StoelNr": 18,
-    "Premium": false,
-    "ZaalId": 1
-  },
-  {
-    "StoelId": 159,
-    "Omschrijving": "Rij H Stoel 19",
-    "Rij": "H",
-    "StoelNr": 19,
-    "Premium": false,
-    "ZaalId": 1
-  },
-  {
-    "StoelId": 160,
-    "Omschrijving": "Rij H Stoel 20",
-    "Rij": "H",
-    "StoelNr": 20,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 1
   },
   {
@@ -1284,7 +1028,7 @@
     "Omschrijving": "Rij I Stoel 1",
     "Rij": "I",
     "StoelNr": 1,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 1
   },
   {
@@ -1292,7 +1036,7 @@
     "Omschrijving": "Rij I Stoel 2",
     "Rij": "I",
     "StoelNr": 2,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 1
   },
   {
@@ -1300,7 +1044,7 @@
     "Omschrijving": "Rij I Stoel 3",
     "Rij": "I",
     "StoelNr": 3,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 1
   },
   {
@@ -1308,7 +1052,7 @@
     "Omschrijving": "Rij I Stoel 4",
     "Rij": "I",
     "StoelNr": 4,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 1
   },
   {
@@ -1316,7 +1060,7 @@
     "Omschrijving": "Rij I Stoel 5",
     "Rij": "I",
     "StoelNr": 5,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 1
   },
   {
@@ -1324,7 +1068,7 @@
     "Omschrijving": "Rij I Stoel 6",
     "Rij": "I",
     "StoelNr": 6,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 1
   },
   {
@@ -1332,7 +1076,7 @@
     "Omschrijving": "Rij I Stoel 7",
     "Rij": "I",
     "StoelNr": 7,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 1
   },
   {
@@ -1340,7 +1084,7 @@
     "Omschrijving": "Rij I Stoel 8",
     "Rij": "I",
     "StoelNr": 8,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 1
   },
   {
@@ -1348,7 +1092,7 @@
     "Omschrijving": "Rij I Stoel 9",
     "Rij": "I",
     "StoelNr": 9,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 1
   },
   {
@@ -1356,7 +1100,7 @@
     "Omschrijving": "Rij I Stoel 10",
     "Rij": "I",
     "StoelNr": 10,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 1
   },
   {
@@ -1364,7 +1108,7 @@
     "Omschrijving": "Rij I Stoel 11",
     "Rij": "I",
     "StoelNr": 11,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 1
   },
   {
@@ -1372,7 +1116,7 @@
     "Omschrijving": "Rij I Stoel 12",
     "Rij": "I",
     "StoelNr": 12,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 1
   },
   {
@@ -1380,7 +1124,7 @@
     "Omschrijving": "Rij I Stoel 13",
     "Rij": "I",
     "StoelNr": 13,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 1
   },
   {
@@ -1388,7 +1132,7 @@
     "Omschrijving": "Rij I Stoel 14",
     "Rij": "I",
     "StoelNr": 14,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 1
   },
   {
@@ -1396,7 +1140,7 @@
     "Omschrijving": "Rij I Stoel 15",
     "Rij": "I",
     "StoelNr": 15,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 1
   },
   {
@@ -1404,39 +1148,7 @@
     "Omschrijving": "Rij I Stoel 16",
     "Rij": "I",
     "StoelNr": 16,
-    "Premium": false,
-    "ZaalId": 1
-  },
-  {
-    "StoelId": 177,
-    "Omschrijving": "Rij I Stoel 17",
-    "Rij": "I",
-    "StoelNr": 17,
-    "Premium": false,
-    "ZaalId": 1
-  },
-  {
-    "StoelId": 178,
-    "Omschrijving": "Rij I Stoel 18",
-    "Rij": "I",
-    "StoelNr": 18,
-    "Premium": false,
-    "ZaalId": 1
-  },
-  {
-    "StoelId": 179,
-    "Omschrijving": "Rij I Stoel 19",
-    "Rij": "I",
-    "StoelNr": 19,
-    "Premium": false,
-    "ZaalId": 1
-  },
-  {
-    "StoelId": 180,
-    "Omschrijving": "Rij I Stoel 20",
-    "Rij": "I",
-    "StoelNr": 20,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 1
   },
   {
@@ -1444,7 +1156,7 @@
     "Omschrijving": "Rij A Stoel 1",
     "Rij": "A",
     "StoelNr": 1,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 2
   },
   {
@@ -1452,7 +1164,7 @@
     "Omschrijving": "Rij A Stoel 2",
     "Rij": "A",
     "StoelNr": 2,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 2
   },
   {
@@ -1460,7 +1172,7 @@
     "Omschrijving": "Rij A Stoel 3",
     "Rij": "A",
     "StoelNr": 3,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 2
   },
   {
@@ -1468,7 +1180,7 @@
     "Omschrijving": "Rij A Stoel 4",
     "Rij": "A",
     "StoelNr": 4,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 2
   },
   {
@@ -1476,7 +1188,7 @@
     "Omschrijving": "Rij A Stoel 5",
     "Rij": "A",
     "StoelNr": 5,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 2
   },
   {
@@ -1484,7 +1196,7 @@
     "Omschrijving": "Rij A Stoel 6",
     "Rij": "A",
     "StoelNr": 6,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 2
   },
   {
@@ -1492,7 +1204,7 @@
     "Omschrijving": "Rij A Stoel 7",
     "Rij": "A",
     "StoelNr": 7,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 2
   },
   {
@@ -1500,7 +1212,7 @@
     "Omschrijving": "Rij A Stoel 8",
     "Rij": "A",
     "StoelNr": 8,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 2
   },
   {
@@ -1508,7 +1220,7 @@
     "Omschrijving": "Rij A Stoel 9",
     "Rij": "A",
     "StoelNr": 9,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 2
   },
   {
@@ -1516,7 +1228,7 @@
     "Omschrijving": "Rij A Stoel 10",
     "Rij": "A",
     "StoelNr": 10,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 2
   },
   {
@@ -1524,7 +1236,7 @@
     "Omschrijving": "Rij A Stoel 11",
     "Rij": "A",
     "StoelNr": 11,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 2
   },
   {
@@ -1532,7 +1244,7 @@
     "Omschrijving": "Rij A Stoel 12",
     "Rij": "A",
     "StoelNr": 12,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 2
   },
   {
@@ -1540,7 +1252,7 @@
     "Omschrijving": "Rij A Stoel 13",
     "Rij": "A",
     "StoelNr": 13,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 2
   },
   {
@@ -1548,7 +1260,7 @@
     "Omschrijving": "Rij A Stoel 14",
     "Rij": "A",
     "StoelNr": 14,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 2
   },
   {
@@ -1556,7 +1268,7 @@
     "Omschrijving": "Rij A Stoel 15",
     "Rij": "A",
     "StoelNr": 15,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 2
   },
   {
@@ -1564,39 +1276,7 @@
     "Omschrijving": "Rij A Stoel 16",
     "Rij": "A",
     "StoelNr": 16,
-    "Premium": true,
-    "ZaalId": 2
-  },
-  {
-    "StoelId": 197,
-    "Omschrijving": "Rij A Stoel 17",
-    "Rij": "A",
-    "StoelNr": 17,
-    "Premium": true,
-    "ZaalId": 2
-  },
-  {
-    "StoelId": 198,
-    "Omschrijving": "Rij A Stoel 18",
-    "Rij": "A",
-    "StoelNr": 18,
-    "Premium": true,
-    "ZaalId": 2
-  },
-  {
-    "StoelId": 199,
-    "Omschrijving": "Rij A Stoel 19",
-    "Rij": "A",
-    "StoelNr": 19,
-    "Premium": true,
-    "ZaalId": 2
-  },
-  {
-    "StoelId": 200,
-    "Omschrijving": "Rij A Stoel 20",
-    "Rij": "A",
-    "StoelNr": 20,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 2
   },
   {
@@ -1604,7 +1284,7 @@
     "Omschrijving": "Rij B Stoel 1",
     "Rij": "B",
     "StoelNr": 1,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 2
   },
   {
@@ -1612,7 +1292,7 @@
     "Omschrijving": "Rij B Stoel 2",
     "Rij": "B",
     "StoelNr": 2,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 2
   },
   {
@@ -1620,7 +1300,7 @@
     "Omschrijving": "Rij B Stoel 3",
     "Rij": "B",
     "StoelNr": 3,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 2
   },
   {
@@ -1628,7 +1308,7 @@
     "Omschrijving": "Rij B Stoel 4",
     "Rij": "B",
     "StoelNr": 4,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 2
   },
   {
@@ -1636,7 +1316,7 @@
     "Omschrijving": "Rij B Stoel 5",
     "Rij": "B",
     "StoelNr": 5,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 2
   },
   {
@@ -1644,7 +1324,7 @@
     "Omschrijving": "Rij B Stoel 6",
     "Rij": "B",
     "StoelNr": 6,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 2
   },
   {
@@ -1652,7 +1332,7 @@
     "Omschrijving": "Rij B Stoel 7",
     "Rij": "B",
     "StoelNr": 7,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 2
   },
   {
@@ -1660,7 +1340,7 @@
     "Omschrijving": "Rij B Stoel 8",
     "Rij": "B",
     "StoelNr": 8,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 2
   },
   {
@@ -1668,7 +1348,7 @@
     "Omschrijving": "Rij B Stoel 9",
     "Rij": "B",
     "StoelNr": 9,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 2
   },
   {
@@ -1676,7 +1356,7 @@
     "Omschrijving": "Rij B Stoel 10",
     "Rij": "B",
     "StoelNr": 10,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 2
   },
   {
@@ -1684,7 +1364,7 @@
     "Omschrijving": "Rij B Stoel 11",
     "Rij": "B",
     "StoelNr": 11,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 2
   },
   {
@@ -1692,7 +1372,7 @@
     "Omschrijving": "Rij B Stoel 12",
     "Rij": "B",
     "StoelNr": 12,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 2
   },
   {
@@ -1700,7 +1380,7 @@
     "Omschrijving": "Rij B Stoel 13",
     "Rij": "B",
     "StoelNr": 13,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 2
   },
   {
@@ -1708,7 +1388,7 @@
     "Omschrijving": "Rij B Stoel 14",
     "Rij": "B",
     "StoelNr": 14,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 2
   },
   {
@@ -1716,7 +1396,7 @@
     "Omschrijving": "Rij B Stoel 15",
     "Rij": "B",
     "StoelNr": 15,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 2
   },
   {
@@ -1724,39 +1404,7 @@
     "Omschrijving": "Rij B Stoel 16",
     "Rij": "B",
     "StoelNr": 16,
-    "Premium": true,
-    "ZaalId": 2
-  },
-  {
-    "StoelId": 217,
-    "Omschrijving": "Rij B Stoel 17",
-    "Rij": "B",
-    "StoelNr": 17,
-    "Premium": true,
-    "ZaalId": 2
-  },
-  {
-    "StoelId": 218,
-    "Omschrijving": "Rij B Stoel 18",
-    "Rij": "B",
-    "StoelNr": 18,
-    "Premium": true,
-    "ZaalId": 2
-  },
-  {
-    "StoelId": 219,
-    "Omschrijving": "Rij B Stoel 19",
-    "Rij": "B",
-    "StoelNr": 19,
-    "Premium": true,
-    "ZaalId": 2
-  },
-  {
-    "StoelId": 220,
-    "Omschrijving": "Rij B Stoel 20",
-    "Rij": "B",
-    "StoelNr": 20,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 2
   },
   {
@@ -1884,38 +1532,6 @@
     "Omschrijving": "Rij C Stoel 16",
     "Rij": "C",
     "StoelNr": 16,
-    "Premium": false,
-    "ZaalId": 2
-  },
-  {
-    "StoelId": 237,
-    "Omschrijving": "Rij C Stoel 17",
-    "Rij": "C",
-    "StoelNr": 17,
-    "Premium": false,
-    "ZaalId": 2
-  },
-  {
-    "StoelId": 238,
-    "Omschrijving": "Rij C Stoel 18",
-    "Rij": "C",
-    "StoelNr": 18,
-    "Premium": false,
-    "ZaalId": 2
-  },
-  {
-    "StoelId": 239,
-    "Omschrijving": "Rij C Stoel 19",
-    "Rij": "C",
-    "StoelNr": 19,
-    "Premium": false,
-    "ZaalId": 2
-  },
-  {
-    "StoelId": 240,
-    "Omschrijving": "Rij C Stoel 20",
-    "Rij": "C",
-    "StoelNr": 20,
     "Premium": false,
     "ZaalId": 2
   },
@@ -2048,38 +1664,6 @@
     "ZaalId": 2
   },
   {
-    "StoelId": 257,
-    "Omschrijving": "Rij D Stoel 17",
-    "Rij": "D",
-    "StoelNr": 17,
-    "Premium": false,
-    "ZaalId": 2
-  },
-  {
-    "StoelId": 258,
-    "Omschrijving": "Rij D Stoel 18",
-    "Rij": "D",
-    "StoelNr": 18,
-    "Premium": false,
-    "ZaalId": 2
-  },
-  {
-    "StoelId": 259,
-    "Omschrijving": "Rij D Stoel 19",
-    "Rij": "D",
-    "StoelNr": 19,
-    "Premium": false,
-    "ZaalId": 2
-  },
-  {
-    "StoelId": 260,
-    "Omschrijving": "Rij D Stoel 20",
-    "Rij": "D",
-    "StoelNr": 20,
-    "Premium": false,
-    "ZaalId": 2
-  },
-  {
     "StoelId": 261,
     "Omschrijving": "Rij E Stoel 1",
     "Rij": "E",
@@ -2204,38 +1788,6 @@
     "Omschrijving": "Rij E Stoel 16",
     "Rij": "E",
     "StoelNr": 16,
-    "Premium": false,
-    "ZaalId": 2
-  },
-  {
-    "StoelId": 277,
-    "Omschrijving": "Rij E Stoel 17",
-    "Rij": "E",
-    "StoelNr": 17,
-    "Premium": false,
-    "ZaalId": 2
-  },
-  {
-    "StoelId": 278,
-    "Omschrijving": "Rij E Stoel 18",
-    "Rij": "E",
-    "StoelNr": 18,
-    "Premium": false,
-    "ZaalId": 2
-  },
-  {
-    "StoelId": 279,
-    "Omschrijving": "Rij E Stoel 19",
-    "Rij": "E",
-    "StoelNr": 19,
-    "Premium": false,
-    "ZaalId": 2
-  },
-  {
-    "StoelId": 280,
-    "Omschrijving": "Rij E Stoel 20",
-    "Rij": "E",
-    "StoelNr": 20,
     "Premium": false,
     "ZaalId": 2
   },
@@ -2368,38 +1920,6 @@
     "ZaalId": 2
   },
   {
-    "StoelId": 297,
-    "Omschrijving": "Rij F Stoel 17",
-    "Rij": "F",
-    "StoelNr": 17,
-    "Premium": false,
-    "ZaalId": 2
-  },
-  {
-    "StoelId": 298,
-    "Omschrijving": "Rij F Stoel 18",
-    "Rij": "F",
-    "StoelNr": 18,
-    "Premium": false,
-    "ZaalId": 2
-  },
-  {
-    "StoelId": 299,
-    "Omschrijving": "Rij F Stoel 19",
-    "Rij": "F",
-    "StoelNr": 19,
-    "Premium": false,
-    "ZaalId": 2
-  },
-  {
-    "StoelId": 300,
-    "Omschrijving": "Rij F Stoel 20",
-    "Rij": "F",
-    "StoelNr": 20,
-    "Premium": false,
-    "ZaalId": 2
-  },
-  {
     "StoelId": 301,
     "Omschrijving": "Rij G Stoel 1",
     "Rij": "G",
@@ -2528,43 +2048,11 @@
     "ZaalId": 2
   },
   {
-    "StoelId": 317,
-    "Omschrijving": "Rij G Stoel 17",
-    "Rij": "G",
-    "StoelNr": 17,
-    "Premium": false,
-    "ZaalId": 2
-  },
-  {
-    "StoelId": 318,
-    "Omschrijving": "Rij G Stoel 18",
-    "Rij": "G",
-    "StoelNr": 18,
-    "Premium": false,
-    "ZaalId": 2
-  },
-  {
-    "StoelId": 319,
-    "Omschrijving": "Rij G Stoel 19",
-    "Rij": "G",
-    "StoelNr": 19,
-    "Premium": false,
-    "ZaalId": 2
-  },
-  {
-    "StoelId": 320,
-    "Omschrijving": "Rij G Stoel 20",
-    "Rij": "G",
-    "StoelNr": 20,
-    "Premium": false,
-    "ZaalId": 2
-  },
-  {
     "StoelId": 321,
     "Omschrijving": "Rij H Stoel 1",
     "Rij": "H",
     "StoelNr": 1,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 2
   },
   {
@@ -2572,7 +2060,7 @@
     "Omschrijving": "Rij H Stoel 2",
     "Rij": "H",
     "StoelNr": 2,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 2
   },
   {
@@ -2580,7 +2068,7 @@
     "Omschrijving": "Rij H Stoel 3",
     "Rij": "H",
     "StoelNr": 3,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 2
   },
   {
@@ -2588,7 +2076,7 @@
     "Omschrijving": "Rij H Stoel 4",
     "Rij": "H",
     "StoelNr": 4,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 2
   },
   {
@@ -2596,7 +2084,7 @@
     "Omschrijving": "Rij H Stoel 5",
     "Rij": "H",
     "StoelNr": 5,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 2
   },
   {
@@ -2604,7 +2092,7 @@
     "Omschrijving": "Rij H Stoel 6",
     "Rij": "H",
     "StoelNr": 6,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 2
   },
   {
@@ -2612,7 +2100,7 @@
     "Omschrijving": "Rij H Stoel 7",
     "Rij": "H",
     "StoelNr": 7,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 2
   },
   {
@@ -2620,7 +2108,7 @@
     "Omschrijving": "Rij H Stoel 8",
     "Rij": "H",
     "StoelNr": 8,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 2
   },
   {
@@ -2628,7 +2116,7 @@
     "Omschrijving": "Rij H Stoel 9",
     "Rij": "H",
     "StoelNr": 9,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 2
   },
   {
@@ -2636,7 +2124,7 @@
     "Omschrijving": "Rij H Stoel 10",
     "Rij": "H",
     "StoelNr": 10,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 2
   },
   {
@@ -2644,7 +2132,7 @@
     "Omschrijving": "Rij H Stoel 11",
     "Rij": "H",
     "StoelNr": 11,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 2
   },
   {
@@ -2652,7 +2140,7 @@
     "Omschrijving": "Rij H Stoel 12",
     "Rij": "H",
     "StoelNr": 12,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 2
   },
   {
@@ -2660,7 +2148,7 @@
     "Omschrijving": "Rij H Stoel 13",
     "Rij": "H",
     "StoelNr": 13,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 2
   },
   {
@@ -2668,7 +2156,7 @@
     "Omschrijving": "Rij H Stoel 14",
     "Rij": "H",
     "StoelNr": 14,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 2
   },
   {
@@ -2676,7 +2164,7 @@
     "Omschrijving": "Rij H Stoel 15",
     "Rij": "H",
     "StoelNr": 15,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 2
   },
   {
@@ -2684,39 +2172,7 @@
     "Omschrijving": "Rij H Stoel 16",
     "Rij": "H",
     "StoelNr": 16,
-    "Premium": false,
-    "ZaalId": 2
-  },
-  {
-    "StoelId": 337,
-    "Omschrijving": "Rij H Stoel 17",
-    "Rij": "H",
-    "StoelNr": 17,
-    "Premium": false,
-    "ZaalId": 2
-  },
-  {
-    "StoelId": 338,
-    "Omschrijving": "Rij H Stoel 18",
-    "Rij": "H",
-    "StoelNr": 18,
-    "Premium": false,
-    "ZaalId": 2
-  },
-  {
-    "StoelId": 339,
-    "Omschrijving": "Rij H Stoel 19",
-    "Rij": "H",
-    "StoelNr": 19,
-    "Premium": false,
-    "ZaalId": 2
-  },
-  {
-    "StoelId": 340,
-    "Omschrijving": "Rij H Stoel 20",
-    "Rij": "H",
-    "StoelNr": 20,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 2
   },
   {
@@ -2724,7 +2180,7 @@
     "Omschrijving": "Rij I Stoel 1",
     "Rij": "I",
     "StoelNr": 1,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 2
   },
   {
@@ -2732,7 +2188,7 @@
     "Omschrijving": "Rij I Stoel 2",
     "Rij": "I",
     "StoelNr": 2,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 2
   },
   {
@@ -2740,7 +2196,7 @@
     "Omschrijving": "Rij I Stoel 3",
     "Rij": "I",
     "StoelNr": 3,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 2
   },
   {
@@ -2748,7 +2204,7 @@
     "Omschrijving": "Rij I Stoel 4",
     "Rij": "I",
     "StoelNr": 4,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 2
   },
   {
@@ -2756,7 +2212,7 @@
     "Omschrijving": "Rij I Stoel 5",
     "Rij": "I",
     "StoelNr": 5,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 2
   },
   {
@@ -2764,7 +2220,7 @@
     "Omschrijving": "Rij I Stoel 6",
     "Rij": "I",
     "StoelNr": 6,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 2
   },
   {
@@ -2772,7 +2228,7 @@
     "Omschrijving": "Rij I Stoel 7",
     "Rij": "I",
     "StoelNr": 7,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 2
   },
   {
@@ -2780,7 +2236,7 @@
     "Omschrijving": "Rij I Stoel 8",
     "Rij": "I",
     "StoelNr": 8,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 2
   },
   {
@@ -2788,7 +2244,7 @@
     "Omschrijving": "Rij I Stoel 9",
     "Rij": "I",
     "StoelNr": 9,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 2
   },
   {
@@ -2796,7 +2252,7 @@
     "Omschrijving": "Rij I Stoel 10",
     "Rij": "I",
     "StoelNr": 10,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 2
   },
   {
@@ -2804,7 +2260,7 @@
     "Omschrijving": "Rij I Stoel 11",
     "Rij": "I",
     "StoelNr": 11,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 2
   },
   {
@@ -2812,7 +2268,7 @@
     "Omschrijving": "Rij I Stoel 12",
     "Rij": "I",
     "StoelNr": 12,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 2
   },
   {
@@ -2820,7 +2276,7 @@
     "Omschrijving": "Rij I Stoel 13",
     "Rij": "I",
     "StoelNr": 13,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 2
   },
   {
@@ -2828,7 +2284,7 @@
     "Omschrijving": "Rij I Stoel 14",
     "Rij": "I",
     "StoelNr": 14,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 2
   },
   {
@@ -2836,7 +2292,7 @@
     "Omschrijving": "Rij I Stoel 15",
     "Rij": "I",
     "StoelNr": 15,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 2
   },
   {
@@ -2844,39 +2300,7 @@
     "Omschrijving": "Rij I Stoel 16",
     "Rij": "I",
     "StoelNr": 16,
-    "Premium": false,
-    "ZaalId": 2
-  },
-  {
-    "StoelId": 357,
-    "Omschrijving": "Rij I Stoel 17",
-    "Rij": "I",
-    "StoelNr": 17,
-    "Premium": false,
-    "ZaalId": 2
-  },
-  {
-    "StoelId": 358,
-    "Omschrijving": "Rij I Stoel 18",
-    "Rij": "I",
-    "StoelNr": 18,
-    "Premium": false,
-    "ZaalId": 2
-  },
-  {
-    "StoelId": 359,
-    "Omschrijving": "Rij I Stoel 19",
-    "Rij": "I",
-    "StoelNr": 19,
-    "Premium": false,
-    "ZaalId": 2
-  },
-  {
-    "StoelId": 360,
-    "Omschrijving": "Rij I Stoel 20",
-    "Rij": "I",
-    "StoelNr": 20,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 2
   },
   {
@@ -2884,7 +2308,7 @@
     "Omschrijving": "Rij A Stoel 1",
     "Rij": "A",
     "StoelNr": 1,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 3
   },
   {
@@ -2892,7 +2316,7 @@
     "Omschrijving": "Rij A Stoel 2",
     "Rij": "A",
     "StoelNr": 2,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 3
   },
   {
@@ -2900,7 +2324,7 @@
     "Omschrijving": "Rij A Stoel 3",
     "Rij": "A",
     "StoelNr": 3,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 3
   },
   {
@@ -2908,7 +2332,7 @@
     "Omschrijving": "Rij A Stoel 4",
     "Rij": "A",
     "StoelNr": 4,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 3
   },
   {
@@ -2916,7 +2340,7 @@
     "Omschrijving": "Rij A Stoel 5",
     "Rij": "A",
     "StoelNr": 5,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 3
   },
   {
@@ -2924,7 +2348,7 @@
     "Omschrijving": "Rij A Stoel 6",
     "Rij": "A",
     "StoelNr": 6,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 3
   },
   {
@@ -2932,7 +2356,7 @@
     "Omschrijving": "Rij A Stoel 7",
     "Rij": "A",
     "StoelNr": 7,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 3
   },
   {
@@ -2940,7 +2364,7 @@
     "Omschrijving": "Rij A Stoel 8",
     "Rij": "A",
     "StoelNr": 8,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 3
   },
   {
@@ -2948,7 +2372,7 @@
     "Omschrijving": "Rij A Stoel 9",
     "Rij": "A",
     "StoelNr": 9,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 3
   },
   {
@@ -2956,7 +2380,7 @@
     "Omschrijving": "Rij A Stoel 10",
     "Rij": "A",
     "StoelNr": 10,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 3
   },
   {
@@ -2964,7 +2388,7 @@
     "Omschrijving": "Rij A Stoel 11",
     "Rij": "A",
     "StoelNr": 11,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 3
   },
   {
@@ -2972,7 +2396,7 @@
     "Omschrijving": "Rij A Stoel 12",
     "Rij": "A",
     "StoelNr": 12,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 3
   },
   {
@@ -2980,7 +2404,7 @@
     "Omschrijving": "Rij A Stoel 13",
     "Rij": "A",
     "StoelNr": 13,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 3
   },
   {
@@ -2988,7 +2412,7 @@
     "Omschrijving": "Rij A Stoel 14",
     "Rij": "A",
     "StoelNr": 14,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 3
   },
   {
@@ -2996,7 +2420,7 @@
     "Omschrijving": "Rij A Stoel 15",
     "Rij": "A",
     "StoelNr": 15,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 3
   },
   {
@@ -3004,39 +2428,7 @@
     "Omschrijving": "Rij A Stoel 16",
     "Rij": "A",
     "StoelNr": 16,
-    "Premium": true,
-    "ZaalId": 3
-  },
-  {
-    "StoelId": 377,
-    "Omschrijving": "Rij A Stoel 17",
-    "Rij": "A",
-    "StoelNr": 17,
-    "Premium": true,
-    "ZaalId": 3
-  },
-  {
-    "StoelId": 378,
-    "Omschrijving": "Rij A Stoel 18",
-    "Rij": "A",
-    "StoelNr": 18,
-    "Premium": true,
-    "ZaalId": 3
-  },
-  {
-    "StoelId": 379,
-    "Omschrijving": "Rij A Stoel 19",
-    "Rij": "A",
-    "StoelNr": 19,
-    "Premium": true,
-    "ZaalId": 3
-  },
-  {
-    "StoelId": 380,
-    "Omschrijving": "Rij A Stoel 20",
-    "Rij": "A",
-    "StoelNr": 20,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 3
   },
   {
@@ -3044,7 +2436,7 @@
     "Omschrijving": "Rij B Stoel 1",
     "Rij": "B",
     "StoelNr": 1,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 3
   },
   {
@@ -3052,7 +2444,7 @@
     "Omschrijving": "Rij B Stoel 2",
     "Rij": "B",
     "StoelNr": 2,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 3
   },
   {
@@ -3060,7 +2452,7 @@
     "Omschrijving": "Rij B Stoel 3",
     "Rij": "B",
     "StoelNr": 3,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 3
   },
   {
@@ -3068,7 +2460,7 @@
     "Omschrijving": "Rij B Stoel 4",
     "Rij": "B",
     "StoelNr": 4,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 3
   },
   {
@@ -3076,7 +2468,7 @@
     "Omschrijving": "Rij B Stoel 5",
     "Rij": "B",
     "StoelNr": 5,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 3
   },
   {
@@ -3084,7 +2476,7 @@
     "Omschrijving": "Rij B Stoel 6",
     "Rij": "B",
     "StoelNr": 6,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 3
   },
   {
@@ -3092,7 +2484,7 @@
     "Omschrijving": "Rij B Stoel 7",
     "Rij": "B",
     "StoelNr": 7,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 3
   },
   {
@@ -3100,7 +2492,7 @@
     "Omschrijving": "Rij B Stoel 8",
     "Rij": "B",
     "StoelNr": 8,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 3
   },
   {
@@ -3108,7 +2500,7 @@
     "Omschrijving": "Rij B Stoel 9",
     "Rij": "B",
     "StoelNr": 9,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 3
   },
   {
@@ -3116,7 +2508,7 @@
     "Omschrijving": "Rij B Stoel 10",
     "Rij": "B",
     "StoelNr": 10,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 3
   },
   {
@@ -3124,7 +2516,7 @@
     "Omschrijving": "Rij B Stoel 11",
     "Rij": "B",
     "StoelNr": 11,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 3
   },
   {
@@ -3132,7 +2524,7 @@
     "Omschrijving": "Rij B Stoel 12",
     "Rij": "B",
     "StoelNr": 12,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 3
   },
   {
@@ -3140,7 +2532,7 @@
     "Omschrijving": "Rij B Stoel 13",
     "Rij": "B",
     "StoelNr": 13,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 3
   },
   {
@@ -3148,7 +2540,7 @@
     "Omschrijving": "Rij B Stoel 14",
     "Rij": "B",
     "StoelNr": 14,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 3
   },
   {
@@ -3156,7 +2548,7 @@
     "Omschrijving": "Rij B Stoel 15",
     "Rij": "B",
     "StoelNr": 15,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 3
   },
   {
@@ -3164,31 +2556,7 @@
     "Omschrijving": "Rij B Stoel 16",
     "Rij": "B",
     "StoelNr": 16,
-    "Premium": true,
-    "ZaalId": 3
-  },
-  {
-    "StoelId": 397,
-    "Omschrijving": "Rij B Stoel 17",
-    "Rij": "B",
-    "StoelNr": 17,
-    "Premium": true,
-    "ZaalId": 3
-  },
-  {
-    "StoelId": 398,
-    "Omschrijving": "Rij B Stoel 18",
-    "Rij": "B",
-    "StoelNr": 18,
-    "Premium": true,
-    "ZaalId": 3
-  },
-  {
-    "StoelId": 399,
-    "Omschrijving": "Rij B Stoel 19",
-    "Rij": "B",
-    "StoelNr": 19,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 3
   },
   {
@@ -3316,38 +2684,6 @@
     "Omschrijving": "Rij C Stoel 16",
     "Rij": "C",
     "StoelNr": 16,
-    "Premium": false,
-    "ZaalId": 3
-  },
-  {
-    "StoelId": 417,
-    "Omschrijving": "Rij C Stoel 17",
-    "Rij": "C",
-    "StoelNr": 17,
-    "Premium": false,
-    "ZaalId": 3
-  },
-  {
-    "StoelId": 418,
-    "Omschrijving": "Rij C Stoel 18",
-    "Rij": "C",
-    "StoelNr": 18,
-    "Premium": false,
-    "ZaalId": 3
-  },
-  {
-    "StoelId": 419,
-    "Omschrijving": "Rij C Stoel 19",
-    "Rij": "C",
-    "StoelNr": 19,
-    "Premium": false,
-    "ZaalId": 3
-  },
-  {
-    "StoelId": 420,
-    "Omschrijving": "Rij C Stoel 20",
-    "Rij": "C",
-    "StoelNr": 20,
     "Premium": false,
     "ZaalId": 3
   },
@@ -3480,38 +2816,6 @@
     "ZaalId": 3
   },
   {
-    "StoelId": 437,
-    "Omschrijving": "Rij D Stoel 17",
-    "Rij": "D",
-    "StoelNr": 17,
-    "Premium": false,
-    "ZaalId": 3
-  },
-  {
-    "StoelId": 438,
-    "Omschrijving": "Rij D Stoel 18",
-    "Rij": "D",
-    "StoelNr": 18,
-    "Premium": false,
-    "ZaalId": 3
-  },
-  {
-    "StoelId": 439,
-    "Omschrijving": "Rij D Stoel 19",
-    "Rij": "D",
-    "StoelNr": 19,
-    "Premium": false,
-    "ZaalId": 3
-  },
-  {
-    "StoelId": 440,
-    "Omschrijving": "Rij D Stoel 20",
-    "Rij": "D",
-    "StoelNr": 20,
-    "Premium": false,
-    "ZaalId": 3
-  },
-  {
     "StoelId": 441,
     "Omschrijving": "Rij E Stoel 1",
     "Rij": "E",
@@ -3636,38 +2940,6 @@
     "Omschrijving": "Rij E Stoel 16",
     "Rij": "E",
     "StoelNr": 16,
-    "Premium": false,
-    "ZaalId": 3
-  },
-  {
-    "StoelId": 457,
-    "Omschrijving": "Rij E Stoel 17",
-    "Rij": "E",
-    "StoelNr": 17,
-    "Premium": false,
-    "ZaalId": 3
-  },
-  {
-    "StoelId": 458,
-    "Omschrijving": "Rij E Stoel 18",
-    "Rij": "E",
-    "StoelNr": 18,
-    "Premium": false,
-    "ZaalId": 3
-  },
-  {
-    "StoelId": 459,
-    "Omschrijving": "Rij E Stoel 19",
-    "Rij": "E",
-    "StoelNr": 19,
-    "Premium": false,
-    "ZaalId": 3
-  },
-  {
-    "StoelId": 460,
-    "Omschrijving": "Rij E Stoel 20",
-    "Rij": "E",
-    "StoelNr": 20,
     "Premium": false,
     "ZaalId": 3
   },
@@ -3800,38 +3072,6 @@
     "ZaalId": 3
   },
   {
-    "StoelId": 477,
-    "Omschrijving": "Rij F Stoel 17",
-    "Rij": "F",
-    "StoelNr": 17,
-    "Premium": false,
-    "ZaalId": 3
-  },
-  {
-    "StoelId": 478,
-    "Omschrijving": "Rij F Stoel 18",
-    "Rij": "F",
-    "StoelNr": 18,
-    "Premium": false,
-    "ZaalId": 3
-  },
-  {
-    "StoelId": 479,
-    "Omschrijving": "Rij F Stoel 19",
-    "Rij": "F",
-    "StoelNr": 19,
-    "Premium": false,
-    "ZaalId": 3
-  },
-  {
-    "StoelId": 480,
-    "Omschrijving": "Rij F Stoel 20",
-    "Rij": "F",
-    "StoelNr": 20,
-    "Premium": false,
-    "ZaalId": 3
-  },
-  {
     "StoelId": 481,
     "Omschrijving": "Rij G Stoel 1",
     "Rij": "G",
@@ -3960,43 +3200,11 @@
     "ZaalId": 3
   },
   {
-    "StoelId": 497,
-    "Omschrijving": "Rij G Stoel 17",
-    "Rij": "G",
-    "StoelNr": 17,
-    "Premium": false,
-    "ZaalId": 3
-  },
-  {
-    "StoelId": 498,
-    "Omschrijving": "Rij G Stoel 18",
-    "Rij": "G",
-    "StoelNr": 18,
-    "Premium": false,
-    "ZaalId": 3
-  },
-  {
-    "StoelId": 499,
-    "Omschrijving": "Rij G Stoel 19",
-    "Rij": "G",
-    "StoelNr": 19,
-    "Premium": false,
-    "ZaalId": 3
-  },
-  {
-    "StoelId": 500,
-    "Omschrijving": "Rij G Stoel 20",
-    "Rij": "G",
-    "StoelNr": 20,
-    "Premium": false,
-    "ZaalId": 3
-  },
-  {
     "StoelId": 501,
     "Omschrijving": "Rij H Stoel 1",
     "Rij": "H",
     "StoelNr": 1,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 3
   },
   {
@@ -4004,7 +3212,7 @@
     "Omschrijving": "Rij H Stoel 2",
     "Rij": "H",
     "StoelNr": 2,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 3
   },
   {
@@ -4012,7 +3220,7 @@
     "Omschrijving": "Rij H Stoel 3",
     "Rij": "H",
     "StoelNr": 3,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 3
   },
   {
@@ -4020,7 +3228,7 @@
     "Omschrijving": "Rij H Stoel 4",
     "Rij": "H",
     "StoelNr": 4,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 3
   },
   {
@@ -4028,7 +3236,7 @@
     "Omschrijving": "Rij H Stoel 5",
     "Rij": "H",
     "StoelNr": 5,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 3
   },
   {
@@ -4036,7 +3244,7 @@
     "Omschrijving": "Rij H Stoel 6",
     "Rij": "H",
     "StoelNr": 6,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 3
   },
   {
@@ -4044,7 +3252,7 @@
     "Omschrijving": "Rij H Stoel 7",
     "Rij": "H",
     "StoelNr": 7,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 3
   },
   {
@@ -4052,7 +3260,7 @@
     "Omschrijving": "Rij H Stoel 8",
     "Rij": "H",
     "StoelNr": 8,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 3
   },
   {
@@ -4060,7 +3268,7 @@
     "Omschrijving": "Rij H Stoel 9",
     "Rij": "H",
     "StoelNr": 9,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 3
   },
   {
@@ -4068,7 +3276,7 @@
     "Omschrijving": "Rij H Stoel 10",
     "Rij": "H",
     "StoelNr": 10,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 3
   },
   {
@@ -4076,7 +3284,7 @@
     "Omschrijving": "Rij H Stoel 11",
     "Rij": "H",
     "StoelNr": 11,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 3
   },
   {
@@ -4084,7 +3292,7 @@
     "Omschrijving": "Rij H Stoel 12",
     "Rij": "H",
     "StoelNr": 12,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 3
   },
   {
@@ -4092,7 +3300,7 @@
     "Omschrijving": "Rij H Stoel 13",
     "Rij": "H",
     "StoelNr": 13,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 3
   },
   {
@@ -4100,7 +3308,7 @@
     "Omschrijving": "Rij H Stoel 14",
     "Rij": "H",
     "StoelNr": 14,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 3
   },
   {
@@ -4108,7 +3316,7 @@
     "Omschrijving": "Rij H Stoel 15",
     "Rij": "H",
     "StoelNr": 15,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 3
   },
   {
@@ -4116,39 +3324,7 @@
     "Omschrijving": "Rij H Stoel 16",
     "Rij": "H",
     "StoelNr": 16,
-    "Premium": false,
-    "ZaalId": 3
-  },
-  {
-    "StoelId": 517,
-    "Omschrijving": "Rij H Stoel 17",
-    "Rij": "H",
-    "StoelNr": 17,
-    "Premium": false,
-    "ZaalId": 3
-  },
-  {
-    "StoelId": 518,
-    "Omschrijving": "Rij H Stoel 18",
-    "Rij": "H",
-    "StoelNr": 18,
-    "Premium": false,
-    "ZaalId": 3
-  },
-  {
-    "StoelId": 519,
-    "Omschrijving": "Rij H Stoel 19",
-    "Rij": "H",
-    "StoelNr": 19,
-    "Premium": false,
-    "ZaalId": 3
-  },
-  {
-    "StoelId": 520,
-    "Omschrijving": "Rij H Stoel 20",
-    "Rij": "H",
-    "StoelNr": 20,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 3
   },
   {
@@ -4156,7 +3332,7 @@
     "Omschrijving": "Rij I Stoel 1",
     "Rij": "I",
     "StoelNr": 1,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 3
   },
   {
@@ -4164,7 +3340,7 @@
     "Omschrijving": "Rij I Stoel 2",
     "Rij": "I",
     "StoelNr": 2,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 3
   },
   {
@@ -4172,7 +3348,7 @@
     "Omschrijving": "Rij I Stoel 3",
     "Rij": "I",
     "StoelNr": 3,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 3
   },
   {
@@ -4180,7 +3356,7 @@
     "Omschrijving": "Rij I Stoel 4",
     "Rij": "I",
     "StoelNr": 4,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 3
   },
   {
@@ -4188,7 +3364,7 @@
     "Omschrijving": "Rij I Stoel 5",
     "Rij": "I",
     "StoelNr": 5,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 3
   },
   {
@@ -4196,7 +3372,7 @@
     "Omschrijving": "Rij I Stoel 6",
     "Rij": "I",
     "StoelNr": 6,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 3
   },
   {
@@ -4204,7 +3380,7 @@
     "Omschrijving": "Rij I Stoel 7",
     "Rij": "I",
     "StoelNr": 7,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 3
   },
   {
@@ -4212,7 +3388,7 @@
     "Omschrijving": "Rij I Stoel 8",
     "Rij": "I",
     "StoelNr": 8,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 3
   },
   {
@@ -4220,7 +3396,7 @@
     "Omschrijving": "Rij I Stoel 9",
     "Rij": "I",
     "StoelNr": 9,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 3
   },
   {
@@ -4228,7 +3404,7 @@
     "Omschrijving": "Rij I Stoel 10",
     "Rij": "I",
     "StoelNr": 10,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 3
   },
   {
@@ -4236,7 +3412,7 @@
     "Omschrijving": "Rij I Stoel 11",
     "Rij": "I",
     "StoelNr": 11,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 3
   },
   {
@@ -4244,7 +3420,7 @@
     "Omschrijving": "Rij I Stoel 12",
     "Rij": "I",
     "StoelNr": 12,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 3
   },
   {
@@ -4252,7 +3428,7 @@
     "Omschrijving": "Rij I Stoel 13",
     "Rij": "I",
     "StoelNr": 13,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 3
   },
   {
@@ -4260,7 +3436,7 @@
     "Omschrijving": "Rij I Stoel 14",
     "Rij": "I",
     "StoelNr": 14,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 3
   },
   {
@@ -4268,7 +3444,7 @@
     "Omschrijving": "Rij I Stoel 15",
     "Rij": "I",
     "StoelNr": 15,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 3
   },
   {
@@ -4276,39 +3452,7 @@
     "Omschrijving": "Rij I Stoel 16",
     "Rij": "I",
     "StoelNr": 16,
-    "Premium": false,
-    "ZaalId": 3
-  },
-  {
-    "StoelId": 537,
-    "Omschrijving": "Rij I Stoel 17",
-    "Rij": "I",
-    "StoelNr": 17,
-    "Premium": false,
-    "ZaalId": 3
-  },
-  {
-    "StoelId": 538,
-    "Omschrijving": "Rij I Stoel 18",
-    "Rij": "I",
-    "StoelNr": 18,
-    "Premium": false,
-    "ZaalId": 3
-  },
-  {
-    "StoelId": 539,
-    "Omschrijving": "Rij I Stoel 19",
-    "Rij": "I",
-    "StoelNr": 19,
-    "Premium": false,
-    "ZaalId": 3
-  },
-  {
-    "StoelId": 540,
-    "Omschrijving": "Rij I Stoel 20",
-    "Rij": "I",
-    "StoelNr": 20,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 3
   },
   {
@@ -4316,7 +3460,7 @@
     "Omschrijving": "Rij A Stoel 1",
     "Rij": "A",
     "StoelNr": 1,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 4
   },
   {
@@ -4324,7 +3468,7 @@
     "Omschrijving": "Rij A Stoel 2",
     "Rij": "A",
     "StoelNr": 2,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 4
   },
   {
@@ -4332,7 +3476,7 @@
     "Omschrijving": "Rij A Stoel 3",
     "Rij": "A",
     "StoelNr": 3,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 4
   },
   {
@@ -4340,7 +3484,7 @@
     "Omschrijving": "Rij A Stoel 4",
     "Rij": "A",
     "StoelNr": 4,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 4
   },
   {
@@ -4348,7 +3492,7 @@
     "Omschrijving": "Rij A Stoel 5",
     "Rij": "A",
     "StoelNr": 5,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 4
   },
   {
@@ -4356,7 +3500,7 @@
     "Omschrijving": "Rij A Stoel 6",
     "Rij": "A",
     "StoelNr": 6,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 4
   },
   {
@@ -4364,7 +3508,7 @@
     "Omschrijving": "Rij A Stoel 7",
     "Rij": "A",
     "StoelNr": 7,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 4
   },
   {
@@ -4372,7 +3516,7 @@
     "Omschrijving": "Rij A Stoel 8",
     "Rij": "A",
     "StoelNr": 8,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 4
   },
   {
@@ -4380,7 +3524,7 @@
     "Omschrijving": "Rij A Stoel 9",
     "Rij": "A",
     "StoelNr": 9,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 4
   },
   {
@@ -4388,7 +3532,7 @@
     "Omschrijving": "Rij A Stoel 10",
     "Rij": "A",
     "StoelNr": 10,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 4
   },
   {
@@ -4396,7 +3540,7 @@
     "Omschrijving": "Rij A Stoel 11",
     "Rij": "A",
     "StoelNr": 11,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 4
   },
   {
@@ -4404,7 +3548,7 @@
     "Omschrijving": "Rij A Stoel 12",
     "Rij": "A",
     "StoelNr": 12,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 4
   },
   {
@@ -4412,7 +3556,7 @@
     "Omschrijving": "Rij A Stoel 13",
     "Rij": "A",
     "StoelNr": 13,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 4
   },
   {
@@ -4420,7 +3564,7 @@
     "Omschrijving": "Rij A Stoel 14",
     "Rij": "A",
     "StoelNr": 14,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 4
   },
   {
@@ -4428,7 +3572,7 @@
     "Omschrijving": "Rij A Stoel 15",
     "Rij": "A",
     "StoelNr": 15,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 4
   },
   {
@@ -4436,39 +3580,7 @@
     "Omschrijving": "Rij A Stoel 16",
     "Rij": "A",
     "StoelNr": 16,
-    "Premium": true,
-    "ZaalId": 4
-  },
-  {
-    "StoelId": 557,
-    "Omschrijving": "Rij A Stoel 17",
-    "Rij": "A",
-    "StoelNr": 17,
-    "Premium": true,
-    "ZaalId": 4
-  },
-  {
-    "StoelId": 558,
-    "Omschrijving": "Rij A Stoel 18",
-    "Rij": "A",
-    "StoelNr": 18,
-    "Premium": true,
-    "ZaalId": 4
-  },
-  {
-    "StoelId": 559,
-    "Omschrijving": "Rij A Stoel 19",
-    "Rij": "A",
-    "StoelNr": 19,
-    "Premium": true,
-    "ZaalId": 4
-  },
-  {
-    "StoelId": 560,
-    "Omschrijving": "Rij A Stoel 20",
-    "Rij": "A",
-    "StoelNr": 20,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 4
   },
   {
@@ -4476,7 +3588,7 @@
     "Omschrijving": "Rij B Stoel 1",
     "Rij": "B",
     "StoelNr": 1,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 4
   },
   {
@@ -4484,7 +3596,7 @@
     "Omschrijving": "Rij B Stoel 2",
     "Rij": "B",
     "StoelNr": 2,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 4
   },
   {
@@ -4492,7 +3604,7 @@
     "Omschrijving": "Rij B Stoel 3",
     "Rij": "B",
     "StoelNr": 3,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 4
   },
   {
@@ -4500,7 +3612,7 @@
     "Omschrijving": "Rij B Stoel 4",
     "Rij": "B",
     "StoelNr": 4,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 4
   },
   {
@@ -4508,7 +3620,7 @@
     "Omschrijving": "Rij B Stoel 5",
     "Rij": "B",
     "StoelNr": 5,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 4
   },
   {
@@ -4516,7 +3628,7 @@
     "Omschrijving": "Rij B Stoel 6",
     "Rij": "B",
     "StoelNr": 6,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 4
   },
   {
@@ -4524,7 +3636,7 @@
     "Omschrijving": "Rij B Stoel 7",
     "Rij": "B",
     "StoelNr": 7,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 4
   },
   {
@@ -4532,7 +3644,7 @@
     "Omschrijving": "Rij B Stoel 8",
     "Rij": "B",
     "StoelNr": 8,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 4
   },
   {
@@ -4540,7 +3652,7 @@
     "Omschrijving": "Rij B Stoel 9",
     "Rij": "B",
     "StoelNr": 9,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 4
   },
   {
@@ -4548,7 +3660,7 @@
     "Omschrijving": "Rij B Stoel 10",
     "Rij": "B",
     "StoelNr": 10,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 4
   },
   {
@@ -4556,7 +3668,7 @@
     "Omschrijving": "Rij B Stoel 11",
     "Rij": "B",
     "StoelNr": 11,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 4
   },
   {
@@ -4564,7 +3676,7 @@
     "Omschrijving": "Rij B Stoel 12",
     "Rij": "B",
     "StoelNr": 12,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 4
   },
   {
@@ -4572,7 +3684,7 @@
     "Omschrijving": "Rij B Stoel 13",
     "Rij": "B",
     "StoelNr": 13,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 4
   },
   {
@@ -4580,7 +3692,7 @@
     "Omschrijving": "Rij B Stoel 14",
     "Rij": "B",
     "StoelNr": 14,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 4
   },
   {
@@ -4588,7 +3700,7 @@
     "Omschrijving": "Rij B Stoel 15",
     "Rij": "B",
     "StoelNr": 15,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 4
   },
   {
@@ -4596,39 +3708,7 @@
     "Omschrijving": "Rij B Stoel 16",
     "Rij": "B",
     "StoelNr": 16,
-    "Premium": true,
-    "ZaalId": 4
-  },
-  {
-    "StoelId": 577,
-    "Omschrijving": "Rij B Stoel 17",
-    "Rij": "B",
-    "StoelNr": 17,
-    "Premium": true,
-    "ZaalId": 4
-  },
-  {
-    "StoelId": 578,
-    "Omschrijving": "Rij B Stoel 18",
-    "Rij": "B",
-    "StoelNr": 18,
-    "Premium": true,
-    "ZaalId": 4
-  },
-  {
-    "StoelId": 579,
-    "Omschrijving": "Rij B Stoel 19",
-    "Rij": "B",
-    "StoelNr": 19,
-    "Premium": true,
-    "ZaalId": 4
-  },
-  {
-    "StoelId": 580,
-    "Omschrijving": "Rij B Stoel 20",
-    "Rij": "B",
-    "StoelNr": 20,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 4
   },
   {
@@ -4756,38 +3836,6 @@
     "Omschrijving": "Rij C Stoel 16",
     "Rij": "C",
     "StoelNr": 16,
-    "Premium": false,
-    "ZaalId": 4
-  },
-  {
-    "StoelId": 597,
-    "Omschrijving": "Rij C Stoel 17",
-    "Rij": "C",
-    "StoelNr": 17,
-    "Premium": false,
-    "ZaalId": 4
-  },
-  {
-    "StoelId": 598,
-    "Omschrijving": "Rij C Stoel 18",
-    "Rij": "C",
-    "StoelNr": 18,
-    "Premium": false,
-    "ZaalId": 4
-  },
-  {
-    "StoelId": 599,
-    "Omschrijving": "Rij C Stoel 19",
-    "Rij": "C",
-    "StoelNr": 19,
-    "Premium": false,
-    "ZaalId": 4
-  },
-  {
-    "StoelId": 600,
-    "Omschrijving": "Rij C Stoel 20",
-    "Rij": "C",
-    "StoelNr": 20,
     "Premium": false,
     "ZaalId": 4
   },
@@ -4920,38 +3968,6 @@
     "ZaalId": 4
   },
   {
-    "StoelId": 617,
-    "Omschrijving": "Rij D Stoel 17",
-    "Rij": "D",
-    "StoelNr": 17,
-    "Premium": false,
-    "ZaalId": 4
-  },
-  {
-    "StoelId": 618,
-    "Omschrijving": "Rij D Stoel 18",
-    "Rij": "D",
-    "StoelNr": 18,
-    "Premium": false,
-    "ZaalId": 4
-  },
-  {
-    "StoelId": 619,
-    "Omschrijving": "Rij D Stoel 19",
-    "Rij": "D",
-    "StoelNr": 19,
-    "Premium": false,
-    "ZaalId": 4
-  },
-  {
-    "StoelId": 620,
-    "Omschrijving": "Rij D Stoel 20",
-    "Rij": "D",
-    "StoelNr": 20,
-    "Premium": false,
-    "ZaalId": 4
-  },
-  {
     "StoelId": 621,
     "Omschrijving": "Rij E Stoel 1",
     "Rij": "E",
@@ -5076,38 +4092,6 @@
     "Omschrijving": "Rij E Stoel 16",
     "Rij": "E",
     "StoelNr": 16,
-    "Premium": false,
-    "ZaalId": 4
-  },
-  {
-    "StoelId": 637,
-    "Omschrijving": "Rij E Stoel 17",
-    "Rij": "E",
-    "StoelNr": 17,
-    "Premium": false,
-    "ZaalId": 4
-  },
-  {
-    "StoelId": 638,
-    "Omschrijving": "Rij E Stoel 18",
-    "Rij": "E",
-    "StoelNr": 18,
-    "Premium": false,
-    "ZaalId": 4
-  },
-  {
-    "StoelId": 639,
-    "Omschrijving": "Rij E Stoel 19",
-    "Rij": "E",
-    "StoelNr": 19,
-    "Premium": false,
-    "ZaalId": 4
-  },
-  {
-    "StoelId": 640,
-    "Omschrijving": "Rij E Stoel 20",
-    "Rij": "E",
-    "StoelNr": 20,
     "Premium": false,
     "ZaalId": 4
   },
@@ -5240,38 +4224,6 @@
     "ZaalId": 4
   },
   {
-    "StoelId": 657,
-    "Omschrijving": "Rij F Stoel 17",
-    "Rij": "F",
-    "StoelNr": 17,
-    "Premium": false,
-    "ZaalId": 4
-  },
-  {
-    "StoelId": 658,
-    "Omschrijving": "Rij F Stoel 18",
-    "Rij": "F",
-    "StoelNr": 18,
-    "Premium": false,
-    "ZaalId": 4
-  },
-  {
-    "StoelId": 659,
-    "Omschrijving": "Rij F Stoel 19",
-    "Rij": "F",
-    "StoelNr": 19,
-    "Premium": false,
-    "ZaalId": 4
-  },
-  {
-    "StoelId": 660,
-    "Omschrijving": "Rij F Stoel 20",
-    "Rij": "F",
-    "StoelNr": 20,
-    "Premium": false,
-    "ZaalId": 4
-  },
-  {
     "StoelId": 661,
     "Omschrijving": "Rij G Stoel 1",
     "Rij": "G",
@@ -5400,43 +4352,11 @@
     "ZaalId": 4
   },
   {
-    "StoelId": 677,
-    "Omschrijving": "Rij G Stoel 17",
-    "Rij": "G",
-    "StoelNr": 17,
-    "Premium": false,
-    "ZaalId": 4
-  },
-  {
-    "StoelId": 678,
-    "Omschrijving": "Rij G Stoel 18",
-    "Rij": "G",
-    "StoelNr": 18,
-    "Premium": false,
-    "ZaalId": 4
-  },
-  {
-    "StoelId": 679,
-    "Omschrijving": "Rij G Stoel 19",
-    "Rij": "G",
-    "StoelNr": 19,
-    "Premium": false,
-    "ZaalId": 4
-  },
-  {
-    "StoelId": 680,
-    "Omschrijving": "Rij G Stoel 20",
-    "Rij": "G",
-    "StoelNr": 20,
-    "Premium": false,
-    "ZaalId": 4
-  },
-  {
     "StoelId": 681,
     "Omschrijving": "Rij H Stoel 1",
     "Rij": "H",
     "StoelNr": 1,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 4
   },
   {
@@ -5444,7 +4364,7 @@
     "Omschrijving": "Rij H Stoel 2",
     "Rij": "H",
     "StoelNr": 2,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 4
   },
   {
@@ -5452,7 +4372,7 @@
     "Omschrijving": "Rij H Stoel 3",
     "Rij": "H",
     "StoelNr": 3,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 4
   },
   {
@@ -5460,7 +4380,7 @@
     "Omschrijving": "Rij H Stoel 4",
     "Rij": "H",
     "StoelNr": 4,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 4
   },
   {
@@ -5468,7 +4388,7 @@
     "Omschrijving": "Rij H Stoel 5",
     "Rij": "H",
     "StoelNr": 5,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 4
   },
   {
@@ -5476,7 +4396,7 @@
     "Omschrijving": "Rij H Stoel 6",
     "Rij": "H",
     "StoelNr": 6,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 4
   },
   {
@@ -5484,7 +4404,7 @@
     "Omschrijving": "Rij H Stoel 7",
     "Rij": "H",
     "StoelNr": 7,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 4
   },
   {
@@ -5492,7 +4412,7 @@
     "Omschrijving": "Rij H Stoel 8",
     "Rij": "H",
     "StoelNr": 8,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 4
   },
   {
@@ -5500,7 +4420,7 @@
     "Omschrijving": "Rij H Stoel 9",
     "Rij": "H",
     "StoelNr": 9,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 4
   },
   {
@@ -5508,7 +4428,7 @@
     "Omschrijving": "Rij H Stoel 10",
     "Rij": "H",
     "StoelNr": 10,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 4
   },
   {
@@ -5516,7 +4436,7 @@
     "Omschrijving": "Rij H Stoel 11",
     "Rij": "H",
     "StoelNr": 11,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 4
   },
   {
@@ -5524,7 +4444,7 @@
     "Omschrijving": "Rij H Stoel 12",
     "Rij": "H",
     "StoelNr": 12,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 4
   },
   {
@@ -5532,7 +4452,7 @@
     "Omschrijving": "Rij H Stoel 13",
     "Rij": "H",
     "StoelNr": 13,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 4
   },
   {
@@ -5540,7 +4460,7 @@
     "Omschrijving": "Rij H Stoel 14",
     "Rij": "H",
     "StoelNr": 14,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 4
   },
   {
@@ -5548,7 +4468,7 @@
     "Omschrijving": "Rij H Stoel 15",
     "Rij": "H",
     "StoelNr": 15,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 4
   },
   {
@@ -5556,39 +4476,7 @@
     "Omschrijving": "Rij H Stoel 16",
     "Rij": "H",
     "StoelNr": 16,
-    "Premium": false,
-    "ZaalId": 4
-  },
-  {
-    "StoelId": 697,
-    "Omschrijving": "Rij H Stoel 17",
-    "Rij": "H",
-    "StoelNr": 17,
-    "Premium": false,
-    "ZaalId": 4
-  },
-  {
-    "StoelId": 698,
-    "Omschrijving": "Rij H Stoel 18",
-    "Rij": "H",
-    "StoelNr": 18,
-    "Premium": false,
-    "ZaalId": 4
-  },
-  {
-    "StoelId": 699,
-    "Omschrijving": "Rij H Stoel 19",
-    "Rij": "H",
-    "StoelNr": 19,
-    "Premium": false,
-    "ZaalId": 4
-  },
-  {
-    "StoelId": 700,
-    "Omschrijving": "Rij H Stoel 20",
-    "Rij": "H",
-    "StoelNr": 20,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 4
   },
   {
@@ -5596,7 +4484,7 @@
     "Omschrijving": "Rij I Stoel 1",
     "Rij": "I",
     "StoelNr": 1,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 4
   },
   {
@@ -5604,7 +4492,7 @@
     "Omschrijving": "Rij I Stoel 2",
     "Rij": "I",
     "StoelNr": 2,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 4
   },
   {
@@ -5612,7 +4500,7 @@
     "Omschrijving": "Rij I Stoel 3",
     "Rij": "I",
     "StoelNr": 3,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 4
   },
   {
@@ -5620,7 +4508,7 @@
     "Omschrijving": "Rij I Stoel 4",
     "Rij": "I",
     "StoelNr": 4,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 4
   },
   {
@@ -5628,7 +4516,7 @@
     "Omschrijving": "Rij I Stoel 5",
     "Rij": "I",
     "StoelNr": 5,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 4
   },
   {
@@ -5636,7 +4524,7 @@
     "Omschrijving": "Rij I Stoel 6",
     "Rij": "I",
     "StoelNr": 6,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 4
   },
   {
@@ -5644,7 +4532,7 @@
     "Omschrijving": "Rij I Stoel 7",
     "Rij": "I",
     "StoelNr": 7,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 4
   },
   {
@@ -5652,7 +4540,7 @@
     "Omschrijving": "Rij I Stoel 8",
     "Rij": "I",
     "StoelNr": 8,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 4
   },
   {
@@ -5660,7 +4548,7 @@
     "Omschrijving": "Rij I Stoel 9",
     "Rij": "I",
     "StoelNr": 9,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 4
   },
   {
@@ -5668,7 +4556,7 @@
     "Omschrijving": "Rij I Stoel 10",
     "Rij": "I",
     "StoelNr": 10,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 4
   },
   {
@@ -5676,7 +4564,7 @@
     "Omschrijving": "Rij I Stoel 11",
     "Rij": "I",
     "StoelNr": 11,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 4
   },
   {
@@ -5684,7 +4572,7 @@
     "Omschrijving": "Rij I Stoel 12",
     "Rij": "I",
     "StoelNr": 12,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 4
   },
   {
@@ -5692,7 +4580,7 @@
     "Omschrijving": "Rij I Stoel 13",
     "Rij": "I",
     "StoelNr": 13,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 4
   },
   {
@@ -5700,7 +4588,7 @@
     "Omschrijving": "Rij I Stoel 14",
     "Rij": "I",
     "StoelNr": 14,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 4
   },
   {
@@ -5708,7 +4596,7 @@
     "Omschrijving": "Rij I Stoel 15",
     "Rij": "I",
     "StoelNr": 15,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 4
   },
   {
@@ -5716,39 +4604,7 @@
     "Omschrijving": "Rij I Stoel 16",
     "Rij": "I",
     "StoelNr": 16,
-    "Premium": false,
-    "ZaalId": 4
-  },
-  {
-    "StoelId": 717,
-    "Omschrijving": "Rij I Stoel 17",
-    "Rij": "I",
-    "StoelNr": 17,
-    "Premium": false,
-    "ZaalId": 4
-  },
-  {
-    "StoelId": 718,
-    "Omschrijving": "Rij I Stoel 18",
-    "Rij": "I",
-    "StoelNr": 18,
-    "Premium": false,
-    "ZaalId": 4
-  },
-  {
-    "StoelId": 719,
-    "Omschrijving": "Rij I Stoel 19",
-    "Rij": "I",
-    "StoelNr": 19,
-    "Premium": false,
-    "ZaalId": 4
-  },
-  {
-    "StoelId": 720,
-    "Omschrijving": "Rij I Stoel 20",
-    "Rij": "I",
-    "StoelNr": 20,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 4
   },
   {
@@ -5756,7 +4612,7 @@
     "Omschrijving": "Rij A Stoel 1",
     "Rij": "A",
     "StoelNr": 1,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 5
   },
   {
@@ -5764,7 +4620,7 @@
     "Omschrijving": "Rij A Stoel 2",
     "Rij": "A",
     "StoelNr": 2,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 5
   },
   {
@@ -5772,7 +4628,7 @@
     "Omschrijving": "Rij A Stoel 3",
     "Rij": "A",
     "StoelNr": 3,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 5
   },
   {
@@ -5780,7 +4636,7 @@
     "Omschrijving": "Rij A Stoel 4",
     "Rij": "A",
     "StoelNr": 4,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 5
   },
   {
@@ -5788,7 +4644,7 @@
     "Omschrijving": "Rij A Stoel 5",
     "Rij": "A",
     "StoelNr": 5,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 5
   },
   {
@@ -5796,7 +4652,7 @@
     "Omschrijving": "Rij A Stoel 6",
     "Rij": "A",
     "StoelNr": 6,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 5
   },
   {
@@ -5804,7 +4660,7 @@
     "Omschrijving": "Rij A Stoel 7",
     "Rij": "A",
     "StoelNr": 7,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 5
   },
   {
@@ -5812,7 +4668,7 @@
     "Omschrijving": "Rij A Stoel 8",
     "Rij": "A",
     "StoelNr": 8,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 5
   },
   {
@@ -5820,7 +4676,7 @@
     "Omschrijving": "Rij A Stoel 9",
     "Rij": "A",
     "StoelNr": 9,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 5
   },
   {
@@ -5828,7 +4684,7 @@
     "Omschrijving": "Rij A Stoel 10",
     "Rij": "A",
     "StoelNr": 10,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 5
   },
   {
@@ -5836,7 +4692,7 @@
     "Omschrijving": "Rij A Stoel 11",
     "Rij": "A",
     "StoelNr": 11,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 5
   },
   {
@@ -5844,7 +4700,7 @@
     "Omschrijving": "Rij A Stoel 12",
     "Rij": "A",
     "StoelNr": 12,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 5
   },
   {
@@ -5852,7 +4708,7 @@
     "Omschrijving": "Rij A Stoel 13",
     "Rij": "A",
     "StoelNr": 13,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 5
   },
   {
@@ -5860,7 +4716,7 @@
     "Omschrijving": "Rij A Stoel 14",
     "Rij": "A",
     "StoelNr": 14,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 5
   },
   {
@@ -5868,7 +4724,7 @@
     "Omschrijving": "Rij A Stoel 15",
     "Rij": "A",
     "StoelNr": 15,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 5
   },
   {
@@ -5876,39 +4732,7 @@
     "Omschrijving": "Rij A Stoel 16",
     "Rij": "A",
     "StoelNr": 16,
-    "Premium": true,
-    "ZaalId": 5
-  },
-  {
-    "StoelId": 737,
-    "Omschrijving": "Rij A Stoel 17",
-    "Rij": "A",
-    "StoelNr": 17,
-    "Premium": true,
-    "ZaalId": 5
-  },
-  {
-    "StoelId": 738,
-    "Omschrijving": "Rij A Stoel 18",
-    "Rij": "A",
-    "StoelNr": 18,
-    "Premium": true,
-    "ZaalId": 5
-  },
-  {
-    "StoelId": 739,
-    "Omschrijving": "Rij A Stoel 19",
-    "Rij": "A",
-    "StoelNr": 19,
-    "Premium": true,
-    "ZaalId": 5
-  },
-  {
-    "StoelId": 740,
-    "Omschrijving": "Rij A Stoel 20",
-    "Rij": "A",
-    "StoelNr": 20,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 5
   },
   {
@@ -5916,7 +4740,7 @@
     "Omschrijving": "Rij B Stoel 1",
     "Rij": "B",
     "StoelNr": 1,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 5
   },
   {
@@ -5924,7 +4748,7 @@
     "Omschrijving": "Rij B Stoel 2",
     "Rij": "B",
     "StoelNr": 2,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 5
   },
   {
@@ -5932,7 +4756,7 @@
     "Omschrijving": "Rij B Stoel 3",
     "Rij": "B",
     "StoelNr": 3,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 5
   },
   {
@@ -5940,7 +4764,7 @@
     "Omschrijving": "Rij B Stoel 4",
     "Rij": "B",
     "StoelNr": 4,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 5
   },
   {
@@ -5948,7 +4772,7 @@
     "Omschrijving": "Rij B Stoel 5",
     "Rij": "B",
     "StoelNr": 5,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 5
   },
   {
@@ -5956,7 +4780,7 @@
     "Omschrijving": "Rij B Stoel 6",
     "Rij": "B",
     "StoelNr": 6,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 5
   },
   {
@@ -5964,7 +4788,7 @@
     "Omschrijving": "Rij B Stoel 7",
     "Rij": "B",
     "StoelNr": 7,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 5
   },
   {
@@ -5972,7 +4796,7 @@
     "Omschrijving": "Rij B Stoel 8",
     "Rij": "B",
     "StoelNr": 8,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 5
   },
   {
@@ -5980,7 +4804,7 @@
     "Omschrijving": "Rij B Stoel 9",
     "Rij": "B",
     "StoelNr": 9,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 5
   },
   {
@@ -5988,7 +4812,7 @@
     "Omschrijving": "Rij B Stoel 10",
     "Rij": "B",
     "StoelNr": 10,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 5
   },
   {
@@ -5996,7 +4820,7 @@
     "Omschrijving": "Rij B Stoel 11",
     "Rij": "B",
     "StoelNr": 11,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 5
   },
   {
@@ -6004,7 +4828,7 @@
     "Omschrijving": "Rij B Stoel 12",
     "Rij": "B",
     "StoelNr": 12,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 5
   },
   {
@@ -6012,7 +4836,7 @@
     "Omschrijving": "Rij B Stoel 13",
     "Rij": "B",
     "StoelNr": 13,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 5
   },
   {
@@ -6020,7 +4844,7 @@
     "Omschrijving": "Rij B Stoel 14",
     "Rij": "B",
     "StoelNr": 14,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 5
   },
   {
@@ -6028,7 +4852,7 @@
     "Omschrijving": "Rij B Stoel 15",
     "Rij": "B",
     "StoelNr": 15,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 5
   },
   {
@@ -6036,39 +4860,7 @@
     "Omschrijving": "Rij B Stoel 16",
     "Rij": "B",
     "StoelNr": 16,
-    "Premium": true,
-    "ZaalId": 5
-  },
-  {
-    "StoelId": 757,
-    "Omschrijving": "Rij B Stoel 17",
-    "Rij": "B",
-    "StoelNr": 17,
-    "Premium": true,
-    "ZaalId": 5
-  },
-  {
-    "StoelId": 758,
-    "Omschrijving": "Rij B Stoel 18",
-    "Rij": "B",
-    "StoelNr": 18,
-    "Premium": true,
-    "ZaalId": 5
-  },
-  {
-    "StoelId": 759,
-    "Omschrijving": "Rij B Stoel 19",
-    "Rij": "B",
-    "StoelNr": 19,
-    "Premium": true,
-    "ZaalId": 5
-  },
-  {
-    "StoelId": 760,
-    "Omschrijving": "Rij B Stoel 20",
-    "Rij": "B",
-    "StoelNr": 20,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 5
   },
   {
@@ -6196,38 +4988,6 @@
     "Omschrijving": "Rij C Stoel 16",
     "Rij": "C",
     "StoelNr": 16,
-    "Premium": false,
-    "ZaalId": 5
-  },
-  {
-    "StoelId": 777,
-    "Omschrijving": "Rij C Stoel 17",
-    "Rij": "C",
-    "StoelNr": 17,
-    "Premium": false,
-    "ZaalId": 5
-  },
-  {
-    "StoelId": 778,
-    "Omschrijving": "Rij C Stoel 18",
-    "Rij": "C",
-    "StoelNr": 18,
-    "Premium": false,
-    "ZaalId": 5
-  },
-  {
-    "StoelId": 779,
-    "Omschrijving": "Rij C Stoel 19",
-    "Rij": "C",
-    "StoelNr": 19,
-    "Premium": false,
-    "ZaalId": 5
-  },
-  {
-    "StoelId": 780,
-    "Omschrijving": "Rij C Stoel 20",
-    "Rij": "C",
-    "StoelNr": 20,
     "Premium": false,
     "ZaalId": 5
   },
@@ -6360,38 +5120,6 @@
     "ZaalId": 5
   },
   {
-    "StoelId": 797,
-    "Omschrijving": "Rij D Stoel 17",
-    "Rij": "D",
-    "StoelNr": 17,
-    "Premium": false,
-    "ZaalId": 5
-  },
-  {
-    "StoelId": 798,
-    "Omschrijving": "Rij D Stoel 18",
-    "Rij": "D",
-    "StoelNr": 18,
-    "Premium": false,
-    "ZaalId": 5
-  },
-  {
-    "StoelId": 799,
-    "Omschrijving": "Rij D Stoel 19",
-    "Rij": "D",
-    "StoelNr": 19,
-    "Premium": false,
-    "ZaalId": 5
-  },
-  {
-    "StoelId": 800,
-    "Omschrijving": "Rij D Stoel 20",
-    "Rij": "D",
-    "StoelNr": 20,
-    "Premium": false,
-    "ZaalId": 5
-  },
-  {
     "StoelId": 801,
     "Omschrijving": "Rij E Stoel 1",
     "Rij": "E",
@@ -6516,38 +5244,6 @@
     "Omschrijving": "Rij E Stoel 16",
     "Rij": "E",
     "StoelNr": 16,
-    "Premium": false,
-    "ZaalId": 5
-  },
-  {
-    "StoelId": 817,
-    "Omschrijving": "Rij E Stoel 17",
-    "Rij": "E",
-    "StoelNr": 17,
-    "Premium": false,
-    "ZaalId": 5
-  },
-  {
-    "StoelId": 818,
-    "Omschrijving": "Rij E Stoel 18",
-    "Rij": "E",
-    "StoelNr": 18,
-    "Premium": false,
-    "ZaalId": 5
-  },
-  {
-    "StoelId": 819,
-    "Omschrijving": "Rij E Stoel 19",
-    "Rij": "E",
-    "StoelNr": 19,
-    "Premium": false,
-    "ZaalId": 5
-  },
-  {
-    "StoelId": 820,
-    "Omschrijving": "Rij E Stoel 20",
-    "Rij": "E",
-    "StoelNr": 20,
     "Premium": false,
     "ZaalId": 5
   },
@@ -6680,38 +5376,6 @@
     "ZaalId": 5
   },
   {
-    "StoelId": 837,
-    "Omschrijving": "Rij F Stoel 17",
-    "Rij": "F",
-    "StoelNr": 17,
-    "Premium": false,
-    "ZaalId": 5
-  },
-  {
-    "StoelId": 838,
-    "Omschrijving": "Rij F Stoel 18",
-    "Rij": "F",
-    "StoelNr": 18,
-    "Premium": false,
-    "ZaalId": 5
-  },
-  {
-    "StoelId": 839,
-    "Omschrijving": "Rij F Stoel 19",
-    "Rij": "F",
-    "StoelNr": 19,
-    "Premium": false,
-    "ZaalId": 5
-  },
-  {
-    "StoelId": 840,
-    "Omschrijving": "Rij F Stoel 20",
-    "Rij": "F",
-    "StoelNr": 20,
-    "Premium": false,
-    "ZaalId": 5
-  },
-  {
     "StoelId": 841,
     "Omschrijving": "Rij G Stoel 1",
     "Rij": "G",
@@ -6840,43 +5504,11 @@
     "ZaalId": 5
   },
   {
-    "StoelId": 857,
-    "Omschrijving": "Rij G Stoel 17",
-    "Rij": "G",
-    "StoelNr": 17,
-    "Premium": false,
-    "ZaalId": 5
-  },
-  {
-    "StoelId": 858,
-    "Omschrijving": "Rij G Stoel 18",
-    "Rij": "G",
-    "StoelNr": 18,
-    "Premium": false,
-    "ZaalId": 5
-  },
-  {
-    "StoelId": 859,
-    "Omschrijving": "Rij G Stoel 19",
-    "Rij": "G",
-    "StoelNr": 19,
-    "Premium": false,
-    "ZaalId": 5
-  },
-  {
-    "StoelId": 860,
-    "Omschrijving": "Rij G Stoel 20",
-    "Rij": "G",
-    "StoelNr": 20,
-    "Premium": false,
-    "ZaalId": 5
-  },
-  {
     "StoelId": 861,
     "Omschrijving": "Rij H Stoel 1",
     "Rij": "H",
     "StoelNr": 1,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 5
   },
   {
@@ -6884,7 +5516,7 @@
     "Omschrijving": "Rij H Stoel 2",
     "Rij": "H",
     "StoelNr": 2,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 5
   },
   {
@@ -6892,7 +5524,7 @@
     "Omschrijving": "Rij H Stoel 3",
     "Rij": "H",
     "StoelNr": 3,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 5
   },
   {
@@ -6900,7 +5532,7 @@
     "Omschrijving": "Rij H Stoel 4",
     "Rij": "H",
     "StoelNr": 4,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 5
   },
   {
@@ -6908,7 +5540,7 @@
     "Omschrijving": "Rij H Stoel 5",
     "Rij": "H",
     "StoelNr": 5,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 5
   },
   {
@@ -6916,7 +5548,7 @@
     "Omschrijving": "Rij H Stoel 6",
     "Rij": "H",
     "StoelNr": 6,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 5
   },
   {
@@ -6924,7 +5556,7 @@
     "Omschrijving": "Rij H Stoel 7",
     "Rij": "H",
     "StoelNr": 7,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 5
   },
   {
@@ -6932,7 +5564,7 @@
     "Omschrijving": "Rij H Stoel 8",
     "Rij": "H",
     "StoelNr": 8,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 5
   },
   {
@@ -6940,7 +5572,7 @@
     "Omschrijving": "Rij H Stoel 9",
     "Rij": "H",
     "StoelNr": 9,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 5
   },
   {
@@ -6948,7 +5580,7 @@
     "Omschrijving": "Rij H Stoel 10",
     "Rij": "H",
     "StoelNr": 10,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 5
   },
   {
@@ -6956,7 +5588,7 @@
     "Omschrijving": "Rij H Stoel 11",
     "Rij": "H",
     "StoelNr": 11,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 5
   },
   {
@@ -6964,7 +5596,7 @@
     "Omschrijving": "Rij H Stoel 12",
     "Rij": "H",
     "StoelNr": 12,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 5
   },
   {
@@ -6972,7 +5604,7 @@
     "Omschrijving": "Rij H Stoel 13",
     "Rij": "H",
     "StoelNr": 13,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 5
   },
   {
@@ -6980,7 +5612,7 @@
     "Omschrijving": "Rij H Stoel 14",
     "Rij": "H",
     "StoelNr": 14,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 5
   },
   {
@@ -6988,7 +5620,7 @@
     "Omschrijving": "Rij H Stoel 15",
     "Rij": "H",
     "StoelNr": 15,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 5
   },
   {
@@ -6996,39 +5628,7 @@
     "Omschrijving": "Rij H Stoel 16",
     "Rij": "H",
     "StoelNr": 16,
-    "Premium": false,
-    "ZaalId": 5
-  },
-  {
-    "StoelId": 877,
-    "Omschrijving": "Rij H Stoel 17",
-    "Rij": "H",
-    "StoelNr": 17,
-    "Premium": false,
-    "ZaalId": 5
-  },
-  {
-    "StoelId": 878,
-    "Omschrijving": "Rij H Stoel 18",
-    "Rij": "H",
-    "StoelNr": 18,
-    "Premium": false,
-    "ZaalId": 5
-  },
-  {
-    "StoelId": 879,
-    "Omschrijving": "Rij H Stoel 19",
-    "Rij": "H",
-    "StoelNr": 19,
-    "Premium": false,
-    "ZaalId": 5
-  },
-  {
-    "StoelId": 880,
-    "Omschrijving": "Rij H Stoel 20",
-    "Rij": "H",
-    "StoelNr": 20,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 5
   },
   {
@@ -7036,7 +5636,7 @@
     "Omschrijving": "Rij I Stoel 1",
     "Rij": "I",
     "StoelNr": 1,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 5
   },
   {
@@ -7044,7 +5644,7 @@
     "Omschrijving": "Rij I Stoel 2",
     "Rij": "I",
     "StoelNr": 2,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 5
   },
   {
@@ -7052,7 +5652,7 @@
     "Omschrijving": "Rij I Stoel 3",
     "Rij": "I",
     "StoelNr": 3,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 5
   },
   {
@@ -7060,7 +5660,7 @@
     "Omschrijving": "Rij I Stoel 4",
     "Rij": "I",
     "StoelNr": 4,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 5
   },
   {
@@ -7068,7 +5668,7 @@
     "Omschrijving": "Rij I Stoel 5",
     "Rij": "I",
     "StoelNr": 5,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 5
   },
   {
@@ -7076,7 +5676,7 @@
     "Omschrijving": "Rij I Stoel 6",
     "Rij": "I",
     "StoelNr": 6,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 5
   },
   {
@@ -7084,7 +5684,7 @@
     "Omschrijving": "Rij I Stoel 7",
     "Rij": "I",
     "StoelNr": 7,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 5
   },
   {
@@ -7092,7 +5692,7 @@
     "Omschrijving": "Rij I Stoel 8",
     "Rij": "I",
     "StoelNr": 8,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 5
   },
   {
@@ -7100,7 +5700,7 @@
     "Omschrijving": "Rij I Stoel 9",
     "Rij": "I",
     "StoelNr": 9,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 5
   },
   {
@@ -7108,7 +5708,7 @@
     "Omschrijving": "Rij I Stoel 10",
     "Rij": "I",
     "StoelNr": 10,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 5
   },
   {
@@ -7116,7 +5716,7 @@
     "Omschrijving": "Rij I Stoel 11",
     "Rij": "I",
     "StoelNr": 11,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 5
   },
   {
@@ -7124,7 +5724,7 @@
     "Omschrijving": "Rij I Stoel 12",
     "Rij": "I",
     "StoelNr": 12,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 5
   },
   {
@@ -7132,7 +5732,7 @@
     "Omschrijving": "Rij I Stoel 13",
     "Rij": "I",
     "StoelNr": 13,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 5
   },
   {
@@ -7140,7 +5740,7 @@
     "Omschrijving": "Rij I Stoel 14",
     "Rij": "I",
     "StoelNr": 14,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 5
   },
   {
@@ -7148,7 +5748,7 @@
     "Omschrijving": "Rij I Stoel 15",
     "Rij": "I",
     "StoelNr": 15,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 5
   },
   {
@@ -7156,39 +5756,7 @@
     "Omschrijving": "Rij I Stoel 16",
     "Rij": "I",
     "StoelNr": 16,
-    "Premium": false,
-    "ZaalId": 5
-  },
-  {
-    "StoelId": 897,
-    "Omschrijving": "Rij I Stoel 17",
-    "Rij": "I",
-    "StoelNr": 17,
-    "Premium": false,
-    "ZaalId": 5
-  },
-  {
-    "StoelId": 898,
-    "Omschrijving": "Rij I Stoel 18",
-    "Rij": "I",
-    "StoelNr": 18,
-    "Premium": false,
-    "ZaalId": 5
-  },
-  {
-    "StoelId": 899,
-    "Omschrijving": "Rij I Stoel 19",
-    "Rij": "I",
-    "StoelNr": 19,
-    "Premium": false,
-    "ZaalId": 5
-  },
-  {
-    "StoelId": 900,
-    "Omschrijving": "Rij I Stoel 20",
-    "Rij": "I",
-    "StoelNr": 20,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 5
   },
   {
@@ -7196,7 +5764,7 @@
     "Omschrijving": "Rij A Stoel 1",
     "Rij": "A",
     "StoelNr": 1,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 6
   },
   {
@@ -7204,7 +5772,7 @@
     "Omschrijving": "Rij A Stoel 2",
     "Rij": "A",
     "StoelNr": 2,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 6
   },
   {
@@ -7212,7 +5780,7 @@
     "Omschrijving": "Rij A Stoel 3",
     "Rij": "A",
     "StoelNr": 3,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 6
   },
   {
@@ -7220,7 +5788,7 @@
     "Omschrijving": "Rij A Stoel 4",
     "Rij": "A",
     "StoelNr": 4,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 6
   },
   {
@@ -7228,7 +5796,7 @@
     "Omschrijving": "Rij A Stoel 5",
     "Rij": "A",
     "StoelNr": 5,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 6
   },
   {
@@ -7236,7 +5804,7 @@
     "Omschrijving": "Rij A Stoel 6",
     "Rij": "A",
     "StoelNr": 6,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 6
   },
   {
@@ -7244,7 +5812,7 @@
     "Omschrijving": "Rij A Stoel 7",
     "Rij": "A",
     "StoelNr": 7,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 6
   },
   {
@@ -7252,7 +5820,7 @@
     "Omschrijving": "Rij A Stoel 8",
     "Rij": "A",
     "StoelNr": 8,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 6
   },
   {
@@ -7260,7 +5828,7 @@
     "Omschrijving": "Rij A Stoel 9",
     "Rij": "A",
     "StoelNr": 9,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 6
   },
   {
@@ -7268,7 +5836,7 @@
     "Omschrijving": "Rij A Stoel 10",
     "Rij": "A",
     "StoelNr": 10,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 6
   },
   {
@@ -7276,7 +5844,7 @@
     "Omschrijving": "Rij A Stoel 11",
     "Rij": "A",
     "StoelNr": 11,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 6
   },
   {
@@ -7284,7 +5852,7 @@
     "Omschrijving": "Rij A Stoel 12",
     "Rij": "A",
     "StoelNr": 12,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 6
   },
   {
@@ -7292,7 +5860,7 @@
     "Omschrijving": "Rij A Stoel 13",
     "Rij": "A",
     "StoelNr": 13,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 6
   },
   {
@@ -7300,7 +5868,7 @@
     "Omschrijving": "Rij A Stoel 14",
     "Rij": "A",
     "StoelNr": 14,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 6
   },
   {
@@ -7308,7 +5876,7 @@
     "Omschrijving": "Rij A Stoel 15",
     "Rij": "A",
     "StoelNr": 15,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 6
   },
   {
@@ -7316,39 +5884,7 @@
     "Omschrijving": "Rij A Stoel 16",
     "Rij": "A",
     "StoelNr": 16,
-    "Premium": true,
-    "ZaalId": 6
-  },
-  {
-    "StoelId": 917,
-    "Omschrijving": "Rij A Stoel 17",
-    "Rij": "A",
-    "StoelNr": 17,
-    "Premium": true,
-    "ZaalId": 6
-  },
-  {
-    "StoelId": 918,
-    "Omschrijving": "Rij A Stoel 18",
-    "Rij": "A",
-    "StoelNr": 18,
-    "Premium": true,
-    "ZaalId": 6
-  },
-  {
-    "StoelId": 919,
-    "Omschrijving": "Rij A Stoel 19",
-    "Rij": "A",
-    "StoelNr": 19,
-    "Premium": true,
-    "ZaalId": 6
-  },
-  {
-    "StoelId": 920,
-    "Omschrijving": "Rij A Stoel 20",
-    "Rij": "A",
-    "StoelNr": 20,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 6
   },
   {
@@ -7356,7 +5892,7 @@
     "Omschrijving": "Rij B Stoel 1",
     "Rij": "B",
     "StoelNr": 1,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 6
   },
   {
@@ -7364,7 +5900,7 @@
     "Omschrijving": "Rij B Stoel 2",
     "Rij": "B",
     "StoelNr": 2,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 6
   },
   {
@@ -7372,7 +5908,7 @@
     "Omschrijving": "Rij B Stoel 3",
     "Rij": "B",
     "StoelNr": 3,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 6
   },
   {
@@ -7380,7 +5916,7 @@
     "Omschrijving": "Rij B Stoel 4",
     "Rij": "B",
     "StoelNr": 4,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 6
   },
   {
@@ -7388,7 +5924,7 @@
     "Omschrijving": "Rij B Stoel 5",
     "Rij": "B",
     "StoelNr": 5,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 6
   },
   {
@@ -7396,7 +5932,7 @@
     "Omschrijving": "Rij B Stoel 6",
     "Rij": "B",
     "StoelNr": 6,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 6
   },
   {
@@ -7404,7 +5940,7 @@
     "Omschrijving": "Rij B Stoel 7",
     "Rij": "B",
     "StoelNr": 7,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 6
   },
   {
@@ -7412,7 +5948,7 @@
     "Omschrijving": "Rij B Stoel 8",
     "Rij": "B",
     "StoelNr": 8,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 6
   },
   {
@@ -7420,7 +5956,7 @@
     "Omschrijving": "Rij B Stoel 9",
     "Rij": "B",
     "StoelNr": 9,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 6
   },
   {
@@ -7428,7 +5964,7 @@
     "Omschrijving": "Rij B Stoel 10",
     "Rij": "B",
     "StoelNr": 10,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 6
   },
   {
@@ -7436,7 +5972,7 @@
     "Omschrijving": "Rij B Stoel 11",
     "Rij": "B",
     "StoelNr": 11,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 6
   },
   {
@@ -7444,7 +5980,7 @@
     "Omschrijving": "Rij B Stoel 12",
     "Rij": "B",
     "StoelNr": 12,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 6
   },
   {
@@ -7452,7 +5988,7 @@
     "Omschrijving": "Rij B Stoel 13",
     "Rij": "B",
     "StoelNr": 13,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 6
   },
   {
@@ -7460,7 +5996,7 @@
     "Omschrijving": "Rij B Stoel 14",
     "Rij": "B",
     "StoelNr": 14,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 6
   },
   {
@@ -7468,7 +6004,7 @@
     "Omschrijving": "Rij B Stoel 15",
     "Rij": "B",
     "StoelNr": 15,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 6
   },
   {
@@ -7476,39 +6012,7 @@
     "Omschrijving": "Rij B Stoel 16",
     "Rij": "B",
     "StoelNr": 16,
-    "Premium": true,
-    "ZaalId": 6
-  },
-  {
-    "StoelId": 937,
-    "Omschrijving": "Rij B Stoel 17",
-    "Rij": "B",
-    "StoelNr": 17,
-    "Premium": true,
-    "ZaalId": 6
-  },
-  {
-    "StoelId": 938,
-    "Omschrijving": "Rij B Stoel 18",
-    "Rij": "B",
-    "StoelNr": 18,
-    "Premium": true,
-    "ZaalId": 6
-  },
-  {
-    "StoelId": 939,
-    "Omschrijving": "Rij B Stoel 19",
-    "Rij": "B",
-    "StoelNr": 19,
-    "Premium": true,
-    "ZaalId": 6
-  },
-  {
-    "StoelId": 940,
-    "Omschrijving": "Rij B Stoel 20",
-    "Rij": "B",
-    "StoelNr": 20,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 6
   },
   {
@@ -7636,38 +6140,6 @@
     "Omschrijving": "Rij C Stoel 16",
     "Rij": "C",
     "StoelNr": 16,
-    "Premium": false,
-    "ZaalId": 6
-  },
-  {
-    "StoelId": 957,
-    "Omschrijving": "Rij C Stoel 17",
-    "Rij": "C",
-    "StoelNr": 17,
-    "Premium": false,
-    "ZaalId": 6
-  },
-  {
-    "StoelId": 958,
-    "Omschrijving": "Rij C Stoel 18",
-    "Rij": "C",
-    "StoelNr": 18,
-    "Premium": false,
-    "ZaalId": 6
-  },
-  {
-    "StoelId": 959,
-    "Omschrijving": "Rij C Stoel 19",
-    "Rij": "C",
-    "StoelNr": 19,
-    "Premium": false,
-    "ZaalId": 6
-  },
-  {
-    "StoelId": 960,
-    "Omschrijving": "Rij C Stoel 20",
-    "Rij": "C",
-    "StoelNr": 20,
     "Premium": false,
     "ZaalId": 6
   },
@@ -7800,38 +6272,6 @@
     "ZaalId": 6
   },
   {
-    "StoelId": 977,
-    "Omschrijving": "Rij D Stoel 17",
-    "Rij": "D",
-    "StoelNr": 17,
-    "Premium": false,
-    "ZaalId": 6
-  },
-  {
-    "StoelId": 978,
-    "Omschrijving": "Rij D Stoel 18",
-    "Rij": "D",
-    "StoelNr": 18,
-    "Premium": false,
-    "ZaalId": 6
-  },
-  {
-    "StoelId": 979,
-    "Omschrijving": "Rij D Stoel 19",
-    "Rij": "D",
-    "StoelNr": 19,
-    "Premium": false,
-    "ZaalId": 6
-  },
-  {
-    "StoelId": 980,
-    "Omschrijving": "Rij D Stoel 20",
-    "Rij": "D",
-    "StoelNr": 20,
-    "Premium": false,
-    "ZaalId": 6
-  },
-  {
     "StoelId": 981,
     "Omschrijving": "Rij E Stoel 1",
     "Rij": "E",
@@ -7956,38 +6396,6 @@
     "Omschrijving": "Rij E Stoel 16",
     "Rij": "E",
     "StoelNr": 16,
-    "Premium": false,
-    "ZaalId": 6
-  },
-  {
-    "StoelId": 997,
-    "Omschrijving": "Rij E Stoel 17",
-    "Rij": "E",
-    "StoelNr": 17,
-    "Premium": false,
-    "ZaalId": 6
-  },
-  {
-    "StoelId": 998,
-    "Omschrijving": "Rij E Stoel 18",
-    "Rij": "E",
-    "StoelNr": 18,
-    "Premium": false,
-    "ZaalId": 6
-  },
-  {
-    "StoelId": 999,
-    "Omschrijving": "Rij E Stoel 19",
-    "Rij": "E",
-    "StoelNr": 19,
-    "Premium": false,
-    "ZaalId": 6
-  },
-  {
-    "StoelId": 1000,
-    "Omschrijving": "Rij E Stoel 20",
-    "Rij": "E",
-    "StoelNr": 20,
     "Premium": false,
     "ZaalId": 6
   },
@@ -8120,38 +6528,6 @@
     "ZaalId": 6
   },
   {
-    "StoelId": 1017,
-    "Omschrijving": "Rij F Stoel 17",
-    "Rij": "F",
-    "StoelNr": 17,
-    "Premium": false,
-    "ZaalId": 6
-  },
-  {
-    "StoelId": 1018,
-    "Omschrijving": "Rij F Stoel 18",
-    "Rij": "F",
-    "StoelNr": 18,
-    "Premium": false,
-    "ZaalId": 6
-  },
-  {
-    "StoelId": 1019,
-    "Omschrijving": "Rij F Stoel 19",
-    "Rij": "F",
-    "StoelNr": 19,
-    "Premium": false,
-    "ZaalId": 6
-  },
-  {
-    "StoelId": 1020,
-    "Omschrijving": "Rij F Stoel 20",
-    "Rij": "F",
-    "StoelNr": 20,
-    "Premium": false,
-    "ZaalId": 6
-  },
-  {
     "StoelId": 1021,
     "Omschrijving": "Rij G Stoel 1",
     "Rij": "G",
@@ -8280,43 +6656,11 @@
     "ZaalId": 6
   },
   {
-    "StoelId": 1037,
-    "Omschrijving": "Rij G Stoel 17",
-    "Rij": "G",
-    "StoelNr": 17,
-    "Premium": false,
-    "ZaalId": 6
-  },
-  {
-    "StoelId": 1038,
-    "Omschrijving": "Rij G Stoel 18",
-    "Rij": "G",
-    "StoelNr": 18,
-    "Premium": false,
-    "ZaalId": 6
-  },
-  {
-    "StoelId": 1039,
-    "Omschrijving": "Rij G Stoel 19",
-    "Rij": "G",
-    "StoelNr": 19,
-    "Premium": false,
-    "ZaalId": 6
-  },
-  {
-    "StoelId": 1040,
-    "Omschrijving": "Rij G Stoel 20",
-    "Rij": "G",
-    "StoelNr": 20,
-    "Premium": false,
-    "ZaalId": 6
-  },
-  {
     "StoelId": 1041,
     "Omschrijving": "Rij H Stoel 1",
     "Rij": "H",
     "StoelNr": 1,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 6
   },
   {
@@ -8324,7 +6668,7 @@
     "Omschrijving": "Rij H Stoel 2",
     "Rij": "H",
     "StoelNr": 2,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 6
   },
   {
@@ -8332,7 +6676,7 @@
     "Omschrijving": "Rij H Stoel 3",
     "Rij": "H",
     "StoelNr": 3,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 6
   },
   {
@@ -8340,7 +6684,7 @@
     "Omschrijving": "Rij H Stoel 4",
     "Rij": "H",
     "StoelNr": 4,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 6
   },
   {
@@ -8348,7 +6692,7 @@
     "Omschrijving": "Rij H Stoel 5",
     "Rij": "H",
     "StoelNr": 5,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 6
   },
   {
@@ -8356,7 +6700,7 @@
     "Omschrijving": "Rij H Stoel 6",
     "Rij": "H",
     "StoelNr": 6,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 6
   },
   {
@@ -8364,7 +6708,7 @@
     "Omschrijving": "Rij H Stoel 7",
     "Rij": "H",
     "StoelNr": 7,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 6
   },
   {
@@ -8372,7 +6716,7 @@
     "Omschrijving": "Rij H Stoel 8",
     "Rij": "H",
     "StoelNr": 8,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 6
   },
   {
@@ -8380,7 +6724,7 @@
     "Omschrijving": "Rij H Stoel 9",
     "Rij": "H",
     "StoelNr": 9,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 6
   },
   {
@@ -8388,7 +6732,7 @@
     "Omschrijving": "Rij H Stoel 10",
     "Rij": "H",
     "StoelNr": 10,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 6
   },
   {
@@ -8396,7 +6740,7 @@
     "Omschrijving": "Rij H Stoel 11",
     "Rij": "H",
     "StoelNr": 11,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 6
   },
   {
@@ -8404,7 +6748,7 @@
     "Omschrijving": "Rij H Stoel 12",
     "Rij": "H",
     "StoelNr": 12,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 6
   },
   {
@@ -8412,7 +6756,7 @@
     "Omschrijving": "Rij H Stoel 13",
     "Rij": "H",
     "StoelNr": 13,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 6
   },
   {
@@ -8420,7 +6764,7 @@
     "Omschrijving": "Rij H Stoel 14",
     "Rij": "H",
     "StoelNr": 14,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 6
   },
   {
@@ -8428,7 +6772,7 @@
     "Omschrijving": "Rij H Stoel 15",
     "Rij": "H",
     "StoelNr": 15,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 6
   },
   {
@@ -8436,39 +6780,7 @@
     "Omschrijving": "Rij H Stoel 16",
     "Rij": "H",
     "StoelNr": 16,
-    "Premium": false,
-    "ZaalId": 6
-  },
-  {
-    "StoelId": 1057,
-    "Omschrijving": "Rij H Stoel 17",
-    "Rij": "H",
-    "StoelNr": 17,
-    "Premium": false,
-    "ZaalId": 6
-  },
-  {
-    "StoelId": 1058,
-    "Omschrijving": "Rij H Stoel 18",
-    "Rij": "H",
-    "StoelNr": 18,
-    "Premium": false,
-    "ZaalId": 6
-  },
-  {
-    "StoelId": 1059,
-    "Omschrijving": "Rij H Stoel 19",
-    "Rij": "H",
-    "StoelNr": 19,
-    "Premium": false,
-    "ZaalId": 6
-  },
-  {
-    "StoelId": 1060,
-    "Omschrijving": "Rij H Stoel 20",
-    "Rij": "H",
-    "StoelNr": 20,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 6
   },
   {
@@ -8476,7 +6788,7 @@
     "Omschrijving": "Rij I Stoel 1",
     "Rij": "I",
     "StoelNr": 1,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 6
   },
   {
@@ -8484,7 +6796,7 @@
     "Omschrijving": "Rij I Stoel 2",
     "Rij": "I",
     "StoelNr": 2,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 6
   },
   {
@@ -8492,7 +6804,7 @@
     "Omschrijving": "Rij I Stoel 3",
     "Rij": "I",
     "StoelNr": 3,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 6
   },
   {
@@ -8500,7 +6812,7 @@
     "Omschrijving": "Rij I Stoel 4",
     "Rij": "I",
     "StoelNr": 4,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 6
   },
   {
@@ -8508,7 +6820,7 @@
     "Omschrijving": "Rij I Stoel 5",
     "Rij": "I",
     "StoelNr": 5,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 6
   },
   {
@@ -8516,7 +6828,7 @@
     "Omschrijving": "Rij I Stoel 6",
     "Rij": "I",
     "StoelNr": 6,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 6
   },
   {
@@ -8524,7 +6836,7 @@
     "Omschrijving": "Rij I Stoel 7",
     "Rij": "I",
     "StoelNr": 7,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 6
   },
   {
@@ -8532,7 +6844,7 @@
     "Omschrijving": "Rij I Stoel 8",
     "Rij": "I",
     "StoelNr": 8,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 6
   },
   {
@@ -8540,7 +6852,7 @@
     "Omschrijving": "Rij I Stoel 9",
     "Rij": "I",
     "StoelNr": 9,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 6
   },
   {
@@ -8548,7 +6860,7 @@
     "Omschrijving": "Rij I Stoel 10",
     "Rij": "I",
     "StoelNr": 10,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 6
   },
   {
@@ -8556,7 +6868,7 @@
     "Omschrijving": "Rij I Stoel 11",
     "Rij": "I",
     "StoelNr": 11,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 6
   },
   {
@@ -8564,7 +6876,7 @@
     "Omschrijving": "Rij I Stoel 12",
     "Rij": "I",
     "StoelNr": 12,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 6
   },
   {
@@ -8572,7 +6884,7 @@
     "Omschrijving": "Rij I Stoel 13",
     "Rij": "I",
     "StoelNr": 13,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 6
   },
   {
@@ -8580,7 +6892,7 @@
     "Omschrijving": "Rij I Stoel 14",
     "Rij": "I",
     "StoelNr": 14,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 6
   },
   {
@@ -8588,7 +6900,7 @@
     "Omschrijving": "Rij I Stoel 15",
     "Rij": "I",
     "StoelNr": 15,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 6
   },
   {
@@ -8596,39 +6908,7 @@
     "Omschrijving": "Rij I Stoel 16",
     "Rij": "I",
     "StoelNr": 16,
-    "Premium": false,
-    "ZaalId": 6
-  },
-  {
-    "StoelId": 1077,
-    "Omschrijving": "Rij I Stoel 17",
-    "Rij": "I",
-    "StoelNr": 17,
-    "Premium": false,
-    "ZaalId": 6
-  },
-  {
-    "StoelId": 1078,
-    "Omschrijving": "Rij I Stoel 18",
-    "Rij": "I",
-    "StoelNr": 18,
-    "Premium": false,
-    "ZaalId": 6
-  },
-  {
-    "StoelId": 1079,
-    "Omschrijving": "Rij I Stoel 19",
-    "Rij": "I",
-    "StoelNr": 19,
-    "Premium": false,
-    "ZaalId": 6
-  },
-  {
-    "StoelId": 1080,
-    "Omschrijving": "Rij I Stoel 20",
-    "Rij": "I",
-    "StoelNr": 20,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 6
   },
   {
@@ -8636,7 +6916,7 @@
     "Omschrijving": "Rij A Stoel 1",
     "Rij": "A",
     "StoelNr": 1,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 7
   },
   {
@@ -8644,7 +6924,7 @@
     "Omschrijving": "Rij A Stoel 2",
     "Rij": "A",
     "StoelNr": 2,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 7
   },
   {
@@ -8652,7 +6932,7 @@
     "Omschrijving": "Rij A Stoel 3",
     "Rij": "A",
     "StoelNr": 3,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 7
   },
   {
@@ -8660,7 +6940,7 @@
     "Omschrijving": "Rij A Stoel 4",
     "Rij": "A",
     "StoelNr": 4,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 7
   },
   {
@@ -8668,7 +6948,7 @@
     "Omschrijving": "Rij A Stoel 5",
     "Rij": "A",
     "StoelNr": 5,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 7
   },
   {
@@ -8676,7 +6956,7 @@
     "Omschrijving": "Rij A Stoel 6",
     "Rij": "A",
     "StoelNr": 6,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 7
   },
   {
@@ -8684,7 +6964,7 @@
     "Omschrijving": "Rij A Stoel 7",
     "Rij": "A",
     "StoelNr": 7,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 7
   },
   {
@@ -8692,7 +6972,7 @@
     "Omschrijving": "Rij A Stoel 8",
     "Rij": "A",
     "StoelNr": 8,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 7
   },
   {
@@ -8700,7 +6980,7 @@
     "Omschrijving": "Rij A Stoel 9",
     "Rij": "A",
     "StoelNr": 9,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 7
   },
   {
@@ -8708,7 +6988,7 @@
     "Omschrijving": "Rij A Stoel 10",
     "Rij": "A",
     "StoelNr": 10,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 7
   },
   {
@@ -8716,7 +6996,7 @@
     "Omschrijving": "Rij A Stoel 11",
     "Rij": "A",
     "StoelNr": 11,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 7
   },
   {
@@ -8724,7 +7004,7 @@
     "Omschrijving": "Rij A Stoel 12",
     "Rij": "A",
     "StoelNr": 12,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 7
   },
   {
@@ -8732,7 +7012,7 @@
     "Omschrijving": "Rij A Stoel 13",
     "Rij": "A",
     "StoelNr": 13,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 7
   },
   {
@@ -8740,7 +7020,7 @@
     "Omschrijving": "Rij A Stoel 14",
     "Rij": "A",
     "StoelNr": 14,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 7
   },
   {
@@ -8748,7 +7028,7 @@
     "Omschrijving": "Rij A Stoel 15",
     "Rij": "A",
     "StoelNr": 15,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 7
   },
   {
@@ -8756,39 +7036,7 @@
     "Omschrijving": "Rij A Stoel 16",
     "Rij": "A",
     "StoelNr": 16,
-    "Premium": true,
-    "ZaalId": 7
-  },
-  {
-    "StoelId": 1097,
-    "Omschrijving": "Rij A Stoel 17",
-    "Rij": "A",
-    "StoelNr": 17,
-    "Premium": true,
-    "ZaalId": 7
-  },
-  {
-    "StoelId": 1098,
-    "Omschrijving": "Rij A Stoel 18",
-    "Rij": "A",
-    "StoelNr": 18,
-    "Premium": true,
-    "ZaalId": 7
-  },
-  {
-    "StoelId": 1099,
-    "Omschrijving": "Rij A Stoel 19",
-    "Rij": "A",
-    "StoelNr": 19,
-    "Premium": true,
-    "ZaalId": 7
-  },
-  {
-    "StoelId": 1100,
-    "Omschrijving": "Rij A Stoel 20",
-    "Rij": "A",
-    "StoelNr": 20,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 7
   },
   {
@@ -8796,7 +7044,7 @@
     "Omschrijving": "Rij B Stoel 1",
     "Rij": "B",
     "StoelNr": 1,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 7
   },
   {
@@ -8804,7 +7052,7 @@
     "Omschrijving": "Rij B Stoel 2",
     "Rij": "B",
     "StoelNr": 2,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 7
   },
   {
@@ -8812,7 +7060,7 @@
     "Omschrijving": "Rij B Stoel 3",
     "Rij": "B",
     "StoelNr": 3,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 7
   },
   {
@@ -8820,7 +7068,7 @@
     "Omschrijving": "Rij B Stoel 4",
     "Rij": "B",
     "StoelNr": 4,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 7
   },
   {
@@ -8828,7 +7076,7 @@
     "Omschrijving": "Rij B Stoel 5",
     "Rij": "B",
     "StoelNr": 5,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 7
   },
   {
@@ -8836,7 +7084,7 @@
     "Omschrijving": "Rij B Stoel 6",
     "Rij": "B",
     "StoelNr": 6,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 7
   },
   {
@@ -8844,7 +7092,7 @@
     "Omschrijving": "Rij B Stoel 7",
     "Rij": "B",
     "StoelNr": 7,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 7
   },
   {
@@ -8852,7 +7100,7 @@
     "Omschrijving": "Rij B Stoel 8",
     "Rij": "B",
     "StoelNr": 8,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 7
   },
   {
@@ -8860,7 +7108,7 @@
     "Omschrijving": "Rij B Stoel 9",
     "Rij": "B",
     "StoelNr": 9,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 7
   },
   {
@@ -8868,7 +7116,7 @@
     "Omschrijving": "Rij B Stoel 10",
     "Rij": "B",
     "StoelNr": 10,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 7
   },
   {
@@ -8876,7 +7124,7 @@
     "Omschrijving": "Rij B Stoel 11",
     "Rij": "B",
     "StoelNr": 11,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 7
   },
   {
@@ -8884,7 +7132,7 @@
     "Omschrijving": "Rij B Stoel 12",
     "Rij": "B",
     "StoelNr": 12,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 7
   },
   {
@@ -8892,7 +7140,7 @@
     "Omschrijving": "Rij B Stoel 13",
     "Rij": "B",
     "StoelNr": 13,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 7
   },
   {
@@ -8900,7 +7148,7 @@
     "Omschrijving": "Rij B Stoel 14",
     "Rij": "B",
     "StoelNr": 14,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 7
   },
   {
@@ -8908,7 +7156,7 @@
     "Omschrijving": "Rij B Stoel 15",
     "Rij": "B",
     "StoelNr": 15,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 7
   },
   {
@@ -8916,39 +7164,7 @@
     "Omschrijving": "Rij B Stoel 16",
     "Rij": "B",
     "StoelNr": 16,
-    "Premium": true,
-    "ZaalId": 7
-  },
-  {
-    "StoelId": 1117,
-    "Omschrijving": "Rij B Stoel 17",
-    "Rij": "B",
-    "StoelNr": 17,
-    "Premium": true,
-    "ZaalId": 7
-  },
-  {
-    "StoelId": 1118,
-    "Omschrijving": "Rij B Stoel 18",
-    "Rij": "B",
-    "StoelNr": 18,
-    "Premium": true,
-    "ZaalId": 7
-  },
-  {
-    "StoelId": 1119,
-    "Omschrijving": "Rij B Stoel 19",
-    "Rij": "B",
-    "StoelNr": 19,
-    "Premium": true,
-    "ZaalId": 7
-  },
-  {
-    "StoelId": 1120,
-    "Omschrijving": "Rij B Stoel 20",
-    "Rij": "B",
-    "StoelNr": 20,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 7
   },
   {
@@ -9076,38 +7292,6 @@
     "Omschrijving": "Rij C Stoel 16",
     "Rij": "C",
     "StoelNr": 16,
-    "Premium": false,
-    "ZaalId": 7
-  },
-  {
-    "StoelId": 1137,
-    "Omschrijving": "Rij C Stoel 17",
-    "Rij": "C",
-    "StoelNr": 17,
-    "Premium": false,
-    "ZaalId": 7
-  },
-  {
-    "StoelId": 1138,
-    "Omschrijving": "Rij C Stoel 18",
-    "Rij": "C",
-    "StoelNr": 18,
-    "Premium": false,
-    "ZaalId": 7
-  },
-  {
-    "StoelId": 1139,
-    "Omschrijving": "Rij C Stoel 19",
-    "Rij": "C",
-    "StoelNr": 19,
-    "Premium": false,
-    "ZaalId": 7
-  },
-  {
-    "StoelId": 1140,
-    "Omschrijving": "Rij C Stoel 20",
-    "Rij": "C",
-    "StoelNr": 20,
     "Premium": false,
     "ZaalId": 7
   },
@@ -9240,38 +7424,6 @@
     "ZaalId": 7
   },
   {
-    "StoelId": 1157,
-    "Omschrijving": "Rij D Stoel 17",
-    "Rij": "D",
-    "StoelNr": 17,
-    "Premium": false,
-    "ZaalId": 7
-  },
-  {
-    "StoelId": 1158,
-    "Omschrijving": "Rij D Stoel 18",
-    "Rij": "D",
-    "StoelNr": 18,
-    "Premium": false,
-    "ZaalId": 7
-  },
-  {
-    "StoelId": 1159,
-    "Omschrijving": "Rij D Stoel 19",
-    "Rij": "D",
-    "StoelNr": 19,
-    "Premium": false,
-    "ZaalId": 7
-  },
-  {
-    "StoelId": 1160,
-    "Omschrijving": "Rij D Stoel 20",
-    "Rij": "D",
-    "StoelNr": 20,
-    "Premium": false,
-    "ZaalId": 7
-  },
-  {
     "StoelId": 1161,
     "Omschrijving": "Rij E Stoel 1",
     "Rij": "E",
@@ -9396,38 +7548,6 @@
     "Omschrijving": "Rij E Stoel 16",
     "Rij": "E",
     "StoelNr": 16,
-    "Premium": false,
-    "ZaalId": 7
-  },
-  {
-    "StoelId": 1177,
-    "Omschrijving": "Rij E Stoel 17",
-    "Rij": "E",
-    "StoelNr": 17,
-    "Premium": false,
-    "ZaalId": 7
-  },
-  {
-    "StoelId": 1178,
-    "Omschrijving": "Rij E Stoel 18",
-    "Rij": "E",
-    "StoelNr": 18,
-    "Premium": false,
-    "ZaalId": 7
-  },
-  {
-    "StoelId": 1179,
-    "Omschrijving": "Rij E Stoel 19",
-    "Rij": "E",
-    "StoelNr": 19,
-    "Premium": false,
-    "ZaalId": 7
-  },
-  {
-    "StoelId": 1180,
-    "Omschrijving": "Rij E Stoel 20",
-    "Rij": "E",
-    "StoelNr": 20,
     "Premium": false,
     "ZaalId": 7
   },
@@ -9560,38 +7680,6 @@
     "ZaalId": 7
   },
   {
-    "StoelId": 1197,
-    "Omschrijving": "Rij F Stoel 17",
-    "Rij": "F",
-    "StoelNr": 17,
-    "Premium": false,
-    "ZaalId": 7
-  },
-  {
-    "StoelId": 1198,
-    "Omschrijving": "Rij F Stoel 18",
-    "Rij": "F",
-    "StoelNr": 18,
-    "Premium": false,
-    "ZaalId": 7
-  },
-  {
-    "StoelId": 1199,
-    "Omschrijving": "Rij F Stoel 19",
-    "Rij": "F",
-    "StoelNr": 19,
-    "Premium": false,
-    "ZaalId": 7
-  },
-  {
-    "StoelId": 1200,
-    "Omschrijving": "Rij F Stoel 20",
-    "Rij": "F",
-    "StoelNr": 20,
-    "Premium": false,
-    "ZaalId": 7
-  },
-  {
     "StoelId": 1201,
     "Omschrijving": "Rij G Stoel 1",
     "Rij": "G",
@@ -9720,43 +7808,11 @@
     "ZaalId": 7
   },
   {
-    "StoelId": 1217,
-    "Omschrijving": "Rij G Stoel 17",
-    "Rij": "G",
-    "StoelNr": 17,
-    "Premium": false,
-    "ZaalId": 7
-  },
-  {
-    "StoelId": 1218,
-    "Omschrijving": "Rij G Stoel 18",
-    "Rij": "G",
-    "StoelNr": 18,
-    "Premium": false,
-    "ZaalId": 7
-  },
-  {
-    "StoelId": 1219,
-    "Omschrijving": "Rij G Stoel 19",
-    "Rij": "G",
-    "StoelNr": 19,
-    "Premium": false,
-    "ZaalId": 7
-  },
-  {
-    "StoelId": 1220,
-    "Omschrijving": "Rij G Stoel 20",
-    "Rij": "G",
-    "StoelNr": 20,
-    "Premium": false,
-    "ZaalId": 7
-  },
-  {
     "StoelId": 1221,
     "Omschrijving": "Rij H Stoel 1",
     "Rij": "H",
     "StoelNr": 1,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 7
   },
   {
@@ -9764,7 +7820,7 @@
     "Omschrijving": "Rij H Stoel 2",
     "Rij": "H",
     "StoelNr": 2,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 7
   },
   {
@@ -9772,7 +7828,7 @@
     "Omschrijving": "Rij H Stoel 3",
     "Rij": "H",
     "StoelNr": 3,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 7
   },
   {
@@ -9780,7 +7836,7 @@
     "Omschrijving": "Rij H Stoel 4",
     "Rij": "H",
     "StoelNr": 4,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 7
   },
   {
@@ -9788,7 +7844,7 @@
     "Omschrijving": "Rij H Stoel 5",
     "Rij": "H",
     "StoelNr": 5,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 7
   },
   {
@@ -9796,7 +7852,7 @@
     "Omschrijving": "Rij H Stoel 6",
     "Rij": "H",
     "StoelNr": 6,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 7
   },
   {
@@ -9804,7 +7860,7 @@
     "Omschrijving": "Rij H Stoel 7",
     "Rij": "H",
     "StoelNr": 7,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 7
   },
   {
@@ -9812,7 +7868,7 @@
     "Omschrijving": "Rij H Stoel 8",
     "Rij": "H",
     "StoelNr": 8,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 7
   },
   {
@@ -9820,7 +7876,7 @@
     "Omschrijving": "Rij H Stoel 9",
     "Rij": "H",
     "StoelNr": 9,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 7
   },
   {
@@ -9828,7 +7884,7 @@
     "Omschrijving": "Rij H Stoel 10",
     "Rij": "H",
     "StoelNr": 10,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 7
   },
   {
@@ -9836,7 +7892,7 @@
     "Omschrijving": "Rij H Stoel 11",
     "Rij": "H",
     "StoelNr": 11,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 7
   },
   {
@@ -9844,7 +7900,7 @@
     "Omschrijving": "Rij H Stoel 12",
     "Rij": "H",
     "StoelNr": 12,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 7
   },
   {
@@ -9852,7 +7908,7 @@
     "Omschrijving": "Rij H Stoel 13",
     "Rij": "H",
     "StoelNr": 13,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 7
   },
   {
@@ -9860,7 +7916,7 @@
     "Omschrijving": "Rij H Stoel 14",
     "Rij": "H",
     "StoelNr": 14,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 7
   },
   {
@@ -9868,7 +7924,7 @@
     "Omschrijving": "Rij H Stoel 15",
     "Rij": "H",
     "StoelNr": 15,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 7
   },
   {
@@ -9876,39 +7932,7 @@
     "Omschrijving": "Rij H Stoel 16",
     "Rij": "H",
     "StoelNr": 16,
-    "Premium": false,
-    "ZaalId": 7
-  },
-  {
-    "StoelId": 1237,
-    "Omschrijving": "Rij H Stoel 17",
-    "Rij": "H",
-    "StoelNr": 17,
-    "Premium": false,
-    "ZaalId": 7
-  },
-  {
-    "StoelId": 1238,
-    "Omschrijving": "Rij H Stoel 18",
-    "Rij": "H",
-    "StoelNr": 18,
-    "Premium": false,
-    "ZaalId": 7
-  },
-  {
-    "StoelId": 1239,
-    "Omschrijving": "Rij H Stoel 19",
-    "Rij": "H",
-    "StoelNr": 19,
-    "Premium": false,
-    "ZaalId": 7
-  },
-  {
-    "StoelId": 1240,
-    "Omschrijving": "Rij H Stoel 20",
-    "Rij": "H",
-    "StoelNr": 20,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 7
   },
   {
@@ -9916,7 +7940,7 @@
     "Omschrijving": "Rij I Stoel 1",
     "Rij": "I",
     "StoelNr": 1,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 7
   },
   {
@@ -9924,7 +7948,7 @@
     "Omschrijving": "Rij I Stoel 2",
     "Rij": "I",
     "StoelNr": 2,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 7
   },
   {
@@ -9932,7 +7956,7 @@
     "Omschrijving": "Rij I Stoel 3",
     "Rij": "I",
     "StoelNr": 3,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 7
   },
   {
@@ -9940,7 +7964,7 @@
     "Omschrijving": "Rij I Stoel 4",
     "Rij": "I",
     "StoelNr": 4,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 7
   },
   {
@@ -9948,7 +7972,7 @@
     "Omschrijving": "Rij I Stoel 5",
     "Rij": "I",
     "StoelNr": 5,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 7
   },
   {
@@ -9956,7 +7980,7 @@
     "Omschrijving": "Rij I Stoel 6",
     "Rij": "I",
     "StoelNr": 6,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 7
   },
   {
@@ -9964,7 +7988,7 @@
     "Omschrijving": "Rij I Stoel 7",
     "Rij": "I",
     "StoelNr": 7,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 7
   },
   {
@@ -9972,7 +7996,7 @@
     "Omschrijving": "Rij I Stoel 8",
     "Rij": "I",
     "StoelNr": 8,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 7
   },
   {
@@ -9980,7 +8004,7 @@
     "Omschrijving": "Rij I Stoel 9",
     "Rij": "I",
     "StoelNr": 9,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 7
   },
   {
@@ -9988,7 +8012,7 @@
     "Omschrijving": "Rij I Stoel 10",
     "Rij": "I",
     "StoelNr": 10,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 7
   },
   {
@@ -9996,7 +8020,7 @@
     "Omschrijving": "Rij I Stoel 11",
     "Rij": "I",
     "StoelNr": 11,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 7
   },
   {
@@ -10004,7 +8028,7 @@
     "Omschrijving": "Rij I Stoel 12",
     "Rij": "I",
     "StoelNr": 12,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 7
   },
   {
@@ -10012,7 +8036,7 @@
     "Omschrijving": "Rij I Stoel 13",
     "Rij": "I",
     "StoelNr": 13,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 7
   },
   {
@@ -10020,7 +8044,7 @@
     "Omschrijving": "Rij I Stoel 14",
     "Rij": "I",
     "StoelNr": 14,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 7
   },
   {
@@ -10028,7 +8052,7 @@
     "Omschrijving": "Rij I Stoel 15",
     "Rij": "I",
     "StoelNr": 15,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 7
   },
   {
@@ -10036,39 +8060,7 @@
     "Omschrijving": "Rij I Stoel 16",
     "Rij": "I",
     "StoelNr": 16,
-    "Premium": false,
-    "ZaalId": 7
-  },
-  {
-    "StoelId": 1257,
-    "Omschrijving": "Rij I Stoel 17",
-    "Rij": "I",
-    "StoelNr": 17,
-    "Premium": false,
-    "ZaalId": 7
-  },
-  {
-    "StoelId": 1258,
-    "Omschrijving": "Rij I Stoel 18",
-    "Rij": "I",
-    "StoelNr": 18,
-    "Premium": false,
-    "ZaalId": 7
-  },
-  {
-    "StoelId": 1259,
-    "Omschrijving": "Rij I Stoel 19",
-    "Rij": "I",
-    "StoelNr": 19,
-    "Premium": false,
-    "ZaalId": 7
-  },
-  {
-    "StoelId": 1260,
-    "Omschrijving": "Rij I Stoel 20",
-    "Rij": "I",
-    "StoelNr": 20,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 7
   },
   {
@@ -10076,7 +8068,7 @@
     "Omschrijving": "Rij A Stoel 1",
     "Rij": "A",
     "StoelNr": 1,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 8
   },
   {
@@ -10084,7 +8076,7 @@
     "Omschrijving": "Rij A Stoel 2",
     "Rij": "A",
     "StoelNr": 2,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 8
   },
   {
@@ -10092,7 +8084,7 @@
     "Omschrijving": "Rij A Stoel 3",
     "Rij": "A",
     "StoelNr": 3,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 8
   },
   {
@@ -10100,7 +8092,7 @@
     "Omschrijving": "Rij A Stoel 4",
     "Rij": "A",
     "StoelNr": 4,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 8
   },
   {
@@ -10108,7 +8100,7 @@
     "Omschrijving": "Rij A Stoel 5",
     "Rij": "A",
     "StoelNr": 5,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 8
   },
   {
@@ -10116,7 +8108,7 @@
     "Omschrijving": "Rij A Stoel 6",
     "Rij": "A",
     "StoelNr": 6,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 8
   },
   {
@@ -10124,7 +8116,7 @@
     "Omschrijving": "Rij A Stoel 7",
     "Rij": "A",
     "StoelNr": 7,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 8
   },
   {
@@ -10132,7 +8124,7 @@
     "Omschrijving": "Rij A Stoel 8",
     "Rij": "A",
     "StoelNr": 8,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 8
   },
   {
@@ -10140,7 +8132,7 @@
     "Omschrijving": "Rij A Stoel 9",
     "Rij": "A",
     "StoelNr": 9,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 8
   },
   {
@@ -10148,7 +8140,7 @@
     "Omschrijving": "Rij A Stoel 10",
     "Rij": "A",
     "StoelNr": 10,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 8
   },
   {
@@ -10156,7 +8148,7 @@
     "Omschrijving": "Rij A Stoel 11",
     "Rij": "A",
     "StoelNr": 11,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 8
   },
   {
@@ -10164,7 +8156,7 @@
     "Omschrijving": "Rij A Stoel 12",
     "Rij": "A",
     "StoelNr": 12,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 8
   },
   {
@@ -10172,7 +8164,7 @@
     "Omschrijving": "Rij A Stoel 13",
     "Rij": "A",
     "StoelNr": 13,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 8
   },
   {
@@ -10180,7 +8172,7 @@
     "Omschrijving": "Rij A Stoel 14",
     "Rij": "A",
     "StoelNr": 14,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 8
   },
   {
@@ -10188,7 +8180,7 @@
     "Omschrijving": "Rij A Stoel 15",
     "Rij": "A",
     "StoelNr": 15,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 8
   },
   {
@@ -10196,39 +8188,7 @@
     "Omschrijving": "Rij A Stoel 16",
     "Rij": "A",
     "StoelNr": 16,
-    "Premium": true,
-    "ZaalId": 8
-  },
-  {
-    "StoelId": 1277,
-    "Omschrijving": "Rij A Stoel 17",
-    "Rij": "A",
-    "StoelNr": 17,
-    "Premium": true,
-    "ZaalId": 8
-  },
-  {
-    "StoelId": 1278,
-    "Omschrijving": "Rij A Stoel 18",
-    "Rij": "A",
-    "StoelNr": 18,
-    "Premium": true,
-    "ZaalId": 8
-  },
-  {
-    "StoelId": 1279,
-    "Omschrijving": "Rij A Stoel 19",
-    "Rij": "A",
-    "StoelNr": 19,
-    "Premium": true,
-    "ZaalId": 8
-  },
-  {
-    "StoelId": 1280,
-    "Omschrijving": "Rij A Stoel 20",
-    "Rij": "A",
-    "StoelNr": 20,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 8
   },
   {
@@ -10236,7 +8196,7 @@
     "Omschrijving": "Rij B Stoel 1",
     "Rij": "B",
     "StoelNr": 1,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 8
   },
   {
@@ -10244,7 +8204,7 @@
     "Omschrijving": "Rij B Stoel 2",
     "Rij": "B",
     "StoelNr": 2,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 8
   },
   {
@@ -10252,7 +8212,7 @@
     "Omschrijving": "Rij B Stoel 3",
     "Rij": "B",
     "StoelNr": 3,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 8
   },
   {
@@ -10260,7 +8220,7 @@
     "Omschrijving": "Rij B Stoel 4",
     "Rij": "B",
     "StoelNr": 4,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 8
   },
   {
@@ -10268,7 +8228,7 @@
     "Omschrijving": "Rij B Stoel 5",
     "Rij": "B",
     "StoelNr": 5,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 8
   },
   {
@@ -10276,7 +8236,7 @@
     "Omschrijving": "Rij B Stoel 6",
     "Rij": "B",
     "StoelNr": 6,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 8
   },
   {
@@ -10284,7 +8244,7 @@
     "Omschrijving": "Rij B Stoel 7",
     "Rij": "B",
     "StoelNr": 7,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 8
   },
   {
@@ -10292,7 +8252,7 @@
     "Omschrijving": "Rij B Stoel 8",
     "Rij": "B",
     "StoelNr": 8,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 8
   },
   {
@@ -10300,7 +8260,7 @@
     "Omschrijving": "Rij B Stoel 9",
     "Rij": "B",
     "StoelNr": 9,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 8
   },
   {
@@ -10308,7 +8268,7 @@
     "Omschrijving": "Rij B Stoel 10",
     "Rij": "B",
     "StoelNr": 10,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 8
   },
   {
@@ -10316,7 +8276,7 @@
     "Omschrijving": "Rij B Stoel 11",
     "Rij": "B",
     "StoelNr": 11,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 8
   },
   {
@@ -10324,7 +8284,7 @@
     "Omschrijving": "Rij B Stoel 12",
     "Rij": "B",
     "StoelNr": 12,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 8
   },
   {
@@ -10332,7 +8292,7 @@
     "Omschrijving": "Rij B Stoel 13",
     "Rij": "B",
     "StoelNr": 13,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 8
   },
   {
@@ -10340,7 +8300,7 @@
     "Omschrijving": "Rij B Stoel 14",
     "Rij": "B",
     "StoelNr": 14,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 8
   },
   {
@@ -10348,7 +8308,7 @@
     "Omschrijving": "Rij B Stoel 15",
     "Rij": "B",
     "StoelNr": 15,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 8
   },
   {
@@ -10356,39 +8316,7 @@
     "Omschrijving": "Rij B Stoel 16",
     "Rij": "B",
     "StoelNr": 16,
-    "Premium": true,
-    "ZaalId": 8
-  },
-  {
-    "StoelId": 1297,
-    "Omschrijving": "Rij B Stoel 17",
-    "Rij": "B",
-    "StoelNr": 17,
-    "Premium": true,
-    "ZaalId": 8
-  },
-  {
-    "StoelId": 1298,
-    "Omschrijving": "Rij B Stoel 18",
-    "Rij": "B",
-    "StoelNr": 18,
-    "Premium": true,
-    "ZaalId": 8
-  },
-  {
-    "StoelId": 1299,
-    "Omschrijving": "Rij B Stoel 19",
-    "Rij": "B",
-    "StoelNr": 19,
-    "Premium": true,
-    "ZaalId": 8
-  },
-  {
-    "StoelId": 1300,
-    "Omschrijving": "Rij B Stoel 20",
-    "Rij": "B",
-    "StoelNr": 20,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 8
   },
   {
@@ -10516,38 +8444,6 @@
     "Omschrijving": "Rij C Stoel 16",
     "Rij": "C",
     "StoelNr": 16,
-    "Premium": false,
-    "ZaalId": 8
-  },
-  {
-    "StoelId": 1317,
-    "Omschrijving": "Rij C Stoel 17",
-    "Rij": "C",
-    "StoelNr": 17,
-    "Premium": false,
-    "ZaalId": 8
-  },
-  {
-    "StoelId": 1318,
-    "Omschrijving": "Rij C Stoel 18",
-    "Rij": "C",
-    "StoelNr": 18,
-    "Premium": false,
-    "ZaalId": 8
-  },
-  {
-    "StoelId": 1319,
-    "Omschrijving": "Rij C Stoel 19",
-    "Rij": "C",
-    "StoelNr": 19,
-    "Premium": false,
-    "ZaalId": 8
-  },
-  {
-    "StoelId": 1320,
-    "Omschrijving": "Rij C Stoel 20",
-    "Rij": "C",
-    "StoelNr": 20,
     "Premium": false,
     "ZaalId": 8
   },
@@ -10680,38 +8576,6 @@
     "ZaalId": 8
   },
   {
-    "StoelId": 1337,
-    "Omschrijving": "Rij D Stoel 17",
-    "Rij": "D",
-    "StoelNr": 17,
-    "Premium": false,
-    "ZaalId": 8
-  },
-  {
-    "StoelId": 1338,
-    "Omschrijving": "Rij D Stoel 18",
-    "Rij": "D",
-    "StoelNr": 18,
-    "Premium": false,
-    "ZaalId": 8
-  },
-  {
-    "StoelId": 1339,
-    "Omschrijving": "Rij D Stoel 19",
-    "Rij": "D",
-    "StoelNr": 19,
-    "Premium": false,
-    "ZaalId": 8
-  },
-  {
-    "StoelId": 1340,
-    "Omschrijving": "Rij D Stoel 20",
-    "Rij": "D",
-    "StoelNr": 20,
-    "Premium": false,
-    "ZaalId": 8
-  },
-  {
     "StoelId": 1341,
     "Omschrijving": "Rij E Stoel 1",
     "Rij": "E",
@@ -10836,38 +8700,6 @@
     "Omschrijving": "Rij E Stoel 16",
     "Rij": "E",
     "StoelNr": 16,
-    "Premium": false,
-    "ZaalId": 8
-  },
-  {
-    "StoelId": 1357,
-    "Omschrijving": "Rij E Stoel 17",
-    "Rij": "E",
-    "StoelNr": 17,
-    "Premium": false,
-    "ZaalId": 8
-  },
-  {
-    "StoelId": 1358,
-    "Omschrijving": "Rij E Stoel 18",
-    "Rij": "E",
-    "StoelNr": 18,
-    "Premium": false,
-    "ZaalId": 8
-  },
-  {
-    "StoelId": 1359,
-    "Omschrijving": "Rij E Stoel 19",
-    "Rij": "E",
-    "StoelNr": 19,
-    "Premium": false,
-    "ZaalId": 8
-  },
-  {
-    "StoelId": 1360,
-    "Omschrijving": "Rij E Stoel 20",
-    "Rij": "E",
-    "StoelNr": 20,
     "Premium": false,
     "ZaalId": 8
   },
@@ -11000,38 +8832,6 @@
     "ZaalId": 8
   },
   {
-    "StoelId": 1377,
-    "Omschrijving": "Rij F Stoel 17",
-    "Rij": "F",
-    "StoelNr": 17,
-    "Premium": false,
-    "ZaalId": 8
-  },
-  {
-    "StoelId": 1378,
-    "Omschrijving": "Rij F Stoel 18",
-    "Rij": "F",
-    "StoelNr": 18,
-    "Premium": false,
-    "ZaalId": 8
-  },
-  {
-    "StoelId": 1379,
-    "Omschrijving": "Rij F Stoel 19",
-    "Rij": "F",
-    "StoelNr": 19,
-    "Premium": false,
-    "ZaalId": 8
-  },
-  {
-    "StoelId": 1380,
-    "Omschrijving": "Rij F Stoel 20",
-    "Rij": "F",
-    "StoelNr": 20,
-    "Premium": false,
-    "ZaalId": 8
-  },
-  {
     "StoelId": 1381,
     "Omschrijving": "Rij G Stoel 1",
     "Rij": "G",
@@ -11160,43 +8960,11 @@
     "ZaalId": 8
   },
   {
-    "StoelId": 1397,
-    "Omschrijving": "Rij G Stoel 17",
-    "Rij": "G",
-    "StoelNr": 17,
-    "Premium": false,
-    "ZaalId": 8
-  },
-  {
-    "StoelId": 1398,
-    "Omschrijving": "Rij G Stoel 18",
-    "Rij": "G",
-    "StoelNr": 18,
-    "Premium": false,
-    "ZaalId": 8
-  },
-  {
-    "StoelId": 1399,
-    "Omschrijving": "Rij G Stoel 19",
-    "Rij": "G",
-    "StoelNr": 19,
-    "Premium": false,
-    "ZaalId": 8
-  },
-  {
-    "StoelId": 1400,
-    "Omschrijving": "Rij G Stoel 20",
-    "Rij": "G",
-    "StoelNr": 20,
-    "Premium": false,
-    "ZaalId": 8
-  },
-  {
     "StoelId": 1401,
     "Omschrijving": "Rij H Stoel 1",
     "Rij": "H",
     "StoelNr": 1,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 8
   },
   {
@@ -11204,7 +8972,7 @@
     "Omschrijving": "Rij H Stoel 2",
     "Rij": "H",
     "StoelNr": 2,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 8
   },
   {
@@ -11212,7 +8980,7 @@
     "Omschrijving": "Rij H Stoel 3",
     "Rij": "H",
     "StoelNr": 3,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 8
   },
   {
@@ -11220,7 +8988,7 @@
     "Omschrijving": "Rij H Stoel 4",
     "Rij": "H",
     "StoelNr": 4,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 8
   },
   {
@@ -11228,7 +8996,7 @@
     "Omschrijving": "Rij H Stoel 5",
     "Rij": "H",
     "StoelNr": 5,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 8
   },
   {
@@ -11236,7 +9004,7 @@
     "Omschrijving": "Rij H Stoel 6",
     "Rij": "H",
     "StoelNr": 6,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 8
   },
   {
@@ -11244,7 +9012,7 @@
     "Omschrijving": "Rij H Stoel 7",
     "Rij": "H",
     "StoelNr": 7,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 8
   },
   {
@@ -11252,7 +9020,7 @@
     "Omschrijving": "Rij H Stoel 8",
     "Rij": "H",
     "StoelNr": 8,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 8
   },
   {
@@ -11260,7 +9028,7 @@
     "Omschrijving": "Rij H Stoel 9",
     "Rij": "H",
     "StoelNr": 9,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 8
   },
   {
@@ -11268,7 +9036,7 @@
     "Omschrijving": "Rij H Stoel 10",
     "Rij": "H",
     "StoelNr": 10,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 8
   },
   {
@@ -11276,7 +9044,7 @@
     "Omschrijving": "Rij H Stoel 11",
     "Rij": "H",
     "StoelNr": 11,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 8
   },
   {
@@ -11284,7 +9052,7 @@
     "Omschrijving": "Rij H Stoel 12",
     "Rij": "H",
     "StoelNr": 12,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 8
   },
   {
@@ -11292,7 +9060,7 @@
     "Omschrijving": "Rij H Stoel 13",
     "Rij": "H",
     "StoelNr": 13,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 8
   },
   {
@@ -11300,7 +9068,7 @@
     "Omschrijving": "Rij H Stoel 14",
     "Rij": "H",
     "StoelNr": 14,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 8
   },
   {
@@ -11308,7 +9076,7 @@
     "Omschrijving": "Rij H Stoel 15",
     "Rij": "H",
     "StoelNr": 15,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 8
   },
   {
@@ -11316,39 +9084,7 @@
     "Omschrijving": "Rij H Stoel 16",
     "Rij": "H",
     "StoelNr": 16,
-    "Premium": false,
-    "ZaalId": 8
-  },
-  {
-    "StoelId": 1417,
-    "Omschrijving": "Rij H Stoel 17",
-    "Rij": "H",
-    "StoelNr": 17,
-    "Premium": false,
-    "ZaalId": 8
-  },
-  {
-    "StoelId": 1418,
-    "Omschrijving": "Rij H Stoel 18",
-    "Rij": "H",
-    "StoelNr": 18,
-    "Premium": false,
-    "ZaalId": 8
-  },
-  {
-    "StoelId": 1419,
-    "Omschrijving": "Rij H Stoel 19",
-    "Rij": "H",
-    "StoelNr": 19,
-    "Premium": false,
-    "ZaalId": 8
-  },
-  {
-    "StoelId": 1420,
-    "Omschrijving": "Rij H Stoel 20",
-    "Rij": "H",
-    "StoelNr": 20,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 8
   },
   {
@@ -11356,7 +9092,7 @@
     "Omschrijving": "Rij I Stoel 1",
     "Rij": "I",
     "StoelNr": 1,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 8
   },
   {
@@ -11364,7 +9100,7 @@
     "Omschrijving": "Rij I Stoel 2",
     "Rij": "I",
     "StoelNr": 2,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 8
   },
   {
@@ -11372,7 +9108,7 @@
     "Omschrijving": "Rij I Stoel 3",
     "Rij": "I",
     "StoelNr": 3,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 8
   },
   {
@@ -11380,7 +9116,7 @@
     "Omschrijving": "Rij I Stoel 4",
     "Rij": "I",
     "StoelNr": 4,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 8
   },
   {
@@ -11388,7 +9124,7 @@
     "Omschrijving": "Rij I Stoel 5",
     "Rij": "I",
     "StoelNr": 5,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 8
   },
   {
@@ -11396,7 +9132,7 @@
     "Omschrijving": "Rij I Stoel 6",
     "Rij": "I",
     "StoelNr": 6,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 8
   },
   {
@@ -11404,7 +9140,7 @@
     "Omschrijving": "Rij I Stoel 7",
     "Rij": "I",
     "StoelNr": 7,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 8
   },
   {
@@ -11412,7 +9148,7 @@
     "Omschrijving": "Rij I Stoel 8",
     "Rij": "I",
     "StoelNr": 8,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 8
   },
   {
@@ -11420,7 +9156,7 @@
     "Omschrijving": "Rij I Stoel 9",
     "Rij": "I",
     "StoelNr": 9,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 8
   },
   {
@@ -11428,7 +9164,7 @@
     "Omschrijving": "Rij I Stoel 10",
     "Rij": "I",
     "StoelNr": 10,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 8
   },
   {
@@ -11436,7 +9172,7 @@
     "Omschrijving": "Rij I Stoel 11",
     "Rij": "I",
     "StoelNr": 11,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 8
   },
   {
@@ -11444,7 +9180,7 @@
     "Omschrijving": "Rij I Stoel 12",
     "Rij": "I",
     "StoelNr": 12,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 8
   },
   {
@@ -11452,7 +9188,7 @@
     "Omschrijving": "Rij I Stoel 13",
     "Rij": "I",
     "StoelNr": 13,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 8
   },
   {
@@ -11460,7 +9196,7 @@
     "Omschrijving": "Rij I Stoel 14",
     "Rij": "I",
     "StoelNr": 14,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 8
   },
   {
@@ -11468,7 +9204,7 @@
     "Omschrijving": "Rij I Stoel 15",
     "Rij": "I",
     "StoelNr": 15,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 8
   },
   {
@@ -11476,39 +9212,7 @@
     "Omschrijving": "Rij I Stoel 16",
     "Rij": "I",
     "StoelNr": 16,
-    "Premium": false,
-    "ZaalId": 8
-  },
-  {
-    "StoelId": 1437,
-    "Omschrijving": "Rij I Stoel 17",
-    "Rij": "I",
-    "StoelNr": 17,
-    "Premium": false,
-    "ZaalId": 8
-  },
-  {
-    "StoelId": 1438,
-    "Omschrijving": "Rij I Stoel 18",
-    "Rij": "I",
-    "StoelNr": 18,
-    "Premium": false,
-    "ZaalId": 8
-  },
-  {
-    "StoelId": 1439,
-    "Omschrijving": "Rij I Stoel 19",
-    "Rij": "I",
-    "StoelNr": 19,
-    "Premium": false,
-    "ZaalId": 8
-  },
-  {
-    "StoelId": 1440,
-    "Omschrijving": "Rij I Stoel 20",
-    "Rij": "I",
-    "StoelNr": 20,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 8
   },
   {
@@ -11516,7 +9220,7 @@
     "Omschrijving": "Rij A Stoel 1",
     "Rij": "A",
     "StoelNr": 1,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 9
   },
   {
@@ -11524,7 +9228,7 @@
     "Omschrijving": "Rij A Stoel 2",
     "Rij": "A",
     "StoelNr": 2,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 9
   },
   {
@@ -11532,7 +9236,7 @@
     "Omschrijving": "Rij A Stoel 3",
     "Rij": "A",
     "StoelNr": 3,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 9
   },
   {
@@ -11540,7 +9244,7 @@
     "Omschrijving": "Rij A Stoel 4",
     "Rij": "A",
     "StoelNr": 4,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 9
   },
   {
@@ -11548,7 +9252,7 @@
     "Omschrijving": "Rij A Stoel 5",
     "Rij": "A",
     "StoelNr": 5,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 9
   },
   {
@@ -11556,7 +9260,7 @@
     "Omschrijving": "Rij A Stoel 6",
     "Rij": "A",
     "StoelNr": 6,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 9
   },
   {
@@ -11564,7 +9268,7 @@
     "Omschrijving": "Rij A Stoel 7",
     "Rij": "A",
     "StoelNr": 7,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 9
   },
   {
@@ -11572,7 +9276,7 @@
     "Omschrijving": "Rij A Stoel 8",
     "Rij": "A",
     "StoelNr": 8,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 9
   },
   {
@@ -11580,7 +9284,7 @@
     "Omschrijving": "Rij A Stoel 9",
     "Rij": "A",
     "StoelNr": 9,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 9
   },
   {
@@ -11588,7 +9292,7 @@
     "Omschrijving": "Rij A Stoel 10",
     "Rij": "A",
     "StoelNr": 10,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 9
   },
   {
@@ -11596,7 +9300,7 @@
     "Omschrijving": "Rij A Stoel 11",
     "Rij": "A",
     "StoelNr": 11,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 9
   },
   {
@@ -11604,7 +9308,7 @@
     "Omschrijving": "Rij A Stoel 12",
     "Rij": "A",
     "StoelNr": 12,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 9
   },
   {
@@ -11612,7 +9316,7 @@
     "Omschrijving": "Rij A Stoel 13",
     "Rij": "A",
     "StoelNr": 13,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 9
   },
   {
@@ -11620,7 +9324,7 @@
     "Omschrijving": "Rij A Stoel 14",
     "Rij": "A",
     "StoelNr": 14,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 9
   },
   {
@@ -11628,7 +9332,7 @@
     "Omschrijving": "Rij A Stoel 15",
     "Rij": "A",
     "StoelNr": 15,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 9
   },
   {
@@ -11636,39 +9340,7 @@
     "Omschrijving": "Rij A Stoel 16",
     "Rij": "A",
     "StoelNr": 16,
-    "Premium": true,
-    "ZaalId": 9
-  },
-  {
-    "StoelId": 1457,
-    "Omschrijving": "Rij A Stoel 17",
-    "Rij": "A",
-    "StoelNr": 17,
-    "Premium": true,
-    "ZaalId": 9
-  },
-  {
-    "StoelId": 1458,
-    "Omschrijving": "Rij A Stoel 18",
-    "Rij": "A",
-    "StoelNr": 18,
-    "Premium": true,
-    "ZaalId": 9
-  },
-  {
-    "StoelId": 1459,
-    "Omschrijving": "Rij A Stoel 19",
-    "Rij": "A",
-    "StoelNr": 19,
-    "Premium": true,
-    "ZaalId": 9
-  },
-  {
-    "StoelId": 1460,
-    "Omschrijving": "Rij A Stoel 20",
-    "Rij": "A",
-    "StoelNr": 20,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 9
   },
   {
@@ -11676,7 +9348,7 @@
     "Omschrijving": "Rij B Stoel 1",
     "Rij": "B",
     "StoelNr": 1,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 9
   },
   {
@@ -11684,7 +9356,7 @@
     "Omschrijving": "Rij B Stoel 2",
     "Rij": "B",
     "StoelNr": 2,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 9
   },
   {
@@ -11692,7 +9364,7 @@
     "Omschrijving": "Rij B Stoel 3",
     "Rij": "B",
     "StoelNr": 3,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 9
   },
   {
@@ -11700,7 +9372,7 @@
     "Omschrijving": "Rij B Stoel 4",
     "Rij": "B",
     "StoelNr": 4,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 9
   },
   {
@@ -11708,7 +9380,7 @@
     "Omschrijving": "Rij B Stoel 5",
     "Rij": "B",
     "StoelNr": 5,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 9
   },
   {
@@ -11716,7 +9388,7 @@
     "Omschrijving": "Rij B Stoel 6",
     "Rij": "B",
     "StoelNr": 6,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 9
   },
   {
@@ -11724,7 +9396,7 @@
     "Omschrijving": "Rij B Stoel 7",
     "Rij": "B",
     "StoelNr": 7,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 9
   },
   {
@@ -11732,7 +9404,7 @@
     "Omschrijving": "Rij B Stoel 8",
     "Rij": "B",
     "StoelNr": 8,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 9
   },
   {
@@ -11740,7 +9412,7 @@
     "Omschrijving": "Rij B Stoel 9",
     "Rij": "B",
     "StoelNr": 9,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 9
   },
   {
@@ -11748,7 +9420,7 @@
     "Omschrijving": "Rij B Stoel 10",
     "Rij": "B",
     "StoelNr": 10,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 9
   },
   {
@@ -11756,7 +9428,7 @@
     "Omschrijving": "Rij B Stoel 11",
     "Rij": "B",
     "StoelNr": 11,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 9
   },
   {
@@ -11764,7 +9436,7 @@
     "Omschrijving": "Rij B Stoel 12",
     "Rij": "B",
     "StoelNr": 12,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 9
   },
   {
@@ -11772,7 +9444,7 @@
     "Omschrijving": "Rij B Stoel 13",
     "Rij": "B",
     "StoelNr": 13,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 9
   },
   {
@@ -11780,7 +9452,7 @@
     "Omschrijving": "Rij B Stoel 14",
     "Rij": "B",
     "StoelNr": 14,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 9
   },
   {
@@ -11788,7 +9460,7 @@
     "Omschrijving": "Rij B Stoel 15",
     "Rij": "B",
     "StoelNr": 15,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 9
   },
   {
@@ -11796,39 +9468,7 @@
     "Omschrijving": "Rij B Stoel 16",
     "Rij": "B",
     "StoelNr": 16,
-    "Premium": true,
-    "ZaalId": 9
-  },
-  {
-    "StoelId": 1477,
-    "Omschrijving": "Rij B Stoel 17",
-    "Rij": "B",
-    "StoelNr": 17,
-    "Premium": true,
-    "ZaalId": 9
-  },
-  {
-    "StoelId": 1478,
-    "Omschrijving": "Rij B Stoel 18",
-    "Rij": "B",
-    "StoelNr": 18,
-    "Premium": true,
-    "ZaalId": 9
-  },
-  {
-    "StoelId": 1479,
-    "Omschrijving": "Rij B Stoel 19",
-    "Rij": "B",
-    "StoelNr": 19,
-    "Premium": true,
-    "ZaalId": 9
-  },
-  {
-    "StoelId": 1480,
-    "Omschrijving": "Rij B Stoel 20",
-    "Rij": "B",
-    "StoelNr": 20,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 9
   },
   {
@@ -11956,38 +9596,6 @@
     "Omschrijving": "Rij C Stoel 16",
     "Rij": "C",
     "StoelNr": 16,
-    "Premium": false,
-    "ZaalId": 9
-  },
-  {
-    "StoelId": 1497,
-    "Omschrijving": "Rij C Stoel 17",
-    "Rij": "C",
-    "StoelNr": 17,
-    "Premium": false,
-    "ZaalId": 9
-  },
-  {
-    "StoelId": 1498,
-    "Omschrijving": "Rij C Stoel 18",
-    "Rij": "C",
-    "StoelNr": 18,
-    "Premium": false,
-    "ZaalId": 9
-  },
-  {
-    "StoelId": 1499,
-    "Omschrijving": "Rij C Stoel 19",
-    "Rij": "C",
-    "StoelNr": 19,
-    "Premium": false,
-    "ZaalId": 9
-  },
-  {
-    "StoelId": 1500,
-    "Omschrijving": "Rij C Stoel 20",
-    "Rij": "C",
-    "StoelNr": 20,
     "Premium": false,
     "ZaalId": 9
   },
@@ -12120,38 +9728,6 @@
     "ZaalId": 9
   },
   {
-    "StoelId": 1517,
-    "Omschrijving": "Rij D Stoel 17",
-    "Rij": "D",
-    "StoelNr": 17,
-    "Premium": false,
-    "ZaalId": 9
-  },
-  {
-    "StoelId": 1518,
-    "Omschrijving": "Rij D Stoel 18",
-    "Rij": "D",
-    "StoelNr": 18,
-    "Premium": false,
-    "ZaalId": 9
-  },
-  {
-    "StoelId": 1519,
-    "Omschrijving": "Rij D Stoel 19",
-    "Rij": "D",
-    "StoelNr": 19,
-    "Premium": false,
-    "ZaalId": 9
-  },
-  {
-    "StoelId": 1520,
-    "Omschrijving": "Rij D Stoel 20",
-    "Rij": "D",
-    "StoelNr": 20,
-    "Premium": false,
-    "ZaalId": 9
-  },
-  {
     "StoelId": 1521,
     "Omschrijving": "Rij E Stoel 1",
     "Rij": "E",
@@ -12276,38 +9852,6 @@
     "Omschrijving": "Rij E Stoel 16",
     "Rij": "E",
     "StoelNr": 16,
-    "Premium": false,
-    "ZaalId": 9
-  },
-  {
-    "StoelId": 1537,
-    "Omschrijving": "Rij E Stoel 17",
-    "Rij": "E",
-    "StoelNr": 17,
-    "Premium": false,
-    "ZaalId": 9
-  },
-  {
-    "StoelId": 1538,
-    "Omschrijving": "Rij E Stoel 18",
-    "Rij": "E",
-    "StoelNr": 18,
-    "Premium": false,
-    "ZaalId": 9
-  },
-  {
-    "StoelId": 1539,
-    "Omschrijving": "Rij E Stoel 19",
-    "Rij": "E",
-    "StoelNr": 19,
-    "Premium": false,
-    "ZaalId": 9
-  },
-  {
-    "StoelId": 1540,
-    "Omschrijving": "Rij E Stoel 20",
-    "Rij": "E",
-    "StoelNr": 20,
     "Premium": false,
     "ZaalId": 9
   },
@@ -12440,38 +9984,6 @@
     "ZaalId": 9
   },
   {
-    "StoelId": 1557,
-    "Omschrijving": "Rij F Stoel 17",
-    "Rij": "F",
-    "StoelNr": 17,
-    "Premium": false,
-    "ZaalId": 9
-  },
-  {
-    "StoelId": 1558,
-    "Omschrijving": "Rij F Stoel 18",
-    "Rij": "F",
-    "StoelNr": 18,
-    "Premium": false,
-    "ZaalId": 9
-  },
-  {
-    "StoelId": 1559,
-    "Omschrijving": "Rij F Stoel 19",
-    "Rij": "F",
-    "StoelNr": 19,
-    "Premium": false,
-    "ZaalId": 9
-  },
-  {
-    "StoelId": 1560,
-    "Omschrijving": "Rij F Stoel 20",
-    "Rij": "F",
-    "StoelNr": 20,
-    "Premium": false,
-    "ZaalId": 9
-  },
-  {
     "StoelId": 1561,
     "Omschrijving": "Rij G Stoel 1",
     "Rij": "G",
@@ -12600,43 +10112,11 @@
     "ZaalId": 9
   },
   {
-    "StoelId": 1577,
-    "Omschrijving": "Rij G Stoel 17",
-    "Rij": "G",
-    "StoelNr": 17,
-    "Premium": false,
-    "ZaalId": 9
-  },
-  {
-    "StoelId": 1578,
-    "Omschrijving": "Rij G Stoel 18",
-    "Rij": "G",
-    "StoelNr": 18,
-    "Premium": false,
-    "ZaalId": 9
-  },
-  {
-    "StoelId": 1579,
-    "Omschrijving": "Rij G Stoel 19",
-    "Rij": "G",
-    "StoelNr": 19,
-    "Premium": false,
-    "ZaalId": 9
-  },
-  {
-    "StoelId": 1580,
-    "Omschrijving": "Rij G Stoel 20",
-    "Rij": "G",
-    "StoelNr": 20,
-    "Premium": false,
-    "ZaalId": 9
-  },
-  {
     "StoelId": 1581,
     "Omschrijving": "Rij H Stoel 1",
     "Rij": "H",
     "StoelNr": 1,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 9
   },
   {
@@ -12644,7 +10124,7 @@
     "Omschrijving": "Rij H Stoel 2",
     "Rij": "H",
     "StoelNr": 2,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 9
   },
   {
@@ -12652,7 +10132,7 @@
     "Omschrijving": "Rij H Stoel 3",
     "Rij": "H",
     "StoelNr": 3,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 9
   },
   {
@@ -12660,7 +10140,7 @@
     "Omschrijving": "Rij H Stoel 4",
     "Rij": "H",
     "StoelNr": 4,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 9
   },
   {
@@ -12668,7 +10148,7 @@
     "Omschrijving": "Rij H Stoel 5",
     "Rij": "H",
     "StoelNr": 5,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 9
   },
   {
@@ -12676,7 +10156,7 @@
     "Omschrijving": "Rij H Stoel 6",
     "Rij": "H",
     "StoelNr": 6,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 9
   },
   {
@@ -12684,7 +10164,7 @@
     "Omschrijving": "Rij H Stoel 7",
     "Rij": "H",
     "StoelNr": 7,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 9
   },
   {
@@ -12692,7 +10172,7 @@
     "Omschrijving": "Rij H Stoel 8",
     "Rij": "H",
     "StoelNr": 8,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 9
   },
   {
@@ -12700,7 +10180,7 @@
     "Omschrijving": "Rij H Stoel 9",
     "Rij": "H",
     "StoelNr": 9,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 9
   },
   {
@@ -12708,7 +10188,7 @@
     "Omschrijving": "Rij H Stoel 10",
     "Rij": "H",
     "StoelNr": 10,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 9
   },
   {
@@ -12716,7 +10196,7 @@
     "Omschrijving": "Rij H Stoel 11",
     "Rij": "H",
     "StoelNr": 11,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 9
   },
   {
@@ -12724,7 +10204,7 @@
     "Omschrijving": "Rij H Stoel 12",
     "Rij": "H",
     "StoelNr": 12,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 9
   },
   {
@@ -12732,7 +10212,7 @@
     "Omschrijving": "Rij H Stoel 13",
     "Rij": "H",
     "StoelNr": 13,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 9
   },
   {
@@ -12740,7 +10220,7 @@
     "Omschrijving": "Rij H Stoel 14",
     "Rij": "H",
     "StoelNr": 14,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 9
   },
   {
@@ -12748,7 +10228,7 @@
     "Omschrijving": "Rij H Stoel 15",
     "Rij": "H",
     "StoelNr": 15,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 9
   },
   {
@@ -12756,39 +10236,7 @@
     "Omschrijving": "Rij H Stoel 16",
     "Rij": "H",
     "StoelNr": 16,
-    "Premium": false,
-    "ZaalId": 9
-  },
-  {
-    "StoelId": 1597,
-    "Omschrijving": "Rij H Stoel 17",
-    "Rij": "H",
-    "StoelNr": 17,
-    "Premium": false,
-    "ZaalId": 9
-  },
-  {
-    "StoelId": 1598,
-    "Omschrijving": "Rij H Stoel 18",
-    "Rij": "H",
-    "StoelNr": 18,
-    "Premium": false,
-    "ZaalId": 9
-  },
-  {
-    "StoelId": 1599,
-    "Omschrijving": "Rij H Stoel 19",
-    "Rij": "H",
-    "StoelNr": 19,
-    "Premium": false,
-    "ZaalId": 9
-  },
-  {
-    "StoelId": 1600,
-    "Omschrijving": "Rij H Stoel 20",
-    "Rij": "H",
-    "StoelNr": 20,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 9
   },
   {
@@ -12796,7 +10244,7 @@
     "Omschrijving": "Rij I Stoel 1",
     "Rij": "I",
     "StoelNr": 1,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 9
   },
   {
@@ -12804,7 +10252,7 @@
     "Omschrijving": "Rij I Stoel 2",
     "Rij": "I",
     "StoelNr": 2,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 9
   },
   {
@@ -12812,7 +10260,7 @@
     "Omschrijving": "Rij I Stoel 3",
     "Rij": "I",
     "StoelNr": 3,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 9
   },
   {
@@ -12820,7 +10268,7 @@
     "Omschrijving": "Rij I Stoel 4",
     "Rij": "I",
     "StoelNr": 4,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 9
   },
   {
@@ -12828,7 +10276,7 @@
     "Omschrijving": "Rij I Stoel 5",
     "Rij": "I",
     "StoelNr": 5,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 9
   },
   {
@@ -12836,7 +10284,7 @@
     "Omschrijving": "Rij I Stoel 6",
     "Rij": "I",
     "StoelNr": 6,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 9
   },
   {
@@ -12844,7 +10292,7 @@
     "Omschrijving": "Rij I Stoel 7",
     "Rij": "I",
     "StoelNr": 7,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 9
   },
   {
@@ -12852,7 +10300,7 @@
     "Omschrijving": "Rij I Stoel 8",
     "Rij": "I",
     "StoelNr": 8,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 9
   },
   {
@@ -12860,7 +10308,7 @@
     "Omschrijving": "Rij I Stoel 9",
     "Rij": "I",
     "StoelNr": 9,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 9
   },
   {
@@ -12868,7 +10316,7 @@
     "Omschrijving": "Rij I Stoel 10",
     "Rij": "I",
     "StoelNr": 10,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 9
   },
   {
@@ -12876,7 +10324,7 @@
     "Omschrijving": "Rij I Stoel 11",
     "Rij": "I",
     "StoelNr": 11,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 9
   },
   {
@@ -12884,7 +10332,7 @@
     "Omschrijving": "Rij I Stoel 12",
     "Rij": "I",
     "StoelNr": 12,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 9
   },
   {
@@ -12892,7 +10340,7 @@
     "Omschrijving": "Rij I Stoel 13",
     "Rij": "I",
     "StoelNr": 13,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 9
   },
   {
@@ -12900,7 +10348,7 @@
     "Omschrijving": "Rij I Stoel 14",
     "Rij": "I",
     "StoelNr": 14,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 9
   },
   {
@@ -12908,7 +10356,7 @@
     "Omschrijving": "Rij I Stoel 15",
     "Rij": "I",
     "StoelNr": 15,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 9
   },
   {
@@ -12916,39 +10364,7 @@
     "Omschrijving": "Rij I Stoel 16",
     "Rij": "I",
     "StoelNr": 16,
-    "Premium": false,
-    "ZaalId": 9
-  },
-  {
-    "StoelId": 1617,
-    "Omschrijving": "Rij I Stoel 17",
-    "Rij": "I",
-    "StoelNr": 17,
-    "Premium": false,
-    "ZaalId": 9
-  },
-  {
-    "StoelId": 1618,
-    "Omschrijving": "Rij I Stoel 18",
-    "Rij": "I",
-    "StoelNr": 18,
-    "Premium": false,
-    "ZaalId": 9
-  },
-  {
-    "StoelId": 1619,
-    "Omschrijving": "Rij I Stoel 19",
-    "Rij": "I",
-    "StoelNr": 19,
-    "Premium": false,
-    "ZaalId": 9
-  },
-  {
-    "StoelId": 1620,
-    "Omschrijving": "Rij I Stoel 20",
-    "Rij": "I",
-    "StoelNr": 20,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 9
   },
   {
@@ -12956,7 +10372,7 @@
     "Omschrijving": "Rij A Stoel 1",
     "Rij": "A",
     "StoelNr": 1,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 10
   },
   {
@@ -12964,7 +10380,7 @@
     "Omschrijving": "Rij A Stoel 2",
     "Rij": "A",
     "StoelNr": 2,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 10
   },
   {
@@ -12972,7 +10388,7 @@
     "Omschrijving": "Rij A Stoel 3",
     "Rij": "A",
     "StoelNr": 3,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 10
   },
   {
@@ -12980,7 +10396,7 @@
     "Omschrijving": "Rij A Stoel 4",
     "Rij": "A",
     "StoelNr": 4,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 10
   },
   {
@@ -12988,7 +10404,7 @@
     "Omschrijving": "Rij A Stoel 5",
     "Rij": "A",
     "StoelNr": 5,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 10
   },
   {
@@ -12996,7 +10412,7 @@
     "Omschrijving": "Rij A Stoel 6",
     "Rij": "A",
     "StoelNr": 6,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 10
   },
   {
@@ -13004,7 +10420,7 @@
     "Omschrijving": "Rij A Stoel 7",
     "Rij": "A",
     "StoelNr": 7,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 10
   },
   {
@@ -13012,7 +10428,7 @@
     "Omschrijving": "Rij A Stoel 8",
     "Rij": "A",
     "StoelNr": 8,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 10
   },
   {
@@ -13020,7 +10436,7 @@
     "Omschrijving": "Rij A Stoel 9",
     "Rij": "A",
     "StoelNr": 9,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 10
   },
   {
@@ -13028,7 +10444,7 @@
     "Omschrijving": "Rij A Stoel 10",
     "Rij": "A",
     "StoelNr": 10,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 10
   },
   {
@@ -13036,7 +10452,7 @@
     "Omschrijving": "Rij A Stoel 11",
     "Rij": "A",
     "StoelNr": 11,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 10
   },
   {
@@ -13044,7 +10460,7 @@
     "Omschrijving": "Rij A Stoel 12",
     "Rij": "A",
     "StoelNr": 12,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 10
   },
   {
@@ -13052,7 +10468,7 @@
     "Omschrijving": "Rij A Stoel 13",
     "Rij": "A",
     "StoelNr": 13,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 10
   },
   {
@@ -13060,7 +10476,7 @@
     "Omschrijving": "Rij A Stoel 14",
     "Rij": "A",
     "StoelNr": 14,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 10
   },
   {
@@ -13068,7 +10484,7 @@
     "Omschrijving": "Rij A Stoel 15",
     "Rij": "A",
     "StoelNr": 15,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 10
   },
   {
@@ -13076,39 +10492,7 @@
     "Omschrijving": "Rij A Stoel 16",
     "Rij": "A",
     "StoelNr": 16,
-    "Premium": true,
-    "ZaalId": 10
-  },
-  {
-    "StoelId": 1637,
-    "Omschrijving": "Rij A Stoel 17",
-    "Rij": "A",
-    "StoelNr": 17,
-    "Premium": true,
-    "ZaalId": 10
-  },
-  {
-    "StoelId": 1638,
-    "Omschrijving": "Rij A Stoel 18",
-    "Rij": "A",
-    "StoelNr": 18,
-    "Premium": true,
-    "ZaalId": 10
-  },
-  {
-    "StoelId": 1639,
-    "Omschrijving": "Rij A Stoel 19",
-    "Rij": "A",
-    "StoelNr": 19,
-    "Premium": true,
-    "ZaalId": 10
-  },
-  {
-    "StoelId": 1640,
-    "Omschrijving": "Rij A Stoel 20",
-    "Rij": "A",
-    "StoelNr": 20,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 10
   },
   {
@@ -13116,7 +10500,7 @@
     "Omschrijving": "Rij B Stoel 1",
     "Rij": "B",
     "StoelNr": 1,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 10
   },
   {
@@ -13124,7 +10508,7 @@
     "Omschrijving": "Rij B Stoel 2",
     "Rij": "B",
     "StoelNr": 2,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 10
   },
   {
@@ -13132,7 +10516,7 @@
     "Omschrijving": "Rij B Stoel 3",
     "Rij": "B",
     "StoelNr": 3,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 10
   },
   {
@@ -13140,7 +10524,7 @@
     "Omschrijving": "Rij B Stoel 4",
     "Rij": "B",
     "StoelNr": 4,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 10
   },
   {
@@ -13148,7 +10532,7 @@
     "Omschrijving": "Rij B Stoel 5",
     "Rij": "B",
     "StoelNr": 5,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 10
   },
   {
@@ -13156,7 +10540,7 @@
     "Omschrijving": "Rij B Stoel 6",
     "Rij": "B",
     "StoelNr": 6,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 10
   },
   {
@@ -13164,7 +10548,7 @@
     "Omschrijving": "Rij B Stoel 7",
     "Rij": "B",
     "StoelNr": 7,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 10
   },
   {
@@ -13172,7 +10556,7 @@
     "Omschrijving": "Rij B Stoel 8",
     "Rij": "B",
     "StoelNr": 8,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 10
   },
   {
@@ -13180,7 +10564,7 @@
     "Omschrijving": "Rij B Stoel 9",
     "Rij": "B",
     "StoelNr": 9,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 10
   },
   {
@@ -13188,7 +10572,7 @@
     "Omschrijving": "Rij B Stoel 10",
     "Rij": "B",
     "StoelNr": 10,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 10
   },
   {
@@ -13196,7 +10580,7 @@
     "Omschrijving": "Rij B Stoel 11",
     "Rij": "B",
     "StoelNr": 11,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 10
   },
   {
@@ -13204,7 +10588,7 @@
     "Omschrijving": "Rij B Stoel 12",
     "Rij": "B",
     "StoelNr": 12,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 10
   },
   {
@@ -13212,7 +10596,7 @@
     "Omschrijving": "Rij B Stoel 13",
     "Rij": "B",
     "StoelNr": 13,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 10
   },
   {
@@ -13220,7 +10604,7 @@
     "Omschrijving": "Rij B Stoel 14",
     "Rij": "B",
     "StoelNr": 14,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 10
   },
   {
@@ -13228,7 +10612,7 @@
     "Omschrijving": "Rij B Stoel 15",
     "Rij": "B",
     "StoelNr": 15,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 10
   },
   {
@@ -13236,39 +10620,7 @@
     "Omschrijving": "Rij B Stoel 16",
     "Rij": "B",
     "StoelNr": 16,
-    "Premium": true,
-    "ZaalId": 10
-  },
-  {
-    "StoelId": 1657,
-    "Omschrijving": "Rij B Stoel 17",
-    "Rij": "B",
-    "StoelNr": 17,
-    "Premium": true,
-    "ZaalId": 10
-  },
-  {
-    "StoelId": 1658,
-    "Omschrijving": "Rij B Stoel 18",
-    "Rij": "B",
-    "StoelNr": 18,
-    "Premium": true,
-    "ZaalId": 10
-  },
-  {
-    "StoelId": 1659,
-    "Omschrijving": "Rij B Stoel 19",
-    "Rij": "B",
-    "StoelNr": 19,
-    "Premium": true,
-    "ZaalId": 10
-  },
-  {
-    "StoelId": 1660,
-    "Omschrijving": "Rij B Stoel 20",
-    "Rij": "B",
-    "StoelNr": 20,
-    "Premium": true,
+    "Premium": false,
     "ZaalId": 10
   },
   {
@@ -13396,38 +10748,6 @@
     "Omschrijving": "Rij C Stoel 16",
     "Rij": "C",
     "StoelNr": 16,
-    "Premium": false,
-    "ZaalId": 10
-  },
-  {
-    "StoelId": 1677,
-    "Omschrijving": "Rij C Stoel 17",
-    "Rij": "C",
-    "StoelNr": 17,
-    "Premium": false,
-    "ZaalId": 10
-  },
-  {
-    "StoelId": 1678,
-    "Omschrijving": "Rij C Stoel 18",
-    "Rij": "C",
-    "StoelNr": 18,
-    "Premium": false,
-    "ZaalId": 10
-  },
-  {
-    "StoelId": 1679,
-    "Omschrijving": "Rij C Stoel 19",
-    "Rij": "C",
-    "StoelNr": 19,
-    "Premium": false,
-    "ZaalId": 10
-  },
-  {
-    "StoelId": 1680,
-    "Omschrijving": "Rij C Stoel 20",
-    "Rij": "C",
-    "StoelNr": 20,
     "Premium": false,
     "ZaalId": 10
   },
@@ -13560,38 +10880,6 @@
     "ZaalId": 10
   },
   {
-    "StoelId": 1697,
-    "Omschrijving": "Rij D Stoel 17",
-    "Rij": "D",
-    "StoelNr": 17,
-    "Premium": false,
-    "ZaalId": 10
-  },
-  {
-    "StoelId": 1698,
-    "Omschrijving": "Rij D Stoel 18",
-    "Rij": "D",
-    "StoelNr": 18,
-    "Premium": false,
-    "ZaalId": 10
-  },
-  {
-    "StoelId": 1699,
-    "Omschrijving": "Rij D Stoel 19",
-    "Rij": "D",
-    "StoelNr": 19,
-    "Premium": false,
-    "ZaalId": 10
-  },
-  {
-    "StoelId": 1700,
-    "Omschrijving": "Rij D Stoel 20",
-    "Rij": "D",
-    "StoelNr": 20,
-    "Premium": false,
-    "ZaalId": 10
-  },
-  {
     "StoelId": 1701,
     "Omschrijving": "Rij E Stoel 1",
     "Rij": "E",
@@ -13716,38 +11004,6 @@
     "Omschrijving": "Rij E Stoel 16",
     "Rij": "E",
     "StoelNr": 16,
-    "Premium": false,
-    "ZaalId": 10
-  },
-  {
-    "StoelId": 1717,
-    "Omschrijving": "Rij E Stoel 17",
-    "Rij": "E",
-    "StoelNr": 17,
-    "Premium": false,
-    "ZaalId": 10
-  },
-  {
-    "StoelId": 1718,
-    "Omschrijving": "Rij E Stoel 18",
-    "Rij": "E",
-    "StoelNr": 18,
-    "Premium": false,
-    "ZaalId": 10
-  },
-  {
-    "StoelId": 1719,
-    "Omschrijving": "Rij E Stoel 19",
-    "Rij": "E",
-    "StoelNr": 19,
-    "Premium": false,
-    "ZaalId": 10
-  },
-  {
-    "StoelId": 1720,
-    "Omschrijving": "Rij E Stoel 20",
-    "Rij": "E",
-    "StoelNr": 20,
     "Premium": false,
     "ZaalId": 10
   },
@@ -13880,38 +11136,6 @@
     "ZaalId": 10
   },
   {
-    "StoelId": 1737,
-    "Omschrijving": "Rij F Stoel 17",
-    "Rij": "F",
-    "StoelNr": 17,
-    "Premium": false,
-    "ZaalId": 10
-  },
-  {
-    "StoelId": 1738,
-    "Omschrijving": "Rij F Stoel 18",
-    "Rij": "F",
-    "StoelNr": 18,
-    "Premium": false,
-    "ZaalId": 10
-  },
-  {
-    "StoelId": 1739,
-    "Omschrijving": "Rij F Stoel 19",
-    "Rij": "F",
-    "StoelNr": 19,
-    "Premium": false,
-    "ZaalId": 10
-  },
-  {
-    "StoelId": 1740,
-    "Omschrijving": "Rij F Stoel 20",
-    "Rij": "F",
-    "StoelNr": 20,
-    "Premium": false,
-    "ZaalId": 10
-  },
-  {
     "StoelId": 1741,
     "Omschrijving": "Rij G Stoel 1",
     "Rij": "G",
@@ -14040,43 +11264,11 @@
     "ZaalId": 10
   },
   {
-    "StoelId": 1757,
-    "Omschrijving": "Rij G Stoel 17",
-    "Rij": "G",
-    "StoelNr": 17,
-    "Premium": false,
-    "ZaalId": 10
-  },
-  {
-    "StoelId": 1758,
-    "Omschrijving": "Rij G Stoel 18",
-    "Rij": "G",
-    "StoelNr": 18,
-    "Premium": false,
-    "ZaalId": 10
-  },
-  {
-    "StoelId": 1759,
-    "Omschrijving": "Rij G Stoel 19",
-    "Rij": "G",
-    "StoelNr": 19,
-    "Premium": false,
-    "ZaalId": 10
-  },
-  {
-    "StoelId": 1760,
-    "Omschrijving": "Rij G Stoel 20",
-    "Rij": "G",
-    "StoelNr": 20,
-    "Premium": false,
-    "ZaalId": 10
-  },
-  {
     "StoelId": 1761,
     "Omschrijving": "Rij H Stoel 1",
     "Rij": "H",
     "StoelNr": 1,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 10
   },
   {
@@ -14084,7 +11276,7 @@
     "Omschrijving": "Rij H Stoel 2",
     "Rij": "H",
     "StoelNr": 2,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 10
   },
   {
@@ -14092,7 +11284,7 @@
     "Omschrijving": "Rij H Stoel 3",
     "Rij": "H",
     "StoelNr": 3,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 10
   },
   {
@@ -14100,7 +11292,7 @@
     "Omschrijving": "Rij H Stoel 4",
     "Rij": "H",
     "StoelNr": 4,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 10
   },
   {
@@ -14108,7 +11300,7 @@
     "Omschrijving": "Rij H Stoel 5",
     "Rij": "H",
     "StoelNr": 5,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 10
   },
   {
@@ -14116,7 +11308,7 @@
     "Omschrijving": "Rij H Stoel 6",
     "Rij": "H",
     "StoelNr": 6,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 10
   },
   {
@@ -14124,7 +11316,7 @@
     "Omschrijving": "Rij H Stoel 7",
     "Rij": "H",
     "StoelNr": 7,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 10
   },
   {
@@ -14132,7 +11324,7 @@
     "Omschrijving": "Rij H Stoel 8",
     "Rij": "H",
     "StoelNr": 8,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 10
   },
   {
@@ -14140,7 +11332,7 @@
     "Omschrijving": "Rij H Stoel 9",
     "Rij": "H",
     "StoelNr": 9,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 10
   },
   {
@@ -14148,7 +11340,7 @@
     "Omschrijving": "Rij H Stoel 10",
     "Rij": "H",
     "StoelNr": 10,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 10
   },
   {
@@ -14156,7 +11348,7 @@
     "Omschrijving": "Rij H Stoel 11",
     "Rij": "H",
     "StoelNr": 11,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 10
   },
   {
@@ -14164,7 +11356,7 @@
     "Omschrijving": "Rij H Stoel 12",
     "Rij": "H",
     "StoelNr": 12,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 10
   },
   {
@@ -14172,7 +11364,7 @@
     "Omschrijving": "Rij H Stoel 13",
     "Rij": "H",
     "StoelNr": 13,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 10
   },
   {
@@ -14180,7 +11372,7 @@
     "Omschrijving": "Rij H Stoel 14",
     "Rij": "H",
     "StoelNr": 14,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 10
   },
   {
@@ -14188,7 +11380,7 @@
     "Omschrijving": "Rij H Stoel 15",
     "Rij": "H",
     "StoelNr": 15,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 10
   },
   {
@@ -14196,39 +11388,7 @@
     "Omschrijving": "Rij H Stoel 16",
     "Rij": "H",
     "StoelNr": 16,
-    "Premium": false,
-    "ZaalId": 10
-  },
-  {
-    "StoelId": 1777,
-    "Omschrijving": "Rij H Stoel 17",
-    "Rij": "H",
-    "StoelNr": 17,
-    "Premium": false,
-    "ZaalId": 10
-  },
-  {
-    "StoelId": 1778,
-    "Omschrijving": "Rij H Stoel 18",
-    "Rij": "H",
-    "StoelNr": 18,
-    "Premium": false,
-    "ZaalId": 10
-  },
-  {
-    "StoelId": 1779,
-    "Omschrijving": "Rij H Stoel 19",
-    "Rij": "H",
-    "StoelNr": 19,
-    "Premium": false,
-    "ZaalId": 10
-  },
-  {
-    "StoelId": 1780,
-    "Omschrijving": "Rij H Stoel 20",
-    "Rij": "H",
-    "StoelNr": 20,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 10
   },
   {
@@ -14236,7 +11396,7 @@
     "Omschrijving": "Rij I Stoel 1",
     "Rij": "I",
     "StoelNr": 1,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 10
   },
   {
@@ -14244,7 +11404,7 @@
     "Omschrijving": "Rij I Stoel 2",
     "Rij": "I",
     "StoelNr": 2,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 10
   },
   {
@@ -14252,7 +11412,7 @@
     "Omschrijving": "Rij I Stoel 3",
     "Rij": "I",
     "StoelNr": 3,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 10
   },
   {
@@ -14260,7 +11420,7 @@
     "Omschrijving": "Rij I Stoel 4",
     "Rij": "I",
     "StoelNr": 4,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 10
   },
   {
@@ -14268,7 +11428,7 @@
     "Omschrijving": "Rij I Stoel 5",
     "Rij": "I",
     "StoelNr": 5,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 10
   },
   {
@@ -14276,7 +11436,7 @@
     "Omschrijving": "Rij I Stoel 6",
     "Rij": "I",
     "StoelNr": 6,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 10
   },
   {
@@ -14284,7 +11444,7 @@
     "Omschrijving": "Rij I Stoel 7",
     "Rij": "I",
     "StoelNr": 7,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 10
   },
   {
@@ -14292,7 +11452,7 @@
     "Omschrijving": "Rij I Stoel 8",
     "Rij": "I",
     "StoelNr": 8,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 10
   },
   {
@@ -14300,7 +11460,7 @@
     "Omschrijving": "Rij I Stoel 9",
     "Rij": "I",
     "StoelNr": 9,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 10
   },
   {
@@ -14308,7 +11468,7 @@
     "Omschrijving": "Rij I Stoel 10",
     "Rij": "I",
     "StoelNr": 10,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 10
   },
   {
@@ -14316,7 +11476,7 @@
     "Omschrijving": "Rij I Stoel 11",
     "Rij": "I",
     "StoelNr": 11,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 10
   },
   {
@@ -14324,7 +11484,7 @@
     "Omschrijving": "Rij I Stoel 12",
     "Rij": "I",
     "StoelNr": 12,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 10
   },
   {
@@ -14332,7 +11492,7 @@
     "Omschrijving": "Rij I Stoel 13",
     "Rij": "I",
     "StoelNr": 13,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 10
   },
   {
@@ -14340,7 +11500,7 @@
     "Omschrijving": "Rij I Stoel 14",
     "Rij": "I",
     "StoelNr": 14,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 10
   },
   {
@@ -14348,7 +11508,7 @@
     "Omschrijving": "Rij I Stoel 15",
     "Rij": "I",
     "StoelNr": 15,
-    "Premium": false,
+    "Premium": true,
     "ZaalId": 10
   },
   {
@@ -14356,55 +11516,7 @@
     "Omschrijving": "Rij I Stoel 16",
     "Rij": "I",
     "StoelNr": 16,
-    "Premium": false,
-    "ZaalId": 10
-  },
-  {
-    "StoelId": 1797,
-    "Omschrijving": "Rij I Stoel 17",
-    "Rij": "I",
-    "StoelNr": 17,
-    "Premium": false,
-    "ZaalId": 10
-  },
-  {
-    "StoelId": 1798,
-    "Omschrijving": "Rij I Stoel 18",
-    "Rij": "I",
-    "StoelNr": 18,
-    "Premium": false,
-    "ZaalId": 10
-  },
-  {
-    "StoelId": 1799,
-    "Omschrijving": "Rij I Stoel 19",
-    "Rij": "I",
-    "StoelNr": 19,
-    "Premium": false,
-    "ZaalId": 10
-  },
-  {
-    "StoelId": 1800,
-    "Omschrijving": "Rij I Stoel 20",
-    "Rij": "I",
-    "StoelNr": 20,
-    "Premium": false,
-    "ZaalId": 10
-  },
-  {
-    "StoelId": 1801,
-    "Omschrijving": "Rij B Stoel 20",
-    "Rij": "B",
-    "StoelNr": 20,
     "Premium": true,
-    "ZaalId": 3
-  },
-  {
-    "StoelId": 1803,
-    "Omschrijving": "Rij J Stoel 2",
-    "Rij": "J",
-    "StoelNr": 2,
-    "Premium": true,
-    "ZaalId": 3
+    "ZaalId": 10
   }
 ]

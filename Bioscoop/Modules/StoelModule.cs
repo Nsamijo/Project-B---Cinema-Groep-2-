@@ -9,79 +9,40 @@ using Bioscoop.Models;
 
 namespace Bioscoop.Modules
 {
-    public class StoelModule
+    public class StoelModule//Judith
     {
         public StoelData nieuwe_json = new StoelData();
+        public List<StoelModel> data;
+        public int zaalnummer;
 
-        public void Run()
+        public void Run(int zaalnummer)
         {
-            bool abort = false;
-            String error = "";
-
-            while (!abort)
-            {
-                Console.Clear();
-                if (!String.IsNullOrEmpty(error)) Helpers.Display.PrintLine("Error: " + error + "\n");
-                Helpers.Display.PrintLine("Stoelbeheer");
-                Helpers.Display.PrintLine("ESC - Terug naar het menu \n");
-                Helpers.Display.PrintLine("Om de stoelen van een zaal te bekijken, vul de nummer voor de zaal in \n");
-                Helpers.Display.PrintHeader("Nr.", "Omschrijving", "Scherm");
-
-                var zalen = ZaalData.LoadData();
-                ZaalData.SortData();
-                int nummering = 1;
-                foreach (ZaalModel zaal in zalen)
-                {
-                    Helpers.Display.PrintTable(nummering.ToString(), zaal.Omschrijving, zaal.Scherm);
-                    nummering++;
-                }
-                Helpers.Display.PrintLine(" ");
-                Helpers.Display.PrintLine("Type je keuze in en sluit af met een enter");
-
-                //userinput functie opvragen in Helpers/Inputs
-                Inputs.KeyInput input = Inputs.ReadUserData();
-                switch (input.action)
-                {
-                    case Inputs.KeyAction.Enter:
-                        int inputValue = Int32.TryParse(input.val, out inputValue) ? inputValue : 1;
-                        if (inputValue > 0 && inputValue <= zalen.Count)
-                        {
-                            error = "";
-                            StoelMain(inputValue);
-                        }
-                        else error = "Onjuist waarde ingevuld.";
-                        break;
-                    case Inputs.KeyAction.Escape: //de functie beeindigen
-                        abort = true;
-                        break;
-                }
-            }
+            this.zaalnummer = zaalnummer;
+            List<StoelModel> stoelData = StoelLoadJson();
+            this.data = stoelData.Where(a => a.ZaalId == zaalnummer).ToList();
+            StoelMain();
         }
 
         //OVERZICHT
-        private void StoelMain(int zaalnummer)
+        public void StoelMain(string error = "")
         {
             Console.Clear();
-            List<StoelModel> stoelen = StoelLoadJson();
             bool abort = false;
-
             while (!abort)
             {
-                Helpers.Display.PrintLine("Stoelbeheer: Zaal " + zaalnummer );
-                Helpers.Display.PrintLine("ESC - Naar menu                       INS - Maak een nieuwe stoel");
-                Helpers.Display.PrintLine("                                      DEL - Pas stoel aan of verwijder stoel");
                 Helpers.Display.PrintLine("");
+                Helpers.Display.PrintLine("ESC - Naar menu                           INS - Voeg stoel toe");
+                Helpers.Display.PrintLine("Stoelbeheer: Zaal " + zaalnummer);
+                Helpers.Display.PrintLine("\nTyp nummer van stoel in om aan te passen of te verwijderen\n");
+                Helpers.Display.PrintHeader(error);
                 Helpers.Display.PrintHeader("Nr", "Omschrijving", "Rij", "Stoelnummer", "Premium");
 
                 //data opvragen en weergeven
                 int numering = 1;
-                foreach (StoelModel stoel in stoelen)
+                foreach (StoelModel stoel in data)
                 {
-                    if (stoel.ZaalId == zaalnummer + 1)
-                    {
-                        Helpers.Display.PrintTable(numering.ToString(), stoel.Omschrijving, stoel.Rij, stoel.StoelNr.ToString(), stoel.Premium.ToString());
-                        numering++;
-                    }
+                    Helpers.Display.PrintTable(numering.ToString(), stoel.Omschrijving, stoel.Rij, stoel.StoelNr.ToString(), stoel.Premium.ToString());
+                    numering++;
                 }
 
                 //bovenaan beginenn van scherm
@@ -91,63 +52,28 @@ namespace Bioscoop.Modules
                 Inputs.KeyInput input = Inputs.ReadUserData();
                 switch (input.action)
                 {
+                    case Inputs.KeyAction.Enter:
+                        int inputValue = Int32.TryParse(input.val, out inputValue) ? inputValue : 0; //int check
+                        inputValue--; //-1 want count start bij 0
+                        if (inputValue >= 0 && inputValue < data.Count)
+                        {
+                            StoelenAanpas(data[inputValue]); //id waarde meegeven van de stoel
+                        }
+                        else
+                        {
+                            StoelMain("Dat is geen geldige input, probeer het nogmaals");
+                        }
+                        break;
                     case Inputs.KeyAction.Insert:
                         VoegStoelToe();
                         break;
                     case Inputs.KeyAction.Escape:
                         abort = true;
                         break;
-                    case Inputs.KeyAction.Delete:
-                        StoelNummerAanpassen();
+                    default:
+                        StoelMain("Dat is geen geldige input, probeer het nogmaals");
                         break;
                 }
-            }
-        }
-
-        public void StoelNummerAanpassen()
-        {
-            Console.Clear();
-            Helpers.Display.PrintLine("Stoelbeheer");
-            Helpers.Display.PrintLine("ESC - Terug naar overzicht                       \n");
-            Helpers.Display.PrintLine("INS - Typ het stoelnummer dat u wilt aanpassen/verwijderen");
-
-            switch (Helpers.Display.Keypress())
-            {
-                case ConsoleKey.Insert:
-                    Helpers.Display.PrintLine("\nStoelnummer:");
-                    var ans = Console.ReadLine();
-                    if (ans.All(char.IsDigit))
-                    {
-                        List<StoelModel> json = StoelLoadJson();
-                        int x = int.Parse(ans);
-                        foreach (StoelModel stoel in json)
-                        {
-                            if (stoel.StoelId == x)
-                            {
-                                StoelenAanpas(x);
-                            }
-                        }
-                    }
-                    break;
-                case ConsoleKey.Escape:
-                    Run();
-                    break;
-                default:
-                    Helpers.Display.PrintLine("Dat is geen geldige input of de stoel bestaat niet");
-                    Helpers.Display.PrintLine("ESC - Terug naar overzicht                    INS - Probeer opnieuw");
-                    switch (Helpers.Display.Keypress())
-                    {
-                        case ConsoleKey.Insert:
-                            StoelNummerAanpassen();
-                            break;
-                        case ConsoleKey.Escape:
-                            Run();
-                            break;
-                        default:
-                            StoelNummerAanpassen();
-                            break;
-                    }
-                    break;
             }
         }
 
@@ -165,12 +91,6 @@ namespace Bioscoop.Modules
             Helpers.Display.PrintLine("      >[B] Nee");
             premiumAns = Console.ReadLine();
 
-            //zaalid(zaalid) vragen
-            string ans = null;
-            Helpers.Display.PrintLine("\nIn welke zaal staat de stoel?");
-            Helpers.Display.PrintLine("Vul het zaalnummer in:");
-            ans = Console.ReadLine();
-
             //premium(premiumAns -> premium) checken
             bool premium = true;
             switch (premiumAns)
@@ -186,25 +106,6 @@ namespace Bioscoop.Modules
                 default:
                     geldigeInput = false;
                     break;
-            }
-
-            //zaalid(zaalid) checken
-            int zaalid = 1;
-            if (ans.All(char.IsDigit))
-            {
-                int x = int.Parse(ans);
-                if (x >= 1)
-                {
-                    zaalid = x;
-                }
-                else
-                {
-                    geldigeInput = false;
-                }
-            }
-            else
-            {
-                geldigeInput = false;
             }
 
             //stoelid bepalen
@@ -237,67 +138,22 @@ namespace Bioscoop.Modules
             string str = null;
             Helpers.Display.PrintLine("\nIn welke rij staat de stoel?");
             Helpers.Display.PrintLine("Vul de rij in (letter A - J)");
-            str = Console.ReadLine();
-            switch (str)
-            {
-                case "A":
-                case "a":
-                    str = "A";
-                    break;
-                case "B":
-                case "b":
-                    str = "B";
-                    break;
-                case "C":
-                case "c":
-                    str = "C";
-                    break;
-                case "D":
-                case "d":
-                    str = "D";
-                    break;
-                case "E":
-                case "e":
-                    str = "E";
-                    break;
-                case "F":
-                case "f":
-                    str = "F";
-                    break;
-                case "G":
-                case "g":
-                    str = "G";
-                    break;
-                case "H":
-                case "h":
-                    str = "H";
-                    break;
-                case "I":
-                case "i":
-                    str = "I";
-                    break;
-                case "J":
-                case "j":
-                    str = "J";
-                    break;
-                default:
-                    geldigeInput = false;
-                    break;
-            }
+            string inpt = Console.ReadLine().ToLower();
+            if (inpt == "a" || inpt == "b" || inpt == "c" || inpt == "d" || inpt == "e" || inpt == "f" || inpt == "g" || inpt == "h" || inpt == "j" || inpt == "i" || inpt == "j") str = inpt;
+            else { geldigeInput = false; }
+
+
             //gegevens checken en stoel aanmaken:
             if (geldigeInput == true)
             {
                 string omschr = "Rij " + str + " Stoel " + z;
-                Helpers.Display.PrintLine(omschr);
 
                 //checken of niet een stoel uit diezelfde zaal dezelfde omschrijving heeft
                 List<StoelModel> stoelen = StoelLoadJson();
                 foreach (StoelModel stoel in stoelen)
                 {
-                    Helpers.Display.PrintLine(stoel.Omschrijving);
-                    if (stoel.ZaalId == z)
+                    if (stoel.ZaalId == zaalnummer)
                     {
-                        Helpers.Display.PrintLine(stoel.Omschrijving);
                         if (stoel.Omschrijving == omschr)
                         {
                             Helpers.Display.PrintLine("De ingevulde zijn niet correct omdat de stoel al bestaat, \ner kan geen nieuwe stoel aangemaakt worden.");
@@ -308,16 +164,16 @@ namespace Bioscoop.Modules
                                     VoegStoelToe();
                                     break;
                                 case ConsoleKey.Escape:
-                                    Run();
+                                    StoelMain();
                                     break;
                                 default:
-                                    Run();
+                                    StoelMain();
                                     break;
                             }
                         }
                     }
                 }
-                StoelToevoegen(stoelId, omschr, str, z, premium, zaalid);
+                StoelToevoegen(stoelId, omschr, str, z, premium, zaalnummer);
             }
             //foutmelding als een van de gegevens niet kloppen:
             else
@@ -330,15 +186,14 @@ namespace Bioscoop.Modules
                         VoegStoelToe();
                         break;
                     case ConsoleKey.Escape:
-                        Run();
+                        StoelMain();
                         break;
                     default:
-                        Run();
+                        StoelMain();
                         break;
                 }
             }
         }
-
 
 
         public void StoelToevoegen(int stoelid, string omschrijving, string rij, int stoelnr, bool premium, int zaalid)
@@ -359,75 +214,67 @@ namespace Bioscoop.Modules
             string str2 = JsonConvert.SerializeObject(list);
             dynamic obj = JsonConvert.DeserializeObject(str2);
             nieuwe_json.UpdateJson(obj);
+            NieuweStoelWordtAangemaakt();
+        }
+
+        public void NieuweStoelWordtAangemaakt(string error = "")
+        {
             Console.Clear();
             Helpers.Display.PrintLine("Stoelbeheer");
             Helpers.Display.PrintLine("De stoel wordt toegevoegd\nESC - Terug naar overzicht         INS - nieuwe stoel");
+            Helpers.Display.PrintLine(error);
             switch (Helpers.Display.Keypress())
             {
                 case ConsoleKey.Insert:
                     VoegStoelToe();
                     break;
                 case ConsoleKey.Escape:
-                    Run();
+                    StoelMain();
                     break;
                 default:
-                    Run();
+                    NieuweStoelWordtAangemaakt("Dat is geen geldige input, probeer het nogmaals");
                     break;
             }
 
         }
 
         //STOELEN AANPAS SCHERM
-        public void StoelenAanpas(int stoelNummer)
+        public void StoelenAanpas(StoelModel stoel, string error = "")
         {
             Console.Clear();
+            Helpers.Display.PrintLine(error);
             Helpers.Display.PrintLine("Stoelbeheer");
-            Helpers.Display.PrintLine("Pas stoel " + stoelNummer + " aan\n");
-            Helpers.Display.PrintHeader("Nr", "Omschrijving", "Rij", "Stoelnummer", "Premium", "Status");
+            Helpers.Display.PrintLine("ESC - Terug naar overzicht         INS - stoel premium veranderen");
+            Helpers.Display.PrintLine("                                   DEL - stoel verwijderen\n");
+            Helpers.Display.PrintLine("Pas stoel " + stoel.Omschrijving + " aan\n");
 
-            //stoel in json zoeken
-            List<StoelModel> stoelen = StoelLoadJson();
-            int nummering = 1;
-            foreach (StoelModel stoel in stoelen)
-            {
-                if (stoel.StoelId == stoelNummer)
-                {
-                    //als die de stoel gevonden heeft, geeft die de gegevens ervan
-                    Helpers.Display.PrintTable(nummering.ToString(), stoel.Omschrijving, stoel.Rij, stoel.StoelNr.ToString(), stoel.Premium.ToString(), stoel.ZaalId.ToString());
-                    nummering++;
-                }
-            }
+            //premium waarde omzetten naar string omdat een bool is.
+            string premium = "";
+            if (stoel.Premium == true) premium = "Ja"; else if (stoel.Premium == false) premium = "Nee";
 
-            Helpers.Display.PrintLine("\nWat wilt u aanpassen");
-            Helpers.Display.PrintLine("ESC - Terug naar overzicht                    INS - Verander premium");
-            Helpers.Display.PrintLine("                                              DEL - Verwijder stoel");
+            int nr = 0; //data weergeven en nummeren voor waarde keuze
+            Helpers.Display.PrintHeader("Nr.", "Benaming", "Waarde");
+            Helpers.Display.PrintTable((nr += 1).ToString(), "Omschrijving: ", stoel.Omschrijving);
+            Helpers.Display.PrintTable((nr += 1).ToString(), "Rij: ", stoel.Rij);
+            Helpers.Display.PrintTable((nr += 1).ToString(), "Stoel nummer: ", stoel.StoelNr.ToString());
+            Helpers.Display.PrintTable((nr += 1).ToString(), "Vip: ", premium);
+
+
+            Helpers.Display.PrintLine("\nWat wilt u aanpassen? Zie hoofd knoppen opties");
 
             switch (Helpers.Display.Keypress())
             {
                 case ConsoleKey.Insert:
-                    ChangePremium(stoelNummer);
+                    ChangePremium(stoel);
                     break;
                 case ConsoleKey.Escape:
-                    Run();
+                    StoelMain();
                     break;
                 case ConsoleKey.Delete:
-                    StoelVerwijderen(stoelNummer);
+                    StoelVerwijderen(stoel);
                     break;
                 default:
-                    Helpers.Display.PrintLine("Dat is geen geldige input.");
-                    Helpers.Display.PrintLine("ESC - Terug naar overzicht                    INS - Probeer opnieuw");
-                    switch (Helpers.Display.Keypress())
-                    {
-                        case ConsoleKey.Insert:
-                            StoelenAanpas(stoelNummer);
-                            break;
-                        case ConsoleKey.Escape:
-                            Run();
-                            break;
-                        default:
-                            StoelenAanpas(stoelNummer);
-                            break;
-                    }
+                    StoelenAanpas(stoel, "Dat is een ongeldige input, probeer het nogmaals.");
                     break;
             }
         }
@@ -437,33 +284,7 @@ namespace Bioscoop.Modules
         {
             string jsonFilePath = Path.GetFullPath(Path.Combine(Environment.CurrentDirectory, @"..\..\..\")) + @"Data\Stoel.json";
             string _json = File.ReadAllText(jsonFilePath);
-
             return JsonConvert.DeserializeObject<List<StoelModel>>(_json);
-        }
-
-        //Deze functie veranderd true - false en terug van premium
-        public void ChangePremium(int stoelNummer)
-        {
-            Console.Clear();
-            List<StoelModel> json = StoelLoadJson();
-            foreach (StoelModel stoel in json)
-            {
-                if (stoel.StoelId == stoelNummer)
-                {
-                    if (stoel.Premium)
-                    { stoel.Premium = false; }
-                    else
-                    { stoel.Premium = true; }
-                }
-            }
-
-            using (StreamWriter file = File.CreateText(Path.GetFullPath(Path.Combine(Environment.CurrentDirectory, @"..\..\..\")) + @"Data\Stoel.json"))
-            {
-                JsonSerializer serializer = new JsonSerializer();
-                serializer.Serialize(file, json);
-            }
-
-            StoelenAanpas(stoelNummer);
         }
 
 
@@ -493,18 +314,35 @@ namespace Bioscoop.Modules
             return "";
         }
 
-        public void StoelVerwijderen(int a)
+        public void StoelVerwijderen(StoelModel data) //verwijder functie
         {
-            dynamic array = this.nieuwe_json.GetJson();
-            string str = JsonConvert.SerializeObject(array);
-            List<StoelModel> list = JsonConvert.DeserializeObject<List<StoelModel>>(str);
-            list.RemoveAll(r => r.StoelId == a);
-            string str2 = JsonConvert.SerializeObject(list);
-            dynamic obj = JsonConvert.DeserializeObject(str2);
-            nieuwe_json.UpdateJson(obj);
-            Console.Clear();
-            Helpers.Display.PrintLine("stoel nummer " + a + " is verwijderd, Typ enter om naar overzicht te gaan");
+            List<StoelModel> stoelData = StoelLoadJson();
+            var toRemove = stoelData.Where(a => a.StoelId == data.StoelId).ToList();
+            foreach (var remove in toRemove) stoelData.Remove(remove);
+
+            var jsonData = JsonConvert.SerializeObject(stoelData, Formatting.Indented);
+            System.IO.File.WriteAllText((Path.GetFullPath(Path.Combine(Environment.CurrentDirectory, @"..\..\..\")) + @"Data\Stoel.json"), jsonData);
+            Helpers.Display.PrintLine("deze stoel  is verwijderd, Typ enter om naar overzicht te gaan");
             string ans = Console.ReadLine();
+            Console.Clear();
+        }
+
+        public void ChangePremium(StoelModel data) //aanpas functie
+        {
+            List<StoelModel> stoelData = StoelLoadJson();
+            var toEdit = stoelData.Where(a => a.StoelId == data.StoelId).ToList();
+
+            if (toEdit.Count() == 1)
+            {
+                foreach (var x in toEdit)
+                {
+                    Helpers.Display.PrintLine(x.Premium.ToString());
+                    if (x.Premium == true) { x.Premium = false; } else { x.Premium = true; }
+                }
+            }
+            var jsonData = JsonConvert.SerializeObject(stoelData, Formatting.Indented);
+            System.IO.File.WriteAllText((Path.GetFullPath(Path.Combine(Environment.CurrentDirectory, @"..\..\..\")) + @"Data\Stoel.json"), jsonData);
+            StoelenAanpas(data);
         }
     }
 }

@@ -1,182 +1,202 @@
 [
   {
-    "FilmId": 19,
-    "Naam": "Avatar",
-    "Omschrijving": "...",
-    "Genre": "Actie",
-    "Duur": "02:42",
-    "Kijkwijzer": "12+",
-    "Status": "Niet beschikbaar"
-  },
-  {
-    "FilmId": 9,
-    "Naam": "Avengers: EndGame",
-    "Omschrijving": "...",
-    "Genre": "Actie",
-    "Duur": "03:01",
-    "Kijkwijzer": "12+",
-    "Status": "Niet beschikbaar"
-  },
-  {
     "FilmId": 8,
     "Naam": "Avengers: Infinity War",
-    "Omschrijving": "...",
+    "Omschrijving": "Tien jaar nadat de eerste film van het Marvel Cinematic Universe werd uitgebracht, komt de spanning tot een hoogtepunt in de grootste confrontatie aller tijden in Marvel's Avengers: Infinity War. Voor het eerst komen alle helden en hun bondgenoten uit alle voorgaande films bij elkaar om het op te nemen tegen de machtige Thanos die een bedreiging vormt die te groot is voor een enkele held. De Avengers moeten bereid zijn alles op te geven in een poging om Thanos te verslaan, voordat zijn missie slaagt en zijn verwoesting een einde brengt aan alles.",
     "Genre": "Actie",
     "Duur": "02:29",
     "Kijkwijzer": "12+",
-    "Status": "Niet beschikbaar"
-  },
-  {
-    "FilmId": 1,
-    "Naam": "Forrest Gump",
-    "Omschrijving": "testomschrijving",
-    "Genre": "Avontuur",
-    "Duur": "02:22",
-    "Kijkwijzer": "12+",
-    "Status": "Niet beschikbaar"
-  },
-  {
-    "FilmId": 13,
-    "Naam": "Inception",
-    "Omschrijving": "...",
-    "Genre": "Sci-Fi",
-    "Duur": "02:28",
-    "Kijkwijzer": "12+",
-    "Status": "Niet beschikbaar"
-  },
-  {
-    "FilmId": 2,
-    "Naam": "Interstellar",
-    "Omschrijving": "...",
-    "Genre": "Avontuur",
-    "Duur": "02:49",
-    "Kijkwijzer": "12+",
-    "Status": "Niet beschikbaar"
+    "Status": "Beschikbaar",
+    "Kliks": 0
   },
   {
     "FilmId": 10,
     "Naam": "Jurassic Park",
-    "Omschrijving": "...",
+    "Omschrijving": "\"Steven Spielbergs meesterlijke avonturenfilm over een eiland met prachtige maar ook gevaarlijke dino's. Op een afgelegen eiland voor de kust van Costa Rica heeft de rijke, excentrieke ondernemer John Hammond een uitzonderlijk themapark gebouwd. Het park bevat prehistorische schepsels van 65 miljoen jaar terug, die door wetenschappers met behulp van DNA uit dinosaurusbloed tot leven zijn gewekt. Een select groepje, bestaande uit advocaat Donald Gennaro, wiskundige Ian Malcolm, dinosaurusexpert dr. Alan Grant en oudheidkundige dr. Ellie Sattler, wordt door Hammond samen met zijn kleinkinderen Tim en Lex uitgenodigd om voor de officiele opening een kijkje te komen nemen. Maar de rondleiding krijgt een ander verloop dan verwacht als het veiligheidssysteem kapot gaat en de reuzen op hol slaan.",
     "Genre": "Actie",
     "Duur": "02:07",
     "Kijkwijzer": "12+",
-    "Status": "Niet beschikbaar"
-  },
-  {
-    "FilmId": 11,
-    "Naam": "Slumdog Millionaire",
-    "Omschrijving": "...",
-    "Genre": "Drama",
-    "Duur": "02:00",
-    "Kijkwijzer": "12+",
-    "Status": "Niet beschikbaar"
-  },
-  {
-    "FilmId": 20,
-    "Naam": "The Shawshank Redemption",
-    "Omschrijving": "...",
-    "Genre": "Drama",
-    "Duur": "02:22",
-    "Kijkwijzer": "12+",
-    "Status": "Niet beschikbaar"
-  },
-  {
-    "FilmId": 16,
-    "Naam": "Titanic",
-    "Omschrijving": "...",
-    "Genre": "Drama",
-    "Duur": "03:14",
-    "Kijkwijzer": "12+",
-    "Status": "Niet beschikbaar"
-  },
-  {
-    "FilmId": 6,
-    "Naam": "Joker",
-    "Omschrijving": "...",
-    "Genre": "Thriller",
-    "Duur": "01:30",
-    "Kijkwijzer": "16+",
-    "Status": "Niet beschikbaar"
-  },
-  {
-    "FilmId": 17,
-    "Naam": "Terminator 2: Judgement Day",
-    "Omschrijving": "...",
-    "Genre": "Actie",
-    "Duur": "02:17",
-    "Kijkwijzer": "16+",
-    "Status": "Niet beschikbaar"
-  },
-  {
-    "FilmId": 4,
-    "Naam": "The Dark Knight",
-    "Omschrijving": "...",
-    "Genre": "Actie",
-    "Duur": "02:32",
-    "Kijkwijzer": "16+",
-    "Status": "Niet beschikbaar"
+    "Status": "Beschikbaar",
+    "Kliks": 0
   },
   {
     "FilmId": 18,
     "Naam": "Kung Fu Panda",
-    "Omschrijving": "...",
+    "Omschrijving": "Animatiekomedie met Jack Black als de panda Po die de wereld van de Kung Fu compleet op z'n kop zet! Po is een luie panda die de Uitverkorene blijkt te zijn om de vallei te redden van het gemene luipaard Tai Lung. Hij moet daarom in de leer bij Kung Fu master Shifu. Po zet de wereld van de Kung Fu compleet op z'n kop! Hij wordt een held door te leren dat als hij in zichzelf gelooft, hij alles kan bereiken.",
     "Genre": "Animatie",
     "Duur": "01:32",
     "Kijkwijzer": "6+",
-    "Status": "Niet beschikbaar"
-  },
-  {
-    "FilmId": 5,
-    "Naam": "Shrek",
-    "Omschrijving": "...",
-    "Genre": "Animatie",
-    "Duur": "01:30",
-    "Kijkwijzer": "6+",
-    "Status": "Niet beschikbaar"
-  },
-  {
-    "FilmId": 3,
-    "Naam": "Back to the Future",
-    "Omschrijving": "...",
-    "Genre": "Avontuur",
-    "Duur": "01:56",
-    "Kijkwijzer": "AL",
-    "Status": "Niet beschikbaar"
-  },
-  {
-    "FilmId": 15,
-    "Naam": "Dumb and Dumber",
-    "Omschrijving": "...",
-    "Genre": "Komedie",
-    "Duur": "01:47",
-    "Kijkwijzer": "AL",
-    "Status": "Niet beschikbaar"
-  },
-  {
-    "FilmId": 12,
-    "Naam": "Star Wars: Episode IV - A New Hope",
-    "Omschrijving": "...",
-    "Genre": "Actie",
-    "Duur": "02:01",
-    "Kijkwijzer": "AL",
-    "Status": "Niet beschikbaar"
+    "Status": "Beschikbaar",
+    "Kliks": 0
   },
   {
     "FilmId": 14,
     "Naam": "The Lion King",
-    "Omschrijving": "...",
+    "Omschrijving": "In de geheel nieuwe Disney Live Action film van regisseur Jon Favreau, reist The Lion King naar de Afrikaanse savanne waar een toekomstige koning is geboren. Simba adoreert zijn vader, koning Mufasa, en neemt zijn eigen koninklijke bestemming ter harte. Maar niet iedereen in het koninkrijk viert de komst van de nieuwe welp. Scar, Mufasa's broer - en voormalig erfgenaam van de troon - heeft zijn eigen plannen. De strijd om Pride Rock wordt geteisterd door verraad, tragedie en drama, wat uiteindelijk resulteert in Simba's verbanning. Met de hulp van een paar nieuwsgierige nieuwe vrienden zal Simba moeten uitzoeken hoe hij kan opgroeien en terugnemen wat hem rechtmatig toekomt.",
     "Genre": "Animation",
     "Duur": "01:28",
     "Kijkwijzer": "AL",
-    "Status": "Niet beschikbaar"
+    "Status": "Beschikbaar",
+    "Kliks": 0
   },
   {
     "FilmId": 7,
-    "Naam": "WAL-E",
-    "Omschrijving": "...",
+    "Naam": "WALL-E",
+    "Omschrijving": "Avonturen-animatiefilm uit de Pixar-stal over de toegewijde robot WALL-E die de aarde schoonmaakt, maar op een dag een nieuwe missie in het leven vindt. Zevenhonderd eenzame jaren doet de robot WALL-E (Waste Allocation Load Lifter Earth-Class) waarvoor hij gemaakt is: het schoonhouden van de aarde. Zijn enige vertier lag in het verzamelen van prullaria. Maar dan ontmoet hij een zoekrobot genaamd EVE. Samen reizen ze door het hele heelal en beginnen aan een van de meest opwindende en fantasierijke avonturen allertijden.",
     "Genre": "Animatie",
     "Duur": "01:38",
     "Kijkwijzer": "AL",
-    "Status": "Niet beschikbaar"
+    "Status": "Beschikbaar",
+    "Kliks": 0
+  },
+  {
+    "FilmId": 4,
+    "Naam": "The Dark Knight",
+    "Omschrijving": "Vervolg op 'Batman Begins' van Christopher Nolan met Christian Bale als de titelheld en Heath Ledger als zijn aartsvijand The Joker. Met de hulp van luitenant Jim Gordon en de toegewijde nieuwe openbaar aanklager, Harvey Dent, wil Batman de georganiseerde misdaad in Gotham voorgoed uitroeien. Dit drietal gaat in eerste instantie doeltreffend te werk, maar ze vallen ten prooi aan een opkomend meesterbrein, 'The Joker'. Hij dompelt Gotham onder in totale anarchie en dwingt de 'Dark Knight' steeds verder over de delicate grens tussen held en burgerwacht.",
+    "Genre": "Actie",
+    "Duur": "02:32",
+    "Kijkwijzer": "16+",
+    "Status": "Beschikbaar",
+    "Kliks": 0
+  },
+  {
+    "FilmId": 19,
+    "Naam": "Avatar",
+    "Omschrijving": "In de epische actie-avonturenfilm Avatar neemt James Cameron, de regisseur van 'Titanic', ons mee naar een spectaculaire nieuwe fantasiewereld. Op de verre maan Pandora, vertrekt een held met tegenzin op een missie naar verlossing en ontdekking wanneer hij een heldhaftige strijd aanvoert om een beschaving te redden.",
+    "Genre": "Actie",
+    "Duur": "02:42",
+    "Kijkwijzer": "12+",
+    "Status": "Niet Beschikbaar",
+    "Kliks": 0
+  },
+  {
+    "FilmId": 9,
+    "Naam": "Avengers: EndGame",
+    "Omschrijving": "De vreselijke gebeurtenissen die door Thanos in gang werden gezet, roeiden de helft van het universum uit en verzwakten de Avengers. De overgebleven Avengers voelen zich genoodzaakt om nog een keer in actie te komen in Avengers: Endgame, de spectaculaire finale van 22 films van Marvel Studios.",
+    "Genre": "Actie",
+    "Duur": "03:01",
+    "Kijkwijzer": "12+",
+    "Status": "Niet Beschikbaar",
+    "Kliks": 0
+  },
+  {
+    "FilmId": 1,
+    "Naam": "Forrest Gump",
+    "Omschrijving": "De vriendelijke maar onnozele Forrest Gump maakt onopzettelijk alle belangrijke gebeurtenissen uit de recente Amerikaanse geschiedenis mee. De sullige goedzak Forrest Gump (Tom Hanks) vertelt op een bankje aan iedereen die het maar horen wil zijn levensverhaal. Hij heeft van alles meegemaakt: president Kennedy ontving hem als lid van het All American football-team op het Witte Huis. Hij liet zijn blote billen zien aan Lyndon B. Johnson en als lid van het Amerikaanse tafeltennisteam ging hij namens Nixon op bezoek in China. Zijn telefoontje leidde tot het Watergate-schandaal. De 75 bereikte zijn IQ nauwelijks, maar op zijn simpele manier drukte Forrest Gump zijn voetsporen in drie decennia Amerikaanse geschiedenis. Met al zijn daden en handelingen wilde hij slechts een doel bereiken: zijn geliefde Jenny (Robin Wright Penn) weer terugzien.",
+    "Genre": "Avontuur",
+    "Duur": "02:22",
+    "Kijkwijzer": "12+",
+    "Status": "Niet Beschikbaar",
+    "Kliks": 0
+  },
+  {
+    "FilmId": 13,
+    "Naam": "Inception",
+    "Omschrijving": "Dom Cobb (Leonardo DiCaprio) is een handige dief, een ware meester op het gebied van Inception: het stelen van waardevolle geheimen uit het onderbewustzijn van mensen die in de droomfase verkeren, wanneer het brein het meest kwetsbaar is. Dankzij die zeldzame gave is Cobb een veelgevraagde speler in de wereld van bedrijfsspionage, maar is hij ook in vele landen voortvluchtig. Daarnaast is hij alles kwijt wat hem ooit dierbaar was. Cobb krijgt echter de kans zijn oude leven weer terug te krijgen, in ruil voor het uitvoeren van een vrijwel onmogelijke Inception: Cobb en zijn team van specialisten moeten deze keer geen idee stelen, maar het in iemands brein plaatsen. Als ze hierin slagen, zou het de perfecte misdaad zijn. Maar hoe goed ze alles ook plannen en hoe groot hun expertise ook is, niets kan het team voorbereiden op de levensgevaarlijke vijand die elke stap die ze nemen lijkt te kunnen voorspellen. Een vijand die alleen Cobb had kunnen zien aankomen.",
+    "Genre": "Sci-Fi",
+    "Duur": "02:28",
+    "Kijkwijzer": "12+",
+    "Status": "Niet Beschikbaar",
+    "Kliks": 0
+  },
+  {
+    "FilmId": 2,
+    "Naam": "Interstellar",
+    "Omschrijving": "Onze tijd op aarde lijkt voorbij, dus begint een groep ontdekkingsreizigers aan de belangrijkste missie uit de geschiedenis van de mens. Ze gaan op zoek naar een plek in de ruimte waar de mensheid kan voortbestaan. ",
+    "Genre": "Avontuur",
+    "Duur": "02:49",
+    "Kijkwijzer": "12+",
+    "Status": "Niet Beschikbaar",
+    "Kliks": 0
+  },
+  {
+    "FilmId": 11,
+    "Naam": "Slumdog Millionaire",
+    "Omschrijving": "Drama in Bollywood-stijl van de Britse regisseur Danny Boyle over een straatjongen Jamal, die het tegen verwachting in ver schopt in de Indiase versie van 'Weekend Miljonairs'. Jamal, een weesjongen uit de sloppen van Mumbai, besluit mee te doen aan de Indiase versie van het televisie programma 'Weekend Miljonairs'. Hij staat op het punt de hoofdprijs van 20 miljoen Roepies te winnen met nog een vraag te gaan. Maar in de pauze van het programma wordt hij gearresteerd op verdenking van oplichting. De politie kan niet geloven dat een jongen zoals hij dergelijke kennis kan bezitten.",
+    "Genre": "Drama",
+    "Duur": "02:00",
+    "Kijkwijzer": "12+",
+    "Status": "Niet Beschikbaar",
+    "Kliks": 0
+  },
+  {
+    "FilmId": 20,
+    "Naam": "The Shawshank Redemption",
+    "Omschrijving": "Gevangenisdrama waarin Tim Robbins bevriend raakt met Morgan Freeman en twee dingen hem op de been houden: hoop en een poster van Rita Hayworth. Het is 1947. Andy Dufresne houdt vol dat hij onschuldig is aan de moord op zijn vrouw en diens minnaar, maar krijgt wel twee maal levenslang in de strenge gevangenis Shawshank. Hij sluit vriendschap met een zwarte gevangene die spullen kan regelen, maar er zijn twee dingen die hem echt op de been houden: hoop en een poster van Rita Hayworth.",
+    "Genre": "Drama",
+    "Duur": "02:22",
+    "Kijkwijzer": "12+",
+    "Status": "Niet Beschikbaar",
+    "Kliks": 0
+  },
+  {
+    "FilmId": 16,
+    "Naam": "Titanic",
+    "Omschrijving": "James Camerons Oscarwinnende drama over een onmogelijke liefde op een schip dat onmogelijk zou kunnen zinken. Het is onmogelijk om de Titanic te laten zinken, beloven de bouwers. Twee van de reizigers op het schip zijn Rose en Jack. Ze zijn geliefden, maar hun liefde is onmogelijk. Want de rijke Rose reist eersteklas met haar onsympathieke verloofde Cal en Jack is een armoedzaaier in de derde klas. Een kleiharde strijd tussen Jack en Cal brandt los, en wanneer het schip zinkt wordt het een strijd op leven en dood.",
+    "Genre": "Drama",
+    "Duur": "03:14",
+    "Kijkwijzer": "12+",
+    "Status": "Niet Beschikbaar",
+    "Kliks": 0
+  },
+  {
+    "FilmId": 6,
+    "Naam": "Joker",
+    "Omschrijving": "Joker van regisseur Todd Phillips draait om de iconische aartsvijand en is een origineel op zichzelf staand verhaal dat nog niet eerder op het grote doek is vertoond. Joker van regisseur Todd Phillips draait om de iconische aartsvijand en is een origineel op zichzelf staand verhaal dat nog niet eerder op het grote doek is vertoond. Phillips rauwe karakterstudie over Arthur Fleck, een rol van Joaquin Phoenix, gaat over een man die problemen heeft om zijn weg te vinden in een ontwricht Gotham. Overdag te boeken als clown, 's avonds probeert hij een voet aan de grond te krijgen als stand-up comedian, maar hij is zelf altijd de klos. Gevangen in een vicieuze cirkel vol apathie en wreedheid, neemt hij een verkeerde beslissing die een kettingreactie van escalerende gebeurtenissen tot gevolg heeft.",
+    "Genre": "Thriller",
+    "Duur": "01:30",
+    "Kijkwijzer": "16+",
+    "Status": "Niet Beschikbaar",
+    "Kliks": 0
+  },
+  {
+    "FilmId": 17,
+    "Naam": "Terminator 2: Judgement Day",
+    "Omschrijving": "Bijna tien jaar zijn verstreken sinds Sarah Connors eerste beproeving. Haar zoon John, de toekomstige leider van het verzet, is opgegroeid tot een flinke jonge kerel. Maar hun nachtmerrie is verre van voorbij. Uit de toekomst daagt een nieuw, nog dodelijker Terminator-model op. Zijn missie: John Connor uit de weg ruimen voor hij volwassen wordt. Gelukkig staan Sarah en John niet alleen in hun strijd met deze angstaanjagende Terminator. Ook het menselijke verzet heeft namelijk een krijger naar het verleden teruggestuurd. Zijn missie: John Connor kost wat kost beschermen. De strijd voor morgen kan losbarsten...",
+    "Genre": "Actie",
+    "Duur": "02:17",
+    "Kijkwijzer": "16+",
+    "Status": "Niet Beschikbaar",
+    "Kliks": 0
+  },
+  {
+    "FilmId": 5,
+    "Naam": "Shrek",
+    "Omschrijving": "Prachtige animatiefilm waarin Shrek, een trolachtig wezen, het op moet nemen tegen de kwaadaardige bewoners van een sprookjesland. Shrek, een trolachtige wezen, is de onwerkelijke held in dit indrukwekkende animatiespektakel. Hij woont in een moeras, waar de kwaadaardige Lord Farguard op een dag de alle bewoners van het sprookjesland verbant. Om zijn moeras weer voor zichzelf te hebben, moet Shrek een prinses bevrijden die bewaakt wordt door een vuurspuwende draak. Hierbij wordt hij geholpen door Donkey, een ezeltje dat hem mateloos irriteert maar het allemaal goed bedoelt.",
+    "Genre": "Animatie",
+    "Duur": "01:30",
+    "Kijkwijzer": "6+",
+    "Status": "Niet Beschikbaar",
+    "Kliks": 0
+  },
+  {
+    "FilmId": 3,
+    "Naam": "Back to the Future",
+    "Omschrijving": "Doc ontwerpt een tijdmachine waardoor Marty per ongeluk wordt teruggezonden naar 1955. Marty McFly is een doorsnee tiener die bevriend is met de gekke uitvinder Doc Brown. Doc ontwerpt een tijdmachine waardoor Marty per ongeluk wordt teruggezonden naar 1955. Hier ontmoet hij zijn ouders die in deze tijd natuurlijk nog veel jonger zijn. Hij verstoort de ontmoeting met zijn ouders en moet hier alles aan doen om hen weer te herenigen. Als dit niet gebeurt, zal hij nooit geboren worden!",
+    "Genre": "Avontuur",
+    "Duur": "01:56",
+    "Kijkwijzer": "AL",
+    "Status": "Niet Beschikbaar",
+    "Kliks": 0
+  },
+  {
+    "FilmId": 15,
+    "Naam": "Dumb and Dumber",
+    "Omschrijving": "De domme Loyd en zijn nog dommere vriend Harry reizen een vrouw achterna om haar koffer (vol met geld) terug te geven - de maffia achtervolgt hen. Lloyd is dom, maar zijn vriend Harry waar hij mee samenwoont is wellicht nog dommer. Vlak voordat Lloyd wederom wordt ontslagen ontmoet hij de vrouw van zijn leven in zijn taxi. Hij ziet hoe ze een koffer achterlaat, waarin losgeld zit voor haar ontvoerde man. Omdat hun leven zo goed als zinloos is pakken ze hun spullen en gaan haar achterna, richting Aspen achtervolgd door de criminelen.",
+    "Genre": "Komedie",
+    "Duur": "01:47",
+    "Kijkwijzer": "AL",
+    "Status": "Niet Beschikbaar",
+    "Kliks": 0
+  },
+  {
+    "FilmId": 12,
+    "Naam": "Star Wars: Episode IV - A New Hope",
+    "Omschrijving": "Luke Skywalker verlaat zijn thuisplaneet en voegt zich bij andere rebellen. Hij probeert prinses Leia te redden van de duivelse Darth Vader.",
+    "Genre": "Actie",
+    "Duur": "02:01",
+    "Kijkwijzer": "AL",
+    "Status": "Niet Beschikbaar",
+    "Kliks": 0
   }
 ]

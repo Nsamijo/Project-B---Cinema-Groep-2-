@@ -7,44 +7,29 @@ namespace Bioscoop
     {
         static void Main(string[] args)
         {
-            Console.SetWindowSize(155, 32);
-            MenuModule menu = new MenuModule(); 
-
-            //haal jou module uit commentaar!!
-            ZaalModule zaalbeheer = new ZaalModule();
-            FilmModule filmbeheer = new FilmModule();
-            GebruikerModule gebruikerbeheer = new GebruikerModule();
-            FilmschemaModule filmschemabeheer = new FilmschemaModule();
-            StoelModule stoelbeheer = new StoelModule();
-
+            Console.SetWindowSize(160, 35);
+            MenuModule menu = new MenuModule();
+            ReserveringModule reservatie = new ReserveringModule();
             bool loop = true;
+
             while (loop)
             {
                 switch (menu.Run())
                 {
                     case ConsoleKey.D1:
                         Console.Clear();
-                        filmbeheer.Run();
+                        reservatie.SelectFilm();
                         break;
                     case ConsoleKey.D2:
                         Console.Clear();
-                        filmschemabeheer.Run();
+                        reservatie.ManageReservationData();
                         break;
-                    case ConsoleKey.D3:
+                    case ConsoleKey.Insert:
                         Console.Clear();
-                        zaalbeheer.Run();
-                        break;
-                    case ConsoleKey.D4:
-                        Console.Clear();
-                        stoelbeheer.Run(); ;
-                        break;
-                    case ConsoleKey.D5:
-                        Console.Clear();
-                        gebruikerbeheer.Run();
+                        menu.MenuAdmin();
                         break;
                 }
             }
         }
     }
 }
-
