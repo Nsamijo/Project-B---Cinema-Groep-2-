@@ -14,12 +14,16 @@ namespace Bioscoop.Modules
         public StoelData nieuwe_json = new StoelData();
         public List<StoelModel> data;
         public int zaalnummer;
+        public string Zaalomschrijving;
 
         public void Run(int zaalnummer)
         {
             this.zaalnummer = zaalnummer;
             List<StoelModel> stoelData = StoelLoadJson();
             this.data = stoelData.Where(a => a.ZaalId == zaalnummer).ToList();
+            List<ZaalModel> zalen = ZaalData.LoadData();
+            ZaalModel zaaldata = zalen.Where(a => a.ZaalId == zaalnummer).SingleOrDefault();
+            this.Zaalomschrijving = zaaldata.Omschrijving;
             StoelMain();
         }
 
@@ -32,7 +36,7 @@ namespace Bioscoop.Modules
             {
                 Helpers.Display.PrintLine("");
                 Helpers.Display.PrintLine("ESC - Naar menu                           INS - Voeg stoel toe");
-                Helpers.Display.PrintLine("Stoelbeheer: Zaal "+ zaalnummer);
+                Helpers.Display.PrintLine("Stoelbeheer: "+Zaalomschrijving);
                 Helpers.Display.PrintLine("\nTyp nummer van stoel in om aan te passen of te verwijderen\n");
                 Helpers.Display.PrintHeader(error);
                 Helpers.Display.PrintHeader("Nr", "Omschrijving", "Rij", "Stoelnummer", "Premium");
@@ -118,13 +122,13 @@ namespace Bioscoop.Modules
             //stoelnummer(z) bepalen:
             string stoelans = null;
             Helpers.Display.PrintLine("\nWelk stoelnummer heeft de stoel?");
-            Helpers.Display.PrintLine("Vul de stoelnummer in (1-20)");
+            Helpers.Display.PrintLine("Vul de stoelnummer in (1 t/m 16)");
             stoelans = Console.ReadLine();
             int z = 1;
             if (stoelans.All(char.IsDigit))
             {
                 int x = int.Parse(stoelans);
-                if (x >= 1 && x <= 20) {z = x;}
+                if (x >= 1 && x <= 16) {z = x;}
                 else {geldigeInput = false;}
             }
 
@@ -196,16 +200,15 @@ namespace Bioscoop.Modules
             char rijcount = 'A';
             string rij = "";
             bool premium = true;
-            //list<stoelmodel> openmaken
             StoelData stoeldata = new StoelData();
             dynamic array = stoeldata.GetJson();
             string str = JsonConvert.SerializeObject(array);
             List<StoelModel> list = JsonConvert.DeserializeObject<List<StoelModel>>(str);
 
-            while (nummering < 10){
+            while (nummering <= 9){
                 
                 rij = rijcount.ToString();
-                for (int i = 1; i < 21; i++)
+                for (int i = 1; i < 17; i++)
                 {
                     //omschrijving bepalen
                     string omschrijving = $"Rij {rij} Stoel {i}";

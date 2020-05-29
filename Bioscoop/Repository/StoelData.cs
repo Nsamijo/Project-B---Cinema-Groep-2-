@@ -17,10 +17,12 @@ namespace Bioscoop.Repository
         }
 
         public string jsonPath => (Path.GetFullPath(Path.Combine(Environment.CurrentDirectory, @"..\..\..\")) + @"Data\Stoel.json");
-        public void LoadJson(){
-            string file = jsonPath;
-            string json = File.ReadAllText(file); ;
-            this.array = JsonConvert.DeserializeObject(json);
+
+
+        public static List<StoelModel> LoadJson(){
+            string jsonFilePath = Path.GetFullPath(Path.Combine(Environment.CurrentDirectory, @"..\..\..\")) + @"Data\Stoel.json";
+            string _json = File.ReadAllText(jsonFilePath);
+            return JsonConvert.DeserializeObject<List<StoelModel>>(_json);
         }
 
 
@@ -29,7 +31,6 @@ namespace Bioscoop.Repository
         {
             string file = Path.GetFullPath(Path.Combine(Environment.CurrentDirectory, @"..\..\..\")) + @"Data\Stoel.json";
             string data = File.ReadAllText(file);
-
             return JsonConvert.DeserializeObject<List<StoelModel>>(data);
         }
 
