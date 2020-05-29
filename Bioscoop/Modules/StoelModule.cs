@@ -124,22 +124,16 @@ namespace Bioscoop.Modules
             if (stoelans.All(char.IsDigit))
             {
                 int x = int.Parse(stoelans);
-                if (x >= 1 && x <= 20)
-                {
-                    z = x;
-                }
-                else
-                {
-                    geldigeInput = false;
-                }
+                if (x >= 1 && x <= 20) {z = x;}
+                else {geldigeInput = false;}
             }
 
             //rij(str) bepalen:
             string str = null;
             Helpers.Display.PrintLine("\nIn welke rij staat de stoel?");
             Helpers.Display.PrintLine("Vul de rij in (letter A - J)");
-            string inpt = Console.ReadLine().ToLower();
-            if (inpt == "a" || inpt == "b" || inpt == "c" || inpt == "d" || inpt == "e" || inpt == "f" || inpt == "g" || inpt == "h" || inpt == "j" || inpt == "i" || inpt == "j") str = inpt;
+            string inpt = Console.ReadLine().ToUpper();
+            if (inpt == "A" || inpt == "B" || inpt == "C" || inpt == "D" || inpt == "E" || inpt == "F" || inpt == "G" || inpt == "H" || inpt == "I" || inpt == "J") str = inpt;
             else { geldigeInput = false; }
             
             
@@ -195,8 +189,54 @@ namespace Bioscoop.Modules
             }
         }
 
+        public static void Stoel180(int zaalnummer)
+        {
+            int nummering = 1;
+            int stoelnummering = 1;
+            char rijcount = 'A';
+            string rij = "";
+            bool premium = true;
+            //list<stoelmodel> openmaken
+            StoelData stoeldata = new StoelData();
+            dynamic array = stoeldata.GetJson();
+            string str = JsonConvert.SerializeObject(array);
+            List<StoelModel> list = JsonConvert.DeserializeObject<List<StoelModel>>(str);
 
-        public void StoelToevoegen(int stoelid, string omschrijving, string rij, int stoelnr, bool premium, int zaalid)
+            while (nummering < 10){
+                
+                rij = rijcount.ToString();
+                for (int i = 1; i < 21; i++)
+                {
+                    //omschrijving bepalen
+                    string omschrijving = $"Rij {rij} Stoel {i}";
+                    //stoelid bepalen
+                    string jsonFilePath = Path.GetFullPath(Path.Combine(Environment.CurrentDirectory, @"..\..\..\")) + @"Data\Stoel.json"; ;
+                    string _json = File.ReadAllText(jsonFilePath);
+                    var stoelData = JsonConvert.DeserializeObject<List<StoelModel>>(_json);
+                    int stoelId = stoelData.Max(r => r.StoelId) + stoelnummering;
+                    stoelnummering += 1;
+                    //aan list<stoelmodel> toevoegen
+                    StoelModel nieuwe_stoel = new StoelModel();
+                    nieuwe_stoel.StoelId = stoelId;
+                    nieuwe_stoel.Omschrijving = omschrijving;
+                    nieuwe_stoel.Rij = rij;
+                    nieuwe_stoel.StoelNr = i;
+                    nieuwe_stoel.Premium = premium;
+                    nieuwe_stoel.ZaalId = zaalnummer;
+                    list.Add(nieuwe_stoel);
+                }
+                rijcount = (char)(rijcount + 1);
+                if (nummering == 2) { premium = false; }
+                nummering++;
+            }
+            //List<StoelModel> aan json toevoegen
+            string str2 = JsonConvert.SerializeObject(list);
+            dynamic obj = JsonConvert.DeserializeObject(str2);
+            stoeldata.UpdateJson(obj);
+        }
+
+
+        public void StoelToevoegen(int stoelid, string omschrijving, string rij, int stoelnr, bool premium, int zaalid, bool melding = true)
         {
             //object maken en stoel toevoegen
             dynamic array = this.nieuwe_json.GetJson();
@@ -214,7 +254,7 @@ namespace Bioscoop.Modules
             string str2 = JsonConvert.SerializeObject(list);
             dynamic obj = JsonConvert.DeserializeObject(str2);
             nieuwe_json.UpdateJson(obj);
-            NieuweStoelWordtAangemaakt();
+            if (melding) { NieuweStoelWordtAangemaakt(); }
         }
 
         public void NieuweStoelWordtAangemaakt(string error = "") 
@@ -258,8 +298,6 @@ namespace Bioscoop.Modules
             Helpers.Display.PrintTable((nr += 1).ToString(), "Rij: ", stoel.Rij);
             Helpers.Display.PrintTable((nr += 1).ToString(), "Stoel nummer: ", stoel.StoelNr.ToString());
             Helpers.Display.PrintTable((nr += 1).ToString(), "Vip: ", premium);
-
-
             Helpers.Display.PrintLine("\nWat wilt u aanpassen? Zie hoofd knoppen opties");
 
             switch (Helpers.Display.Keypress())
@@ -286,7 +324,6 @@ namespace Bioscoop.Modules
             string _json = File.ReadAllText(jsonFilePath);
             return JsonConvert.DeserializeObject<List<StoelModel>>(_json);
         }
-
 
         //deze functie checkt of de stoelnummer (die toegevoegd moet worden) bestaat en boven de 0 is
         public static string GeldigStoelnummer(string stoelnummer)
@@ -337,7 +374,7 @@ namespace Bioscoop.Modules
                 foreach (var x in toEdit)
                 {
                     Helpers.Display.PrintLine(x.Premium.ToString());
-                    if (x.Premium == true) { x.Premium = false; } else { x.Premium = true; }
+                    x.Premium = (!data.Premium);
                 }
             }
             var jsonData = JsonConvert.SerializeObject(stoelData, Formatting.Indented);
