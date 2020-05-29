@@ -298,7 +298,6 @@ namespace Bioscoop.Repository
                                     res.Insert(i, f);
                                     break;
                                 }
-
                             }
                         } else
                         {
@@ -312,9 +311,7 @@ namespace Bioscoop.Repository
                     res.Add(f);
                 }
             }
-
             return res;
-
         }
     }
 }
