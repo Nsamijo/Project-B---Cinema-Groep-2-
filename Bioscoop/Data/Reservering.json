@@ -1,39 +1,39 @@
 [
   {
     "ReservatieId": 1,
-    "code": "aaaab",
-    "ProgrammaId": 12,
-    "StoelId": 143,
-    "Aantal": 1,
+    "code": "aaaaa",
+    "ProgrammaId": 9,
+    "StoelId": [ 1, 2 ],
+    "Aantal": 2,
     "Totaal": "25,00"
   },
   {
     "ReservatieId": 2,
-    "code": "aaaac",
-    "ProgrammaId": 8,
-    "StoelId": 177,
-    "Aantal": 1,
-    "Totaal": "12,50"
-  },
-  {
-    "ReservatieId": 3,
-    "code": "aaaad",
-    "ProgrammaId": 5,
-    "StoelId": [ 62, 63, 64 ],
+    "code": "aaaab",
+    "ProgrammaId": 9,
+    "StoelId": [ 14, 15, 16 ],
     "Aantal": 3,
     "Totaal": "12,50"
   },
   {
+    "ReservatieId": 3,
+    "code": "aaaac",
+    "ProgrammaId": 9,
+    "StoelId": [ 22 ],
+    "Aantal": 1,
+    "Totaal": "12,50"
+  },
+  {
     "ReservatieId": 5,
-    "code": "aaaae",
-    "ProgrammaId": 4,
-    "StoelId": [ 120, 121 ],
+    "code": "aaaac",
+    "ProgrammaId": 9,
+    "StoelId": [ 25 ],
     "Aantal": 2,
     "Totaal": "25,00"
   },
   {
     "ReservatieId": 6,
-    "code": "aaaaf",
+    "code": "aaaad",
     "ProgrammaId": 4,
     "StoelId": [ 120, 121 ],
     "Aantal": 2,
@@ -41,7 +41,7 @@
   },
   {
     "ReservatieId": 7,
-    "code": "aaaaag",
+    "code": "aaaae",
     "ProgrammaId": 4,
     "StoelId": [ 2, 3 ],
     "Aantal": 2,
@@ -49,7 +49,7 @@
   },
   {
     "ReservatieId": 8,
-    "code": "aaaah",
+    "code": "aaaaf",
     "ProgrammaId": 4,
     "StoelId": [ 5 ],
     "Aantal": 1,
@@ -57,7 +57,7 @@
   },
   {
     "ReservatieId": 9,
-    "code": "aaaai",
+    "code": "aaaag",
     "ProgrammaId": 4,
     "StoelId": [ 8, 9, 10 ],
     "Aantal": 3,
@@ -65,7 +65,15 @@
   },
   {
     "ReservatieId": 10,
-    "code": "aaaaj",
+    "code": "aaaah",
+    "ProgrammaId": 4,
+    "StoelId": [ 15, 16 ],
+    "Aantal": 2,
+    "Totaal": "25,00"
+  },
+  {
+    "ReservatieId": 11,
+    "code": "aaaai",
     "ProgrammaId": 4,
     "StoelId": [ 15, 16 ],
     "Aantal": 2,

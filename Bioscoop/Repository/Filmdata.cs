@@ -34,6 +34,7 @@ namespace Bioscoop.Repository
         {
             List<FilmModel> filmData = LoadData();
             data.FilmId = getId();
+            data.Kliks = 0;
             filmData.Add(data);
 
             // Update json data string
@@ -42,9 +43,14 @@ namespace Bioscoop.Repository
         public static void RemoveData(FilmModel data) //verwijder functie
         {
             List<FilmModel> filmData = LoadData();
+            List<FilmModel> filmschemaData = LoadData();
 
             var toRemove = filmData.Where(a => a.FilmId == data.FilmId).ToList();
             foreach (var remove in toRemove) filmData.Remove(remove);
+
+            //voorfilmschema
+            for (int i = 0; i < filmschemaData.Count; i++) if (filmschemaData[i].FilmId == data.FilmId)
+                    if (filmschemaData[i].FilmId == data.FilmId) FilmschemaData.VerwijderProgramma(i);
 
             // Update json data string
             SaveData(filmData);

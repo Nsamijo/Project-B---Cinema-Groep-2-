@@ -27,14 +27,14 @@ namespace Bioscoop.Modules
                 Helpers.Display.PrintLine(" ");
 
                 int i = 1;
-                Helpers.Display.PrintFilmHeader("No", "Film", "Zaal", "Datum", "Tijd");
+                Helpers.Display.PrintHeaderFilm("No", "Film", "Zaal", "Datum", "Tijd");
                 foreach (FilmschemaModel programma in filmschema)
                 {
                     try
                     {
                         string filmnaam = filmData.Where(film => film.FilmId == programma.FilmId).ToList()[0].Naam;
                         string zaalnaam = zaalData.Where(zaal => zaal.ZaalId == programma.ZaalId).ToList()[0].Omschrijving;
-                        Helpers.Display.PrintFilmTable(i.ToString(), filmnaam, zaalnaam, programma.Datum, programma.Tijd);
+                        Helpers.Display.PrintTableFilm(i.ToString(), filmnaam, zaalnaam, programma.Datum, programma.Tijd);
                     }
                     catch
                     {
@@ -198,13 +198,13 @@ namespace Bioscoop.Modules
             Helpers.Display.PrintLine("ESC - Terug naar menu \n");
 
             int i = 1;
-            Helpers.Display.PrintFilmHeader("Nr", "Film", "Zaal", "Datum", "Tijd");
+            Helpers.Display.PrintHeaderFilm("Nr", "Film", "Zaal", "Datum", "Tijd");
             foreach (FilmschemaModel programma in filmschema)
             {
                 string filmnaam = filmData.Where(film => film.FilmId == programma.FilmId).ToList()[0].Naam;
                 string zaalnaam = zaalData.Where(zaal => zaal.ZaalId == programma.ZaalId).ToList()[0].Omschrijving;
 
-                Helpers.Display.PrintFilmTable(i.ToString(), filmnaam, zaalnaam, programma.Datum, programma.Tijd);
+                Helpers.Display.PrintTableFilm(i.ToString(), filmnaam, zaalnaam, programma.Datum, programma.Tijd);
                 i++;
             }
             Helpers.Display.PrintLine(" ");
@@ -304,7 +304,7 @@ namespace Bioscoop.Modules
             Helpers.Display.PrintHeader("No", "Naam", "Omschrijving", "Genre", "Kijkwijzer");
             foreach (FilmModel film in films)
             {
-                Helpers.Display.PrintFilmTable(i.ToString(), film.Naam, film.Omschrijving, film.Genre, film.Kijkwijzer);
+                Helpers.Display.PrintTableFilm(i.ToString(), film.Naam, film.Omschrijving, film.Genre, film.Kijkwijzer);
                 i++;
             }
 
@@ -329,17 +329,17 @@ namespace Bioscoop.Modules
                         return films[inputValue]; //waarde meegeven van de gekozen film
                     } else if (inputValue == -1)
                     {
-                        return new FilmModel(-2,"","Verkeerde input, vul een nummer in","","","","");
+                        return new FilmModel(-2,"","Verkeerde input, vul een nummer in","","","","",0);
                     } else
                     {
-                        return new FilmModel(-2, "", "Verkeerd nummer, vul een nummer uit de lijst in", "", "", "", "");
+                        return new FilmModel(-2, "", "Verkeerd nummer, vul een nummer uit de lijst in", "", "", "", "",0);
                     }
 
                     
                 case Inputs.KeyAction.Escape: //de functie beeindigen
-                    return new FilmModel(-1, "", "", "", "", "", "");
+                    return new FilmModel(-1, "", "", "", "", "", "",0);
             }
-            return new FilmModel(-2, "", "", "", "", "", "");
+            return new FilmModel(-2, "", "", "", "", "", "",0);
         }
 
         public string AssignTijd(string datum, int zaalid,string error = "")

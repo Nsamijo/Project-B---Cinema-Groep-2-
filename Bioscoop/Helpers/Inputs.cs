@@ -9,7 +9,9 @@ namespace Bioscoop.Helpers
             Enter,
             Escape,
             Insert,
-            Delete
+            Delete,
+            F1,
+            F2
         }
 
         public class KeyInput //verwacht een waarde en een key
@@ -32,6 +34,12 @@ namespace Bioscoop.Helpers
                         return input;
                     case ConsoleKey.Insert:
                         input.action = KeyAction.Insert;
+                        return input;
+                    case ConsoleKey.F1:
+                        input.action = KeyAction.F1;
+                        return input;
+                    case ConsoleKey.F2:
+                        input.action = KeyAction.F2;
                         return input;
                     case ConsoleKey.Delete:
                         input.action = KeyAction.Delete;

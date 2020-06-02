@@ -13,11 +13,13 @@ namespace Bioscoop.Models
         public int Aantal { get; set; }
         public string Totaal { get; set; }
 
-        public ReserveringModel() { }
+        public ReserveringModel() {
+            StoelId = new List<int>();
+        }
 
-        public ReserveringModel(int ReserveringId, string code, int programmaId, List<int> stoelId, int aantal, string totaal)
+        public ReserveringModel(int reserveringId, string code, int programmaId, List<int> stoelId, int aantal, string totaal)
         {
-            ReserveringId = ReserveringId;
+            ReserveringId = reserveringId;
             Code = code;
             ProgrammaId = programmaId;
             StoelId = stoelId;
