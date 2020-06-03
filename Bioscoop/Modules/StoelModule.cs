@@ -135,7 +135,7 @@ namespace Bioscoop.Modules
             //rij(str) bepalen:
             string str = null;
             Helpers.Display.PrintLine("\nIn welke rij staat de stoel?");
-            Helpers.Display.PrintLine("Vul de rij in (letter A - J)");
+            Helpers.Display.PrintLine("Vul de rij in (letter A t/m J)");
             string inpt = Console.ReadLine().ToUpper();
             if (inpt == "A" || inpt == "B" || inpt == "C" || inpt == "D" || inpt == "E" || inpt == "F" || inpt == "G" || inpt == "H" || inpt == "I" || inpt == "J") str = inpt;
             else { geldigeInput = false; }
@@ -193,7 +193,7 @@ namespace Bioscoop.Modules
             }
         }
 
-        public static void Stoel180(int zaalnummer)
+        public static void Stoel144(int zaalnummer)
         {
             int nummering = 1;
             int stoelnummering = 1;
@@ -232,10 +232,21 @@ namespace Bioscoop.Modules
                 if (nummering == 2) { premium = false; }
                 nummering++;
             }
-            //List<StoelModel> aan json toevoegen
+            //Json updaten
             string str2 = JsonConvert.SerializeObject(list);
             dynamic obj = JsonConvert.DeserializeObject(str2);
             stoeldata.UpdateJson(obj);
+        }
+
+
+        public static void DeleteStoel144(int zaalnummer)
+        {
+            List<StoelModel> stoelData = StoelLoadJson();
+            List<StoelModel> stoelen = stoelData.Where(a => a.ZaalId == zaalnummer).ToList();
+            foreach (var remove in stoelen) stoelData.Remove(remove);
+
+            var jsonData = JsonConvert.SerializeObject(stoelData, Formatting.Indented);
+            System.IO.File.WriteAllText((Path.GetFullPath(Path.Combine(Environment.CurrentDirectory, @"..\..\..\")) + @"Data\Stoel.json"), jsonData);
         }
 
 
@@ -278,7 +289,6 @@ namespace Bioscoop.Modules
                     NieuweStoelWordtAangemaakt("Dat is geen geldige input, probeer het nogmaals");
                     break;
             }
-
         }
 
         //STOELEN AANPAS SCHERM
@@ -326,32 +336,6 @@ namespace Bioscoop.Modules
             string jsonFilePath = Path.GetFullPath(Path.Combine(Environment.CurrentDirectory, @"..\..\..\")) + @"Data\Stoel.json";
             string _json = File.ReadAllText(jsonFilePath);
             return JsonConvert.DeserializeObject<List<StoelModel>>(_json);
-        }
-
-        //deze functie checkt of de stoelnummer (die toegevoegd moet worden) bestaat en boven de 0 is
-        public static string GeldigStoelnummer(string stoelnummer)
-        {
-
-            var ans = Console.ReadLine();
-            if (ans.All(char.IsDigit))
-            {
-                int x = int.Parse(stoelnummer);
-                List<StoelModel> json = StoelLoadJson();
-                foreach (StoelModel stoel in json)
-                {
-                    if (stoel.StoelId == x)
-                    {
-                        return stoelnummer;
-                    }
-                }
-            }
-            else
-            {
-                Helpers.Display.PrintLine("Geen geldige input, probeer het nogmaals");
-                stoelnummer = Console.ReadLine();
-                GeldigStoelnummer(stoelnummer);
-            }
-            return "";
         }
 
         public void StoelVerwijderen(StoelModel data) //verwijder functie
