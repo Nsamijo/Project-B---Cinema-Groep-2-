@@ -101,21 +101,23 @@ namespace Bioscoop.Modules
                 Helpers.Display.PrintLine("");
                 Helpers.Display.PrintHeader("Nr.", "Menu");
                 Helpers.Display.PrintTable("1", "Reservatie beheer");
-                Helpers.Display.PrintTable("2", "Reservatie Rapportage");
-                Helpers.Display.PrintTable("3", "Film Rapportage");
+                Helpers.Display.PrintTable("2", "Rapportage");
+
+                ReserveringModule reservering = new ReserveringModule();
+                ManagementModule management = new ManagementModule();
 
                 switch (Helpers.Display.Keypress())
                 {
                     case ConsoleKey.D1:
                         Console.Clear();
-                        //reservatie module
+                        management.ReservatieManagament();
                         break;
                     case ConsoleKey.D2:
                         Console.Clear();
                         //rapportage
                         break;
                     case ConsoleKey.Escape:
-                        Display.PrintLine("\nBent u zeker dat u wilt uitloggen? (y/n)");
+                        Display.PrintLine("\n Weet u zeker dat u wilt uitloggen? (y/n)");
                         if (Helpers.Display.Keypress() == ConsoleKey.Y)
                             loop = false;
                         break;

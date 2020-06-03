@@ -1,6 +1,6 @@
 [
   {
-    "ProgrammaId": 6,
+    "ProgrammaId": 4,
     "Datum": "27/05/2020",
     "Tijd": "11:00",
     "FilmId": 8,
@@ -8,28 +8,28 @@
   },
   {
     "ProgrammaId": 7,
-    "Datum": "28/05/2020",
+    "Datum": "28/06/2020",
     "Tijd": "11:00",
     "FilmId": 18,
     "ZaalId": 3
   },
   {
     "ProgrammaId": 9,
-    "Datum": "28/05/2020",
+    "Datum": "08/06/2020",
     "Tijd": "18:00",
     "FilmId": 8,
     "ZaalId": 1
   },
   {
     "ProgrammaId": 10,
-    "Datum": "28/05/2020",
+    "Datum": "28/06/2020",
     "Tijd": "12:00",
     "FilmId": 10,
     "ZaalId": 1
   },
   {
     "ProgrammaId": 11,
-    "Datum": "29/05/2020",
+    "Datum": "29/06/2020",
     "Tijd": "12:00",
     "FilmId": 10,
     "ZaalId": 1
@@ -48,5 +48,4 @@
     "FilmId": 18,
     "ZaalId": 6
   }
-
 ]

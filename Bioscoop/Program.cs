@@ -22,7 +22,7 @@ namespace Bioscoop
                         break;
                     case ConsoleKey.D2:
                         Console.Clear();
-                        reservatie.ManageReservationData();
+                        reservatie.ReserveringLogin();
                         break;
                     case ConsoleKey.Insert:
                         Console.Clear();
