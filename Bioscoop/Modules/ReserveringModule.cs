@@ -113,13 +113,29 @@ namespace Bioscoop.Modules
 
                 Helpers.Display.PrintTableInfo("Benaming", "Waarde");
                 Helpers.Display.PrintTableInfo("Naam: ", film.Naam);
-                int maxLength = 50; int index = 0;
-                while (index + maxLength < film.Omschrijving.Length) // bij omschrijvingen lager dan length oplossingen verzinnen. pakt deze anders niet
+                int maxLength = 50; bool first = true; int index = 0;
+                var woorden = film.Omschrijving.Split(' ');
+                string lijn = "";
+                foreach (string woord in woorden)
                 {
-                    if (index == 0) Helpers.Display.PrintTableInfo("Omschrijving: ", film.Omschrijving.Substring(index, maxLength));
-                    else Helpers.Display.PrintTableInfo(" ", film.Omschrijving.Substring(index, maxLength));
-                    index += maxLength;
+                    index++;
+
+                    if ((lijn + woord + " ").Length <= maxLength)
+                        lijn += woord + " ";
+                    else
+                    {
+                        if (first)
+                            Helpers.Display.PrintTableInfo("Omschrijving:  ", lijn);
+                        else
+                            Helpers.Display.PrintTableInfo("  ", lijn);
+                        lijn = woord + " ";
+                        first = false;
+                    }
+
+                    if (index >= woorden.Length)
+                        Helpers.Display.PrintTableInfo("  ", lijn);
                 }
+
                 Helpers.Display.PrintTableInfo("Genre: ", film.Genre);
                 Helpers.Display.PrintTableInfo("Duur: ", film.Duur);
                 Helpers.Display.PrintTableInfo("Kijkwijzer: ", film.Kijkwijzer);
