@@ -100,7 +100,10 @@ namespace Bioscoop.Modules
             {
                 Console.Clear();
                 Helpers.Display.PrintLine("Bioscoop - Medewerkers Portaal                       Welkom: " + medewerker.Naam);
-                Helpers.Display.PrintLine("ESC - Uitloggen");
+                if (medewerker.Rechten)
+                    Helpers.Display.PrintLine("ESC - Terug naar Admin Portaal");
+                else
+                    Helpers.Display.PrintLine("ESC - Uitloggen");
                 Helpers.Display.PrintLine("");
                 Helpers.Display.PrintHeader("Nr.", "Menu");
                 Helpers.Display.PrintTable("1", "Reservatie beheer");
@@ -120,8 +123,11 @@ namespace Bioscoop.Modules
                         //rapportage
                         break;
                     case ConsoleKey.Escape:
-                        Display.PrintLine("\n Weet u zeker dat u wilt uitloggen? (y/n)");
+                        if (!medewerker.Rechten)
+                            Display.PrintLine("\n Weet u zeker dat u wilt uitloggen? (y/n)");
                         if (Helpers.Display.Keypress() == ConsoleKey.Y)
+                            loop = false;
+                        else
                             loop = false;
                         break;
                 }
