@@ -50,7 +50,7 @@ namespace Bioscoop.Modules
             {
                 Console.Clear(); Console.CursorVisible = false;
                 Helpers.Display.PrintLine("Bioscoop - Admin Portaal                            Welkom: " + admin.NuIngelogd().Naam);
-                Helpers.Display.PrintLine("ESC - Uitloggen");
+                Helpers.Display.PrintLine("ESC - Uitloggen                            INS - Medewerker Portaal");
                 Helpers.Display.PrintLine("");
                 Helpers.Display.PrintHeader("Nr.", "Menu");
                 Helpers.Display.PrintTable("1", "Filmbeheer");
@@ -86,6 +86,9 @@ namespace Bioscoop.Modules
                         Display.PrintLine("\nBent u zeker dat u wilt uitloggen? (y/n)");
                         if (Helpers.Display.Keypress() == ConsoleKey.Y)
                             loop = false;
+                        break;
+                    case ConsoleKey.Insert:
+                        MenuMedewerker(admin.NuIngelogd());
                         break;
                 }
             }
