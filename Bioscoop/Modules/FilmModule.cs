@@ -116,12 +116,32 @@ namespace Bioscoop.Modules
                 int nr = 0; //data weergeven en nummeren voor waarde keuze
                 Helpers.Display.PrintHeader("Nr.", "Benaming", "Waarde");
                 Helpers.Display.PrintTable((nr += 1).ToString(), "Naam: ", film.Naam);
-                int maxLength = 45; int index = 0;
-                while (index + maxLength < film.Omschrijving.Length)
+                int maxLength = 45; int index = 0; string lijn = ""; bool first = true;
+                var woorden = film.Omschrijving.Split(' ');
+                foreach (string woord in woorden)
                 {
-                    if (index == 0) Helpers.Display.PrintTable((nr += 1).ToString(), "Omschrijving: ", film.Omschrijving.Substring(index, maxLength));
-                    else Helpers.Display.PrintTable(" ", " ", film.Omschrijving.Substring(index, maxLength));
-                    index += maxLength;
+                    //tellen de index op om te kijken hoe vaak er geloop is
+                    index++;
+                    //gefiltered of het volgend woord mag worden opgeteld
+                    if ((lijn + woord + " ").Length <= maxLength)
+                        //tellen woord samen met een spatie op aan de string
+                        lijn += woord + " ";
+                    else
+                    {
+                        //eerste keer voor de print hierdoor wordt omschrijving ook geprint
+                        if (first)
+                            Helpers.Display.PrintTable((nr += 1).ToString(),"Omschrijving: ", lijn);
+                        //printen normaal de string nu
+                        else
+                            Helpers.Display.PrintTable(" ", " ", lijn);
+                        //string wordt opniew gezet met het woord (hierdoor raakt er geen informatie kwijt)
+                        lijn = woord + " ";
+                        //first wordt op false gezet zodat omschrijving niet nog een keer wordt geprint
+                        first = false;
+                    }
+                    //kijken of de gehele array is door gespitsed en printen dan de overige woorden || niet altijd is de string de maximale lengte
+                    if (index >= woorden.Length)
+                        Helpers.Display.PrintTable(" ", " ", lijn);
                 }
                 Helpers.Display.PrintTable((nr += 1).ToString(), "Genre: ", film.Genre);
                 Helpers.Display.PrintTable((nr += 1).ToString(), "Duur: ", film.Duur);

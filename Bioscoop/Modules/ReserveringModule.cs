@@ -113,25 +113,35 @@ namespace Bioscoop.Modules
 
                 Helpers.Display.PrintTableInfo("Benaming", "Waarde");
                 Helpers.Display.PrintTableInfo("Naam: ", film.Naam);
+                //variablen die kijken voor de filtering
                 int maxLength = 50; bool first = true; int index = 0;
+                //maken een array van de omschrijving
                 var woorden = film.Omschrijving.Split(' ');
+                //string voor de omschrijving per lijn
                 string lijn = "";
+
                 foreach (string woord in woorden)
                 {
+                    //tellen de index op om te kijken hoe vaak er geloop is
                     index++;
-
+                    //gefiltered of het volgend woord mag worden opgeteld
                     if ((lijn + woord + " ").Length <= maxLength)
+                        //tellen woord samen met een spatie op aan de string
                         lijn += woord + " ";
                     else
                     {
+                        //eerste keer voor de print hierdoor wordt omschrijving ook geprint
                         if (first)
                             Helpers.Display.PrintTableInfo("Omschrijving:  ", lijn);
+                        //printen normaal de string nu
                         else
                             Helpers.Display.PrintTableInfo("  ", lijn);
+                        //string wordt opniew gezet met het woord (hierdoor raakt er geen informatie kwijt)
                         lijn = woord + " ";
+                        //first wordt op false gezet zodat omschrijving niet nog een keer wordt geprint
                         first = false;
                     }
-
+                    //kijken of de gehele array is door gespitsed en printen dan de overige woorden || niet altijd is de string de maximale lengte
                     if (index >= woorden.Length)
                         Helpers.Display.PrintTableInfo("  ", lijn);
                 }
@@ -270,7 +280,6 @@ namespace Bioscoop.Modules
                 Helpers.Display.PrintLine("Reservatie informatie: \n");
 
                 //weergave data
-                int nr = 0; 
                 List<string> displaystoelen = new List<string>();
 
                 Helpers.Display.PrintTableInfo("Benaming", "Waarde");
