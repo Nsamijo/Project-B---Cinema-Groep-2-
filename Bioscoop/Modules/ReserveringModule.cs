@@ -413,11 +413,18 @@ namespace Bioscoop.Modules
                 Display.PrintTableFilm("No", "Titel", "Zaal", "Datum", "Tijd", "Code");
                 for(int i = 0; i < reserveringData.Count(); i++)
                 {
-                    ReserveringModel r = reserveringData[i];
-                    FilmschemaModel fs = filmschemaData.Where(fs => fs.ProgrammaId == r.ProgrammaId).ToList()[0];
-                    FilmModel f = filmData.Where(f => f.FilmId == fs.FilmId).ToList()[0];
-                    ZaalModel z = zaalData.Where(z => z.ZaalId == fs.ZaalId).ToList()[0];
-                    Display.PrintTableFilm("" + i + 1, f.Naam, z.Omschrijving, fs.Datum, fs.Tijd, r.Code);
+                    try
+                    {
+                        ReserveringModel r = reserveringData[i];
+                        FilmschemaModel fs = filmschemaData.Where(fs => fs.ProgrammaId == r.ProgrammaId).ToList()[0];
+                        FilmModel f = filmData.Where(f => f.FilmId == fs.FilmId).ToList()[0];
+                        ZaalModel z = zaalData.Where(z => z.ZaalId == fs.ZaalId).ToList()[0];
+                        Display.PrintTableFilm(i + 1 + "", f.Naam, z.Omschrijving, fs.Datum, fs.Tijd, r.Code);
+                    }
+                    catch
+                    {
+
+                    }
                 }
 
                 Display.PrintLine("");
