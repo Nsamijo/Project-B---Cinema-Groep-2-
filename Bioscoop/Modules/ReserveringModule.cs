@@ -391,12 +391,61 @@ namespace Bioscoop.Modules
 
         public void AddReservering()
         {
-
+            
         }
        
         public void Run() //hoofd functie
         {
-           
+            bool abort = false;
+            string message = "";
+            while (!abort)
+            {
+                Display.PrintLine("Bioscoop - Beheren reservering");
+                Display.PrintLine("ESC - Terug");
+                Display.PrintLine("");
+                if(message != "")
+                {
+                    Display.PrintLine("");
+                    Display.PrintLine(message);
+                }
+                Display.PrintLine("");
+
+                Display.PrintTableFilm("No", "Titel", "Zaal", "Datum", "Tijd", "Code");
+                for(int i = 0; i < reserveringData.Count(); i++)
+                {
+                    ReserveringModel r = reserveringData[i];
+                    FilmschemaModel fs = filmschemaData.Where(fs => fs.ProgrammaId == r.ProgrammaId).ToList()[0];
+                    FilmModel f = filmData.Where(f => f.FilmId == fs.FilmId).ToList()[0];
+                    ZaalModel z = zaalData.Where(z => z.ZaalId == fs.ZaalId).ToList()[0];
+                    Display.PrintTableFilm("" + i + 1, f.Naam, z.Omschrijving, fs.Datum, fs.Tijd, r.Code);
+                }
+
+                Display.PrintLine("");
+                Display.PrintLine("Vul de code van de reservering die u wilt aanpassen");
+                Inputs.KeyInput input = Inputs.ReadUserData();
+                switch (input.action)
+                {
+                    case Inputs.KeyAction.Enter:
+                        string code = input.val;
+                        if (code.Length != 5)
+                        {
+                            Console.Clear();
+                            break;
+                        }
+                        else
+                        {
+
+                            ReserveringModel reservering = ReserveringData.GetReservering(code);
+                            PrintReservering(reservering);
+                        }
+                        break;
+                    case Inputs.KeyAction.Escape:
+                        abort = true;
+                        break;
+                }
+                Console.Clear();
+
+            }
         }
         public void ManageReservationData()
         {
@@ -497,5 +546,6 @@ namespace Bioscoop.Modules
                     break;
             }
         }
+       
     }
 }

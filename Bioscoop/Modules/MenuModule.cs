@@ -57,12 +57,14 @@ namespace Bioscoop.Modules
                 Helpers.Display.PrintTable("2", "Filmschemabeheer");
                 Helpers.Display.PrintTable("3", "Zaalbeheer");
                 Helpers.Display.PrintTable("4", "Gebruikerbeheer");
+                Helpers.Display.PrintTable("5", "Reserveringbeheer");
 
                 ZaalModule zaalbeheer = new ZaalModule();
                 FilmModule filmbeheer = new FilmModule();
                 GebruikerModule gebruikerbeheer = new GebruikerModule();
                 FilmschemaModule filmschemabeheer = new FilmschemaModule();
                 StoelModule stoelbeheer = new StoelModule();
+                ReserveringModule reserveringbeheer = new ReserveringModule();
 
                 switch (Helpers.Display.Keypress())
                 {
@@ -81,6 +83,10 @@ namespace Bioscoop.Modules
                     case ConsoleKey.D4:
                         Console.Clear();
                         gebruikerbeheer.Run(admin);
+                        break;
+                    case ConsoleKey.D5:
+                        Console.Clear();
+                        reserveringbeheer.Run();
                         break;
                     case ConsoleKey.Escape:
                         Display.PrintLine("\nBent u zeker dat u wilt uitloggen? (y/n)");
