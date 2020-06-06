@@ -410,16 +410,14 @@ namespace Bioscoop.Modules
                 }
                 Display.PrintLine("");
 
-                Display.PrintTableFilm("No", "Titel", "Zaal", "Datum", "Tijd", "Code");
+                Display.PrintHeader("Nr","Code","Programma datum");
                 for(int i = 0; i < reserveringData.Count(); i++)
                 {
                     try
                     {
                         ReserveringModel r = reserveringData[i];
                         FilmschemaModel fs = filmschemaData.Where(fs => fs.ProgrammaId == r.ProgrammaId).ToList()[0];
-                        FilmModel f = filmData.Where(f => f.FilmId == fs.FilmId).ToList()[0];
-                        ZaalModel z = zaalData.Where(z => z.ZaalId == fs.ZaalId).ToList()[0];
-                        Display.PrintTableFilm(i + 1 + "", f.Naam, z.Omschrijving, fs.Datum, fs.Tijd, r.Code);
+                        Display.PrintTable(i + 1 + "", r.Code,fs.Datum);
                     }
                     catch
                     {
@@ -428,22 +426,23 @@ namespace Bioscoop.Modules
                 }
 
                 Display.PrintLine("");
-                Display.PrintLine("Vul de code van de reservering die u wilt aanpassen");
+                Display.PrintLine("Vul een waarde in om naar het overzicht scherm van deze reservering te gaan");
                 Inputs.KeyInput input = Inputs.ReadUserData();
                 switch (input.action)
                 {
                     case Inputs.KeyAction.Enter:
-                        string code = input.val;
-                        if (code.Length != 5)
+                        int inputValue = Int32.TryParse(input.val, out inputValue) ? inputValue : 0;
+                        inputValue--; //-1 want count start bij 0
+                        if(inputValue >= 0 && inputValue < reserveringData.Count())
                         {
-                            Console.Clear();
-                            break;
+                            PrintReservering(reserveringData[inputValue]);
                         }
-                        else
+                        else if(inputValue == -1)
                         {
-
-                            ReserveringModel reservering = ReserveringData.GetReservering(code);
-                            PrintReservering(reservering);
+                            message = "Verkeerde input, vul een nummer in";
+                        } else
+                        {
+                            message = "Verkeerd nummer, vul een nummer uit de lijst in";
                         }
                         break;
                     case Inputs.KeyAction.Escape:
