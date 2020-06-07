@@ -55,6 +55,15 @@ namespace Bioscoop.Helpers
 
             Console.WriteLine(_sb.ToString());
         }
+        public static void PrintReserveringbeheer(string col1, string col2 = null, string col3 = null)
+        {
+            StringBuilder _sb = new StringBuilder();
+            _sb.Append((String.IsNullOrEmpty(col1) ? "   " : prefix + col1.PadRight(3)));
+            _sb.Append((String.IsNullOrEmpty(col2) ? "               " : " " + col2.PadRight(15)));
+            _sb.Append((String.IsNullOrEmpty(col3) ? "               " : " " + col3.PadRight(15)));
+
+            Console.WriteLine(_sb.ToString());
+        }
         public static void PrintTableFilm(string col1, string col2 = null, string col3 = null, string col4 = null, string col5 = null, string col6 = null)
         {
             StringBuilder _sb = new StringBuilder();

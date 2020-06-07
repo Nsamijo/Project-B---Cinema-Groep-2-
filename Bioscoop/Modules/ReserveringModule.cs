@@ -275,8 +275,8 @@ namespace Bioscoop.Modules
                 //menu
                 Helpers.Display.PrintHeader("Bioscoop - Reserveren");
                 Helpers.Display.PrintLine("ESC - Terug naar het filmoverzicht                                  DEL - Reset\n");
-                Helpers.Display.PrintLine("Welkom bij het reservatie scherm. \n Controleer de gegevens van uw bestelling.\n");
-                Helpers.Display.PrintLine("Reservatie informatie: \n");
+                Helpers.Display.PrintLine("Welkom bij het reserveringsscherm. \n Controleer de gegevens van uw bestelling.\n");
+                Helpers.Display.PrintLine("Reservering informatie: \n");
 
                 //weergave data
                 List<string> displaystoelen = new List<string>();
@@ -327,8 +327,8 @@ namespace Bioscoop.Modules
                         }                          
                         break;
                     case 3:
-                        Helpers.Display.PrintLine("druk op Insert om de bestelling te betalen \n");
-                        Helpers.Display.PrintLine("druk op Escape om de bestelling te annuleren en terug te gaan naar het hoofdmenu");
+                        Helpers.Display.PrintLine("druk op INSert om de bestelling te betalen \n");
+                        Helpers.Display.PrintLine("druk op ESCape om de bestelling te annuleren en terug te gaan naar het hoofdmenu");
                         newReservering.Totaal = totaal.ToString();
                         check = true;
                         break;
@@ -368,7 +368,7 @@ namespace Bioscoop.Modules
                                    totaal = prijs * ((decimal)persoon / 100);
                                    error = "";
                                 }
-                                else error = "Deze stoel is niet beschikbaar. Voel een nieuwe waarde in.";
+                                else error = "Deze stoel is niet beschikbaar. Vul een nieuwe waarde in.";
                                 plekken = plekken.Where(p => !newReservering.StoelId.Any(p2 => p2 == p.StoelId)).ToList();
                                 if(error == "")
                                     persoon++;
@@ -468,15 +468,15 @@ namespace Bioscoop.Modules
                 Display.PrintLine("Bioscoop - Reserveringbeheer");
                 Display.PrintLine("ESC - Terug");
                 Display.PrintLine("\n");
-
-                Display.PrintHeader("Nr", "Code", "Programma datum");
+                Display.PrintLine("Overzicht van alle reserveringen: \n");
+                Display.PrintReserveringbeheer("Nr", "Code", "Programma datum");
                 for (int i = 0; i < reserveringData.Count(); i++)
                 {
                     try
                     {
                         ReserveringModel r = reserveringData[i];
                         FilmschemaModel fs = filmschemaData.Where(fs => fs.ProgrammaId == r.ProgrammaId).ToList()[0];
-                        Display.PrintTable(i + 1 + "", r.Code, fs.Datum);
+                        Display.PrintReserveringbeheer(i + 1 + "", r.Code, fs.Datum);
                     }
                     catch
                     {
@@ -564,13 +564,11 @@ namespace Bioscoop.Modules
             FilmschemaModel filmschema = filmschemaData.Where(fs => fs.ProgrammaId == r.ProgrammaId).SingleOrDefault();
             FilmModel film = filmData.Where(f => f.FilmId == filmschema.FilmId).SingleOrDefault();
             ZaalModel zaal = zaalData.Where(z => z.ZaalId == filmschema.ZaalId).SingleOrDefault();
+            List<StoelModel> stoelen = stoelData.Where(a => a.ZaalId == filmschema.ZaalId).ToList();
             PrijsModel prijzen = prijsData.Where(a => a.Soort == zaal.Scherm).SingleOrDefault(); decimal prijs = decimal.Parse(prijzen.Prijs);
-            List<StoelModel> stoelen = new List<StoelModel>();
+            List<StoelModel> stoel = new List<StoelModel>();
             foreach (int id in r.StoelId)
                 stoelen.Add(stoelData.Where(s => s.StoelId == id).SingleOrDefault());
-            string ststring = "" + stoelen[0].StoelNr;
-            for (int i = 1; i < stoelen.Count; i++)
-                ststring += "," + stoelen[i].StoelNr;
 
             //display
             bool abort = false;
@@ -594,7 +592,13 @@ namespace Bioscoop.Modules
                 Display.PrintTableInfo("Rij:", stoelen[0].Rij);
                 Display.PrintTableInfo("Vip:", (stoelen[0].Premium ? "Ja" : "Nee"));
                 Display.PrintTableInfo("Prijs per persoon: ", (prijs / 100).ToString("0.00"));
-                Display.PrintTableInfo("Stoel: ", ststring);
+                List<string> displaystoelen = new List<string>();
+                if (r.StoelId.Count > 0)
+                {
+                    foreach (int s in r.StoelId)
+                        displaystoelen.Add(stoelData.Where(t => t.StoelId == s).Select(x => x.Omschrijving).SingleOrDefault());
+                    Helpers.Display.PrintTableInfo("Stoelen: ", String.Join(", ", displaystoelen));
+                }
                 Display.PrintTableInfo("Totaal betaald:", r.Totaal);
 
                 Inputs.KeyInput input = Inputs.ReadUserData();
