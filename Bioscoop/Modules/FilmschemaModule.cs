@@ -543,9 +543,7 @@ namespace Bioscoop.Modules
                                         while (FilmschemaData.DatumSyntax(datum) == false && datum != "abort")
                                         {
                                             Console.Clear();
-                                            Helpers.Display.PrintLine("Probeer het opnieuw\n\n");
-                                            datum = AssignDatum();
-                                            Console.Clear();
+                                            datum = AssignDatum(datum);
                                         }
                                         if (datum != "abort")
                                         {

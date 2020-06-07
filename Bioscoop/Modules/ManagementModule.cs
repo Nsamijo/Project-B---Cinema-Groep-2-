@@ -35,17 +35,19 @@ namespace Bioscoop.Modules
                     Console.ForegroundColor = originalColor;
                 }
 
+                string fromdate = DateTime.UtcNow.ToString("dd/MM/yyyy");
+
                 //menu
-                Helpers.Display.PrintHeader("Zaalbeheer");
+                Helpers.Display.PrintHeader("Reserveringoverzicht van vandaag:", fromdate);
                 Helpers.Display.PrintLine("ESC - Terug naar menu                        INS - Reservatie overzicht");
                 Helpers.Display.PrintLine(" ");
                 Helpers.Display.PrintLine("Vul een nummer in om een reservering aan te maken");
                 Helpers.Display.PrintLine(" ");
-                Helpers.Display.PrintTableFilm("Nr.", "Film", "Tijd", "Plekken", "Scherm", "Datum");
+                Helpers.Display.PrintTableFilm("Nr.", "Film", "Tijd", "Plekken", "Scherm");
 
                 //data voor loop
                 var land = new System.Globalization.CultureInfo("nl-NL");
-                string fromdate = DateTime.UtcNow.ToString("dd/MM/yyyy"); DateTime td = DateTime.Parse(fromdate, land);
+                DateTime td = DateTime.Parse(fromdate, land);
                 List<FilmschemaModel> filmschema = filmschemaData.Where(s => s.Datum == fromdate).ToList();
                 int nummering = 1; // nummer naast de waarde op het scherm
                 foreach (FilmschemaModel schema in filmschema)
@@ -74,7 +76,7 @@ namespace Bioscoop.Modules
                     }
 
                     DateTime d = DateTime.Parse(schema.Datum, land);
-                    Helpers.Display.PrintTableFilm(nummering.ToString(), filmdata.Naam, schema.Tijd, rijPlekken.Sum().ToString(), zaaldata.Scherm,  schema.Datum); 
+                    Helpers.Display.PrintTableFilm(nummering.ToString(), filmdata.Naam, schema.Tijd, rijPlekken.Sum().ToString(), zaaldata.Scherm); 
                     nummering++;
                 }
                 Helpers.Display.PrintLine(" ");
@@ -111,7 +113,76 @@ namespace Bioscoop.Modules
 
         public void RapportageManagement()
         {
+            //globale data
+            List<FilmschemaModel> filmschema = filmschemaData;
+            List<ReserveringModel> reservering = reserveringData;
 
+            Boolean abort = false;
+            String error = "";
+            while (!abort)
+            {
+                Console.Clear();
+                if (!String.IsNullOrEmpty(error)) //error handling en text kleur veranderen
+                {
+                    ConsoleColor originalColor = Console.ForegroundColor;
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Helpers.Display.PrintLine("Error: " + error);
+                    Helpers.Display.PrintLine("");
+                    Console.ForegroundColor = originalColor;
+                }
+
+                Helpers.Display.PrintHeader("Bioscoop - Rapportage");
+                Helpers.Display.PrintLine("ESC - Terug naar menu                        ");
+                Helpers.Display.PrintLine("\n De populairste films die beschikbaar zijn op dit moment\n");
+                Helpers.Display.PrintLine("Meest bekeken                                                                Meest gereserveerd\n");
+                Helpers.Display.PrintTableRapportage("Nr", "Filmnaam", "Kliks", " | ", "Filmnaam", "Reserveringen");
+
+
+                List<FilmModel> filmloop = filmData.Where(x => x.Status == "Beschikbaar").ToList();
+                List<FilmModel> filmorder = filmloop.OrderByDescending(x => x.Kliks).ToList();
+                List<FilmModel> filmkliks = new List<FilmModel>();
+                foreach (FilmModel film in filmorder)
+                    filmkliks.Add(film);
+
+                List<int> filmids = new List<int>();
+                foreach (var a in filmloop)
+                    filmids.Add(a.FilmId);
+
+                
+                List<int> data = new List<int>();
+                foreach (int id in filmids)
+                {
+                    var all = reservering
+                            .Join(filmschema,
+                            res => res.ProgrammaId,
+                            schema => schema.ProgrammaId,
+                            (res, schema) => new
+                            {
+                                schema.FilmId,
+                                res.ReserveringId
+                            })
+                            .Where(data => data.FilmId == id);
+
+                    data.Add(all.Count());
+                }
+                data.Sort();
+                data.Reverse();
+
+                int i = 0;
+                List<FilmModel> filmloop5 = filmloop.Take(5).ToList();
+                foreach (var a in filmloop5)
+                {
+                    Helpers.Display.PrintTableRapportage((i + 1).ToString(), filmkliks[i].Naam, filmkliks[i].Kliks.ToString(), " | ", filmloop[i].Naam, data[i].ToString());
+                    i++;
+                }
+                Console.Write(">"); Inputs.KeyInput input = Inputs.ReadUserData();
+                switch (input.action)
+                {
+                    case Inputs.KeyAction.Escape: //de functie beeindigen
+                        abort = true;
+                        break;
+                }
+            }
         }
     }
 }

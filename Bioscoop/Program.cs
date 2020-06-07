@@ -5,7 +5,7 @@ namespace Bioscoop
 {
     class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             Console.SetWindowSize(160, 35);
             MenuModule menu = new MenuModule();

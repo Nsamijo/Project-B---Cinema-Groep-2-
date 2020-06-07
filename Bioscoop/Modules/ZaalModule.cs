@@ -172,6 +172,7 @@ namespace Bioscoop.Modules
                         if( temp == "y")
                         {
                             ZaalData.RemoveData(zaal);
+                            StoelModule.DeleteStoel144(zaal.ZaalId);
                             ConsoleColor ogColor = Console.ForegroundColor;
                             Console.ForegroundColor = ConsoleColor.Red;
                             Console.WriteLine(zaal.Omschrijving + " is verwijderd.");
@@ -281,6 +282,7 @@ namespace Bioscoop.Modules
                             Console.ForegroundColor = originalColor;
                             System.Threading.Thread.Sleep(2000);
                             ZaalData.SortData();
+                            StoelModule.Stoel144(newZaal.ZaalId);
                             abort = true;
                         }
                         break;

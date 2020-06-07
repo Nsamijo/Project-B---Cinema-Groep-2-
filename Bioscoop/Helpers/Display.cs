@@ -71,13 +71,11 @@ namespace Bioscoop.Helpers
         {
             StringBuilder _sb = new StringBuilder();
             _sb.Append((String.IsNullOrEmpty(col1) ? "   " : prefix + col1.PadRight(3)));
-            _sb.Append((String.IsNullOrEmpty(col2) ? "                                          " : " " + col2.PadRight(43)));
-            _sb.Append((String.IsNullOrEmpty(col3) ? "                    " : " " + col3.PadRight(20)));
-            _sb.Append((String.IsNullOrEmpty(col4) ? "                    " : " " + col4.PadRight(20)));
-            _sb.Append((String.IsNullOrEmpty(col5) ? "                    " : " " + col5.PadRight(20)));
-            _sb.Append((String.IsNullOrEmpty(col6) ? "                    " : " " + col6.PadRight(20)));
-            _sb.Append((String.IsNullOrEmpty(col7) ? "                    " : " " + col7.PadRight(20)));
-            _sb.Append((String.IsNullOrEmpty(col8) ? "                    " : " " + col8.PadRight(20)));
+            _sb.Append((String.IsNullOrEmpty(col2) ? "                                          " : " " + col2.PadRight(45)));
+            _sb.Append((String.IsNullOrEmpty(col3) ? "               " : " " + col3.PadRight(15)));
+            _sb.Append((String.IsNullOrEmpty(col4) ? "               " : " " + col4.PadRight(10)));
+            _sb.Append((String.IsNullOrEmpty(col5) ? "                                          " : " " + col5.PadRight(45)));
+            _sb.Append((String.IsNullOrEmpty(col6) ? "               " : " " + col6.PadRight(15)));
 
             Console.WriteLine(_sb.ToString());
         }

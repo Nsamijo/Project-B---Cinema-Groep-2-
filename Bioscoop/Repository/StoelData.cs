@@ -12,6 +12,11 @@ namespace Bioscoop.Repository
         //om naar json te updaten vanaf hier
         public dynamic array;
 
+        public StoelData()
+        {
+            LoadData();
+        }
+
         public static string jsonPath => Path.GetFullPath(Path.Combine(Environment.CurrentDirectory, @"..\..\..\")) + @"Data\Stoel.json";
 
         public static List<StoelModel> LoadData()
@@ -21,23 +26,10 @@ namespace Bioscoop.Repository
             return JsonConvert.DeserializeObject<List<StoelModel>>(json);
         }
 
-        public StoelData()
-        {
-            LoadJson();
-        }
-
-        public void LoadJson()
-        {
-            string file = jsonPath;
-            string json = File.ReadAllText(file); ;
-            this.array = JsonConvert.DeserializeObject(json);
-        }
-
         public dynamic GetJson()
         {
             string file = Path.GetFullPath(Path.Combine(Environment.CurrentDirectory, @"..\..\..\")) + @"Data\Stoel.json";
             string data = File.ReadAllText(file);
-
             return JsonConvert.DeserializeObject<List<StoelModel>>(data);
         }
 

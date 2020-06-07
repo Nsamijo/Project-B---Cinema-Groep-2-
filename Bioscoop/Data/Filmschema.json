@@ -47,5 +47,12 @@
     "Tijd": "15:00",
     "FilmId": 18,
     "ZaalId": 6
+  },
+  {
+    "ProgrammaId": 14,
+    "Datum": "07/06/2020",
+    "Tijd": "15:00",
+    "FilmId": 14,
+    "ZaalId": 7
   }
 ]

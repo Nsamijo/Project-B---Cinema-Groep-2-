@@ -57,7 +57,7 @@ namespace Bioscoop.Modules
                 }
                 else
                     Helpers.Display.PrintLine("\n Er zijn geen beschikbare films gevonden");
-                Helpers.Display.PrintLine("\n Type je keuze in en sluit af met een enter");
+                Helpers.Display.PrintLine("\n Vul uw keuze in en sluit af met een enter");
 
                 //userinput functie opvragen in Helpers/Inputs
                 Console.Write(">");
@@ -70,6 +70,7 @@ namespace Bioscoop.Modules
                         if (inputValue >= 0 && inputValue < filmAanbod.Count)
                         {
                             error = "";
+                            FilmData.UpdateKliks(filmAanbod[inputValue]);
                             ViewFilm(filmAanbod[inputValue]); //waarde meegeven van de gekozen film
                         }
                         else
@@ -328,8 +329,10 @@ namespace Bioscoop.Modules
                         }                          
                         break;
                     case 3:
-                        Console.WriteLine("druk op Insert om de bestelling te betalen");
-                        Console.WriteLine("druk op ESC om de bestelling te cancelen en terug te gaan naar het hoofdmenu"); 
+                        Helpers.Display.PrintLine("druk op Insert om de bestelling te betalen");
+                        Helpers.Display.PrintLine("druk op ESC om de bestelling te beijndigen en terug te gaan naar het hoofdmenu");
+                        newReservering.Totaal = totaal.ToString();
+                        check = true;
                         break;
                 }
 
@@ -361,7 +364,7 @@ namespace Bioscoop.Modules
                                 break;
                             case 2:
                                 inputValue -= 1;
-                                if (inputValue >= 0 && inputValue <= plekken.Count())
+                                if (inputValue >= 0 && inputValue < plekken.Count())
                                 {
                                    newReservering.StoelId.Add(plekken[inputValue].StoelId);
                                    totaal = prijs * ((decimal)persoon / 100);
@@ -374,11 +377,6 @@ namespace Bioscoop.Modules
                                 //als alle stoelen zijn gekozen; naar volgende scherm
                                 if (persoon > aantal)
                                     x++;
-                                break;
-                            case 3:
-                                Console.WriteLine("druk op Insert om de bestelling te betalen");
-                                Console.WriteLine("druk op ESC om de bestelling te cancelen en terug te gaan naar het hoofdmenu");
-                                check = true;
                                 break;
                             default:
                                 x++;
@@ -396,34 +394,126 @@ namespace Bioscoop.Modules
                             Reservering(schemaData, true);
                         break;
                     case Inputs.KeyAction.Insert:
-                        //betalen(ReserveringModel newReservering
-                        //daar meot deze functie eigenlijk in
-                        if (check == true)
+                        if(check == true)
                         {
-                            newReservering.Totaal = totaal.ToString();
-                            ReserveringData.AddData(newReservering);
-                            ConsoleColor originalColor = Console.ForegroundColor;
-                            Console.ForegroundColor = ConsoleColor.Green;
-                            Console.WriteLine("De nieuwe reservering is opgeslagen.");
-                            Console.ForegroundColor = originalColor;
-                            System.Threading.Thread.Sleep(2000);
-                            ReserveringData.SortData();
-                            abort = true;
+                            ReserveringBetaling(newReservering);
                         }
                         break;
                 }
             }
         }
 
+        public void ReserveringBetaling(ReserveringModel newReservering)
+        {
+            Random betaalcode = new Random();
+            int randomNr = betaalcode.Next();
+            string error = "";
+            bool abort = false;
+            while(!abort)
+            {
+                Console.Clear();
+                if (!String.IsNullOrEmpty(error)) //error handling en text kleur veranderen
+                {
+                    ConsoleColor originalColor = Console.ForegroundColor;
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Helpers.Display.PrintLine("Error: " + error);
+                    Helpers.Display.PrintLine("");
+                    Console.ForegroundColor = originalColor;
+                }
+
+                Helpers.Display.PrintHeader("Bioscoop - Betalen");
+                Helpers.Display.PrintLine("ESC - Terug\n");
+                Helpers.Display.PrintLine("Welkom bij het betaalscherm \n Vul de betalingscode in om de bestelling af te ronden\n");
+                Helpers.Display.PrintLine("Betaalcode: " + randomNr.ToString());
+
+                Console.Write(">"); Inputs.KeyInput input = Inputs.ReadUserData(); //waarde oplezen met keyinput functie
+                int inputValue = Int32.TryParse(input.val, out inputValue) ? inputValue : 0;
+                switch (input.action)
+                {
+                    case Inputs.KeyAction.Enter:
+                        if (inputValue == randomNr)
+                        {
+                            ReserveringData.AddData(newReservering);
+                            ConsoleColor originalColor = Console.ForegroundColor;
+                            Console.ForegroundColor = ConsoleColor.Green;
+                            Display.PrintLine("De nieuwe reservering is verwerkt. \n U word nu doorverwezen naar het overzicht scherm");
+                            Console.ForegroundColor = originalColor;
+                            System.Threading.Thread.Sleep(2000);
+                            ReserveringData.SortData();
+                            ReserveringOverzicht(newReservering, false);
+                        }
+                        else
+                            error = "Verkeerde waarde ingevuld";
+                        break;
+                    case Inputs.KeyAction.Escape:  //de functie beeindigen
+                        return;
+                }
+            }
+        }
+
         public void ReserveringManagement()
         {
-            //zelfde als de andere beheer schermen.
-            //Alle reservaties weergeven, kunnen verwijderen.
+            bool abort = false;
+            string error = "";
+            while (!abort)
+            {
+                if (!String.IsNullOrEmpty(error)) //error handling en text kleur veranderen
+                {
+                    ConsoleColor originalColor = Console.ForegroundColor;
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Helpers.Display.PrintLine("Error: " + error);
+                    Helpers.Display.PrintLine("");
+                    Console.ForegroundColor = originalColor;
+                }
+
+                Display.PrintLine("Bioscoop - Reserveringbeheer");
+                Display.PrintLine("ESC - Terug");
+                Display.PrintLine("\n");
+
+                Display.PrintHeader("Nr", "Code", "Programma datum");
+                for (int i = 0; i < reserveringData.Count(); i++)
+                {
+                    try
+                    {
+                        ReserveringModel r = reserveringData[i];
+                        FilmschemaModel fs = filmschemaData.Where(fs => fs.ProgrammaId == r.ProgrammaId).ToList()[0];
+                        Display.PrintTable(i + 1 + "", r.Code, fs.Datum);
+                    }
+                    catch
+                    {
+                        error = "Fout bij data ophalen";
+                    }
+                }
+
+                Display.PrintLine("");
+                Display.PrintLine("Vul een waarde in om naar het overzicht van deze reservering te gaan");
+                Console.Write(">"); Inputs.KeyInput input = Inputs.ReadUserData();
+                switch (input.action)
+                {
+                    case Inputs.KeyAction.Enter:
+                        int inputValue = Int32.TryParse(input.val, out inputValue) ? inputValue : 0;
+                        inputValue--; //-1 want count start bij 0
+                        if (inputValue >= 0 && inputValue < reserveringData.Count())
+                            ReserveringOverzicht(reserveringData[inputValue], true);
+                        else if (inputValue == -1)
+                            error = "Verkeerde input, vul een nummer in";
+                        else
+                        {
+                            error = "Verkeerd nummer, vul een nummer uit de lijst in";
+                        }
+                        break;
+                    case Inputs.KeyAction.Escape:
+                        abort = true;
+                        break;
+                }
+                Console.Clear();
+            }
         }
        
         public void ReserveringLogin()
         {
             Console.CursorVisible = true;
+            Console.Clear();
             string error = "";
             bool abort = false;
             while (!abort)
@@ -449,6 +539,7 @@ namespace Bioscoop.Modules
                         string code = input.val;
                         if (code.Length != 5)
                         {
+                            error = "Vul een bestaande code in";
                             Console.Clear();
                             break;
                         }
@@ -456,20 +547,18 @@ namespace Bioscoop.Modules
                         {
                             ReserveringModel reservering = reserveringData.Where(r => r.Code == code).SingleOrDefault();
                             if (reservering != null)
-                                ReserveringOverzicht(reservering);
+                                ReserveringOverzicht(reservering, false);
                             else
                                 error = "Code is niet gevonden";
                         }
                         break;
                     case Inputs.KeyAction.Escape:
                         abort = true;
-                        break;
-
+                        return;
                 }
-                Console.Clear();
             }
         }
-        public void ReserveringOverzicht(ReserveringModel r)
+        public void ReserveringOverzicht(ReserveringModel r, bool admin)
         {
             Console.CursorVisible = false;
             //data
@@ -493,7 +582,9 @@ namespace Bioscoop.Modules
                 Display.PrintLine("ESC - Terug naar menu                                DEL - Opzeggen");
                 Display.PrintLine("");
 
-                Display.PrintLine("Hier kunt u de informatie van uw reservering inzien");
+                Display.PrintLine("Hier kunt u de informatie van uw reservering inzien \n");
+
+                if(admin == false)Display.PrintLine("Bewaar deze reserveringscode");
                 Display.PrintTableInfo($"Reserveringscode:", r.Code);
                 Display.PrintLine("");
                 Display.PrintTableInfo("Film:", film.Naam);
@@ -512,6 +603,8 @@ namespace Bioscoop.Modules
                 {
                     case Inputs.KeyAction.Escape:
                         abort = true;
+                        if(admin == false)
+                            Program.Main(null);
                         break;
                     case Inputs.KeyAction.Delete:
                         Display.PrintLine("\n Weet u zeker dat je de reservering wilt opzeggen? U krijgt geen terugbetaling");

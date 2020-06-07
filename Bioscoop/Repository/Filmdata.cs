@@ -30,6 +30,20 @@ namespace Bioscoop.Repository
 
             return filmId;
         }
+        public static void UpdateKliks(FilmModel film) //opslaan en schrijven naar json functie
+        {
+            List<FilmModel> filmData = LoadData();
+
+            var toEdit = filmData.Where(a => a.FilmId == film.FilmId).ToList();
+            if (toEdit.Count() == 1)
+            {
+                foreach (var x in toEdit)
+                    x.Kliks = x.Kliks + 1;
+            }
+
+            // Update json data string
+            SaveData(filmData);
+        }
         public static void AddData(FilmModel data) //toevoeg functie
         {
             List<FilmModel> filmData = LoadData();
