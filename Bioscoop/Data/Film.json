@@ -7,7 +7,7 @@
     "Duur": "02:29",
     "Kijkwijzer": "12+",
     "Status": "Beschikbaar",
-    "Kliks": 12
+    "Kliks": 13
   },
   {
     "FilmId": 10,
@@ -17,7 +17,7 @@
     "Duur": "02:07",
     "Kijkwijzer": "12+",
     "Status": "Beschikbaar",
-    "Kliks": 2
+    "Kliks": 4
   },
   {
     "FilmId": 18,
@@ -27,7 +27,7 @@
     "Duur": "01:32",
     "Kijkwijzer": "6+",
     "Status": "Beschikbaar",
-    "Kliks": 5
+    "Kliks": 6
   },
   {
     "FilmId": 14,
@@ -37,7 +37,7 @@
     "Duur": "01:28",
     "Kijkwijzer": "AL",
     "Status": "Beschikbaar",
-    "Kliks": 0
+    "Kliks": 1
   },
   {
     "FilmId": 7,

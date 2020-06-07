@@ -115,12 +115,10 @@ namespace Bioscoop.Modules
                 switch (Helpers.Display.Keypress())
                 {
                     case ConsoleKey.D1:
-                        Console.Clear();
                         management.ReservatieManagament();
                         break;
                     case ConsoleKey.D2:
-                        Console.Clear();
-                        //rapportage
+                        management.RapportageManagement();
                         break;
                     case ConsoleKey.Escape:
                         if (!medewerker.Rechten)

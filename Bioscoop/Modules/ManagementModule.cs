@@ -39,7 +39,7 @@ namespace Bioscoop.Modules
 
                 //menu
                 Helpers.Display.PrintHeader("Reserveringoverzicht van vandaag:", fromdate);
-                Helpers.Display.PrintLine("ESC - Terug naar menu                        INS - Reservatie overzicht");
+                Helpers.Display.PrintLine("ESC - Terug naar menu                        INS - Reserveringbeheer");
                 Helpers.Display.PrintLine(" ");
                 Helpers.Display.PrintLine("Vul een nummer in om een reservering aan te maken");
                 Helpers.Display.PrintLine(" ");

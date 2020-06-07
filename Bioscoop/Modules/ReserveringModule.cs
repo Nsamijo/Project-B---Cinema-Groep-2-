@@ -40,7 +40,7 @@ namespace Bioscoop.Modules
 
                 //menu
                 Helpers.Display.PrintHeader("Bioscoop - Filmoverzicht");
-                Helpers.Display.PrintLine("ESC - Terug naar menu                       INS - Filmprogramma van vandaag\n");
+                Helpers.Display.PrintLine("ESC - Terug naar menu                      \n");// INS - Filmprogramma van vandaag? 
                 Helpers.Display.PrintLine("Vul een nummer in om de informatie en fimschema in te zien van de desbetreffende film\n");
                 Helpers.Display.PrintLine("Het huidige film aabod: \n");
                 Helpers.Display.PrintTableFilm("Nr", "Naam","Genre", "Kijkwijzer");
@@ -78,11 +78,9 @@ namespace Bioscoop.Modules
                             error = "Onjuist waarde ingevuld.";
                         }
                         break;
-
-                    case Inputs.KeyAction.Insert: //toevoeg scherm aanroepen
+                    /*case Inputs.KeyAction.Insert: //niet verder implementeren
                         //filmprogramma vandaag
-                        break;
-
+                        break;*/
                     case Inputs.KeyAction.Escape: //de functie beeindigen
                         abort = true;
                         break;
@@ -329,8 +327,8 @@ namespace Bioscoop.Modules
                         }                          
                         break;
                     case 3:
-                        Helpers.Display.PrintLine("druk op Insert om de bestelling te betalen");
-                        Helpers.Display.PrintLine("druk op ESC om de bestelling te beijndigen en terug te gaan naar het hoofdmenu");
+                        Helpers.Display.PrintLine("druk op Insert om de bestelling te betalen \n");
+                        Helpers.Display.PrintLine("druk op Escape om de bestelling te annuleren en terug te gaan naar het hoofdmenu");
                         newReservering.Totaal = totaal.ToString();
                         check = true;
                         break;
@@ -453,6 +451,7 @@ namespace Bioscoop.Modules
 
         public void ReserveringManagement()
         {
+            Console.Clear();
             bool abort = false;
             string error = "";
             while (!abort)
