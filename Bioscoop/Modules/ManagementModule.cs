@@ -104,9 +104,8 @@ namespace Bioscoop.Modules
                         break;
                     case Inputs.KeyAction.Insert:
                         abort = true;
-                        ReserveringModule.ReserveringManagement();
+                        ReserveringModule.ReserveringBeheer();
                         break;
-                        
                 }
             }
         }

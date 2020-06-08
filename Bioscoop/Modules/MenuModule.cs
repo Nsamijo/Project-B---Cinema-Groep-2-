@@ -22,10 +22,10 @@ namespace Bioscoop.Modules
             Helpers.Display.PrintLine("Bioscoop - Hoofdmenu                                                INS - Login \n");
             Helpers.Display.PrintLine("Welkom op het klanten portaal van de Bioscoop \n");
             Helpers.Display.PrintLine("Navigeer naar het filmoverzicht om alle film informatie in te zien en een film te reserveren");
-            Helpers.Display.PrintLine("Als je een reservatie hebt aangemaakt kan je deze inzien bij beheren reservatie \n");
+            Helpers.Display.PrintLine("Als je een reservering hebt aangemaakt kan je deze inzien bij beheren reservering \n");
             Helpers.Display.PrintHeader("Nr.", "Menu");
             Helpers.Display.PrintTable("1", "Filmoverzicht");
-            Helpers.Display.PrintTable("2", "Beheren reservatie");
+            Helpers.Display.PrintTable("2", "Beheren reservering");
         }
         public void MenuAdmin()
         {
@@ -83,7 +83,7 @@ namespace Bioscoop.Modules
                         gebruikerbeheer.Run(admin);
                         break;
                     case ConsoleKey.Escape:
-                        Display.PrintLine("\nBent u zeker dat u wilt uitloggen? (y/n)");
+                        Display.PrintLine("\n Weet u zeker dat u wilt uitloggen? (y/n)");
                         if (Helpers.Display.Keypress() == ConsoleKey.Y)
                             loop = false;
                         break;
@@ -106,7 +106,7 @@ namespace Bioscoop.Modules
                     Helpers.Display.PrintLine("ESC - Uitloggen");
                 Helpers.Display.PrintLine("");
                 Helpers.Display.PrintHeader("Nr.", "Menu");
-                Helpers.Display.PrintTable("1", "Reservatie beheer");
+                Helpers.Display.PrintTable("1", "Reservering beheer");
                 Helpers.Display.PrintTable("2", "Rapportage");
 
                 ReserveringModule reservering = new ReserveringModule();

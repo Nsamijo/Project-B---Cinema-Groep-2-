@@ -130,5 +130,28 @@
     ],
     "Aantal": 3,
     "Totaal": "28.50"
+  },
+  {
+    "ReserveringId": 13,
+    "Code": "u4pkz",
+    "ProgrammaId": 9,
+    "StoelId": [
+      62,
+      66
+    ],
+    "Aantal": 2,
+    "Totaal": "19.00"
+  },
+  {
+    "ReserveringId": 14,
+    "Code": "7lrgt",
+    "ProgrammaId": 9,
+    "StoelId": [
+      144,
+      146,
+      148
+    ],
+    "Aantal": 3,
+    "Totaal": "39.00"
   }
 ]

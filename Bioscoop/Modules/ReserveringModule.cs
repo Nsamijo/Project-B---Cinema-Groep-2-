@@ -436,7 +436,7 @@ namespace Bioscoop.Modules
                             Console.ForegroundColor = ConsoleColor.Green;
                             Display.PrintLine("De nieuwe reservering is verwerkt. \n U word nu doorverwezen naar het overzicht scherm");
                             Console.ForegroundColor = originalColor;
-                            System.Threading.Thread.Sleep(2000);
+                            System.Threading.Thread.Sleep(3000);
                             ReserveringData.SortData();
                             ReserveringOverzicht(newReservering, false);
                         }
@@ -449,7 +449,7 @@ namespace Bioscoop.Modules
             }
         }
 
-        public void ReserveringManagement()
+        public void ReserveringBeheer()
         {
             Console.Clear();
             bool abort = false;
@@ -467,7 +467,7 @@ namespace Bioscoop.Modules
 
                 Display.PrintLine("Bioscoop - Reserveringbeheer");
                 Display.PrintLine("ESC - Terug");
-                Display.PrintLine("\n");
+                Display.PrintLine("");
                 Display.PrintLine("Overzicht van alle reserveringen: \n");
                 Display.PrintReserveringbeheer("Nr", "Code", "Programma datum");
                 for (int i = 0; i < reserveringData.Count(); i++)
@@ -535,8 +535,7 @@ namespace Bioscoop.Modules
                 switch (input.action)
                 {
                     case Inputs.KeyAction.Enter:
-                        string code = input.val;
-                        if (code.Length != 5)
+                        if (input.val == null || input.val.Length != 5)
                         {
                             error = "Vul een bestaande code in";
                             Console.Clear();
@@ -544,7 +543,7 @@ namespace Bioscoop.Modules
                         }
                         else
                         {
-                            ReserveringModel reservering = reserveringData.Where(r => r.Code == code).SingleOrDefault();
+                            ReserveringModel reservering = reserveringData.Where(r => r.Code == input.val).SingleOrDefault();
                             if (reservering != null)
                                 ReserveringOverzicht(reservering, false);
                             else
@@ -555,6 +554,7 @@ namespace Bioscoop.Modules
                         abort = true;
                         return;
                 }
+                Console.Clear();
             }
         }
         public void ReserveringOverzicht(ReserveringModel r, bool admin)
