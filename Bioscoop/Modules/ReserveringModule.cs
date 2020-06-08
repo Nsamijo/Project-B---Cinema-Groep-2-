@@ -221,6 +221,7 @@ namespace Bioscoop.Modules
             decimal totaal = 0;
             string rij = "";
             int persoon = 1;
+            bool vipprijs = false;
 
             int x = 0;
             while (!abort && x < 4)
@@ -285,6 +286,7 @@ namespace Bioscoop.Modules
                 Helpers.Display.PrintTableInfo("Film: ", films.Naam);
                 Helpers.Display.PrintTableInfo("Scherm: ", zaal.Scherm);
                 Helpers.Display.PrintTableInfo("Prijs: ", (prijs/100).ToString("0.00"));
+                Helpers.Display.PrintTableInfo("Vip: ", (vipprijs ? "Ja" : "Nee"));
                 Helpers.Display.PrintTableInfo("Tijd: ", schemaData.Tijd);
                 Helpers.Display.PrintTableInfo("Datum: ", schemaData.Datum);
                 if (newReservering.Aantal >0) Helpers.Display.PrintTableInfo("Aantal: ", newReservering.Aantal.ToString());
@@ -355,6 +357,7 @@ namespace Bioscoop.Modules
                                     {
                                         PrijsModel vipPrijs = prijsData.Where(a => a.Soort == "VIP").SingleOrDefault(); decimal plus = decimal.Parse(vipPrijs.Prijs);
                                         prijs += plus;
+                                        vipprijs = true;
                                     }
                                     x++; error = "";
                                 }
@@ -565,10 +568,10 @@ namespace Bioscoop.Modules
             FilmModel film = filmData.Where(f => f.FilmId == filmschema.FilmId).SingleOrDefault();
             ZaalModel zaal = zaalData.Where(z => z.ZaalId == filmschema.ZaalId).SingleOrDefault();
             List<StoelModel> stoelen = stoelData.Where(a => a.ZaalId == filmschema.ZaalId).ToList();
-            PrijsModel prijzen = prijsData.Where(a => a.Soort == zaal.Scherm).SingleOrDefault(); decimal prijs = decimal.Parse(prijzen.Prijs);
+            decimal prijs = decimal.Parse(r.Totaal);
             List<StoelModel> stoel = new List<StoelModel>();
             foreach (int id in r.StoelId)
-                stoelen.Add(stoelData.Where(s => s.StoelId == id).SingleOrDefault());
+                stoel.Add(stoelData.Where(s => s.StoelId == id).SingleOrDefault());
 
             //display
             bool abort = false;
@@ -588,10 +591,10 @@ namespace Bioscoop.Modules
                 Display.PrintTableInfo("Scherm:", zaal.Scherm);
                 Display.PrintTableInfo("Tijd:", filmschema.Tijd);
                 Display.PrintTableInfo("Datum:", filmschema.Datum);
-                Display.PrintTableInfo("Aantal", stoelen.Count.ToString());
-                Display.PrintTableInfo("Rij:", stoelen[0].Rij);
-                Display.PrintTableInfo("Vip:", (stoelen[0].Premium ? "Ja" : "Nee"));
-                Display.PrintTableInfo("Prijs per persoon: ", (prijs / 100).ToString("0.00"));
+                Display.PrintTableInfo("Aantal", r.Aantal.ToString());
+                Display.PrintTableInfo("Rij:", stoel[0].Rij);
+                Display.PrintTableInfo("Vip:", (stoel[0].Premium ? "Ja" : "Nee"));
+                Display.PrintTableInfo("Prijs per persoon: ", (prijs / r.Aantal).ToString("0.00"));
                 List<string> displaystoelen = new List<string>();
                 if (r.StoelId.Count > 0)
                 {
