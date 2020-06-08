@@ -594,7 +594,7 @@ namespace Bioscoop.Modules
                 Display.PrintTableInfo("Aantal", r.Aantal.ToString());
                 Display.PrintTableInfo("Rij:", stoel[0].Rij);
                 Display.PrintTableInfo("Vip:", (stoel[0].Premium ? "Ja" : "Nee"));
-                Display.PrintTableInfo("Prijs per persoon: ", (prijs / r.Aantal).ToString("0.00"));
+                Display.PrintTableInfo("Prijs per persoon: ", (prijs / r.Aantal).ToString());
                 List<string> displaystoelen = new List<string>();
                 if (r.StoelId.Count > 0)
                 {
