@@ -40,10 +40,11 @@ namespace Bioscoop.Modules
 
                 //menu
                 Helpers.Display.PrintHeader("Bioscoop - Filmoverzicht");
-                Helpers.Display.PrintLine("ESC - Terug naar menu                      \n");// INS - Filmprogramma van vandaag? 
-                Helpers.Display.PrintLine("Vul een nummer in om de informatie en fimschema in te zien van de desbetreffende film\n");
+                Helpers.Display.PrintMenu("ESC - Terug naar het hoofdmenu");// INS - Filmprogramma van vandaag? 
+                Helpers.Display.PrintLine("");
+                Helpers.Display.PrintLine("Vul een nummer in om de informatie en filmschema in te zien van de desbetreffende film\n");
                 Helpers.Display.PrintLine("Het huidige film aabod: \n");
-                Helpers.Display.PrintTableFilm("Nr", "Naam","Genre", "Kijkwijzer");
+                Helpers.Display.PrintTableFilm("Nr", "Naam", "Genre", "Kijkwijzer");
 
                 List<FilmModel> filmAanbod = filmData.Where(f => f.Status == "Beschikbaar").ToList();
                 int nummering = 1; // nummer naast de waarde op het scherm
@@ -106,14 +107,16 @@ namespace Bioscoop.Modules
                 }
 
                 //menu
-                Helpers.Display.PrintHeader("Bioscoop - Filmoverzicht - " + film.Naam);
-                Helpers.Display.PrintLine("ESC - Terug naar menu\n");
+                Helpers.Display.PrintHeader("Bioscoop - Filmoverzicht - ", film.Naam);
+                Helpers.Display.PrintMenu("ESC - Terug naar het overzicht");
+                Helpers.Display.PrintLine("");
                 Helpers.Display.PrintLine("Film informatie: \n");
 
                 Helpers.Display.PrintTableInfo("Benaming", "Waarde");
                 Helpers.Display.PrintTableInfo("Naam: ", film.Naam);
+
                 //variablen die kijken voor de filtering
-                int maxLength = 50; bool first = true; int index = 0;
+                int maxLength = 55; bool first = true; int index = 0;
                 //maken een array van de omschrijving
                 var woorden = film.Omschrijving.Split(' ');
                 //string voor de omschrijving per lijn
@@ -132,7 +135,6 @@ namespace Bioscoop.Modules
                         //eerste keer voor de print hierdoor wordt omschrijving ook geprint
                         if (first)
                             Helpers.Display.PrintTableInfo("Omschrijving:  ", lijn);
-                        //printen normaal de string nu
                         else
                             Helpers.Display.PrintTableInfo("  ", lijn);
                         //string wordt opniew gezet met het woord (hierdoor raakt er geen informatie kwijt)
@@ -173,7 +175,7 @@ namespace Bioscoop.Modules
                     Helpers.Display.PrintTable(nummering.ToString(), land.DateTimeFormat.GetDayName(d.DayOfWeek), schema.Datum, schema.Tijd, data.Scherm);
                     nummering++;
                 }
-                Helpers.Display.PrintLine("\n Vul je keuze in en sluit af met een enter");
+                Helpers.Display.PrintLine("\n Vul uw keuze in en sluit af met een enter");
 
                 //userinput functie opvragen in Helpers/Inputs
                 Console.Write(">");
@@ -275,7 +277,7 @@ namespace Bioscoop.Modules
                 //Display
                 //menu
                 Helpers.Display.PrintHeader("Bioscoop - Reserveren");
-                Helpers.Display.PrintLine("ESC - Terug naar het filmoverzicht                                  DEL - Reset\n");
+                Helpers.Display.PrintMenu("ESC - Terug", "DEL - Reset\n");
                 Helpers.Display.PrintLine("Welkom bij het reserveringsscherm. \n Controleer de gegevens van uw bestelling.\n");
                 Helpers.Display.PrintLine("Reservering informatie: \n");
 
@@ -297,7 +299,7 @@ namespace Bioscoop.Modules
                     Helpers.Display.PrintTableInfo("Stoelen: ", String.Join(", ", displaystoelen));
                 }
                 if(totaal > 0)
-                    Helpers.Display.PrintTableInfo("Totaal: ", totaal.ToString());
+                    Helpers.Display.PrintTableInfo("Totaal: ", totaal.ToString("0.00"));
                 Helpers.Display.PrintLine("");
 
                 switch (x) //switch case met de vragen voor de input
@@ -329,8 +331,8 @@ namespace Bioscoop.Modules
                         }                          
                         break;
                     case 3:
-                        Helpers.Display.PrintLine("druk op INSert om de bestelling te betalen \n");
-                        Helpers.Display.PrintLine("druk op ESCape om de bestelling te annuleren en terug te gaan naar het hoofdmenu");
+                        Helpers.Display.PrintLine("Druk op Insert om de bestelling te betalen \n");
+                        Helpers.Display.PrintLine("Druk op Escape om de bestelling te annuleren en terug te gaan naar het hoofdmenu");
                         newReservering.Totaal = totaal.ToString();
                         check = true;
                         break;
@@ -379,13 +381,18 @@ namespace Bioscoop.Modules
                                 if (persoon > aantal)
                                     x++;
                                 break;
+                            case 3:
+                                Helpers.Display.PrintLine("Druk op Insert om de bestelling te betalen \n");
+                                Helpers.Display.PrintLine("Druk op Escape om de bestelling te annuleren en terug te gaan naar het hoofdmenu");
+                                Console.CursorVisible = false;
+                                break;
                             default:
                                 x++;
                                 break;
                         }
                         break;
                     case Inputs.KeyAction.Escape:  //de functie beeindigen
-                        abort = true;
+                        Program.Main(null);
                         break;
                     case Inputs.KeyAction.Delete:
                         abort = true;
@@ -423,7 +430,8 @@ namespace Bioscoop.Modules
                 }
 
                 Helpers.Display.PrintHeader("Bioscoop - Betalen");
-                Helpers.Display.PrintLine("ESC - Terug\n");
+                Helpers.Display.PrintMenu("ESC - Terug");
+                Helpers.Display.PrintLine("");
                 Helpers.Display.PrintLine("Welkom bij het betaalscherm \n Vul de betalingscode in om de bestelling af te ronden\n");
                 Helpers.Display.PrintLine("Betaalcode: " + randomNr.ToString());
 
@@ -467,9 +475,9 @@ namespace Bioscoop.Modules
                     Helpers.Display.PrintLine("");
                     Console.ForegroundColor = originalColor;
                 }
-
+                ReserveringData.SortData();
                 Display.PrintLine("Bioscoop - Reserveringbeheer");
-                Display.PrintLine("ESC - Terug");
+                Display.PrintMenu("ESC - Terug");
                 Display.PrintLine("");
                 Display.PrintLine("Overzicht van alle reserveringen: \n");
                 Display.PrintReserveringbeheer("Nr", "Code", "Programma datum");
@@ -516,6 +524,7 @@ namespace Bioscoop.Modules
         {
             Console.CursorVisible = true;
             Console.Clear();
+            ReserveringData.SortData();
             string error = "";
             bool abort = false;
             while (!abort)
@@ -529,11 +538,11 @@ namespace Bioscoop.Modules
                     Console.ForegroundColor = originalColor;
                 }
                 Display.PrintLine("Bioscoop - Beheren reservering");
-                Display.PrintLine("ESC - Terug");
+                Display.PrintMenu("ESC - Terug naar het hoofdmenu");
                 Display.PrintLine("");
                 Display.PrintLine("Als u een film heeft gereserveerd krijgt u een unieke code te zien");
                 Display.PrintLine("Met deze code kunt de gegevens van uw reservering inzien \n");
-                Display.PrintLine("Vul uw unieke code in");
+                Display.PrintLine("Vul uw unieke code in:");
                 Console.Write(">"); Inputs.KeyInput input = Inputs.ReadUserData();
                 switch (input.action)
                 {
@@ -568,7 +577,7 @@ namespace Bioscoop.Modules
             FilmModel film = filmData.Where(f => f.FilmId == filmschema.FilmId).SingleOrDefault();
             ZaalModel zaal = zaalData.Where(z => z.ZaalId == filmschema.ZaalId).SingleOrDefault();
             List<StoelModel> stoelen = stoelData.Where(a => a.ZaalId == filmschema.ZaalId).ToList();
-            decimal prijs = decimal.Parse(r.Totaal);
+            decimal prijs = decimal.Parse(r.Totaal, CultureInfo.InvariantCulture);
             List<StoelModel> stoel = new List<StoelModel>();
             foreach (int id in r.StoelId)
                 stoel.Add(stoelData.Where(s => s.StoelId == id).SingleOrDefault());
@@ -579,7 +588,7 @@ namespace Bioscoop.Modules
             {
                 Console.Clear();
                 Display.PrintLine("Bioscoop - Beheren reservering");
-                Display.PrintLine("ESC - Terug naar menu                                DEL - Opzeggen");
+                Display.PrintMenu("ESC - Terug naar het hoofdmenu", "DEL - Opzeggen");
                 Display.PrintLine("");
 
                 Display.PrintLine("Hier kunt u de informatie van uw reservering inzien \n");
@@ -602,7 +611,7 @@ namespace Bioscoop.Modules
                         displaystoelen.Add(stoelData.Where(t => t.StoelId == s).Select(x => x.Omschrijving).SingleOrDefault());
                     Helpers.Display.PrintTableInfo("Stoelen: ", String.Join(", ", displaystoelen));
                 }
-                Display.PrintTableInfo("Totaal betaald:", r.Totaal);
+                Display.PrintTableInfo("Totaal betaald:", prijs.ToString("0.00"));
 
                 Inputs.KeyInput input = Inputs.ReadUserData();
                 switch (input.action)
@@ -613,7 +622,7 @@ namespace Bioscoop.Modules
                             Program.Main(null);
                         break;
                     case Inputs.KeyAction.Delete:
-                        Display.PrintLine("\n Weet u zeker dat je de reservering wilt opzeggen? U krijgt geen terugbetaling");
+                        Display.PrintLine("\n Weet u zeker dat u de reservering wilt opzeggen? U krijgt geen terugbetaling");
                         Display.PrintLine("Druk op een nummer om uw keuze te bevestigen");
                         Display.PrintLine("");
                         Display.PrintLine("Nr  Keuze");
@@ -623,6 +632,12 @@ namespace Bioscoop.Modules
                         {
                             case ConsoleKey.D1:
                                 ReserveringData.RemoveData(r);
+                                ConsoleColor ogColor = Console.ForegroundColor;
+                                Console.ForegroundColor = ConsoleColor.Red;
+                                Console.WriteLine(" Reservering met resererveringscode: " + r.Code + " is verwijderd");
+                                Console.ForegroundColor = ogColor;
+                                System.Threading.Thread.Sleep(2000);
+                                Program.Main(null);
                                 break;
                             case ConsoleKey.D2:
                                 break;

@@ -34,9 +34,8 @@ namespace Bioscoop.Modules
             bool abort = false;
             while (!abort)
             {
-                Helpers.Display.PrintLine("");
-                Helpers.Display.PrintLine("ESC - Naar menu                           INS - Voeg stoel toe");
-                Helpers.Display.PrintLine("Stoelbeheer: Zaal " + Zaalomschrijving);
+                Helpers.Display.PrintTableInfo("Stoelbeheer: Zaal ", Zaalomschrijving);
+                Helpers.Display.PrintMenu("ESC - Terug", "INS - Voeg stoel toe");
                 Helpers.Display.PrintLine("\n Vul het nummer van de stoel in om deze aan te passen of te verwijderen\n");
                 Helpers.Display.PrintHeader(error);
                 Helpers.Display.PrintHeader("Nr", "Omschrijving", "Rij", "Stoelnummer", "Premium");
@@ -53,7 +52,7 @@ namespace Bioscoop.Modules
                 Console.SetWindowPosition(0, 1);
 
                 //input INS of ESC of DEL
-                Inputs.KeyInput input = Inputs.ReadUserData();
+                Console.Write(">"); Inputs.KeyInput input = Inputs.ReadUserData();
                 switch (input.action)
                 {
                     case Inputs.KeyAction.Enter:
@@ -93,7 +92,7 @@ namespace Bioscoop.Modules
             Helpers.Display.PrintLine("\nIs de stoel premium?");
             Helpers.Display.PrintLine("      >[A] Ja");
             Helpers.Display.PrintLine("      >[B] Nee");
-            premiumAns = Console.ReadLine();
+            Console.Write(">"); premiumAns = Console.ReadLine();
 
             //premium(premiumAns -> premium) checken
             bool premium = true;
@@ -123,7 +122,7 @@ namespace Bioscoop.Modules
             string stoelans = null;
             Helpers.Display.PrintLine("\nWelk stoelnummer heeft de stoel?");
             Helpers.Display.PrintLine("Vul de stoelnummer in (1-16)");
-            stoelans = Console.ReadLine();
+            Console.Write(">"); stoelans = Console.ReadLine();
             int z = 1;
             if (stoelans.All(char.IsDigit))
             {
@@ -176,7 +175,7 @@ namespace Bioscoop.Modules
             else
             {
                 Helpers.Display.PrintLine("De ingevulde zijn niet correct, er kan geen nieuwe stoel aangemaakt worden.");
-                Helpers.Display.PrintLine("ESC - Terug naar overzicht                    INS - Probeer opnieuw");
+                Helpers.Display.PrintMenu("ESC - Terug naar overzicht", "INS - Probeer opnieuw");
                 switch (Helpers.Display.Keypress())
                 {
                     case ConsoleKey.Insert:
@@ -294,7 +293,8 @@ namespace Bioscoop.Modules
         {
             Console.Clear();
             Helpers.Display.PrintLine("Stoelbeheer");
-            Helpers.Display.PrintLine("De stoel wordt toegevoegd\nESC - Terug naar overzicht         INS - nieuwe stoel");
+            Helpers.Display.PrintLine("De stoel wordt toegevoegd\n");
+            Helpers.Display.PrintMenu("ESC - Terug", "INS - Nieuwe stoel");
             Helpers.Display.PrintLine(error);
             switch (Helpers.Display.Keypress())
             {
@@ -315,10 +315,11 @@ namespace Bioscoop.Modules
         public void StoelenAanpas(StoelModel stoel, string error = "")
         {
             Console.Clear();
-            Helpers.Display.PrintLine(error);
+            if(error != null)
+                Helpers.Display.PrintLine(error);
             Helpers.Display.PrintLine("Stoelbeheer");
-            Helpers.Display.PrintLine("ESC - Terug naar overzicht         INS - stoel premium veranderen");
-            Helpers.Display.PrintLine("                                   DEL - stoel verwijderen\n");
+            Helpers.Display.PrintMenu("ESC - Terug", "INS - Stoel premium veranderen");
+            Helpers.Display.PrintMenu(" ", "DEL - Stoel verwijderen\n");
             Helpers.Display.PrintLine("Pas stoel " + stoel.Omschrijving + " aan\n");
 
             //premium waarde omzetten naar string omdat een bool is.
@@ -331,7 +332,9 @@ namespace Bioscoop.Modules
             Helpers.Display.PrintTable((nr += 1).ToString(), "Rij: ", stoel.Rij);
             Helpers.Display.PrintTable((nr += 1).ToString(), "Stoel nummer: ", stoel.StoelNr.ToString());
             Helpers.Display.PrintTable((nr += 1).ToString(), "Vip: ", premium);
-            Helpers.Display.PrintLine("\nWat wilt u aanpassen? Zie hoofd knoppen voor opties");
+
+            Helpers.Display.PrintLine("");
+            Helpers.Display.PrintLine("Wat wil je aanpassen? Zie hoofd knoppen voor opties");
 
             switch (Helpers.Display.Keypress())
             {

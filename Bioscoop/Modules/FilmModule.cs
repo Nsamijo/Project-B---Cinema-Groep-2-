@@ -32,7 +32,7 @@ namespace Bioscoop.Modules
 
                 //menu
                 Helpers.Display.PrintHeader("Filmbeheer");
-                Helpers.Display.PrintLine("ESC - Terug naar menu                       INS - Nieuwe Film aanmaken");
+                Helpers.Display.PrintMenu("ESC - Terug naar het menu", "INS - Nieuwe film aanmaken");
                 Helpers.Display.PrintLine(" ");
                 Helpers.Display.PrintLine("Vul een nummer in om deze waarde te bewerken");
                 Helpers.Display.PrintLine(" ");
@@ -53,7 +53,7 @@ namespace Bioscoop.Modules
                     nummering++;
                 }
                 Helpers.Display.PrintLine(" ");
-                Helpers.Display.PrintLine("Type je keuze in en sluit af met een enter");
+                Helpers.Display.PrintLine("Vul je keuze in en sluit af met een enter");
 
                 //userinput functie opvragen in Helpers/Inputs
                 Console.Write(">");
@@ -62,7 +62,7 @@ namespace Bioscoop.Modules
                 {
                     case Inputs.KeyAction.Enter:
                         int inputValue = Int32.TryParse(input.val, out inputValue) ? inputValue : 0;
-                        inputValue--; //-1 want count start bij 0
+                        inputValue--; //-1 want list start bij 0
                         if (inputValue >= 0 && inputValue < filmen.Count)
                         {
                             error = "";
@@ -73,8 +73,6 @@ namespace Bioscoop.Modules
                             error = "Onjuist waarde ingevuld.";
                         }
                         break;
-
-
                     case Inputs.KeyAction.Insert: //toevoeg scherm aanroepen
                         AddFilm();
                         break;
@@ -109,14 +107,14 @@ namespace Bioscoop.Modules
 
                 //menu
                 Helpers.Display.PrintHeader("Aanpassen film : " + film.Naam);
-                Helpers.Display.PrintLine("ESC - Terug naar menu                   Del - Verwijderen");
-                Helpers.Display.PrintLine("                                        INS - Opslaan"); Display.PrintLine("");
+                Helpers.Display.PrintMenu("ESC - Terug naar menu", "Del - Verwijderen");
+                Helpers.Display.PrintMenu(" ","INS - Opslaan"); Display.PrintLine("");
                 Helpers.Display.PrintLine("Druk op een nummer om deze waarde aan te passen."); Display.PrintLine("");
 
                 int nr = 0; //data weergeven en nummeren voor waarde keuze
                 Helpers.Display.PrintHeader("Nr.", "Benaming", "Waarde");
                 Helpers.Display.PrintTable((nr += 1).ToString(), "Naam: ", film.Naam);
-                int maxLength = 45; int index = 0; string lijn = ""; bool first = true;
+                int maxLength = 55; int index = 0; string lijn = ""; bool first = true;
                 var woorden = film.Omschrijving.Split(' ');
                 foreach (string woord in woorden)
                 {
@@ -175,7 +173,7 @@ namespace Bioscoop.Modules
                             {
                                 case 0:
                                     if (inputData.val.Length > 1) editFilm.Naam = inputData.val;
-                                    else error = "De naam moet uit minimaal 2 karakters bestaan ";
+                                    else error = "De naam moet uit minimaal 2 karakters bestaan";
                                     break;
                                 case 1:
                                     if (inputData.val.Length > 9) editFilm.Omschrijving = inputData.val;
@@ -184,21 +182,21 @@ namespace Bioscoop.Modules
                                 case 2:
                                     if ((inputData.val == "Avontuur") || (inputData.val == "Actie") || (inputData.val == "Thriller") || (inputData.val == "Horror") || (inputData.val == "Animatie") || (inputData.val == "Drama") || (inputData.val == "Sci-Fi") || (inputData.val == "Comedy"))
                                     { editFilm.Genre = inputData.val; }
-                                    else error = "Onjuiste waarde ingevuld.";
+                                    else error = "Onjuiste waarde ingevuld";
                                     break;
                                 case 3:
                                     if (DateTime.TryParseExact(input.val, "HH:mm", System.Globalization.CultureInfo.CurrentCulture, System.Globalization.DateTimeStyles.None, out DateTime dt))
                                     { editFilm.Duur = dt.ToString("HH:mm"); }
-                                    else error = "Onjuiste waarde ingevuld.";
+                                    else error = "Onjuiste waarde ingevuld";
                                     break;
                                 case 4:
                                     if ((inputData.val == "6+") || (inputData.val == "9+") || (inputData.val == "12+") || (inputData.val == "16+") || (inputData.val == "18+") || (inputData.val == "AL"))
                                     { editFilm.Kijkwijzer = inputData.val; }
-                                    else error = "Onjuiste waarde ingevuld.";
+                                    else error = "Onjuiste waarde ingevuld";
                                     break;
                                 case 5:
                                     if (inputData.val == "Beschikbaar" || inputData.val == "Niet Beschikbaar") editFilm.Status = inputData.val;
-                                    else error = "Onjuiste waarde ingevuld.";
+                                    else error = "Onjuiste waarde ingevuld";
                                     break;
                                 default:
                                     break;
@@ -218,14 +216,14 @@ namespace Bioscoop.Modules
                         abort = true;
                         break;
                     case Inputs.KeyAction.Delete: //de specifieke film data verwijderen
-                        Console.WriteLine("Weet je zeker dat je " + film.Naam + " wilt verwijderen? (y/n)");
+                        Helpers.Display.PrintLine("Weet je zeker dat je " + film.Naam + " wilt verwijderen? (y/n)");
                         string confirm = Console.ReadLine();
-                        if( confirm == "y")
+                        if( confirm == "y" || confirm == "Y")
                         {
                             FilmData.RemoveData(film);
                             ConsoleColor ogColor = Console.ForegroundColor;
                             Console.ForegroundColor = ConsoleColor.Red;
-                            Console.WriteLine(film.Naam + " is verwijderd.");
+                            Console.WriteLine(" " + film.Naam + " is verwijderd");
                             Console.ForegroundColor = ogColor;
                             System.Threading.Thread.Sleep(2000);
                             abort = true;
@@ -260,15 +258,36 @@ namespace Bioscoop.Modules
 
                 //menu
                 Helpers.Display.PrintHeader("Film toevoegen");
-                Helpers.Display.PrintLine("ESC - Terug naar menu                       Del - Reset");
-                if (!String.IsNullOrEmpty(newFilm.Status)) Helpers.Display.PrintLine("                                            INS - Opslaan Nieuwe Film");
+                Helpers.Display.PrintMenu("ESC - Terug", "Del - Reset");
+                if (!String.IsNullOrEmpty(newFilm.Status)) Helpers.Display.PrintMenu("", "INS - Opslaan nieuwe Film");
                 Helpers.Display.PrintLine(" ");
-                if (!String.IsNullOrEmpty(newFilm.Naam)) Helpers.Display.PrintLine("Naam: " + newFilm.Naam);
-                if (!String.IsNullOrEmpty(newFilm.Omschrijving)) Helpers.Display.PrintLine("Omschrijving: " + newFilm.Omschrijving);
-                if (!String.IsNullOrEmpty(newFilm.Genre)) Helpers.Display.PrintLine("Genre: " + newFilm.Genre);
-                if (!String.IsNullOrEmpty(newFilm.Duur)) Helpers.Display.PrintLine("Duur: " + newFilm.Duur);
-                if (!String.IsNullOrEmpty(newFilm.Kijkwijzer)) Helpers.Display.PrintLine("Status: " + newFilm.Kijkwijzer);
-                if (!String.IsNullOrEmpty(newFilm.Status)) Helpers.Display.PrintLine("Scherm: " + newFilm.Status);
+                if (!String.IsNullOrEmpty(newFilm.Naam)) Helpers.Display.PrintTableInfo("Naam: " + newFilm.Naam);
+                if (!String.IsNullOrEmpty(newFilm.Omschrijving))
+                {
+                    int maxLength = 55; int index = 0; string lijn = ""; bool first = true;
+                    var woorden = newFilm.Omschrijving.Split(' ');
+                    foreach (string woord in woorden)
+                    {
+                        index++;
+                        if ((lijn + woord + " ").Length <= maxLength)
+                            lijn += woord + " ";
+                        else
+                        {
+                            if (first)
+                                Helpers.Display.PrintTableInfo("Omschrijving: ", lijn);
+                            else
+                                Helpers.Display.PrintTableInfo(" ", lijn);
+                            lijn = woord + " ";
+                            first = false;
+                        }
+                        if (index >= woorden.Length)
+                            Helpers.Display.PrintTableInfo(" ", lijn);
+                    }
+                }
+                if (!String.IsNullOrEmpty(newFilm.Genre)) Helpers.Display.PrintTableInfo("Genre: ", newFilm.Genre);
+                if (!String.IsNullOrEmpty(newFilm.Duur)) Helpers.Display.PrintTableInfo("Duur: ", newFilm.Duur);
+                if (!String.IsNullOrEmpty(newFilm.Kijkwijzer)) Helpers.Display.PrintTableInfo("Status: ", newFilm.Kijkwijzer);
+                if (!String.IsNullOrEmpty(newFilm.Status)) Helpers.Display.PrintTableInfo("Scherm: ", newFilm.Status);
                 Helpers.Display.PrintLine("");
 
                 switch (x) //switch case die vanaf 0 begint. elke waarde moet ingevuld worden.
@@ -282,8 +301,7 @@ namespace Bioscoop.Modules
                     case 6: Helpers.Display.PrintLine("druk op Insert om de gegevens op te slaan"); break;
                 }
 
-                Console.Write(">");
-                input = Inputs.ReadUserData(); //waarde oplezen met keyinput functie
+                Console.Write(">"); input = Inputs.ReadUserData(); //waarde oplezen met keyinput functie
                 switch (input.action)
                 {
                     case Inputs.KeyAction.Enter:
@@ -291,7 +309,7 @@ namespace Bioscoop.Modules
                         {
                             case 0:
                                 if (input.val.Length > 1) { newFilm.Naam = input.val; x++; error = ""; }
-                                else error = "De naam moet uit minimaal 2 karakters bestaan ";
+                                else error = "De naam moet uit minimaal 2 karakters bestaan";
                                 break;
                             case 1:
                                 if (input.val.Length > 9) { newFilm.Omschrijving = input.val; x++; error = ""; }
@@ -300,26 +318,26 @@ namespace Bioscoop.Modules
                             case 2:
                                 if ((input.val == "Avontuur") || (input.val == "Actie") || (input.val == "Thriller") || (input.val == "Horror") || (input.val == "Animatie") || (input.val == "Drama") || (input.val == "Sci-Fi") || (input.val == "Comedy"))
                                 { newFilm.Genre = input.val; x++; error = ""; }
-                                else error = "Onjuiste waarde ingevuld.";
+                                else error = "Onjuiste waarde ingevuld";
                                 break;
                             case 3:
                                 if (DateTime.TryParseExact(input.val, "HH:mm", System.Globalization.CultureInfo.CurrentCulture, System.Globalization.DateTimeStyles.None, out DateTime dt))
                                 { newFilm.Duur = dt.ToString("HH:mm"); x++; error = "";}
-                                else error = "Onjuiste waarde ingevuld.";
+                                else error = "Onjuiste waarde ingevuld";
                                 break;
                             case 4:
                                 if ((input.val == "6+") || (input.val == "9+") || (input.val == "12+") || (input.val == "16+") || (input.val == "18+") || (input.val == "AL"))
                                 { newFilm.Kijkwijzer = input.val; x++; error = ""; }
-                                else error = "Onjuiste waarde ingevuld.";
+                                else error = "Onjuiste waarde ingevuld";
                                 break;
                             case 5:
                                 if (input.val == "Beschikbaar" || input.val == "Niet Beschikbaar")
                                 { newFilm.Status = input.val; x++; error = ""; }
-                                else error = "Onjuiste waarde ingevuld.";
+                                else error = "Onjuiste waarde ingevuld";
                                 check = true;
                                 break;
                             case 6:
-                                Console.WriteLine("druk op Insert om de gegevens op te slaan");
+                                Helpers.Display.PrintLine("Druk op Insert om de gegevens op te slaan");
                                 break;
                             default:
                                 x++;
@@ -335,7 +353,7 @@ namespace Bioscoop.Modules
                             FilmData.AddData(newFilm);
                             ConsoleColor originalColor = Console.ForegroundColor;
                             Console.ForegroundColor = ConsoleColor.Green;
-                            Console.WriteLine("De nieuwe film is opgeslagen.");
+                            Console.WriteLine("De nieuwe film is opgeslagen");
                             Console.ForegroundColor = originalColor;
                             System.Threading.Thread.Sleep(2000);
                             FilmData.SortData();

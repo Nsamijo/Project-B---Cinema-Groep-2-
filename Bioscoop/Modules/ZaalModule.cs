@@ -30,7 +30,7 @@ namespace Bioscoop.Modules
 
                 //menu
                 Helpers.Display.PrintHeader("Zaalbeheer");
-                Helpers.Display.PrintLine("ESC - Terug naar menu                       INS - Nieuwe Zaal aanmaken");
+                Helpers.Display.PrintMenu("ESC - Terug naar het menu", "INS - Nieuwe Zaal aanmaken");
                 Helpers.Display.PrintLine(" ");
                 Helpers.Display.PrintLine("Vul een nummer in om deze waarde te bewerken");
                 Helpers.Display.PrintLine(" ");
@@ -99,8 +99,8 @@ namespace Bioscoop.Modules
 
                 //menu
                 Helpers.Display.PrintHeader("Aanpassen zaal : " + zaal.Omschrijving);
-                Helpers.Display.PrintLine("ESC - Terug naar menu                        Del - Verwijderen");
-                Helpers.Display.PrintLine("F1 - Stoelenbeheer                           INS - Opslaan"); 
+                Helpers.Display.PrintMenu("ESC - Terug", "Del - Verwijderen");
+                Helpers.Display.PrintMenu("F1 - Stoelenbeheer", "INS - Opslaan"); 
                 Display.PrintLine("");
 
                 int nr = 0; //data weergeven en nummeren voor waarde keuze
@@ -167,7 +167,7 @@ namespace Bioscoop.Modules
                         abort = true;
                         break;
                     case Inputs.KeyAction.Delete: //de specifieke zaal data verwijderen
-                        Console.WriteLine("Weet je zeker dat je " + zaal.Omschrijving + " wilt verwijderen? (y/n)");
+                        Display.PrintLine("\n Weet je zeker dat je " + zaal.Omschrijving + " wilt verwijderen? (y/n)");
                         string temp = Console.ReadLine();
                         if( temp == "y")
                         {
@@ -175,7 +175,7 @@ namespace Bioscoop.Modules
                             StoelModule.DeleteStoel144(zaal.ZaalId);
                             ConsoleColor ogColor = Console.ForegroundColor;
                             Console.ForegroundColor = ConsoleColor.Red;
-                            Console.WriteLine(zaal.Omschrijving + " is verwijderd.");
+                            Console.WriteLine(" " + zaal.Omschrijving + " is verwijderd.");
                             Console.ForegroundColor = ogColor;
                             System.Threading.Thread.Sleep(2000);
                             abort = true;
@@ -210,12 +210,12 @@ namespace Bioscoop.Modules
 
                 //menu
                 Helpers.Display.PrintHeader("Zaal toevoegen");
-                Helpers.Display.PrintLine("ESC - Terug naar menu                       Del - Reset");
-                if (!String.IsNullOrEmpty(newZaal.Scherm)) Helpers.Display.PrintLine("                                            INS - Opslaan Nieuwe Zaal");
+                Helpers.Display.PrintMenu("ESC - Terug","Del - Reset");
+                if (!String.IsNullOrEmpty(newZaal.Scherm)) Helpers.Display.PrintMenu(" ", "INS - Opslaan nieuwe Zaal");
                 Helpers.Display.PrintLine(" ");
-                if (!String.IsNullOrEmpty(newZaal.Omschrijving)) Helpers.Display.PrintLine("Omschrijving: " + newZaal.Omschrijving);
-                if (!String.IsNullOrEmpty(newZaal.Status)) Helpers.Display.PrintLine("Status: " + newZaal.Status);
-                if (!String.IsNullOrEmpty(newZaal.Scherm)) Helpers.Display.PrintLine("Scherm: " + newZaal.Scherm);
+                if (!String.IsNullOrEmpty(newZaal.Omschrijving)) Helpers.Display.PrintTableInfo("Omschrijving: " ,newZaal.Omschrijving);
+                if (!String.IsNullOrEmpty(newZaal.Status)) Helpers.Display.PrintTableInfo("Status: ", newZaal.Status);
+                if (!String.IsNullOrEmpty(newZaal.Scherm)) Helpers.Display.PrintTableInfo("Scherm: ", newZaal.Scherm);
                 Helpers.Display.PrintLine("");
 
                 switch (x) //switch case die vanaf 0 begint. elke waarde moet ingevuld worden.

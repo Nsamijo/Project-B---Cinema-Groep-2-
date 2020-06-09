@@ -21,8 +21,8 @@ namespace Bioscoop.Modules
                 List<ZaalModel> zaalData = ZaalData.LoadData();
 
                 Helpers.Display.PrintHeader("Filmschemabeheer");
-                Helpers.Display.PrintLine("ESC - Terug naar menu                       INS - Nieuwe Filmschema aanmaken");
-                Helpers.Display.PrintLine("                                            DEL - Filmschema verwijderen");
+                Helpers.Display.PrintMenu("ESC - Terug naar het menu", "INS - Nieuwe filmschema aanmaken");
+                Helpers.Display.PrintMenu(" ", "DEL - Filmschema verwijderen");
                 Helpers.Display.PrintLine(" ");
                 Helpers.Display.PrintLine("Vul een nummer in om deze waarde te bewerken.");
                 Helpers.Display.PrintLine(" ");
@@ -46,9 +46,9 @@ namespace Bioscoop.Modules
                     i++;
                 }
                 Helpers.Display.PrintLine(" ");
-                Helpers.Display.PrintLine("Typ het nummer van het programma in dat u wilt veranderen:");
+                Helpers.Display.PrintLine("Vul het nummer van het programma in dat u wilt veranderen:");
 
-                Inputs.KeyInput input = Inputs.ReadUserData();
+                Console.Write(">"); Inputs.KeyInput input = Inputs.ReadUserData();
                 switch (input.action)
                 {
                     case Inputs.KeyAction.Enter:
@@ -191,8 +191,8 @@ namespace Bioscoop.Modules
             List<ZaalModel> zaalData = ZaalData.LoadData();
 
             //menu
-            Helpers.Display.PrintHeader("Filmschemabeheer - verwijderen");
-            Helpers.Display.PrintLine("ESC - Terug naar menu \n");
+            Helpers.Display.PrintHeader("Filmschemabeheer - Verwijderen");
+            Helpers.Display.PrintLine("ESC - Terug \n");
 
             int i = 1;
             Helpers.Display.PrintHeader("Nr", "Film", "Zaal", "Datum", "Tijd");
@@ -205,9 +205,9 @@ namespace Bioscoop.Modules
                 i++;
             }
             Helpers.Display.PrintLine(" ");
-            Helpers.Display.PrintLine("Typ het nummer van het programma dat u wilt verwijderen");
+            Helpers.Display.PrintLine("Vul het nummer in van het programma dat u wilt verwijderen");
 
-            Inputs.KeyInput input = Inputs.ReadUserData();
+            Console.Write(">"); Inputs.KeyInput input = Inputs.ReadUserData();
 
             switch (input.action)
             {
@@ -226,7 +226,8 @@ namespace Bioscoop.Modules
 
         public ZaalModel AssignZaal(string datum, string error = "")
         {
-            Helpers.Display.PrintLine("[ESC] teruggaan");
+            Helpers.Display.PrintMenu("Filmschemabeheer - Toevoegen - Zaal");
+            Helpers.Display.PrintMenu("ESC - Terug");
 
             List<ZaalModel> zalen;
             zalen = ZaalData.LoadData();
@@ -259,8 +260,8 @@ namespace Bioscoop.Modules
                 Console.ForegroundColor = ConsoleColor.White;
             }
             Helpers.Display.PrintLine(" ");
-            Helpers.Display.PrintLine("Typ het nummer van de zaal die u wilt toevoegen");
-            Inputs.KeyInput input = Inputs.ReadUserData();
+            Helpers.Display.PrintLine("Vul het nummer in van de zaal die u wilt toevoegen");
+            Console.Write(">"); Inputs.KeyInput input = Inputs.ReadUserData();
 
             switch (input.action)
             {
@@ -273,11 +274,11 @@ namespace Bioscoop.Modules
                     }
                     else if (inputValue == -1)
                     {
-                        return new ZaalModel(-2, "Verkeerde input, type een nummer in", "", "");
+                        return new ZaalModel(-2, "Verkeerde input, vul een nummer in", "", "");
                     }
                     else
                     {
-                        return new ZaalModel(-2, "Verkeerd nummer, type een nummer van de lijst in", "", "");
+                        return new ZaalModel(-2, "Verkeerd nummer, vul een nummer van de lijst in", "", "");
                     }
 
 
@@ -289,7 +290,8 @@ namespace Bioscoop.Modules
 
         public FilmModel AssignFilm(string tijd, string datum, int zaalid, string error = "")
         {
-            Helpers.Display.PrintLine("[ESC] teruggaan");
+            Helpers.Display.PrintMenu("Filmschemabeheer - Toevoegen - Film");
+            Helpers.Display.PrintMenu("ESC - Terug");
 
             List<FilmModel> films = Repository.FilmData.LoadData();
             int i = 1;
@@ -298,10 +300,11 @@ namespace Bioscoop.Modules
             Helpers.Display.PrintLine($"Zaal: {ZaalData.LoadData().Where(z => z.ZaalId == zaalid).ToList()[0].Omschrijving}");
             Helpers.Display.PrintLine($"Tijd: {tijd}");
             Helpers.Display.PrintLine("");
-            Helpers.Display.PrintHeader("No", "Naam", "Omschrijving", "Genre", "Kijkwijzer");
+            Helpers.Display.PrintTableFilm("No", "Naam", "Omschrijving", "Genre", "Kijkwijzer");
             foreach (FilmModel film in films)
             {
-                Helpers.Display.PrintHeader(i.ToString(), film.Naam, film.Omschrijving, film.Genre, film.Kijkwijzer);
+                if (film.Omschrijving.Length > 15) film.Omschrijving = film.Omschrijving.Substring(0, 15) + "..";
+                Helpers.Display.PrintTableFilm(i.ToString(), film.Naam, film.Omschrijving, film.Genre, film.Kijkwijzer);
                 i++;
             }
 
@@ -313,8 +316,8 @@ namespace Bioscoop.Modules
                 Console.ForegroundColor = ConsoleColor.White;
             }
             Helpers.Display.PrintLine(" ");
-            Helpers.Display.PrintLine("Typ welke film u wilt toevoegen");
-            Inputs.KeyInput input = Inputs.ReadUserData();
+            Helpers.Display.PrintLine("Vul in welke film je wilt toevoegen");
+            Console.Write(">"); Inputs.KeyInput input = Inputs.ReadUserData();
 
             switch (input.action)
             {
@@ -343,7 +346,8 @@ namespace Bioscoop.Modules
 
         public string AssignTijd(string datum, int zaalid, string error = "")
         {
-            Helpers.Display.PrintLine("[ESC] teruggaan");
+            Helpers.Display.PrintMenu("Filmschemabeheer - Toevoegen - Tijd");
+            Helpers.Display.PrintMenu("ESC - Terug");
 
             string res = "";
             string[] tijden = new string[4] { "10:00", "13:30", "17:00", "20:30" };
@@ -388,7 +392,7 @@ namespace Bioscoop.Modules
                 Helpers.Display.PrintLine(error);
                 Console.ForegroundColor = ConsoleColor.White;
             }
-            Inputs.KeyInput input = Inputs.ReadUserData();
+            Console.Write(">"); Inputs.KeyInput input = Inputs.ReadUserData();
             switch (input.action)
             {
                 case Inputs.KeyAction.Enter:
@@ -417,7 +421,8 @@ namespace Bioscoop.Modules
         public string AssignDatum(string error = "")
         {
             string res = "";
-            Helpers.Display.PrintLine("[ESC] teruggaan");
+            Helpers.Display.PrintMenu("Filmschemabeheer - Toevoegen - Datum");
+            Helpers.Display.PrintLine("ESC Terug");
             string[] dagen = FilmschemaData.VolgendeDagen(1, 14);
             int count = 0;
 
@@ -455,8 +460,8 @@ namespace Bioscoop.Modules
                 Helpers.Display.PrintLine(error);
                 Console.ForegroundColor = ConsoleColor.White;
             }
-            Helpers.Display.PrintLine("Typ welke dag: ");
-            Inputs.KeyInput input = Inputs.ReadUserData();
+            Helpers.Display.PrintLine("Vul in welke dag: ");
+            Console.Write(">"); Inputs.KeyInput input = Inputs.ReadUserData();
             switch (input.action)
             {
                 case Inputs.KeyAction.Enter:
@@ -494,13 +499,14 @@ namespace Bioscoop.Modules
             Console.Clear();
             while (!abort)
             {
+                Helpers.Display.PrintHeader("Filmschemabeheer - Aanpassen");
+                Helpers.Display.PrintMenu("Esc - Terug", "INS - Opslaan");
+                Helpers.Display.PrintLine(" ");
+
                 Helpers.Display.PrintLine($"Datum: {programma.Datum}");
                 Helpers.Display.PrintLine($"Zaal: {zaalData.Where(zaal => zaal.ZaalId == programma.ZaalId).ToList()[0].Omschrijving}");
                 Helpers.Display.PrintLine($"Film: {filmData.Where(film => film.FilmId == programma.FilmId).ToList()[0].Naam}");
                 Helpers.Display.PrintLine($"Tijd: {programma.Tijd}");
-
-
-                Helpers.Display.PrintLine("[ESC] verlaten               [INS] opslaan");
                 Helpers.Display.PrintLine(" ");
                 Helpers.Display.PrintLine("Wat wilt u veranderen?");
                 Helpers.Display.PrintLine("1. Datum");
@@ -514,7 +520,7 @@ namespace Bioscoop.Modules
                     Helpers.Display.PrintLine(message);
                     Console.ForegroundColor = ConsoleColor.White;
                 }
-                Inputs.KeyInput input = Inputs.ReadUserData();
+                Console.Write(">"); Inputs.KeyInput input = Inputs.ReadUserData();
                 switch (input.action)
                 {
                     case Inputs.KeyAction.Escape:

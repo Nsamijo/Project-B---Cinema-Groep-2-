@@ -79,7 +79,7 @@ namespace Bioscoop.Repository
         public static void SortData() //data sorteer functie
         {
             var reserveringData = LoadData();
-            var orderedData = reserveringData.OrderBy(x => x.ProgrammaId);
+            var orderedData = reserveringData.OrderByDescending(x => x.ProgrammaId);
 
             var jsondata = JsonConvert.SerializeObject(orderedData, Formatting.Indented);
             System.IO.File.WriteAllText(jsonPath, jsondata);

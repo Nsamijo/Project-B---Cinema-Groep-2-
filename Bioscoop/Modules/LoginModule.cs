@@ -16,7 +16,7 @@ namespace Bioscoop.Modules
             ///hierdoor is de wachtwoordt niet zichtbaar voor derden 
             ///als deze wordt ingevoerd.
             /// </summary>
-
+            Console.Write(">");
             //string pass is de holder voor het wacht woordt van de gebruiker
             string pass = "";
             do
@@ -72,22 +72,24 @@ namespace Bioscoop.Modules
             ///Zo niet dan wordt een null terug gegeven
             /// </summary>
             Console.Clear();
-            Console.WriteLine("Bioscoop Inlog Portaal");
-            Console.WriteLine("ESC - Terug\n");
-            Console.Write("Gebruikersnaam: ");
+            Helpers.Display.PrintLine("Bioscoop Inlog Portaal");
+            Helpers.Display.PrintMenu("ESC - Terug");
+            Helpers.Display.PrintLine("");
+            Helpers.Display.PrintLine("Gebruikersnaam: ");
             string gebruiker = new GebruikersMenu().ReadWithSpecialKeys();
 
             while (gebruiker.Equals("DEL") || gebruiker.Equals("INS"))
             {
-                Console.WriteLine("\nOnbekende toets! Voer aub uw gebruikersnaam opnieuw in\n");
-                Console.Write("Gebruikersnaam: ");
+                Helpers.Display.PrintLine("\nOnbekende toets! Voer uw gebruikersnaam opnieuw in\n");
+                Helpers.Display.PrintLine("Gebruikersnaam: ");
                 gebruiker = new GebruikersMenu().ReadWithSpecialKeys();
             }
 
             if (gebruiker.Equals("ESC"))
                 return new GebruikerModel("cancel", "cancel", 0, "cancel", false);
 
-            Console.Write("\nWachtwoord: ");
+            Helpers.Display.PrintLine("");
+            Helpers.Display.PrintLine("Wachtwoord: ");
 
             string pass = Wachtwoordt();
             //als de sessie wordt onderbroken
@@ -121,7 +123,7 @@ namespace Bioscoop.Modules
                 ///<summary>
                 ///als er niet is ingelogd dan wordt dit vermeld
                 /// </summary>
-                Console.WriteLine("\nNiet ingelogd!\nCheck uw gebruikersnaam of wachtwoord!");
+                Helpers.Display.PrintLine("\nNiet ingelogd!\nCheck je gebruikersnaam of wachtwoord!");
                 Thread.Sleep(500);
             }
             else if (this.Ingelogd.Naam.Equals("cancel"))
@@ -129,7 +131,7 @@ namespace Bioscoop.Modules
                 ///<summary>
                 ///Als de gebruiker beslist om te stoppen met inloggen
                 /// </summary>
-                Console.WriteLine("\n\nInloggen is gecanceld.");
+                Helpers.Display.PrintLine("\n\nInloggen is geannuleerd");
             }
         }
         public GebruikerModel NuIngelogd()

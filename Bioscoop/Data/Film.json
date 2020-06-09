@@ -7,17 +7,17 @@
     "Duur": "02:29",
     "Kijkwijzer": "12+",
     "Status": "Beschikbaar",
-    "Kliks": 13
+    "Kliks": 17
   },
   {
     "FilmId": 10,
     "Naam": "Jurassic Park",
-    "Omschrijving": "\"Steven Spielbergs meesterlijke avonturenfilm over een eiland met prachtige maar ook gevaarlijke dino's. Op een afgelegen eiland voor de kust van Costa Rica heeft de rijke, excentrieke ondernemer John Hammond een uitzonderlijk themapark gebouwd. Het park bevat prehistorische schepsels van 65 miljoen jaar terug, die door wetenschappers met behulp van DNA uit dinosaurusbloed tot leven zijn gewekt. Een select groepje, bestaande uit advocaat Donald Gennaro, wiskundige Ian Malcolm, dinosaurusexpert dr. Alan Grant en oudheidkundige dr. Ellie Sattler, wordt door Hammond samen met zijn kleinkinderen Tim en Lex uitgenodigd om voor de officiele opening een kijkje te komen nemen. Maar de rondleiding krijgt een ander verloop dan verwacht als het veiligheidssysteem kapot gaat en de reuzen op hol slaan.",
+    "Omschrijving": "Steven Spielbergs meesterlijke avonturenfilm over een eiland met prachtige maar ook gevaarlijke dino's. Op een afgelegen eiland voor de kust van Costa Rica heeft de rijke, excentrieke ondernemer John Hammond een uitzonderlijk themapark gebouwd. Het park bevat prehistorische schepsels van 65 miljoen jaar terug, die door wetenschappers met behulp van DNA uit dinosaurusbloed tot leven zijn gewekt. Een select groepje, bestaande uit advocaat Donald Gennaro, wiskundige Ian Malcolm, dinosaurusexpert dr. Alan Grant en oudheidkundige dr. Ellie Sattler, wordt door Hammond samen met zijn kleinkinderen Tim en Lex uitgenodigd om voor de officiele opening een kijkje te komen nemen. Maar de rondleiding krijgt een ander verloop dan verwacht als het veiligheidssysteem kapot gaat en de reuzen op hol slaan.",
     "Genre": "Actie",
     "Duur": "02:07",
     "Kijkwijzer": "12+",
     "Status": "Beschikbaar",
-    "Kliks": 4
+    "Kliks": 14
   },
   {
     "FilmId": 18,
@@ -27,7 +27,7 @@
     "Duur": "01:32",
     "Kijkwijzer": "6+",
     "Status": "Beschikbaar",
-    "Kliks": 6
+    "Kliks": 8
   },
   {
     "FilmId": 14,
@@ -37,7 +37,7 @@
     "Duur": "01:28",
     "Kijkwijzer": "AL",
     "Status": "Beschikbaar",
-    "Kliks": 1
+    "Kliks": 2
   },
   {
     "FilmId": 7,
@@ -47,7 +47,7 @@
     "Duur": "01:38",
     "Kijkwijzer": "AL",
     "Status": "Beschikbaar",
-    "Kliks": 0
+    "Kliks": 1
   },
   {
     "FilmId": 4,
@@ -57,7 +57,7 @@
     "Duur": "02:32",
     "Kijkwijzer": "16+",
     "Status": "Beschikbaar",
-    "Kliks": 0
+    "Kliks": 1
   },
   {
     "FilmId": 19,

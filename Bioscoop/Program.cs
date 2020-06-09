@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 using Bioscoop.Modules;
 
 namespace Bioscoop
@@ -7,7 +8,12 @@ namespace Bioscoop
     {
         public static void Main(string[] args)
         {
+            //globale data
             Console.SetWindowSize(160, 35);
+            var culture = new CultureInfo("nl-NL");
+            CultureInfo.DefaultThreadCurrentCulture = culture;
+            CultureInfo.DefaultThreadCurrentUICulture = culture;
+
             MenuModule menu = new MenuModule();
             ReserveringModule reservatie = new ReserveringModule();
             bool loop = true;

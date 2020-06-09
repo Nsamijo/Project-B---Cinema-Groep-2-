@@ -35,21 +35,21 @@ namespace Bioscoop.Modules
                     Console.ForegroundColor = originalColor;
                 }
 
-                string fromdate = DateTime.UtcNow.ToString("dd/MM/yyyy");
+                string fromdate = DateTime.UtcNow.ToString("dd\\/MM\\/yyyy");
 
                 //menu
-                Helpers.Display.PrintHeader("Reserveringoverzicht van vandaag:", fromdate);
-                Helpers.Display.PrintLine("ESC - Terug naar menu                        INS - Reserveringbeheer");
+                Helpers.Display.PrintHeader("Reserveringsoverzicht van vandaag:", fromdate);
+                Helpers.Display.PrintMenu("ESC - Terug naar het hoofdmenu", "INS - Reserveringbeheer");
                 Helpers.Display.PrintLine(" ");
-                Helpers.Display.PrintLine("Vul een nummer in om een reservering aan te maken");
+                Helpers.Display.PrintLine("Vul een nummer in om een reservering toe te voegen");
                 Helpers.Display.PrintLine(" ");
                 Helpers.Display.PrintTableFilm("Nr.", "Film", "Tijd", "Plekken", "Scherm");
 
                 //data voor loop
-                var land = new System.Globalization.CultureInfo("nl-NL");
-                DateTime td = DateTime.Parse(fromdate, land);
                 List<FilmschemaModel> filmschema = filmschemaData.Where(s => s.Datum == fromdate).ToList();
                 int nummering = 1; // nummer naast de waarde op het scherm
+                if (filmschema.Count() == 0)
+                    Helpers.Display.PrintLine("Er draaien geen films vandaag");
                 foreach (FilmschemaModel schema in filmschema)
                 {
                     ZaalModel zaaldata = zaalData.Where(a => a.ZaalId == schema.ZaalId).SingleOrDefault();
@@ -75,12 +75,12 @@ namespace Bioscoop.Modules
                         rijPlekken.Add(filterPlekken.Count());
                     }
 
-                    DateTime d = DateTime.Parse(schema.Datum, land);
+                    DateTime d = DateTime.Parse(schema.Datum);
                     Helpers.Display.PrintTableFilm(nummering.ToString(), filmdata.Naam, schema.Tijd, rijPlekken.Sum().ToString(), zaaldata.Scherm); 
                     nummering++;
                 }
                 Helpers.Display.PrintLine(" ");
-                Helpers.Display.PrintLine("Type je keuze in en sluit af met een enter");
+                Helpers.Display.PrintLine("Vul je keuze in en sluit af met een enter");
 
                 //userinput functie opvragen in Helpers/Inputs
                 Console.Write(">"); Inputs.KeyInput input = Inputs.ReadUserData();
@@ -131,9 +131,9 @@ namespace Bioscoop.Modules
                 }
 
                 Helpers.Display.PrintHeader("Bioscoop - Rapportage");
-                Helpers.Display.PrintLine("ESC - Terug naar menu                        ");
-                Helpers.Display.PrintLine("\n De populairste films die beschikbaar zijn op dit moment\n");
-                Helpers.Display.PrintLine("Meest bekeken                                                                Meest gereserveerd\n");
+                Helpers.Display.PrintLine("ESC - Terug");
+                Helpers.Display.PrintLine("\n De populairste films die beschikbaar zijn op dit moment \n");
+                Helpers.Display.PrintLine("Meest bekeken                                                                Meest gereserveerd \n");
                 Helpers.Display.PrintTableRapportage("Nr", "Filmnaam", "Kliks", " | ", "Filmnaam", "Reserveringen");
 
 

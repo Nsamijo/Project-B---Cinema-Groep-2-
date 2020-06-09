@@ -1,35 +1,35 @@
 [
   {
     "ProgrammaId": 12,
-    "Datum": "29/05/2020",
+    "Datum": "28/05/2020",
     "Tijd": "10:00",
     "FilmId": 18,
-    "ZaalId": 6
+    "ZaalId": 5
   },
   {
     "ProgrammaId": 13,
     "Datum": "29/05/2020",
     "Tijd": "15:00",
     "FilmId": 18,
-    "ZaalId": 6
+    "ZaalId": 5
   },
   {
     "ProgrammaId": 14,
-    "Datum": "08/06/2020",
+    "Datum": "10/06/2020",
     "Tijd": "15:00",
     "FilmId": 14,
     "ZaalId": 7
   },
   {
     "ProgrammaId": 16,
-    "Datum": "08/06/2020",
+    "Datum": "10/06/2020",
     "Tijd": "12:00",
     "FilmId": 6,
     "ZaalId": 3
   },
   {
     "ProgrammaId": 9,
-    "Datum": "08/06/2020",
+    "Datum": "10/06/2020",
     "Tijd": "18:00",
     "FilmId": 8,
     "ZaalId": 1

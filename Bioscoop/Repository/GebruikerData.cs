@@ -68,7 +68,7 @@ namespace Bioscoop.Repository
             /// </summary>
             Console.Clear();
             Helpers.Display.PrintLine("Gebruikersbeheer");
-            Helpers.Display.PrintLine("ESC terug naar het menu\t\tINS nieuwe gebruiker aanmaken");
+            Helpers.Display.PrintMenu("ESC Terug naar het menu", "INS - Nieuwe gebruiker aanmaken");
             Helpers.Display.PrintLine("Ingelogd: " + admin.Naam);
             Helpers.Display.PrintLine("Account-type: " + ((admin.Rechten) ? "Admin" : "Medewerker"));
         }
@@ -105,6 +105,7 @@ namespace Bioscoop.Repository
             ///Deze functie catch special keys
             ///Kan verder worden uitgebreid
             /// </summary>
+            Console.Write(">");
             string result = "";
             ConsoleKeyInfo key = Console.ReadKey(true);
             while (key.Key != ConsoleKey.Enter && key.Key != ConsoleKey.Escape && key.Key != ConsoleKey.Insert && key.Key != ConsoleKey.Delete)
@@ -145,26 +146,28 @@ namespace Bioscoop.Repository
                 //ingebouwde functie voor het tonen van de gebruiker
                 Console.Clear();
                 Helpers.Display.PrintLine("Gebruikerbeheer\n");
+                Helpers.Display.PrintMenu("ESC - Terug", "DEL - Gebruiker verwijderen");
+                Helpers.Display.PrintMenu(" ", "INS - Opslaan");
                 GebruikerModel temp = user;
+                Helpers.Display.PrintLine("Aanpassen gebruiker: " + temp.Naam);
                 Helpers.Display.PrintLine("Aanpassingen opgeslagen: " + opgeslagen + "\n");
-                Helpers.Display.PrintLine("Aanpassen gebruiker: " + temp.Naam + "\nESC Terug naar overzicht(CANCEL)\t DEL Gebruikerverwijderen\nINS Opslaan\n");
                 Helpers.Display.PrintLine("1. Naam:           " + temp.Naam);
                 Helpers.Display.PrintLine("2. Wachtwoord:     " + temp.Wachtwoord);
                 Helpers.Display.PrintLine("3. Account-type:   " + ((temp.Rechten) ? "Admin" : "Medewerker"));
                 Helpers.Display.PrintLine("4. Gebruikersnaam: " + temp.Gebruikersnaam);
                 Helpers.Display.PrintLine("Welke attribute wilt u veranderen: ");
-                Console.Write(">>> ");
+                Console.Write(">");
             }
 
             string Verander()
             {
                 //ingebouwde functie om te veranderen
-                Console.Write("Verander naar >>> ");
+                Console.Write("Verander naar >");
                 string keuze = ReadWithSpecialKeys();
                 while (keuze == "DEL" || keuze == "INS")
                 {
-                    Helpers.Display.PrintLine("Toets onbekend! Voer aub opnieuw in!");
-                    Console.Write("Verander naar >>> ");
+                    Helpers.Display.PrintLine("Toets onbekend! Voer opnieuw in!");
+                    Console.Write("Verander naar >");
                     keuze = ReadWithSpecialKeys();
                 }
                 //geeft de verandering terug
@@ -294,7 +297,7 @@ namespace Bioscoop.Repository
             }
             catch
             {
-                Helpers.Display.PrintLine("\nSelecteer een gebruiker die wel in de lijst staat");
+                Helpers.Display.PrintLine("\nSelecteer een gebruiker die in de lijst staat");
                 Thread.Sleep(500);
             }
 
@@ -305,13 +308,14 @@ namespace Bioscoop.Repository
             //array voor alle input (details van de nieuwe gebruiker)
             string[] user = new string[4];
             //wat er ingevuld moet worden
-            string[] todo = { "Naam: ", "Gebruikersnaam: ", "Wachtwoordt: ", "Rechten: " };
+            string[] todo = { "Naam: ", "Gebruikersnaam: ", "Wachtwoord: ", "Rechten: " };
             //input string hierin wordt de input gezet
             string input = "";
             Console.Clear();
             //details met wat er moet gebeuren
             Display.PrintLine("Gebruikersbeheer\nWelkom: " + admin.Naam);
-            Helpers.Display.PrintLine("ESC - Terug naar overzicht                                     DEL RESET\n\nVoer aub de volgende gegevens in: ");
+            Helpers.Display.PrintMenu("ESC - Terug", "DEL - Reset");
+            Helpers.Display.PrintLine("\n Voer aub de volgende gegevens in: ");
             //pointer voor hoever de progress is
             int pointer = 0;
             //zolang doorgaan tot alle details zijn ingevuld
@@ -324,14 +328,15 @@ namespace Bioscoop.Repository
                 {
                     //vangen speciale keys die niet worden gebruikt
                     case "INS":
-                        Helpers.Display.PrintLine("\nProbeer nogmaals! De toets die is ingedrukt wordt niet ondersteunt momenteel");
+                        Helpers.Display.PrintLine("\nProbeer nogmaals! De toets die is ingedrukt wordt momenteel niet ondersteunt");
                         break;
                     case "DEL":
                         pointer = 0;
                         user = new string[4];
                         Console.Clear();
                         Helpers.Display.PrintLine("Gebruikersbeheer\nWelkom: " + admin.Naam);
-                        Helpers.Display.PrintLine("ESC - Terug naar overzicht                                     DEL RESET\n\nVoer aub de volgende gegevens in: ");
+                        Helpers.Display.PrintMenu("ESC - Terug", "DEL - Reset");
+                        Helpers.Display.PrintLine("Voer de volgende gegevens in: ");
                         break;
                     //vangen een lege string
                     case "":
@@ -374,7 +379,7 @@ namespace Bioscoop.Repository
                     //print alle gebruikers behalve de admin
                     this.PrintGebruikers(data, admin);
                     //keuze voor de gebruiker
-                    Helpers.Display.PrintLine("\nToets in wat u wilt doen\nToets een nummer in om een gebruiker te veranderen\n" + message);
+                    Helpers.Display.PrintLine("\n Toets in wat je wilt doen\n Vul een nummer in om een gebruiker te veranderen" + message);
                     //keuze inlezen
                     keuze = ReadWithSpecialKeys();
 
@@ -386,12 +391,12 @@ namespace Bioscoop.Repository
                             break;
                         else
                             //error message
-                            message = "\nToets een nummer in dat is aangegeven!";
+                            message = "\n Vul een nummer in dat is aangegeven!";
                     }
                     else if (keuze.Equals("ESC") || keuze.Equals("INS"))
                         break;
                     else
-                        message = "\nToets alleen nummers in!";
+                        message = "\n Vul alleen nummers in!";
                 }
                 //kijken wat de keuze is
                 switch (keuze)
