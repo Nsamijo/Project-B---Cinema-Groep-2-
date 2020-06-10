@@ -334,6 +334,7 @@ namespace Bioscoop.Modules
                         Helpers.Display.PrintLine("Druk op Insert om de bestelling te betalen \n");
                         Helpers.Display.PrintLine("Druk op Escape om de bestelling te annuleren en terug te gaan naar het hoofdmenu");
                         newReservering.Totaal = totaal.ToString();
+                        newReservering.Totaal = newReservering.Totaal.Replace(",", ".");
                         check = true;
                         break;
                 }
