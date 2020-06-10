@@ -125,8 +125,6 @@ namespace Bioscoop.Modules
                             Display.PrintLine("\n Weet je zeker dat je wilt uitloggen? (y/n)");
                         if (Helpers.Display.Keypress() == ConsoleKey.Y)
                             loop = false;
-                        else
-                            loop = false;
                         break;
                 }
             }
