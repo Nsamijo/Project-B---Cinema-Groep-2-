@@ -150,7 +150,10 @@ namespace Bioscoop.Repository
                 Helpers.Display.PrintMenu(" ", "INS - Opslaan");
                 GebruikerModel temp = user;
                 Helpers.Display.PrintLine("Aanpassen gebruiker: " + temp.Naam);
-                Helpers.Display.PrintLine("Aanpassingen opgeslagen: " + opgeslagen + "\n");
+                Console.Write(" Aanpassingen opgeslagen: ");
+                Console.ForegroundColor = (opgeslagen ? ConsoleColor.Green : ConsoleColor.Red);
+                Console.Write(opgeslagen + "\n\n");
+                Console.ForegroundColor = ConsoleColor.White;
                 Helpers.Display.PrintLine("1. Naam:           " + temp.Naam);
                 Helpers.Display.PrintLine("2. Wachtwoord:     " + temp.Wachtwoord);
                 Helpers.Display.PrintLine("3. Account-type:   " + ((temp.Rechten) ? "Admin" : "Medewerker"));
@@ -192,6 +195,7 @@ namespace Bioscoop.Repository
                 //het object wordt gecloned zodat er aanpassingen
                 //kunnen worden gemaakt
                 var temp = user.Clone();
+                var check = user.Clone();
                 //veranderingen worden hierin temporeel opgeslagen
                 string change;
 
@@ -203,7 +207,18 @@ namespace Bioscoop.Repository
                     //welke attribute wordt aangepast
                     ConsoleKey pressed = Helpers.Display.Keypress();
                     //schone zaak
-                    Console.Clear();
+                    if (pressed == ConsoleKey.Delete)
+                    {
+                        user.Naam = "DEL";
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Helpers.Display.PrintLine("De gebruiker is succesvol verwijderd!");
+                        Console.ForegroundColor = ConsoleColor.White;
+                        Thread.Sleep(1000);
+                        return user;
+                    }
+                    else
+                        Console.Clear();
+
                     switch (pressed)
                     {
 
@@ -216,7 +231,10 @@ namespace Bioscoop.Repository
                             if (change.Equals("ESC"))
                                 break;
                             else
+                            {
                                 temp.Naam = change;
+                                opgeslagen = false;
+                            }
                             break;
                         //wachtwoordt van veranderen van de gebruiker
                         case ConsoleKey.D2:
@@ -227,7 +245,10 @@ namespace Bioscoop.Repository
                             if (change.Equals("ESC"))
                                 break;
                             else
+                            {
                                 temp.Wachtwoord = change;
+                                opgeslagen = false;
+                            }
                             break;
                         //rechten veranderen van de gebruiker
                         case ConsoleKey.D3:
@@ -239,10 +260,16 @@ namespace Bioscoop.Repository
                                 break;
                             //admin rechten toekennen
                             else if (change.Contains("admin"))
+                            {
                                 temp.Rechten = true;
+                                opgeslagen = false;
+                            }
                             //medewerker rechten toekennen
                             else if (change.Contains("medewerker"))
+                            {
                                 temp.Rechten = false;
+                                opgeslagen = false;
+                            }
                             break;
 
                         case ConsoleKey.D4:
@@ -253,18 +280,18 @@ namespace Bioscoop.Repository
                             if (change.Equals("ESC"))
                                 break;
                             else
+                            {
                                 temp.Gebruikersnaam = change;
+                                opgeslagen = false;
+                            }
                             break;
                         case ConsoleKey.Escape:
                             //terug naar menu met alle gebruikers
                             return user;
-                        case ConsoleKey.Delete:
-                            //veranderen de naam naar DEl om te verwijderen
-                            user.Naam = "DEL";
-                            return user;
+
                         case ConsoleKey.Insert:
                             //alle aanpassingen worden opgeslagen
-                            user = temp;
+                            user = temp.Clone();
                             opgeslagen = true;
                             break;
                     }
@@ -291,7 +318,9 @@ namespace Bioscoop.Repository
                 }
                 //kijken of er een gebruiker verandert moet worden of verwijdert
                 if (temp.Naam == "DEL")
+                {
                     data.Remove(data[locatie]);
+                }
                 else
                     data[locatie] = temp;
             }
@@ -363,6 +392,10 @@ namespace Bioscoop.Repository
             GebruikerModel gebruiker = new GebruikerModel(user[0], user[1], genID, user[2], rechten);
             //gebruiker toevoegen
             data.Add(gebruiker);
+            Console.ForegroundColor = ConsoleColor.Green;
+            Helpers.Display.PrintLine("\nDe gebruiker is succesvol toegevoegd!");
+            Console.ForegroundColor = ConsoleColor.White;
+            Thread.Sleep(1000);
         }
         public void AdminsRechten(List<GebruikerModel> data, GebruikerModel admin)
         {
