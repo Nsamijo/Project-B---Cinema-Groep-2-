@@ -259,9 +259,9 @@ namespace Bioscoop.Modules
                 //menu
                 Helpers.Display.PrintHeader("Film toevoegen");
                 Helpers.Display.PrintMenu("ESC - Terug", "Del - Reset");
-                if (!String.IsNullOrEmpty(newFilm.Status)) Helpers.Display.PrintMenu("", "INS - Opslaan nieuwe Film");
+                if (!String.IsNullOrEmpty(newFilm.Status)) Helpers.Display.PrintMenu(" ", "INS - Opslaan nieuwe Film");
                 Helpers.Display.PrintLine(" ");
-                if (!String.IsNullOrEmpty(newFilm.Naam)) Helpers.Display.PrintTableInfo("Naam: " + newFilm.Naam);
+                if (!String.IsNullOrEmpty(newFilm.Naam)) Helpers.Display.PrintTableInfo("Naam: ", newFilm.Naam);
                 if (!String.IsNullOrEmpty(newFilm.Omschrijving))
                 {
                     int maxLength = 55; int index = 0; string lijn = ""; bool first = true;

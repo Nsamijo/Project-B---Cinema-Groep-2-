@@ -71,6 +71,7 @@ namespace Bioscoop.Repository
             Helpers.Display.PrintMenu("ESC Terug naar het menu", "INS - Nieuwe gebruiker aanmaken");
             Helpers.Display.PrintLine("Ingelogd: " + admin.Naam);
             Helpers.Display.PrintLine("Account-type: " + ((admin.Rechten) ? "Admin" : "Medewerker"));
+            Helpers.Display.PrintLine("");
         }
         public void PrintGebruikers(List<GebruikerModel> users, GebruikerModel admin)
         {
@@ -145,7 +146,7 @@ namespace Bioscoop.Repository
             {
                 //ingebouwde functie voor het tonen van de gebruiker
                 Console.Clear();
-                Helpers.Display.PrintLine("Gebruikerbeheer\n");
+                Helpers.Display.PrintLine("Gebruikerbeheer");
                 Helpers.Display.PrintMenu("ESC - Terug", "DEL - Gebruiker verwijderen");
                 Helpers.Display.PrintMenu(" ", "INS - Opslaan");
                 GebruikerModel temp = user;
@@ -155,7 +156,7 @@ namespace Bioscoop.Repository
                 Helpers.Display.PrintLine("2. Wachtwoord:     " + temp.Wachtwoord);
                 Helpers.Display.PrintLine("3. Account-type:   " + ((temp.Rechten) ? "Admin" : "Medewerker"));
                 Helpers.Display.PrintLine("4. Gebruikersnaam: " + temp.Gebruikersnaam);
-                Helpers.Display.PrintLine("Welke attribute wilt u veranderen: ");
+                Helpers.Display.PrintLine("\n Welke attribute wilt u veranderen: ");
                 Console.Write(">");
             }
 
