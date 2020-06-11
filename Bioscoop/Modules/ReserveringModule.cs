@@ -393,7 +393,13 @@ namespace Bioscoop.Modules
                         }
                         break;
                     case Inputs.KeyAction.Escape:  //de functie beeindigen
-                        Program.Main(null);
+
+                        if (check == true)
+                            Program.Main(null);
+                        else if (check == false)
+                            abort = true;
+                        else
+                            abort = true;
                         break;
                     case Inputs.KeyAction.Delete:
                         abort = true;
