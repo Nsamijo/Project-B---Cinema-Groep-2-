@@ -117,34 +117,41 @@ namespace Bioscoop.Modules
 
                 //variablen die kijken voor de filtering
                 int maxLength = 55; bool first = true; int index = 0;
-                //maken een array van de omschrijving
-                var woorden = film.Omschrijving.Split(' ');
-                //string voor de omschrijving per lijn
-                string lijn = "";
-
-                foreach (string woord in woorden)
+                if (film.Omschrijving.Length > maxLength)
                 {
-                    //tellen de index op om te kijken hoe vaak er geloop is
-                    index++;
-                    //gefiltered of het volgend woord mag worden opgeteld
-                    if ((lijn + woord + " ").Length <= maxLength)
-                        //tellen woord samen met een spatie op aan de string
-                        lijn += woord + " ";
-                    else
+                    //maken een array van de omschrijving
+                    var woorden = film.Omschrijving.Split(' ');
+                    //string voor de omschrijving per lijn
+                    string lijn = "";
+
+                    foreach (string woord in woorden)
                     {
-                        //eerste keer voor de print hierdoor wordt omschrijving ook geprint
-                        if (first)
-                            Helpers.Display.PrintTableInfo("Omschrijving:  ", lijn);
+                        //tellen de index op om te kijken hoe vaak er geloop is
+                        index++;
+                        //gefiltered of het volgend woord mag worden opgeteld
+                        if ((lijn + woord + " ").Length <= maxLength)
+                            //tellen woord samen met een spatie op aan de string
+                            lijn += woord + " ";
                         else
+                        {
+                            //eerste keer voor de print hierdoor wordt omschrijving ook geprint
+                            if (first)
+                                Helpers.Display.PrintTableInfo("Omschrijving:  ", lijn);
+                            else
+                                Helpers.Display.PrintTableInfo("  ", lijn);
+                            //string wordt opniew gezet met het woord (hierdoor raakt er geen informatie kwijt)
+                            lijn = woord + " ";
+                            //first wordt op false gezet zodat omschrijving niet nog een keer wordt geprint
+                            first = false;
+                        }
+                        //kijken of de gehele array is door gespitsed en printen dan de overige woorden || niet altijd is de string de maximale lengte
+                        if (index >= woorden.Length)
                             Helpers.Display.PrintTableInfo("  ", lijn);
-                        //string wordt opniew gezet met het woord (hierdoor raakt er geen informatie kwijt)
-                        lijn = woord + " ";
-                        //first wordt op false gezet zodat omschrijving niet nog een keer wordt geprint
-                        first = false;
                     }
-                    //kijken of de gehele array is door gespitsed en printen dan de overige woorden || niet altijd is de string de maximale lengte
-                    if (index >= woorden.Length)
-                        Helpers.Display.PrintTableInfo("  ", lijn);
+                }
+                else
+                {
+                    Helpers.Display.PrintTableInfo("Omschrijving:  ", film.Omschrijving);
                 }
 
                 Helpers.Display.PrintTableInfo("Genre: ", film.Genre);
